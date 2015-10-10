@@ -34,6 +34,7 @@ Till en början är det VHF och UHF men kommer så småningom utökas med fler o
 
 Sverige delas in i följande distrikt efter sina län:
 
+\footnotesize
 \begin{tabular}{cl}
 \textbf{Dist.} & \textbf{Län}\\
 \hline
@@ -47,6 +48,7 @@ Sverige delas in i följande distrikt efter sina län:
 7 & Skåne, Blekinge, Kronoberg, Jönköping, Kalmar\\
 8 & Speciella stationer utanför landets gränser, t.ex. militära skepp\\
 \end{tabular}
+\normalsize
 
 \section{Repeaterlistan}
 
@@ -66,10 +68,12 @@ Repeaterlistan sorteras på geografiskt namn efter var de befinner sig.
 
 \subsection{Klubbar}
 
+\small
 \begin{tabular}{ll|ll}
 	Signal & Klubb               & Signal & Klubb                   \\ \hline
 	SK5JV  & Fagersta radioklubb & SK0SSA & Sveriges sändaramatörer
 \end{tabular}
+\normalsize
 
 \subsection{Militära stationer (FRO)}
 
@@ -108,11 +112,25 @@ Repeaterlistan sorteras på geografiskt namn efter var de befinner sig.
 
 \section{Frekvenser}
 
+\tiny
+\subsection{VHF-bandet enligt PTS (136--174 MHz)}
+\begin{tabular}{rrrll}
+	  Start &    Stop &           Duplex & Användning         & Anmärkning                \\ \hline
+	137,000 & 138,000 &                  & Satellit           & MSS nedlänk ERC/DEC(99)05 \\
+	138,000 & 144,000 &                  & Militär användning &  \\
+	138,000 & 143,600 &                  & Landmobil radio    &  \\
+	144,000 & 146,000 &                  & Amatörradio        &  \\
+	146,000 & 149,900 &                  & Militär användning &  \\
+	146,050 & 147,000 & 150,050--151,000 & Landmobil radio    &  \\
+	146,050 & 147,000 & 150,050--151,000 & PMR                &
+\end{tabular}
+\normalsize
+
 \subsection{Tillståndsfria frekvenser, ej amatörradio}
 
-Dessa frekvenser är avsedda för allmänhet eller för specifika ändamål som anges. Det innebär att de kan brukas för de ändamål som anges i PTS författningssamlingar och sammanställning över ej tillståndspliktiga frekvenser. Observera att du är skyldig att själv kontrollera bestämmelserna innan en frekvens brukas.
+Dessa frekvenser är avsedda för allmänhet eller för specifika ända\-mål som anges. Det innebär att de kan brukas för de ändamål som anges i PTS författningssamlingar och sammanställning över ej tillståndspliktiga frekvenser. Observera att du är skyldig att själv kontrollera bestämmelserna innan en frekvens brukas.
 
-Effekten i tabellen är ustrålad effekt PEP om inte annat anges.\\
+Effekten i tabellen är ustrålad effekt PEP om inte annat anges.
 
 \begin{tabular}{rlrl}
 	Frekvens & Benämning & Effekt & Användningsområde   \\ \hline
@@ -143,23 +161,6 @@ Jakt K5 är öppen att användas för andra ändamål och sammanfaller ej med ma
 
 [N] Smalbandig FM-modulation skall användas pga tätt liggande kanaler.
 
-På PMR446 används ibland subtoner för att skapa virtuella grupper och sub-kanaler. De som används är följande toner och frekvenser:
-
-\begin{tabular}{rr|rr|rr}
-	 1 &  67,0 & 14 & 107,2 & 27 & 167,9 \\
-	 2 &  69,3 & 15 & 110,9 & 28 & 173,8 \\
-	 3 &  74,4 & 16 & 114,8 & 29 & 179,9 \\
-	 4 &  77,0 & 17 & 118,8 & 30 & 186,2 \\
-	 5 &  79,7 & 18 & 123,0 & 31 & 192,8 \\
-	 6 &  82,5 & 19 & 127,3 & 32 & 203,5 \\
-	 7 &  85,4 & 20 & 131,8 & 33 & 210,7 \\
-	 8 &  88,5 & 21 & 136,5 & 34 & 218,1 \\
-	 9 &  91,5 & 22 & 141,3 & 35 & 225,7 \\
-	10 &  94,8 & 23 & 146,2 & 36 & 233,6 \\
-	11 &  97,4 & 24 & 151,4 & 37 & 241,8 \\
-	12 & 100,0 & 25 & 156,7 & 38 & 250,3 \\
-	13 & 103,5 & 26 & 162,2 &    &
-\end{tabular}
 
 \begin{tabular}{rlrl}
 	Frekvens & Benämning & Effekt & Användningsområde          \\ \hline
@@ -175,7 +176,33 @@ På PMR446 används ibland subtoner för att skapa virtuella grupper och sub-kan
 
 SRBR är ett ej tillståndspliktigt frekvenssegment som används för yrkesmässig radiotrafik.
 
-\section{Telegrafi}
+\section{CTCSS subtoner}
+
+På PMR446 och andra band samt för ett antal repeatrar på 70cm primärt men även ibland 2m och andra band används subtoner för att skapa virtuella grupper och sub-kanaler. De som används är följande toner och frekvenser:
+
+\begin{tabular}{rr|rr|rr|rr|rr}
+	 1 &  67,0 &  2 &  69,3 &  3 &  74,4 &  4 &  77,0 &  5 &  79,7 \\ \hline
+	 6 &  82,5 &  7 &  85,4 &  8 &  88,5 &  9 &  91,5 & 10 &  94,8 \\ \hline
+	11 &  97,4 & 12 & 100,0 & 13 & 103,5 & 14 & 107,2 & 15 & 110,9 \\ \hline
+	16 & 114,8 & 17 & 118,8 & 18 & 123,0 & 19 & 127,3 & 20 & 131,8 \\ \hline
+	21 & 136,5 & 22 & 141,3 & 23 & 146,2 & 24 & 151,4 & 25 & 156,7 \\ \hline
+	26 & 162,2 & 27 & 167,9 & 28 & 173,8 & 29 & 179,9 & 30 & 186,2 \\ \hline
+	31 & 192,8 & 32 & 203,5 & 33 & 210,7 & 34 & 218,1 & 35 & 225,7 \\ \hline
+	36 & 233,6 & 37 & 241,8 & 38 & 250,3 &    &       &    &
+\end{tabular}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Formler och matematik}
 
