@@ -1,9 +1,10 @@
-\documentclass[12pt,swedish,a4paper]{article}
+\documentclass[10pt,swedish,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[swedish]{babel}
 \usepackage{longtable}
 \usepackage[a5paper,textwidth=12cm,textheight=17cm]{geometry}
 \usepackage{amsmath}
+\usepackage{pdflscape}
 
 \begin{document}
 \title{Handbok för Radiooperatörer\\
@@ -59,6 +60,50 @@ Repeaterlistan sorteras på geografiskt namn efter var de befinner sig.
 \end{tabular}
 
 \subsection{VHF 2m}
+
+Bandplan för 2m bandet i IARU region 1 (fastslagen under kongress i Sydafrika 2011) med NRAU tilläg.
+
+
+\section{Bandplaner amatörradio}
+
+\begin{landscape}
+\subsection{2m 144.000--146.000 MHz}
+\begin{tabular}{rrrll}
+	Frekvens &           &  BW Max & Trafik       & Anmärkning                              \\ \hline
+	144.0000 &  144.1100 &  500 Hz & CW, EME      & CW anrop 144.050,                       \\
+	         &           &         &              & MS random 144.100                       \\ \hline
+	144.1100 &  144.1500 &  500 Hz & CW, MGM      & EME MGM 144.120--144.160                \\
+	         &           &         &              & PSK31 cent. 144.138                     \\ \hline
+	144.1500 &  144.1800 & 2.7 kHz & CW, SSB, MGM & EME 144.150--144.160                    \\
+	         &           &         &              & MGM 144.160--144.180 anrop 144.170      \\ \hline
+	144.1800 &  144.3600 & 2.7 kHz & CW, SSB, MGM & MS SSB random 144.195--144.205          \\
+	         &           &         &              & \textbf{SSB anrop 144.300}              \\ \hline
+	144.3600 &  144.3990 & 2.7 kHz & CW, SSB, MGM & MS MGM random anrop 144.370             \\ \hline
+	144.4000 &  144.4900 &  500 Hz & Fyr          & Exklusivt segment fyrar, ej QSO         \\ \hline
+	144.5000 &  144.7940 &  20 kHz & All mode     & SSTV, RTTY, FAX, ATV                    \\
+	         &           &         &              & Linjära transpondrar                    \\ \hline
+	144.7940 &  144.9625 &  12 kHz & MGM          & APRS 144.800                            \\ \hline
+	144.9750 & 145.19350 &  12 kHz & FM, DV       & Rpt in 144.975--145.1935                \\
+	         &           &         &              & RV46–-RV63, 12.5 kHz, 600 kHz skift     \\ \hline
+	145.1940 &  145.2060 &  12 kHz & FM rymd      & 145.200 för kom. m. bem. rymdfark.      \\ \hline
+	145.2060 &  145.5625 &  12 kHz & FM, DV       & FM 145.2125-–145.5875  V17–V47          \\
+	         &           &         &              & \textbf{FM anrop 145.500}, RTTY 145.300 \\
+	         &           &         &              & FM simpl. INET GW 145.2375, 2875, 3375  \\
+	         &           &         &              & DV anrop 145.375                        \\ \hline
+	145.5750 &  145.7935 &  12 kHz & FM, DV       & Rpt ut 145.575--145.7875                \\
+	         &           &         &              & RV46–RV63, 12.5 kHz kanalavstånd        \\ \hline
+	 145.794 &   145.806 &  12 kHz & FM Rymd      & 145.800, 145.200 dplx m. bem. rymdfark. \\ \hline
+	 145.806 &   146.000 &  12 kHz & All mode     & Exklusivt satellit                      \\ \hline
+\end{tabular}
+
+\end{landscape}
+
+Rekommenderade kanaler för simplextrafik mellan två radiostationer är i segmentet 145.2125--145.5875 med anropsfrekvens 145.500. Kanalerna numreras på olika vis beroende på var man är i världen men i dag rekommenderas 12.5 kHz kanalseparation och smalbands FM. Tidigare användes normal FM och 25 kHz kanalsteg. Frekvensen 145.300 skall undvikas helt då den är upplåten för RTTY.
+
+Vanligtvis anropar man på 145.500 och flyttar sig sedan till någon sidorfrekvens. 
+
+
+
 
 \subsection{UHF 70cm}
 
