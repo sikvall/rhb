@@ -5,9 +5,10 @@
 \usepackage[a5paper,textwidth=12cm,textheight=17cm]{geometry}
 \usepackage{amsmath}
 \usepackage{pdflscape}
+\usepackage{longtable}
 
 \begin{document}
-\title{Handbok för Radiooperatörer\\
+\title{Trafikhandbok för Amatörradio\\
 VHF/UHF}
 \author{SM0UEI}
 \maketitle
@@ -17,7 +18,7 @@ Handbok för radiooperatörer innehåller diverse matnyttig information för ama
 
 Skriv ut den på A4 med två sidor på samma papper och vik ihop till ett häfte. Ladda ner den i läsplattan eller surfplattan. Papperstypen är vald som A5 för att underlätta läsning på platta och mobiltelefon till och med.
 
-Idéer tankar, korrigeringar och annat som behöver vara med är välkommet att du skickar till anders@sikvall.se så kan jag se till att få med det i nästa utgåva. Denna bok uppdateras sporadiskt när det finns skäl och tid till detta.
+Idéer tankar, korrigeringar och annat som behöver vara med är väl\-kom\-met att du skickar till anders@sikvall.se så kan jag se till att få med det i nästa utgåva. Denna bok uppdateras sporadiskt när det finns skäl och tid till detta.
 
 Till en början är det VHF och UHF men kommer så småningom utökas med fler och fler band.
 \end{abstract}
@@ -59,79 +60,99 @@ Repeaterlistan sorteras på geografiskt namn efter var de befinner sig.
 	SK7XY       & Malmö           & Malmö        &           145.625 &         -0.600 & DTMF 0
 \end{tabular}
 
-\subsection{VHF 2m}
-
-Bandplan för 2m bandet i IARU region 1 (fastslagen under kongress i Sydafrika 2011) med NRAU tilläg.
-
-
-\section{Bandplaner amatörradio}
-
-\begin{landscape}
-\subsection{2m 144.000--146.000 MHz}
-\begin{tabular}{rrrll}
-	Frekvens &           &  BW Max & Trafik       & Anmärkning                              \\ \hline
-	144.0000 &  144.1100 &  500 Hz & CW, EME      & CW anrop 144.050,                       \\
-	         &           &         &              & MS random 144.100                       \\ \hline
-	144.1100 &  144.1500 &  500 Hz & CW, MGM      & EME MGM 144.120--144.160                \\
-	         &           &         &              & PSK31 cent. 144.138                     \\ \hline
-	144.1500 &  144.1800 & 2.7 kHz & CW, SSB, MGM & EME 144.150--144.160                    \\
-	         &           &         &              & MGM 144.160--144.180 anrop 144.170      \\ \hline
-	144.1800 &  144.3600 & 2.7 kHz & CW, SSB, MGM & MS SSB random 144.195--144.205          \\
-	         &           &         &              & \textbf{SSB anrop 144.300}              \\ \hline
-	144.3600 &  144.3990 & 2.7 kHz & CW, SSB, MGM & MS MGM random anrop 144.370             \\ \hline
-	144.4000 &  144.4900 &  500 Hz & Fyr          & Exklusivt segment fyrar, ej QSO         \\ \hline
-	144.5000 &  144.7940 &  20 kHz & All mode     & SSTV, RTTY, FAX, ATV                    \\
-	         &           &         &              & Linjära transpondrar                    \\ \hline
-	144.7940 &  144.9625 &  12 kHz & MGM          & APRS 144.800                            \\ \hline
-	144.9750 & 145.19350 &  12 kHz & FM, DV       & Rpt in 144.975--145.1935                \\
-	         &           &         &              & RV46–-RV63, 12.5 kHz, 600 kHz skift     \\ \hline
-	145.1940 &  145.2060 &  12 kHz & FM rymd      & 145.200 för kom. m. bem. rymdfark.      \\ \hline
-	145.2060 &  145.5625 &  12 kHz & FM, DV       & FM 145.2125-–145.5875  V17–V47          \\
-	         &           &         &              & \textbf{FM anrop 145.500}, RTTY 145.300 \\
-	         &           &         &              & FM simpl. INET GW 145.2375, 2875, 3375  \\
-	         &           &         &              & DV anrop 145.375                        \\ \hline
-	145.5750 &  145.7935 &  12 kHz & FM, DV       & Rpt ut 145.575--145.7875                \\
-	         &           &         &              & RV46–RV63, 12.5 kHz kanalavstånd        \\ \hline
-	 145.794 &   145.806 &  12 kHz & FM Rymd      & 145.800, 145.200 dplx m. bem. rymdfark. \\ \hline
-	 145.806 &   146.000 &  12 kHz & All mode     & Exklusivt satellit                      \\ \hline
-\end{tabular}
-
-\end{landscape}
-
-Rekommenderade kanaler för simplextrafik mellan två radiostationer är i segmentet 145.2125--145.5875 med anropsfrekvens 145.500. Kanalerna numreras på olika vis beroende på var man är i världen men i dag rekommenderas 12.5 kHz kanalseparation och smalbands FM. Tidigare användes normal FM och 25 kHz kanalsteg. Frekvensen 145.300 skall undvikas helt då den är upplåten för RTTY.
-
-Vanligtvis anropar man på 145.500 och flyttar sig sedan till någon sidorfrekvens. 
 
 
 
-
-\subsection{UHF 70cm}
 
 \section{Signaler}
 
 \subsection{Klubbar}
 
 \small
-\begin{tabular}{ll|ll}
-	Signal & Klubb               & Signal & Klubb                   \\ \hline
-	SK5JV  & Fagersta radioklubb & SK0SSA & Sveriges sändaramatörer
-\end{tabular}
+\begin{longtable}{ll|ll}
+	\textbf{Signal} & \textbf{Klubb}      & \textbf{Signal} & \textbf{Klubb}          \\ \hline
+	SK5JV           & Fagersta radioklubb & SK0SSA          & Sveriges sändaramatörer
+\end{longtable}
 \normalsize
 
 \subsection{Militära stationer (FRO)}
 
 \begin{tabular}{ll}
-	Signal & Beskrivning                \\ \hline
-	SL5AB  & Enköpings ledningsbataljon
+	\textbf{Signal} & \textbf{Beskrivning}       \\ \hline
+	SL5AB           & Enköpings ledningsbataljon
 \end{tabular}
 
 \section{Terminologi och trafik}
 
 \subsection{Q-koder}
 
+\begin{longtable}{ll}
+	\textbf{Kod} & \textbf{Fråga / Svar}                                                 \\ \hline
+	QRA          & Vad heter er station?                                                 \\
+	             & Vår station heter ...                                                 \\ \hline
+	QRB          & Hur långt bort från min station befinner ni er?                       \\
+	             & Avståndet mellan oss är ungefär ...                                   \\ \hline
+	QRG          & Kan ni ange min exakta frekvens?                                      \\
+	             & Er exakta frekvens är ... (MHz/kHz)                                   \\ \hline
+	QRH          & Varierar min frekvens/våglängd?                                       \\
+	             & Er frekvens/våglängd varierar.                                        \\ \hline
+	QRI          & Hur är min sändningston (CW)?                                         \\
+	             & Er sändningston är 1--God, 2--Varierande, 3--Dålig                    \\ \hline
+	QRK          & Vilken uppfattbarhet har mina signaler?                               \\
+	             & Uppfattbarheten hos dina signaler är:                                 \\
+	             & 1--Dålig, 2--Bristfällig, 3--Ganska god, 4--God, 5--Utmärkt           \\ \hline
+	QRL          & Är ni upptagen?                                                       \\
+	             & Jag är upptagen med ... (namn/signal) stör ej.                        \\ \hline
+	QRM          & Är ni störd av annan station?                                         \\
+	             & Störningarna är:                                                      \\
+	             & 1--Obef., 2--Svaga, 3--Måttliga, 4--Starka, 5--Mycket starka          \\ \hline
+	QRN          & Besväras ni av atmosfäriska störningar?                               \\
+	             & Störningarna är:                                                      \\
+	             & 1--Obef., 2--Svaga, 3--Måttliga, 4--Starka, 5--Mycket starka          \\ \hline
+	QRO          & Kan jag (ska jag) öka sändareffekten?                                 \\
+	             & Öka sändareffekten.                                                   \\ \hline
+	QRP          & Kan jag (ska jag) minska sändareffekten?                              \\
+	             & Minska sändareffekten.                                                \\ \hline
+	QRQ          & Kan jag (får jag) öka sändningshastigheten?                           \\
+	             & Öka sändningshastigheten.                                             \\ \hline
+	QRS          & Kan jag (skall jag) sända långsammare?                                \\
+	             & Sänd långsammare.                                                     \\ \hline
+	QRT          & Skall jag avbryta sändningen?                                         \\
+	             & Avbryt sändningen                                                     \\ \hline
+	QRU          & Har ni något till mig?                                                \\
+	             & Jag har inget till er. Se även QTC.                                   \\ \hline
+	QRV          & Är ni redo?                                                           \\
+	             & Jag är redo.                                                          \\ \hline
+	QRX          & När anropar ni mig härnäst?                                           \\
+	             & Jag anropar er kl ... (på ... MHz/kHz)                                \\ \hline
+	QRZ          & Vem anropar mig?                                                      \\
+	             & Ni anropas av ... (på ... MHz/kHz).                                   \\ \hline
+	QSA          & Vilken styrka har mina signaler?                                      \\
+	             & Era signaler är:                                                      \\
+	             & 1--Ej uppf., 2--Svaga, 3--Ganska starka, 4--Starka, 5--Mycket starka  \\ \hline
+	QSB          & Svajar styrkan på mina signaler?                                      \\
+	             & Styrkan på era signaler svajar.                                       \\ \hline
+	QSK          & Kan du höra mig mellan dina tecken och får jag avbryta dig? \\
+	             & Jag kan höra dig mellan mina tecken och du får avbryta.               \\ \hline
+	QSL          & Kan ni ge mig kvittens?                                               \\
+	             & Jag kvitterar.                                                        \\ \hline
+	QSO          & Ha ni förbindelse med ... eller ... (förmedlat)?                      \\
+	             & Jag har förbindelse med ... (via ...)                                 \\ \hline
+	QST          & Har tidigare använts som allmänt anrop men ersatts av CQ              \\ \hline
+	QSY          & Skall jag övergå till att sända på annan frekvens?                    \\
+	             & Gå över till att sända på annan frekvens (eller ... kHz/MHz).         \\ \hline
+	QTC          & Hur många telegram har ni att sända?                                  \\
+	             & Jag har ... telegram till dig (eller ...).                            \\ \hline
+	QTH          & Vilken är er geografiska position?                                    \\
+	             & Min geografiska position är ...                                       \\ \hline
+	QTR          & Kan ni ge mig rätt tid?                                               \\
+	             & Rätt tid är ...                                                       \\ \hline
+\end{longtable}
+
+\clearpage
 \subsection{Bokstaveringsalfabetet (Svenska)}
 
-\begin{tabular}{cl|cl|cl }
+\begin{longtable}{cl|cl|cl }
 	A & Adam   & O & Olof    & 1 & Ett \\
 	B & Bertil & P & Petter  & 2 & Tvåa \\
 	C & Cesar  & Q & Qvintus & 3 & Trea \\
@@ -142,82 +163,91 @@ Vanligtvis anropar man på 145.500 och flyttar sig sedan till någon sidorfrekve
 	H & Helge  & V & Viktor  & 8 & Åtta \\
 	I & Ivar   & W & Wilhelm & 9 & Nia \\
 	J & Johan  & X & Xerxes  & 0 & Nolla \\
-	K & Kalle  & Y & Yngve   &   &  \\
-	L & Ludvig & Z & Zäta    &   &  \\
-	M & Martin & Å & Åke     &   &  \\
-	N & Niklas & Ä & Ärlig   &   &  \\
-	  &        & Ö & Östen   &   &
-\end{tabular}
+	K & Kalle  & Y & Yngve   & . & Punkt\\
+	L & Ludvig & Z & Zäta    & , & Komma\\
+	M & Martin & Å & Åke     & - & Minus\\
+	N & Niklas & Ä & Ärlig   & + & Plus\\
+	  &        & Ö & Östen   &   & Mellanslag\\
+\end{longtable}
 
 \subsection{Bokstaveringsalfabetet (Internationella)}
+\begin{longtable}{cc|cc|cc}
+	A &   Alfa   &  P   &    Papa    & 0 &  Zero   \\
+	B &  Bravo   &  Q   &   Quebec   & 1 &   One   \\
+	C & Charlie  &  R   &   Romeo    & 2 &   Two   \\
+	D &  Delta   &  S   &   Sierra   & 3 &  Tree   \\
+	E &   Echo   &  T   &   Tango    & 4 &  Fower  \\
+	F & Foxtrot  &  U   &  Uniform   & 5 &  Fife   \\
+	G &   Golf   &  V   &   Victor   & 6 &   Six   \\
+	H &  Hotel   &  W   &  Whiskey   & 7 &  Seven  \\
+	I &  India   &  X   &   X-ray    & 8 &   Ait   \\
+	J &  Juliet  &  Y   &   Yankee   & 9 &  Niner  \\
+	K &   Kilo   &  Z   &    Zulu    & . &  Stop   \\
+	L &   Lima   & Å/AA & Alfa-Alfa  & , & Decimal \\
+	M &   Mike   & Ä/AE & Alfa-Echo  &  \\
+	N & November & Ö/OE & Oscar-Echo &  \\
+	O &  Oscar   &      &            &
+\end{longtable}
 
---- Mer om detta här.
+\clearpage
 
-\section{Frekvenser}
+\section{Frekvenslistor}
 
-\tiny
-\subsection{VHF-bandet enligt PTS (136--174 MHz)}
-\begin{tabular}{rrrll}
-	  Start &    Stop &           Duplex & Användning         & Anmärkning                \\ \hline
-	137,000 & 138,000 &                  & Satellit           & MSS nedlänk ERC/DEC(99)05 \\
-	138,000 & 144,000 &                  & Militär användning &  \\
-	138,000 & 143,600 &                  & Landmobil radio    &  \\
-	144,000 & 146,000 &                  & Amatörradio        &  \\
-	146,000 & 149,900 &                  & Militär användning &  \\
-	146,050 & 147,000 & 150,050--151,000 & Landmobil radio    &  \\
-	146,050 & 147,000 & 150,050--151,000 & PMR                &
-\end{tabular}
-\normalsize
-
-\subsection{Tillståndsfria frekvenser, ej amatörradio}
-
-Dessa frekvenser är avsedda för allmänhet eller för specifika ända\-mål som anges. Det innebär att de kan brukas för de ändamål som anges i PTS författningssamlingar och sammanställning över ej tillståndspliktiga frekvenser. Observera att du är skyldig att själv kontrollera bestämmelserna innan en frekvens brukas.
+Dessa frekvenser är avsedda för allmänhet eller för specifika ända\-mål som anges. Det innebär att de kan brukas för de ändamål som anges i PTS för\-fatt\-nings\-sam\-ling\-ar och sammanställning över ej tillståndspliktiga frekvenser. Observera att du är skyldig att själv kontrollera bestämmelserna innan en frekvens brukas.
 
 Effekten i tabellen är ustrålad effekt PEP om inte annat anges.
 
+\subsection{Jakt och jordbruksfrekvenser 155 MHz}
 \begin{tabular}{rlrl}
-	Frekvens & Benämning & Effekt & Användningsområde   \\ \hline
-	 155,425 & Jakt K1   &    5 W & Jakt, Jordbruk [M]  \\
-	 155,475 & Jakt K2   &    5 W & Jakt, Jordbruk [M]  \\
-	 155,475 & Jakt K3   &    5 W & Jakt, Jordbruk [M]  \\
-	 155,525 & Jakt K4   &    5 W & Jakt, Jordbruk [M]  \\
-	 156,000 & Jakt K5   &    5 W & Jakt, Jordbruk, PMR \\
-	 155,400 & Jakt K6   &    5 W & Jakt, Jordbruk [M]  \\
-	 155,450 & Jakt K7   &    5 W & Jakt, Jordbruk [M]
+	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde} \\ \hline
+	          155,425 & Jakt K1            &             5 W & Jakt, Jordbruk [M]         \\
+	          155,475 & Jakt K2            &             5 W & Jakt, Jordbruk [M]         \\
+	          155,475 & Jakt K3            &             5 W & Jakt, Jordbruk [M]         \\
+	          155,525 & Jakt K4            &             5 W & Jakt, Jordbruk [M]         \\
+	          156,000 & Jakt K5            &             5 W & Jakt, Jordbruk, PMR        \\
+	          155,400 & Jakt K6            &             5 W & Jakt, Jordbruk [M]         \\
+	          155,450 & Jakt K7            &             5 W & Jakt, Jordbruk [M]
 \end{tabular}
 
 Jakt K5 är öppen att användas för andra ändamål och sammanfaller ej med marina VHF-bandet vilket de andra gör.
 
+
+\subsection{Öppna PMR-bandet på 446 MHz}
 \begin{tabular}{rlrl}
-	 Frekvens & Benämning & Effekt & Användningsområde \\ \hline
-	446,00625 & PMR446 K1 & 500 mW & PMR [N]              \\
-	446,01875 & PMR446 K2 & 500 mW & PMR [N]              \\
-	446,03125 & PMR446 K3 & 500 mW & PMR [N]              \\
-	446,04375 & PMR446 K4 & 500 mW & PMR [N]              \\
-	446,05625 & PMR446 K5 & 500 mW & PMR [N]              \\
-	446,06875 & PMR446 K6 & 500 mW & PMR [N]              \\
-	446,08125 & PMR446 K7 & 500 mW & PMR [N]              \\
-	446,09375 & PMR446 K8 & 500 mW & PMR [N]
+	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde} \\ \hline
+	        446,00625 & PMR446 K1          &          500 mW & PMR [N]                    \\
+	        446,01875 & PMR446 K2          &          500 mW & PMR [N]                    \\
+	        446,03125 & PMR446 K3          &          500 mW & PMR [N]                    \\
+	        446,04375 & PMR446 K4          &          500 mW & PMR [N]                    \\
+	        446,05625 & PMR446 K5          &          500 mW & PMR [N]                    \\
+	        446,06875 & PMR446 K6          &          500 mW & PMR [N]                    \\
+	        446,08125 & PMR446 K7          &          500 mW & PMR [N]                    \\
+	        446,09375 & PMR446 K8          &          500 mW & PMR [N]
 \end{tabular}
 
 [M] Delas med marin VHF-radio. Får därför inte användas till sjöss inom landets gränser eller i svenska territorialvatten.
 
 [N] Smalbandig FM-modulation skall användas pga tätt liggande kanaler.
 
+\subsection{Kortdistansradio (KDR)}
+
+Kallas även SRBR för Short Range Business Radio.
 
 \begin{tabular}{rlrl}
-	Frekvens & Benämning & Effekt & Användningsområde          \\ \hline
-	 444,600 & SRBR K1   &    2 W & Short range business radio \\
-	 444,625 & SRBR K2   &    2 W & Short range business radio \\
-	 444,800 & SRBR K3   &    2 W & Short range business radio \\
-	 444,825 & SRBR K4   &    2 W & Short range business radio \\
-	 444,850 & SRBR K5   &    2 W & Short range business radio \\
-	 444,875 & SRBR K6   &    2 W & Short range business radio \\
-	 444,925 & SRBR K7   &    2 W & Short range business radio \\
-	 444,975 & SRBR K8   &    2 W & Short range business radio
+	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde} \\ \hline
+	          444,600 & SRBR K1            &             2 W & Short range business radio \\
+	          444,625 & SRBR K2            &             2 W & Short range business radio \\
+	          444,800 & SRBR K3            &             2 W & Short range business radio \\
+	          444,825 & SRBR K4            &             2 W & Short range business radio \\
+	          444,850 & SRBR K5            &             2 W & Short range business radio \\
+	          444,875 & SRBR K6            &             2 W & Short range business radio \\
+	          444,925 & SRBR K7            &             2 W & Short range business radio \\
+	          444,975 & SRBR K8            &             2 W & Short range business radio
 \end{tabular}
 
 SRBR är ett ej tillståndspliktigt frekvenssegment som används för yrkesmässig radiotrafik.
+
+Rekommendationen är att man skall använda CTCSS eller motsvarande för att undvika störa och bli störd av andra stationer som delar frekvenserna.
 
 \section{CTCSS subtoner}
 
@@ -234,51 +264,82 @@ På PMR446 och andra band samt för ett antal repeatrar på 70cm primärt men ä
 	36 & 233,6 & 37 & 241,8 & 38 & 250,3 &    &       &    &
 \end{tabular}
 
+\subsection{CTCSS Zoner i Sverige}
 
+Rekommendationer för repeatrar i olika distrikt och län att använda CTCSS för att hindra att störningar uppkommer vid conds mm. Det ger också möjligheten för sändaramatörer att öppna just den repeater man önskar om man har flera på samma frekvens omkring sig.
 
-\section{Formler och matematik}
+\begin{longtable}{lcccc}
+	\textbf{Område} & \textbf{Primär} & \textbf{Sek. 1} & \textbf{Sek. 2} & \textbf{Sek. 3} \\ \hline
+	Distrikt 0      &      77,0       &      123.0      &      67.0       &      100.0      \\
+	Distrikt 1      &      218.1      &      233.6      &                 &  \\
+	Distrikt 2      &      107.2      &      146.2      &      162.2      &      186.2      \\
+	Distrikt 3      &      127.3      &      141.3      &      250.3      &  \\
+	Värml. / Örebro &      74.4       &      151.4      &                 &  \\
+	Dalarna         &      85.4       &      151.4      &                 &  \\
+	Distrikt 5      &      82.5       &      91.5       &      103.5      &      203.5      \\
+	Distrikt 6      &      114.8      &      118,8      &   94.8 131.8    &  \\
+	Distrikt 7      &      79.7       &      156.7      &      210.7      &
+\end{longtable}
 
-\subsection{Ohms Lag och effektlagen}
+\begin{landscape}
+\section{Bandplan 2m 144--146 MHz}
+\begin{tabular}{rrrll}
+	\textbf{Frekvens} &           & \textbf{BW} & \textbf{Trafik} & \textbf{Noteringar}                     \\ \hline
+	         144.0000 &  144.1100 &          500 Hz & CW, EME         & \textbf{CW anrop 144.050}                       \\
+	                  &           &                 &                 & MS random 144.100                       \\ \hline
+	         144.1100 &  144.1500 &          500 Hz & CW, MGM         & EME MGM 144.120--144.160                \\
+	                  &           &                 &                 & PSK31 cent. 144.138                     \\ \hline
+	         144.1500 &  144.1800 &         2.7 kHz & CW, SSB, MGM    & EME 144.150--144.160                    \\
+	                  &           &                 &                 & MGM 144.160--144.180 anrop 144.170      \\ \hline
+	         144.1800 &  144.3600 &         2.7 kHz & CW, SSB, MGM    & MS SSB random 144.195--144.205          \\
+	                  &           &                 &                 & \textbf{SSB anrop 144.300}              \\ \hline
+	         144.3600 &  144.3990 &         2.7 kHz & CW, SSB, MGM    & MS MGM random anrop 144.370             \\ \hline
+	         144.4000 &  144.4900 &          500 Hz & Fyr             & Exklusivt segment fyrar, ej QSO         \\ \hline
+	         144.5000 &  144.7940 &          20 kHz & All mode        & SSTV, RTTY, FAX, ATV                    \\
+	                  &           &                 &                 & Linjära transpondrar                    \\ \hline
+	         144.7940 &  144.9625 &          12 kHz & MGM             & APRS 144.800                            \\ \hline
+	         144.9750 & 145.19350 &          12 kHz & FM, DV          & Rpt in 144.975--145.1935                \\
+	                  &           &                 &                 & RV46–-RV63, 12.5 kHz, 600 kHz skift     \\ \hline
+	         145.1940 &  145.2060 &          12 kHz & FM rymd         & 145.200 för kom. m. bem. rymdfark.      \\ \hline
+	         145.2060 &  145.5625 &          12 kHz & FM, DV          & FM 145.2125-–145.5875  V17–V47          \\
+	                  &           &                 &                 & \textbf{FM anrop 145.500}, RTTY 145.300 \\
+	                  &           &                 &                 & FM simpl. INET GW 145.2375, 2875, 3375  \\
+	                  &           &                 &                 & DV anrop 145.375                        \\ \hline
+	         145.5750 &  145.7935 &          12 kHz & FM, DV          & Rpt ut 145.575--145.7875                \\
+	                  &           &                 &                 & RV46–RV63, 12.5 kHz kanalavstånd        \\ \hline
+	          145.794 &   145.806 &          12 kHz & FM Rymd         & 145.800, 145.200 dplx m. bem. rymdfark. \\ \hline
+	          145.806 &   146.000 &          12 kHz & All mode        & Exklusivt satellit                      \\ \hline
+\end{tabular}
+\end{landscape}
 
-\begin{align}
-U &= R\cdot I\\
-R &= U/I\\
-I &= U/R
-\end{align}
-
-\begin{align}
-P &= U \cdot I\\
-U &= P/I\\
-I &= P/U
-\end{align}
-
-\begin{align}
-P &= U^2/R\\
-P &= R \cdot I^2
-\end{align}
-
-\subsection{Frirumsutbredning}
-
-En radiovåg i fria rymden utbreder sig med ljusets hastighet $c$ och effektdensiteten kan beskrivas som arean hos en expanderande sfär från en punktformig strålkälla.
-
-Med frekvensen $f$ i MHz och avståndet $d$ i kilometer kan man beräkna sträck\-dämp\-ning\-en\footnote{Eng.: Pathloss} genom följande formel som också kallas \emph{Friis formel för frirumsutbredning} och som tecknas:
-
-\begin{equation}
-L=20\cdot \log(f) + 20\cdot \log(d) +32.45
-\end{equation}
-
-\subsection{Kaskadkopplade bruskällor}
-
-Kaskadkopplade förstärkarsteg med sina brusfaktorer och respektive gain kända kan beräknas teoretiskt med följande samband där $N_n$ är det $n$:e stegets brusfaktor samt $G_n$ är det $n$:e blockets förstärkningsfaktor (gain). Observera att detta är i faktorer, ej dB. För att räkna om från dB till linjär faktor använder du $F=10^{\mathrm{dB}/10}$ så blir det korrekt.
-
-\begin{equation}
-N'=N_1+\frac{N_2-1}{G_1} + \frac{N_3-1}{G_1G_2} + ... + \frac{N_n-1}{G_1G_2...G_{n-1}}
-\end{equation}
-
-\subsubsection{Brusfaktor vanliga komponenter}
-
-En bra LNA\footnote{Low Noise Amplifier, preamp} kan ha en brusfaktor under 1 dB. Mellanförstärkare väl matchade brukar ligga runt ca 2 dB. Slutsteg kan ha ganska hög brusfaktor. Det är alltid första steget i kedjan som bestämmer mest hur det skall bli.
-
-Passiva komponenter har samma brusfaktor som deras dämpning i dB.
+\begin{landscape}
+\section{Bandplan 70cm 432--438 MHz}
+\begin{tabular}{rrrll}
+	\textbf{Frekvens} &               & \textbf{BW} & \textbf{Trafik} & \textbf{Anmärkning}                           \\ \hline
+	         432.0000 &      432.0250 &          500 Hz & CW              & EME exklusivt.                                \\ \hline
+	         432.0250 &      432.1000 &          500 Hz & CW, PSK31       & CW mellan 432.000--085, \textbf{CW anrop 432.050}      \\
+	                  &               &                 &                 & PSK31 432.088                                 \\ \hline
+	         432.1000 &      432.3990 &         2.7 kHz & CW, SSB, MGM    & \textbf{SSB anrop 432.200}                    \\
+	                  &               &                 &                 & Mikrovåg talkback 432.350, FSK441 432.370     \\ \hline
+	         432.4000 &      432.4900 &          500 Hz & Fyr             & Exklusivt segment för fyrar                   \\ \hline
+	         432.5000 &      432.5940 &          12 kHz & All mode        & Linjära transpondrar IN 432.500--600          \\ \hline
+	         432.5000 &      432.5750 &          12 kHz & All mode        & NRAU Digital rep. in 432.500--575 2 MHz skift \\ \hline
+	         432.5940 &      432.9940 &          12 kHz & All mode        & Linjära transpondrar ut 432.600--800          \\ \hline
+	         432.5940 &      432.9940 &          12 kHz & FM              & Rep. in 432.600--975 RU368--398 2 MHz skift   \\ \hline
+	         432.9940 &      433.3810 &          12 kHz & FM              & Rep. in 433.000--375 RU368--398 1.6 MHz skift \\ \hline
+	         433.3940 &      433.5810 &          12 kHz & FM              & SSTV (FM/AFSK) 433.400                        \\
+	                  &               &                 &                 & FM simplex U272--286 \textbf{anrop 433.500}   \\ \hline
+	         433.6000 &      434.0000 &          20 kHz & All mode        & RTTY (FM/AFSK) 433.600                        \\
+	                  &               &                 &                 & FAX 433.700, APRS 433.800                     \\ \hline
+	         434.0000 &      434.4940 &          20 kHz & All mode        & NRAU Dig. kanaler 433.450, 434.475            \\ \hline
+	    $^1$ 434.5000 & $^1$ 434.5940 &          20 kHz & All mode        & NRAU Dig. rep. ut 434.500--575, 2 MHz skift   \\ \hline
+	         434.5940 &      434.9810 &          12 kHz & FM              & NRAU Rep. ut 434.600--975 RU 368--RU398       \\
+	                  &               &                 &                 & 12,5 kHz med 2 MHz skift                      \\ \hline
+	          435.000 &       438.000 &          20 kHz & All mode        & Exklusivt satellit                            \\ \hline
+\end{tabular}
+	\begin{itemize}
+		\item[$^1$] SSA har ett fel i sin bandplan här där det står 433.500--433.5940 i stället.
+	\end{itemize}
+\end{landscape}
 
 \end{document}
