@@ -1,11 +1,13 @@
-\documentclass[10pt,swedish,a4paper]{article}
+\documentclass[10pt,swedish,a4paper,twoside]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[swedish]{babel}
 \usepackage{longtable}
-\usepackage[a5paper,textwidth=12cm,textheight=17cm]{geometry}
+\usepackage[a5paper,textwidth=12cm,
+	textheight=17cm,bindingoffset=1cm]{geometry}
 \usepackage{amsmath}
 \usepackage{pdflscape}
 \usepackage{longtable}
+\usepackage{textcomp}
 
 \begin{document}
 \title{Trafikhandbok för Amatörradio\\
@@ -153,6 +155,43 @@ Sverige delas in i följande distrikt efter sina län:
 	N & November & Ö/OE & Oscar-Echo &   &  \\
 	O &  Oscar   &      &            &   &
 \end{longtable}
+
+\section{S-värden}
+
+Signalstyrkan i amatörradio uttrycks oftast som S-värden. Dessa fås i regel genom nivån på AGC hos mottagaren. Därför ser man sälla utslag vid riktigt låga signaler.
+
+Standard kalibrering för S-metern är enligt följande skala:
+
+\begin{tabular}{r|rr|rr}
+	  & \multicolumn{2}{c|}{$<$ 30 MHz} & \multicolumn{2}{c}{$>$ 30 MHz} \\
+	S &  dBm &               \textmu V &  dBm &            \textmu V \\
+	\hline
+	1 & -121 &                    0.21 & -141 &                 0.02\\
+	2 & -115 & 0.40 & -135 & 0.04\\
+	3 & -109 & 0.80 & -129 & 0.08\\
+	4 & -103 & 1.60 & -123 & 0.16\\
+	5 & -97 & 3.20 & -117 & 0.32\\
+	6 & -91 & 6.30 & -111 & 0.63\\
+	7 & -85 & 12.60 & -105 & 1.26\\
+	8 & -79 & 25.00 & -99 & 2.50\\
+	9 & -73 & 50.00 & -93 & 5.00\\
+	9+10 & -63 & 160 & -83 & 16\\
+	9+20 & -53 & 500 & -73 6 50\\
+	9+30 & -43 & 1600 & -63 & 160\\
+	9+40 & -33 & 5000 & -53 & 500\\
+\end{tabular}
+
+Termiska brusgolvet vid olika mottagarbandbredder:
+
+\begin{tabular}{rr|rr}
+	RBW/kHz & N$_0$/dBm & RBW/kHz & N$_0$/dBm\\
+	\hline
+1 & -144 &  6.25 & -136\\
+3 & -139 & 12.50 & -133\\
+5 & -137 & 25.00 & -130\\
+
+\end{tabular}
+
 
 \section{Frekvenser}
 
