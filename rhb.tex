@@ -156,12 +156,28 @@ Sverige delas in i följande distrikt efter sina län:
 	O &  Oscar   &      &            &   &
 \end{longtable}
 
-\section{S-värden}
+\section{Signal och brus}
+
+Effekter anges i W eller i decibel relaterat till 1 mW (dBm) eller relaterat 1W (dBW). Tabell över effekt och decibelwatt nedan:
+\begin{center}
+\begin{tabular}{rrr|rrr}
+	            \textbf{W} & \textbf{dBW} & \textbf{dBm} &    \textbf{W} & \textbf{dBW} & \textbf{dBm} \\ \hline
+	  1 \textmu W & -60 & -30 &  1 W &   0 &  30 \\
+	 10 \textmu W & -50 & -20 &  3 W &   5 &  35 \\
+	100 \textmu W & -40 & -10 &  5 W &   7 &  37 \\
+	         1 mW & -30 &   0 & 10 W &  10 &  40 \\
+	        10 mW & -20 &  10 & 20 W &  13 &  43 \\
+	       100 mW & -10 &  20 & 50 W &  17 &  47
+\end{tabular}
+\end{center}
+
+\subsection{S-värden}
 
 Signalstyrkan i amatörradio uttrycks oftast som S-värden. Dessa fås i regel genom nivån på AGC hos mottagaren. Därför ser man sälla utslag vid riktigt låga signaler.
 
 Standard kalibrering för S-metern är enligt följande skala:
 
+\begin{center}
 \begin{tabular}{r|rr|rr}
 	  & \multicolumn{2}{c|}{$<$ 30 MHz} & \multicolumn{2}{c}{$>$ 30 MHz} \\
 	S &  dBm &               \textmu V &  dBm &            \textmu V \\
@@ -176,12 +192,17 @@ Standard kalibrering för S-metern är enligt följande skala:
 	8 & -79 & 25.00 & -99 & 2.50\\
 	9 & -73 & 50.00 & -93 & 5.00\\
 	9+10 & -63 & 160 & -83 & 16\\
-	9+20 & -53 & 500 & -73 6 50\\
+	9+20 & -53 & 500 & -73 & 50\\
 	9+30 & -43 & 1600 & -63 & 160\\
 	9+40 & -33 & 5000 & -53 & 500\\
 \end{tabular}
+\end{center}
+\subsection{Termiska brusgolvet}
+Termiska brusgolvet vid olika mottagarbandbredder beskrivs i tabellen. Generellt kan man beräkna brusgolvet genom följande formel:
 
-Termiska brusgolvet vid olika mottagarbandbredder:
+$$N_0=k_BTB$$
+
+Där $k_B$ är boltzmanns konstant
 
 \begin{tabular}{rr|rr}
 	RBW/kHz & N$_0$/dBm & RBW/kHz & N$_0$/dBm\\
