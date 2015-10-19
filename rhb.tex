@@ -34,7 +34,58 @@ Till en början är det VHF och UHF men kommer så småningom utökas med fler o
 
 % % % % % % % % % % % % % % % % % % % % % % %
 
-\section{Distrikt}
+\section{Signaler och distrikt}
+
+\subsection{Svenska signaler}
+
+Svenska signaler förekommer inom ett antal prefix. Enligt ITU disponerar Sverige förljande signalserier:
+7SA--7SZ samt 8SA--8SZ och vidare de mer kända SAA--SMZ. Dessa har används till varierande ändamål, exempelvis har flyget signaler i serien SE-AAA--ZZZ. Polisen har tidigare använt signaler i serien SHA plus fyra siffror, detta är nu ersatt med nytt system i.o.m. RAKEL. Räddningstjänsten använde SDA med fyra siffror. Signaler som 7SA + 4 siffror används för mindre yrkesbåtar SC + 4 siffror för fritidsbåtar.
+
+Amatörradion använder ett antal signaler, de viktigaste är:
+
+\begin{tabular}{ll}
+	SM & Amatörradiosignal utdelad av PTS (nya signaler tilldelas ej i serien) \\
+	SA & Amatörradiosignal tilldelad av SSA, ESA eller FRO                     \\
+	SK & Klubbsignaler (som regel tvåställiga efter distriktsiffran)           \\
+	SL & Militära signaler (som regel tvåställiga efter distriktsiffran)
+\end{tabular}
+
+Dessa signaler följs av en \textit{distriktsiffra} se särskilt avsnitt och sedan 2-ställiga eller 3-ställiga bokstavskombinationer som är den personliga signalen. Exempel är SM0UEI som är min egen signal, distriktsiffran är 0 dvs hemmavarande i Stockholms län. Ett annat exempel kan vara SK5JV tidigare Fagersta amatörradioklubb.
+
+Repeatrar som tillhör klubbar får ofta signal efter klubben med tillägg /R för repeater.
+
+Det finns numera även ett stort antal signaler som är tillfälliga eller knutna till särskilda event, exempelvis scoutverksamhet som ibland sänder amatörradio och särskilda forskningsfartyg, flyg- och rymdfart mm.
+
+Som suffix används följande:
+
+\begin{tabular}{ll}
+	/M  & Mobil (rörlig) sändaramatör, även portabel \\
+	/MM & Mobil till sjöss (mobil maritime)          \\
+	/AE & Mobil i luften (aeromobile)                \\
+	/R  & Repeaterstation
+\end{tabular}
+
+%\subsection{Utländska signaler}
+%
+%Det är svårare att veta exakt hur utländska signaler är uppbyggda. Eftersom denna handledning är för VHF/UHF tar vi inte med alla DXCC-signaler utan de som är närmast oss i Sverige. Konsultera den fulla listan från ITU eller SSA för mer information.
+%
+%\begin{tabular}{cl|cl|cl}
+%	\textbf{Signal} & \textbf{Land} & \textbf{Signal} & \textbf{Land} & \textbf{Signal} & \textbf{Land} \\ \hline
+%	   AMA--AOZ     & Spanien       &    C3A--C3Z     & Andorra       &    C4A--C4Z     & Cypern        \\
+%	   DAA--DRZ     & Tyskland      &    EAA--EHZ     & Spanien       &    EIA--EJZ     & Irland        \\
+%	   EKA--EKZ     & Armenien      &    EMA--EOZ     & Ukraina       &    EBA--ERZ     & Moldav.       \\
+%	   ESA--ESZ     & Estland       &    EUA--EWZ     & Vitryssl.     &    EXA--EXZ     & Ryssland      \\
+%	   EYA--EYZ     & Tajikist.     &    EZA--EZZ     & Turkmenist.   &    FAA--FZZ     & Frankrike     \\
+%	   GAA--GZZ     & Storbrit.     &    HAA--HZZ     & Ungern        &    HBA--HBZ     & Schweiz       \\
+%	   HEA--HEZ     & Schweiz       &    HFA--HFZ     & Polen         &    HGA--HGZ     & Ungern        \\
+%	   HVA--HVZ     & Vatikan.      &    HWA--HYZ     & Frankrike     &    H2A--H2Z     & Cypern        \\
+%	   IAA--IZZ     & Italien       &    JWA--JXZ     & Norge         &    J4A--J4Z     & Grekland      \\
+%	   LAA--LNZ     & Norge         &    LXA--LXZ     & Luxemburg     &    LYA--LYZ     & Litauen       \\
+%	   LZA--LZZ     & Bulgarien     &    MAA--MZZ     & Storbrit.     &    OEA--OEZ     & Österrike     \\
+%	   OFA--OJZ     & Finland       &    OKA--OLZ     & Tjeckien      &    OMA--OMZ     & Slovakien.
+%\end{tabular}
+
+\subsection{Distriktsiffror}
 
 Sverige delas in i följande distrikt efter sina län:
 
@@ -138,22 +189,22 @@ Sverige delas in i följande distrikt efter sina län:
 \end{longtable}
 
 \subsection{Bokstaveringsalfabetet (Internationella)}
-\begin{longtable}{cc|cc|cc}
-	A &   Alfa   &  P   &    Papa    & 0 &  Zero   \\
-	B &  Bravo   &  Q   &   Quebec   & 1 &   One   \\
-	C & Charlie  &  R   &   Romeo    & 2 &   Two   \\
-	D &  Delta   &  S   &   Sierra   & 3 &  Tree   \\
-	E &   Echo   &  T   &   Tango    & 4 &  Fower  \\
-	F & Foxtrot  &  U   &  Uniform   & 5 &  Fife   \\
-	G &   Golf   &  V   &   Victor   & 6 &   Six   \\
-	H &  Hotel   &  W   &  Whiskey   & 7 &  Seven  \\
-	I &  India   &  X   &   X-ray    & 8 &   Ait   \\
-	J &  Juliet  &  Y   &   Yankee   & 9 &  Niner  \\
-	K &   Kilo   &  Z   &    Zulu    & . &  Stop   \\
-	L &   Lima   & Å/AA & Alfa-Alfa  & , & Decimal \\
-	M &   Mike   & Ä/AE & Alfa-Echo  &   &  \\
-	N & November & Ö/OE & Oscar-Echo &   &  \\
-	O &  Oscar   &      &            &   &
+\begin{longtable}{cl|cl|cl}
+	A & Alfa     &  P   & Papa       & 0 & Zero    \\
+	B & Bravo    &  Q   & Quebec     & 1 & One     \\
+	C & Charlie  &  R   & Romeo      & 2 & Two     \\
+	D & Delta    &  S   & Sierra     & 3 & Tree    \\
+	E & Echo     &  T   & Tango      & 4 & Fower   \\
+	F & Foxtrot  &  U   & Uniform    & 5 & Fife    \\
+	G & Golf     &  V   & Victor     & 6 & Six     \\
+	H & Hotel    &  W   & Whiskey    & 7 & Seven   \\
+	I & India    &  X   & X-ray      & 8 & Ait     \\
+	J & Juliet   &  Y   & Yankee     & 9 & Niner   \\
+	K & Kilo     &  Z   & Zulu       & . & Stop    \\
+	L & Lima     & Å/AA & Alfa-Alfa  & , & Decimal \\
+	M & Mike     & Ä/AE & Alfa-Echo  & - & Minus   \\
+	N & November & Ö/OE & Oscar-Echo & + & Plus    \\
+	O & Oscar    &      &            &   & Space
 \end{longtable}
 
 \section{Signal och brus}
@@ -179,22 +230,21 @@ Standard kalibrering för S-metern är enligt följande skala:
 
 \begin{center}
 \begin{tabular}{r|rr|rr}
-	  & \multicolumn{2}{c|}{$<$ 30 MHz} & \multicolumn{2}{c}{$>$ 30 MHz} \\
-	S &  dBm &               \textmu V &  dBm &            \textmu V \\
-	\hline
-	1 & -121 &                    0.21 & -141 &                 0.02\\
-	2 & -115 & 0.40 & -135 & 0.04\\
-	3 & -109 & 0.80 & -129 & 0.08\\
-	4 & -103 & 1.60 & -123 & 0.16\\
-	5 & -97 & 3.20 & -117 & 0.32\\
-	6 & -91 & 6.30 & -111 & 0.63\\
-	7 & -85 & 12.60 & -105 & 1.26\\
-	8 & -79 & 25.00 & -99 & 2.50\\
-	9 & -73 & 50.00 & -93 & 5.00\\
-	9+10 & -63 & 160 & -83 & 16\\
-	9+20 & -53 & 500 & -73 & 50\\
-	9+30 & -43 & 1600 & -63 & 160\\
-	9+40 & -33 & 5000 & -53 & 500\\
+	     & \multicolumn{2}{c|}{$<$ 30 MHz} & \multicolumn{2}{c}{$>$ 30 MHz} \\
+	   S &  dBm &                \textmu V &  dBm &               \textmu V \\ \hline
+	   1 & -121 &                     0.21 & -141 &                    0.02 \\
+	   2 & -115 &                     0.40 & -135 &                    0.04 \\
+	   3 & -109 &                     0.80 & -129 &                    0.08 \\
+	   4 & -103 &                     1.60 & -123 &                    0.16 \\
+	   5 &  -97 &                     3.20 & -117 &                    0.32 \\
+	   6 &  -91 &                     6.30 & -111 &                    0.63 \\
+	   7 &  -85 &                    12.60 & -105 &                    1.26 \\
+	   8 &  -79 &                    25.00 &  -99 &                    2.50 \\
+	   9 &  -73 &                    50.00 &  -93 &                    5.00 \\
+	9+10 &  -63 &                      160 &  -83 &                      16 \\
+	9+20 &  -53 &                      500 &  -73 &                      50 \\
+	9+30 &  -43 &                     1600 &  -63 &                     160 \\
+	9+40 &  -33 &                     5000 &  -53 &                     500
 \end{tabular}
 \end{center}
 \subsection{Termiska brusgolvet}
@@ -202,16 +252,19 @@ Termiska brusgolvet vid olika mottagarbandbredder beskrivs i tabellen. Generellt
 
 $$N_0=k_BTB$$
 
-Där $k_B$ är boltzmanns konstant
+Där $k_B$ är boltzmanns konstant $>>>>>>$
 
-\begin{tabular}{rr|rr}
-	RBW/kHz & N$_0$/dBm & RBW/kHz & N$_0$/dBm\\
-	\hline
-1 & -144 &  6.25 & -136\\
-3 & -139 & 12.50 & -133\\
-5 & -137 & 25.00 & -130\\
-
+\begin{center}
+\begin{tabular}{rr|rr|rr}
+	\textbf{RBW} & \textbf{N$_0$} & \textbf{RBW} & \textbf{N$_0$} & \textbf{RBW} & \textbf{N$_0$} \\ \hline
+	         0.5 &           -141 &         6.25 &           -136 &          100 &           -124 \\
+	         1.0 &           -144 &        12.50 &           -133 &          200 &           -121 \\
+	         3.0 &           -139 &        25.00 &           -130 &         5000 &           -107 \\
+	         5.0 &           -137 &        50.00 &           -127 &        10000 &           -104
 \end{tabular}
+\end{center}
+
+Mottagarbandbredden (RBW) anges i kHz och brusgolvet i dBm (dB relaterat en styrka om 1 mW).
 
 
 \section{Frekvenser}
