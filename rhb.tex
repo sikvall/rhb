@@ -12,7 +12,7 @@
 \usepackage{textcomp}
 
 \begin{document}
-\title{Trafikhandbok för Amatörradio\\
+\title{Radiohandbok för Amatörradio\\
 VHF/UHF}
 \author{SM0UEI}
 \maketitle
@@ -379,6 +379,28 @@ Rekommendationer för repeatrar i olika distrikt och län att använda CTCSS fö
 %%%%%%%%%% Bandplaner här roterade 90 för enklast läsning %%%%%%%%%%
 
 \begin{landscape}
+	\section{Bandplan 6m 50--52 MHz}
+	\begin{tabular}{rrrll}
+		\textbf{Frekvens} &        & \textbf{BW} & \textbf{Trafik} & \textbf{Noteringar}                                  \\ \hline
+		           50.000 & 50.100 &      500 Hz & CW              & \textbf{CW anrp. 50.050 och 50.090 (interkont.)}              \\ \hline
+		           50.100 & 50.130 &     2.7 kHz & CW, SSB         & Interkontinental DX-trafik. Ej QSO inom Europa       \\ \hline
+		           50.100 & 50.200 &     2.7 kHz & CW,SSB          & DX 50.110--50.130, \textbf{50.110 50.150 anrop (interkont.)} \\ \hline
+		           50.200 & 50.300 &     2.7 kHz & CW,SSB          & Generell användning. 50.285 för crossband            \\ \hline
+		           50.300 & 50.400 &     2.7 kHz & CW, MGM         & PSK 50.305, EME 50.310 – 50.320                      \\
+		                  &        &             &                 & MS 50.350 – 50.380                                   \\ \hline
+		           50.400 & 50.500 &       1 kHz & CW, MGM         & Endast fyrar, 50.401 ±500 Hz WSPR-fyrar              \\ \hline
+		           51.210 & 51.390 &      12 kHz & FM              & Repeater Repeater in, 20/10 kHz kanalavstånd         \\
+		                  &        &             &                 & RF81 – RF99                                          \\ \hline
+		           50.500 & 52.000 &      12 kHz & Alla moder      & SSTV 50.510, RTTY 50.600, FM 51.510                  \\ \hline
+		           51.810 & 51.990 &      12 kHz & FM Repeater     & Repeater ut, 20/10 kHz kanalavstånd                  \\
+		                  &        &             &                 & RF81 – RF99                                          \\ \hline
+	\end{tabular}
+\end{landscape}
+
+
+
+
+\begin{landscape}
 \section{Bandplan 2m 144--146 MHz}
 \begin{tabular}{rrrll}
 	\textbf{Frekvens} &           & \textbf{BW} & \textbf{Trafik} & \textbf{Noteringar}                     \\ \hline
@@ -442,145 +464,181 @@ Rekommendationer för repeatrar i olika distrikt och län att använda CTCSS fö
 
 
 \begin{landscape}
+	\section{Bandplan 70cm 432--438 MHz}
+	\begin{tabular}{rrrll}
+		\textbf{Frekvens} &          & \textbf{BW} & \textbf{Trafik} & \textbf{Anmärkning}                                            \\ \hline
+		         1240.000 & 1243.250 &      20 kHz & Alla moder      & 1240.000 - 1241.000 Digital kommunikation                      \\ \hline
+		         1243.250 & 1260.000 &      20 kHz & ATV och Data    & Repeater ut 1258.150-1259.350, R20--68                         \\ \hline
+		         1260.000 & 1270.000 &      12 kHz & Satellit        & Endast för satelliter alla moder                               \\ \hline
+		         1270.000 & 1272.000 &      20 kHz & Alla moder      & Repeater in, 1270.025-1270.700, RS1--28                        \\
+		                  &          &             &                 & Packet RS29--50                                                \\ \hline
+		         1272.000 & 1290.994 &      20 kHz & ATV och Data    & Amatörtelevision ATV                                           \\ \hline
+		         1290.994 & 1291.481 &      20 kHz & FM och DV       & Repeater in Repeat. in 1291.000--1291.475                      \\
+		                  &          &             &                 & RM0 – RM19, 25 kHz, 6 MHz skift                                \\ \hline
+		         1291.494 & 1296.000 &      12 kHz & Alla moder      &  \\ \hline
+		         1296.000 & 1296.150 &      500 Hz & CW,  MGM        & EME 1296.000--025, \textbf{CW anrop 1296.050}                  \\
+		                  &          &             &                 & PSK31 1296.138 MHz                                             \\ \hline
+		         1296.150 & 1296.400 &     2.7 kHz & CW, SSB, MGM    & \textbf{SSB anrop 1296.200}, \textbf{FSK441 MS anrop 1296.370} \\ \hline
+		         1296.400 & 1296.600 &     2.7 kHz & CW, SSB, MGM    & Linjära transpondrar infrekvens                                \\ \hline
+		         1296.600 & 1296.800 &     2.7 kHz & CW, SSB, MGM    & SSTV/FAX 1296.500, MGM/RTTY 1296.600                           \\ \hline
+		         1296.600 & 1296.800 &     2.7 kHz & CW, SSB, MGM    & Linjära transpondrar utfrekvens                                \\
+		                  &          &             &                 & 1296.750-.800 lokala fyrar max 10 W                            \\ \hline
+		         1296.800 & 1296.994 &      500 Hz & Fyrar           & Exklusivt segment för fyrar                                    \\ \hline
+		         1296.994 & 1297.481 &      20 kHz & FM              & Repeater ut Repeater ut 1297.000--1297.475                     \\
+		                  &          &             &                 & RM0 – RM19, 25 kHz, 6 MHz skift                                \\ \hline
+		         1297.494 & 1297.981 &      20 kHz & FM simplex      & Simplex 25 kHz kanaler SM20--39                                \\
+		                  &          &             &                 & \textbf{FM anrop 1297.500 SM20}                                \\ \hline
+		         1299.000 & 1299.750 &     150 kHz & Alla moder      & 5 st 150 kHz kanaler för DD,                                   \\
+		                  &          &             &                 & 1299.075, 225, 375, 525, och 675 $\pm$75 kHz                   \\ \hline
+		         1299.750 & 1300.000 &      20 kHz & Alla moder      & 8 st FM/DV 25 kHz kanaler 1299.775--1299.975
+	\end{tabular}
+\end{landscape}
+
+
+
+
+
+
+\begin{landscape}
 	\small
 \section{PTS Bandplan för VHF}
 \begin{longtable}{llll}
-	          \textbf{Frekvens}            &  \textbf{Duplex}   & \textbf{Användning}                   & \textbf{Anmärkning}            \\ \hline
-	              30.0--37.5               &                    & Medicinska implantat                  & Undantag f. tillst.pl.         \\
+	\textbf{Frekvens}                      & \textbf{Duplex}    & \textbf{Användning}                   & \textbf{Anmärkning}            \\ \hline
+	30.0--37.5                             &                    & Medicinska implantat                  & Undantag f. tillst.pl.         \\
 	                                       &                    &                                       & 2006/771/EG 2013/752/EU        \\
-	              30.01--68                &                    & Militär användning                    &  \\
-	            30.015--30.025             &                    & Telemetri och Radiostyrning           & Undantag från tillståndsplikt  \\
+	30.01--68                              &                    & Militär användning                    &  \\
+	30.015--30.025                         &                    & Telemetri och Radiostyrning           & Undantag från tillståndsplikt  \\
 	                                       &                    &                                       & radiost. trafikljus            \\
-	            30,265--30,355             &                    & Telemetri och radiostyrning           & Undantag från tillståndsplikt  \\
-	            30,925--31,375             &                    & Landmobil radio                       & Undantag från tillståndsplikt  \\
-	            34,995--35,275             &                    & Radiostyrning av modellflygplan       & Undantag från tillståndsplikt  \\
-	             37,5--41,015              &                    & Landmobil radio                       &  \\
-	             37,5--38,25               &                    & Radioastronomi                        & Onsala rymd - observatorium    \\
-	            39,525--39,55              &                    & Telemetri och radiostyrning           & Undantag från tillståndsplikt  \\
-	            40,45--40,575              &                    & Telemetri och radiostyrning           & Undantag från tillståndsplikt  \\
-	             40,66--40,7               &                    & Allmän kortdistansradio               & Undantag f. tillst.pl.         \\
+	30,265--30,355                         &                    & Telemetri och radiostyrning           & Undantag från tillståndsplikt  \\
+	30,925--31,375                         &                    & Landmobil radio                       & Undantag från tillståndsplikt  \\
+	34,995--35,275                         &                    & Radiostyrning av modellflygplan       & Undantag från tillståndsplikt  \\
+	37,5--41,015                           &                    & Landmobil radio                       &  \\
+	37,5--38,25                            &                    & Radioastronomi                        & Onsala rymd - observatorium    \\
+	39,525--39,55                          &                    & Telemetri och radiostyrning           & Undantag från tillståndsplikt  \\
+	40,45--40,575                          &                    & Telemetri och radiostyrning           & Undantag från tillståndsplikt  \\
+	40,66--40,7                            &                    & Allmän kortdistansradio               & Undantag f. tillst.pl.         \\
 	                                       &                    &                                       & 2006/771/EG 2013/752/EU        \\
-	             40,66--40,7               &                    & ISM                                   &  \\
-	             40,66--40,8               &                    & Telemetri och radiostyrning           & Undantag från tillståndsplikt  \\
-	               41--43,6                &                    & Ljudöverföring                        & Undantag från tillståndsplikt  \\
-	                50--52                 &                    & Amatörradio                           & Undantag från tillståndsplikt  \\
+	40,66--40,7                            &                    & ISM                                   &  \\
+	40,66--40,8                            &                    & Telemetri och radiostyrning           & Undantag från tillståndsplikt  \\
+	41--43,6                               &                    & Ljudöverföring                        & Undantag från tillståndsplikt  \\
+	50--52                                 &                    & Amatörradio                           & Undantag från tillståndsplikt  \\
 	                                       &                    &                                       & (Max 200 W)                    \\
-	               68--74,8                &                    & Landmobil radio                       &  \\
-	               68--74,8                &                    & PMR                                   &  \\
-	             69,6--69,725              &                    & Landmobil radio                       & Undantag från tillståndsplikt  \\
-	             69,6--69,725              &                    & PMR	Undantag från tillståndsplikt     &  \\
-	               73--74,6                &                    & Radioastronomi                        & Onsala rymd - observatorium    \\
-	              74,8--75,2               &                    & Radionavigering för luftfart          &  \\
-	              74,8--75,2               &                    & Luftfartsradio (ILS)                  &  \\
-	             75,2--75,625              &                    & Landmobil radio                       &  \\
+	68--74,8                               &                    & Landmobil radio                       &  \\
+	68--74,8                               &                    & PMR                                   &  \\
+	69,6--69,725                           &                    & Landmobil radio                       & Undantag från tillståndsplikt  \\
+	69,6--69,725                           &                    & PMR	Undantag från tillståndsplikt     &  \\
+	73--74,6                               &                    & Radioastronomi                        & Onsala rymd - observatorium    \\
+	74,8--75,2                             &                    & Radionavigering för luftfart          &  \\
+	74,8--75,2                             &                    & Luftfartsradio (ILS)                  &  \\
+	75,2--75,625                           &                    & Landmobil radio                       &  \\
 	%%% Sidbrytning %%%
-	\textbf{Frekvens} &  \textbf{Duplex}   & \textbf{Användning}                   & \textbf{Anmärkning}            \\ \hline
-	             75,2--75,625              &                    & PMR                                   &  \\
-	            75,625--77,475             &   80.625--82.475   & Landmobil radio                       &  \\
-	            75,625--77,475             &   80.625--82.475   & PMR                                   &  \\
-	            77,475--80,625             &                    & Landmobil radio                       &  \\
-	            77,475--80,625             &                    & PMR                                   &  \\
-	            80,625--82,475             &   75.625--77.475   & Landmobil radio                       &  \\
-	            80,625--82,475             &   75.625--77.475   & PMR                                   &  \\
-	             82,475--87,5              &                    & Landmobil radio                       &  \\
-	             82,475--87,5              &                    & PMR                                   &  \\
-	              87,5--108                &                    & Rundradio	Band II, GE84               &  \\
-	              87,5--108                &                    & Ljudöverföring                        & Undantag från tillståndsplikt  \\
+	\textbf{Frekvens} & \textbf{Duplex}    & \textbf{Användning}                   & \textbf{Anmärkning}            \\ \hline
+	75,2--75,625                           &                    & PMR                                   &  \\
+	75,625--77,475                         & 80.625--82.475     & Landmobil radio                       &  \\
+	75,625--77,475                         & 80.625--82.475     & PMR                                   &  \\
+	77,475--80,625                         &                    & Landmobil radio                       &  \\
+	77,475--80,625                         &                    & PMR                                   &  \\
+	80,625--82,475                         & 75.625--77.475     & Landmobil radio                       &  \\
+	80,625--82,475                         & 75.625--77.475     & PMR                                   &  \\
+	82,475--87,5                           &                    & Landmobil radio                       &  \\
+	82,475--87,5                           &                    & PMR                                   &  \\
+	87,5--108                              &                    & Rundradio	Band II, GE84               &  \\
+	87,5--108                              &                    & Ljudöverföring                        & Undantag från tillståndsplikt  \\
 	                                       &                    &                                       & 2006/771/EG 2013/752/EU        \\
-	              87,5--108                &                    & FM analog ljudradio	Band II, GE84     &  \\
-	             108--117,975              &                    & Radionavigering för luftfart          &  \\
-	             108--117,975              &                    & Luftfartsradio (ILS)                  &  \\
-	             108--117,975              &                    & Luftfartsradio (VOR)                  &  \\
-	             117,975--137              &                    & Luftfartsradio                        &  \\
-	            121,45--121,55             &                    & Sjöfartsradio (EPIRB)                 & Positionsbestämning;           \\
+	87,5--108                              &                    & FM analog ljudradio	Band II, GE84     &  \\
+	108--117,975                           &                    & Radionavigering för luftfart          &  \\
+	108--117,975                           &                    & Luftfartsradio (ILS)                  &  \\
+	108--117,975                           &                    & Luftfartsradio (VOR)                  &  \\
+	117,975--137                           &                    & Luftfartsradio                        &  \\
+	121,45--121,55                         &                    & Sjöfartsradio (EPIRB)                 & Positionsbestämning;           \\
 	                                       &                    &                                       & undantag f. tillst.pl.         \\
 	                                       &                    &                                       & COSPAS/SARSAT-sändare          \\
-	            121,45--121,55             &                    & PLB                                   & Positionsbestämning;           \\
+	121,45--121,55                         &                    & PLB                                   & Positionsbestämning;           \\
 	                                       &                    &                                       & undantag f. tillst.pl.         \\
 	                                       &                    &                                       & COSPAS/SARSAT-sändare          \\
-	               137--138                &                    & Satellit                              & MSS nedlänk ERC/DEC/(99)05     \\
-	               138--144                &                    & Militär användning                    &  \\
-	              138--143,6               &                    & Landmobil radio                       &  \\
-	               144--146                &                    & Amatörradio                           & Undantag från tillst.pl.       \\
-	              146--149,9               &                    & Militär användning                    &  \\
-	             146,05--147               &    150.05--151     & Landmobil radio                       &  \\
-	             146,05--147               &    150.05--151     & PMR                                   &  \\
+	137--138                               &                    & Satellit                              & MSS nedlänk ERC/DEC/(99)05     \\
+	138--144                               &                    & Militär användning                    &  \\
+	138--143,6                             &                    & Landmobil radio                       &  \\
+	144--146                               &                    & Amatörradio                           & Undantag från tillst.pl.       \\
+	146--149,9                             &                    & Militär användning                    &  \\
+	146,05--147                            & 150.05--151        & Landmobil radio                       &  \\
+	146,05--147                            & 150.05--151        & PMR                                   &  \\
 	%%% Sidbrytning %%%
-	\textbf{Frekvens} &  \textbf{Duplex}   & \textbf{Användning}                   & \textbf{Anmärkning}            \\ \hline
-	              147--149,9               &                    & Landmobil radio                       &  \\
-	             148--150,05               &                    & Jordstationer (mobila satellitsystem) & MSS upplänk                    \\
+	\textbf{Frekvens} & \textbf{Duplex}    & \textbf{Användning}                   & \textbf{Anmärkning}            \\ \hline
+	147--149,9                             &                    & Landmobil radio                       &  \\
+	148--150,05                            &                    & Jordstationer (mobila satellitsystem) & MSS upplänk                    \\
 	                                       &                    &                                       & Undantag från tillst.pl.       \\
 	                                       &                    &                                       & ERC/DEC/(99)05                 \\
 	                                       &                    &                                       & ERC/DEC/(99)06                 \\
-	           150,05--155,9875            &                    & Militär användning                    &  \\
-	             150,05--151               &    146.05--147     & Landmobil radio                       &  \\
-	             150,05--153               &                    & Radioastronomi                        & Onsala rymd - observatorium    \\
-	             150,05--151               &    146.05--147     & PMR                                   &  \\
-	               151--153                &                    & Landmobil radio                       &  \\
-	           151,52--151,555             &                    & Spårning, pejling och datainsamling   & Undantag från tillståndsplikt  \\
-	           151,52--152,2675            &                    & Radiopejling av djur                  & Undantag från tillståndsplikt  \\
-	            154--155,9875              &                    & Sjöfartsradio                         &  \\
-	            154--155,9875              &                    & Landmobil radio                       &  \\
-	          155,3875--155,5375           &                    & Landmobil radio                       & Undantag från tillståndsplikt; \\
+	150,05--155,9875                       &                    & Militär användning                    &  \\
+	150,05--151                            & 146.05--147        & Landmobil radio                       &  \\
+	150,05--153                            &                    & Radioastronomi                        & Onsala rymd - observatorium    \\
+	150,05--151                            & 146.05--147        & PMR                                   &  \\
+	151--153                               &                    & Landmobil radio                       &  \\
+	151,52--151,555                        &                    & Spårning, pejling och datainsamling   & Undantag från tillståndsplikt  \\
+	151,52--152,2675                       &                    & Radiopejling av djur                  & Undantag från tillståndsplikt  \\
+	154--155,9875                          &                    & Sjöfartsradio                         &  \\
+	154--155,9875                          &                    & Landmobil radio                       &  \\
+	155,3875--155,5375                     &                    & Landmobil radio                       & Undantag från tillståndsplikt; \\
 	                                       &                    &                                       & jord- och skogsbruk samt jakt  \\
-	          155,9875--156,0125           &                    & Landmobil radio                       & Undantag från tillståndsplikt  \\
-	          156,0125--156,3625           & 160.6125--160.9625 & Sjöfartsradio                         & RR AP18                        \\
-	          156,3625--156,7625           &                    & Sjöfartsradio                         & RR AP18                        \\
-	          156,4875--156,7625           &                    & Landmobil radio                       &  \\
-	          156,5125--156,5375           &                    & Sjöfartsradio (DSC)                   & RR AP18 Nödanrop               \\
-	          156,7625--156,8375           &                    & Sjöfartsradio                         & RR AP18, Kanal 16              \\
-	          156,8375--156,8875           &                    & Sjöfartsradio                         &  \\
-	          156,8375--158,075            &                    & Landmobil radio                       &  \\
-	          156,8375--158,075            &                    & PMR                                   &  \\
-	          156,8875--157,4375           & 161.4875--162.0375 & Sjöfartsradio                         & RR AP18                        \\
-	          158,075--160,6125            & 166.075--168.6125  & Landmobil radio                       &  \\
-	           158,075--160,625            &  166.075--168.625  & Landmobil radio                       &  \\
-	           158,075--160,625            &  166.075--168.625  & PMR                                   &  \\
-	          158,075--160,6125            & 166.075--168.6125  & PMR                                   &  \\
+	155,9875--156,0125                     &                    & Landmobil radio                       & Undantag från tillståndsplikt  \\
+	156,0125--156,3625                     & 160.6125--160.9625 & Sjöfartsradio                         & RR AP18                        \\
+	156,3625--156,7625                     &                    & Sjöfartsradio                         & RR AP18                        \\
+	156,4875--156,7625                     &                    & Landmobil radio                       &  \\
+	156,5125--156,5375                     &                    & Sjöfartsradio (DSC)                   & RR AP18 Nödanrop               \\
+	156,7625--156,8375                     &                    & Sjöfartsradio                         & RR AP18, Kanal 16              \\
+	156,8375--156,8875                     &                    & Sjöfartsradio                         &  \\
+	156,8375--158,075                      &                    & Landmobil radio                       &  \\
+	156,8375--158,075                      &                    & PMR                                   &  \\
+	156,8875--157,4375                     & 161.4875--162.0375 & Sjöfartsradio                         & RR AP18                        \\
+	158,075--160,6125                      & 166.075--168.6125  & Landmobil radio                       &  \\
+	158,075--160,625                       & 166.075--168.625   & Landmobil radio                       &  \\
+	158,075--160,625                       & 166.075--168.625   & PMR                                   &  \\
+	158,075--160,6125                      & 166.075--168.6125  & PMR                                   &  \\
 	%%% Sidbrytning %%%
-	\textbf{Frekvens} &  \textbf{Duplex}   & \textbf{Användning}                   & \textbf{Anmärkning}            \\ \hline
-	          160,6125--160,9625           & 156.0125--156.3625 & Sjöfartsradio                         & RR AP18                        \\
-	          160,6125--162,0375           &                    & Landmobil radio                       &  \\
-	          160,6125--162,0375           &                    & PMR                                   &  \\
-	          161,4875--162,0375           & 156.8875--157.4375 & Sjöfartsradio                         & RR AP18                        \\
-	            161,85--162,15             &                    & Sjöfartsradio (AIS)                   & RR AP18 ERC/DEC(99)17          \\
-	             162,025--163              &    170.025--171    & Landmobil radio                       &  \\
-	             162,025--163              &    170.025--171    & PMR                                   &  \\
-	               163--164                &      171--172      & Militär användning                    &  \\
-	               164--166                &      172--174      & Landmobil radio                       &  \\
-	               164--166                &      172--174      & PMR                                   &  \\
-	             166--166,075              &                    & Landmobil radio                       &  \\
-	             166--166,075              &                    & PMR                                   &  \\
-	          166,075--168,6125            & 158.075 - 160.6125 & Landmobil radio                       &  \\
-	           166,075--168,625            & 158.075 - 160.625  & Landmobil radio                       &  \\
-	           166,075--168,625            & 158.075 - 160.625  & PMR                                   &  \\
-	          166,075--168,6125            & 158.075 - 160.6125 & PMR                                   &  \\
-	           168,625--170,025            &                    & Landmobil radio                       &  \\
-	           168,625--170,025            &                    & Personsökning                         &  \\
-	           168,625--170,025            &                    & PMR                                   &  \\
-	            169,375--169,4             &                    & Allmän kortdistansradio               & Undantag från tillståndsplikt  \\
-	           169,4--169,8125             &                    & Allmän kortdistansradio               & Undantag från tillståndsplikt  \\
+	\textbf{Frekvens} & \textbf{Duplex}    & \textbf{Användning}                   & \textbf{Anmärkning}            \\ \hline
+	160,6125--160,9625                     & 156.0125--156.3625 & Sjöfartsradio                         & RR AP18                        \\
+	160,6125--162,0375                     &                    & Landmobil radio                       &  \\
+	160,6125--162,0375                     &                    & PMR                                   &  \\
+	161,4875--162,0375                     & 156.8875--157.4375 & Sjöfartsradio                         & RR AP18                        \\
+	161,85--162,15                         &                    & Sjöfartsradio (AIS)                   & RR AP18 ERC/DEC(99)17          \\
+	162,025--163                           & 170.025--171       & Landmobil radio                       &  \\
+	162,025--163                           & 170.025--171       & PMR                                   &  \\
+	163--164                               & 171--172           & Militär användning                    &  \\
+	164--166                               & 172--174           & Landmobil radio                       &  \\
+	164--166                               & 172--174           & PMR                                   &  \\
+	166--166,075                           &                    & Landmobil radio                       &  \\
+	166--166,075                           &                    & PMR                                   &  \\
+	166,075--168,6125                      & 158.075 - 160.6125 & Landmobil radio                       &  \\
+	166,075--168,625                       & 158.075 - 160.625  & Landmobil radio                       &  \\
+	166,075--168,625                       & 158.075 - 160.625  & PMR                                   &  \\
+	166,075--168,6125                      & 158.075 - 160.6125 & PMR                                   &  \\
+	168,625--170,025                       &                    & Landmobil radio                       &  \\
+	168,625--170,025                       &                    & Personsökning                         &  \\
+	168,625--170,025                       &                    & PMR                                   &  \\
+	169,375--169,4                         &                    & Allmän kortdistansradio               & Undantag från tillståndsplikt  \\
+	169,4--169,8125                        &                    & Allmän kortdistansradio               & Undantag från tillståndsplikt  \\
 	                                       &                    & 2006/771/EG 2013/752/EU               &  \\
-	            169,4--169,475             &                    & Hörselhjälpmedel                      & Undantag från tillståndsplikt  \\
+	169,4--169,475                         &                    & Hörselhjälpmedel                      & Undantag från tillståndsplikt  \\
 	                                       &                    &                                       & 2006/771/EG 2013/752/EU        \\
-	            169,4--169,475             &                    & Mätaravläsning                        & Undantag från tillståndsplikt  \\
+	169,4--169,475                         &                    & Mätaravläsning                        & Undantag från tillståndsplikt  \\
 	                                       &                    &                                       & 2006/771/EG 2013/752/EU        \\
-	          169,4875--169,5875           &                    & Hörselhjälpmedel                      & Undantag från tillståndsplikt  \\
+	169,4875--169,5875                     &                    & Hörselhjälpmedel                      & Undantag från tillståndsplikt  \\
 	                                       &                    &                                       & 2006/771/EG 2013/752/EU        \\
-	             170,025--171              &    162.025--163    & Landmobil radio                       &  \\
-	             170,025--171              &    162.025--163    & PMR                                   &  \\
+	170,025--171                           & 162.025--163       & Landmobil radio                       &  \\
+	170,025--171                           & 162.025--163       & PMR                                   &  \\
 	%%% Sidbrytning %%%
-	\textbf{Frekvens} &  \textbf{Duplex}   & \textbf{Användning}                   & \textbf{Anmärkning}            \\ \hline
-	               171--172                &      163--164      & Militär användning                    &  \\
-	               172--174                &      164--166      & Landmobil radio                       &  \\
-	               172--174                &      164--166      & PMR                                   &  \\
-	               174--223                &                    & Rundradio (DVB-T)                     & Äv. DVB-T2 Band III, k. 5--11  \\
-	               174--223                &                    & Rundradio (T-DAB)                     & Äv. DVB-T2 Band III, k. 5--11  \\
-	               223--230                &                    & Rundradio (DVB-T)                     & Äv. DVB-T2 Band III, k. 12     \\
-	               223--230                &                    & Rundradio (T-DAB)                     & Äv. DVB-T2 Band III, k. 12     \\
-	               230--240                &                    & Rundradio (T-DAB)                     & WI95revCO07                    \\
-	               240--267                &                    & Landmobil radio                       &  \\
-	            242,95--243,05             &                    & SAR (kommunikation)                   &
+	\textbf{Frekvens} & \textbf{Duplex}    & \textbf{Användning}                   & \textbf{Anmärkning}            \\ \hline
+	171--172                               & 163--164           & Militär användning                    &  \\
+	172--174                               & 164--166           & Landmobil radio                       &  \\
+	172--174                               & 164--166           & PMR                                   &  \\
+	174--223                               &                    & Rundradio (DVB-T)                     & Äv. DVB-T2 Band III, k. 5--11  \\
+	174--223                               &                    & Rundradio (T-DAB)                     & Äv. DVB-T2 Band III, k. 5--11  \\
+	223--230                               &                    & Rundradio (DVB-T)                     & Äv. DVB-T2 Band III, k. 12     \\
+	223--230                               &                    & Rundradio (T-DAB)                     & Äv. DVB-T2 Band III, k. 12     \\
+	230--240                               &                    & Rundradio (T-DAB)                     & WI95revCO07                    \\
+	240--267                               &                    & Landmobil radio                       &  \\
+	242,95--243,05                         &                    & SAR (kommunikation)                   &
 \end{longtable}
 \normalsize
 \end{landscape}
@@ -588,100 +646,193 @@ Rekommendationer för repeatrar i olika distrikt och län att använda CTCSS fö
 \begin{landscape}
 \section{PTS bandplan för UHF}
 \begin{longtable}{llll}
-	\textbf{Frekvens}  & \textbf{Duplex}    & \textbf{Användning}            & \textbf{Anmärkning}                 \\ \hline
-	328,6--335,4       &                    & Radionavigering                & För luftfart                        \\
-	328,6--335,4       &                    & Luftfartsradio (ILS)           &  \\
-	335,4--386         &                    & Militär användning             &  \\
-	336--339           & 357--360           & Landmobil radio                &  \\
-	336--339           & 357--360           & SAP/SAB bärbara ljudlänkar     &  \\
-	357--360           & 336--339           & Landmobil radio                &  \\
-	357--360           & 336--339           & SAP/SAB bärbara ljudlänkar     &  \\
-	370--371           & 386--387           & Fast radio                     & Svensk kanalplan Smalbandig         \\
-	374--376           & 387--389           & Fast radio                     & Svensk kanalplan Smalbandig         \\
-	380--385           & 390--395           & Landmobil radio                & Blocktillstånd Rakel                \\
-	380--385           & 390--395           & TETRA                          & Blocktillstånd Rakel                \\
-	386--387           & 370--371           & Fast radio                     & Svensk kanalplan Smalbandig         \\
-	387--389           & 374--376           & Fast radio                     & Svensk kanalplan Smalbandig         \\
-	389--390           &                    & Militär användning             &  \\
-	390--395           & 380--385           & Landmobil radio                & Blocktillstånd Rakel                \\
-	390--395           & 380--385           & TETRA                          & Blocktillstånd Rakel                \\
-	395--399,9         &                    & Militär användning             &  \\
-	399,9--400,05      &                    & Satellitnavigerings-system     &  \\
-	400,05--400,15     &                    & Satellit                       & Standardfrekvens och tidssignal     \\
-	400,15--401        &                    & Satellit                       & MSS nedlänk ERC/DEC/(99)05          \\
-	400,15--404        &                    & Ballongburna radiosonder       &  \\
-	400,15--404        &                    & Meteorologi                    &  \\
-	401--406           &                    & Medicinska implantat           & Undantag från tillståndsplikt       \\
-	402--403           &                    & Meteorologi                    & Via satellit                        \\
-	404--406           &                    & Landmobil radio                &  \\
-	\textbf{Frekvens}  & \textbf{Duplex}    & \textbf{Användning}            & \textbf{Anmärkning}                 \\ \hline
-	406--406,1         &                    & Sjöfartsradio (EPIRB)          & Undantag från tillståndsplikt       \\
-	                   &                    &                                & (COSPAS-SARSAT)                     \\
-	406--406,1         &                    & PLB                            & Undantag från tillståndsplikt       \\
-	                   &                    &                                & (COSPAS-SARSAT)                     \\
-	406,1--410         &                    & Landmobil radio                &  \\
-	406,1--410         &                    & PMR                            &  \\
-	410--420           & 420--430           & Landmobil radio                &  \\
-	410--420           & 420--430           & PMR                            &  \\
-	410--420           & 420--430           & TETRA                          &  \\
-	420--430           & 410--420           & Landmobil radio                &  \\
-	420--430           & 410--420           & PMR                            &  \\
-	420--430           & 410--420           & TETRA                          &  \\
-	429,4375--429,4625 &                    & Larmöverföring                 & Undantag från tillståndsplikt       \\
-	430--432           &                    & Landmobil radio                &  \\
-	432	438            &                    & Amatörradio                    & Undantag från tillståndsplikt       \\
-	433,05--434,79     &                    & Allmän kortdistansradio        & Undantag från tillståndsplikt       \\
-	                   &                    &                                & 2006/771/EG 2013/752/EU             \\
-	438--439,6875      &                    & Telemetri och radiostyrning    &  \\
-	438--439,6875      &                    & Kortdistansradio (SRD)         &  \\
-	439,6875--439,9875 &                    & Telemetri och radiostyrning    & Undantag från tillståndsplikt       \\
-	440--442           &                    & Landmobil radio                &  \\
-	442--444           & 448--450           & Landmobil radio                &  \\
-	442--444           & 448--450           & PMR                            &  \\
-	443,9875--444,4125 &                    & Telemetri och radiostyrning    & Undantag från tillståndsplikt       \\
-444--444,5875      &                    & Landmobil radio                &  \\
-	444--444,5875      &                    & Telemetri och radiostyrning    &  \\
-	444,5875--444,9875 &                    & Landmobil radio                & Undantag från tillståndsplikt       \\
-	\textbf{Frekvens}  & \textbf{Duplex}    & \textbf{Användning}            & \textbf{Anmärkning}                 \\ \hline
-	444,5875--448      &                    & Landmobil radio                &  \\
-	444,5875--448      &                    & PMR                            &  \\
-	446--446,1         &                    & PMR 446                        & Undantag från tillståndsplikt       \\
-
-	446,1--446,2       &                    & Landmobil radio                & Undantag från tillståndsplikt       \\
-	                   &                    &                                & Digital PMR ECC/DEC/(05)12          \\
-	448--450           & 442--444           & Landmobil radio                &  \\
-	448--450           & 442--444           & PMR                            &  \\
-	450--452,5         & 460--462.5         & PMR                            &  \\
-	452,5--457,5       & 462.5--467.5       & CDMA 450                       & Digitala cellulära system           \\
-	457,5--460         & 467.5--470         & PMR                            &  \\
-	457,5125--457,5875 & 467.5125--467.5875 & Kom. ombord fartyg & 3 kanaler 25 kHz                    \\
-	                   &                    &                                & 5 kanaler 12,5 kHz                  \\
-	460--462,5         & 450--452.5         & PMR                            &  \\
-	462,5--467,5       & 452.5--457.5       & CDMA 450                       & Digitala cellulära system           \\
-	467,5--470         & 457.5--460         & PMR                            &  \\
-	467,5125--467,5875 & 457.5125--457.5875 & Kom. ombord  fartyg & 3 kanaler 25 kHz                    \\
-	                   &                    &                                & 5 kanaler 12,5 kHz                  \\
-	470--790           &                    & Ljudöverföring                 & ERC/REC 70-03, Annex 10 e           \\
-	470--790           &                    & Rundradio (DVB-T)              & Äv. DVB-T2 Band IV/V, k. 21--60, \\
-	                   &                    &                                & 470-694 MHz tom 31 mars 2020;       \\
-	                   &                    &                                & 694-790 MHz tom 31 mars 2017        \\
-	790--862           &                    & TRA-ECS	Blocktillstånd         & Undantag från tillståndsplikt       \\
-	823--832           &                    & Ljudöverföring                 & Undantag från tillståndsplikt       \\
-	862--863           &                    & Övrigt                         &  \\
-	863--865           &                    & Allmän kortdistansradio        & Undantag från tillståndsplikt       \\
-	863--865           &                    & Ljudöverföring                 & Undantag från tillståndsplikt       \\
-	865--868           &                    & RFID                           & Undantag från tillståndsplikt       \\
-	\textbf{Frekvens}  & \textbf{Duplex}    & \textbf{Användning}            & \textbf{Anmärkning}                 \\ \hline
-
-	865--868           &                    & Allmän kortdistansradio        & Undantag från tillståndsplikt       \\
-	868--870           &                    & Allmän kortdistansradio        & Undantag från tillståndsplikt       \\
-	868,6--869,7       &                    & Larmöverföring                 & Undantag från tillståndsplikt       \\
-	869,2--869,25      &                    & Trygghetslarm                  & Undantag från tillståndsplikt
+	\textbf{Frekvens}  & \textbf{Duplex}    & \textbf{Användning}     & \textbf{Anmärkning}                      \\ \hline
+	328,6--335,4       &                    & Radionavigering         & För luftfart                             \\
+	328,6--335,4       &                    & Luftfartsradio (ILS)    &  \\
+	335,4--386         &                    & Militär användning      &  \\
+	336--339           & 357--360           & Landmobil radio         &  \\
+	336--339           & 357--360           & SAP/SAB                 & bärbara ljudlänkar                       \\
+	357--360           & 336--339           & Landmobil radio         &  \\
+	357--360           & 336--339           & SAP/SAB                 & bärbara ljudlänkar                       \\
+	370--371           & 386--387           & Fast radio              & Svensk kanalplan Smalbandig              \\
+	374--376           & 387--389           & Fast radio              & Svensk kanalplan Smalbandig              \\
+	380--385           & 390--395           & Landmobil radio         & Blocktillstånd Rakel                     \\
+	380--385           & 390--395           & TETRA                   & Blocktillstånd Rakel                     \\
+	386--387           & 370--371           & Fast radio              & Svensk kanalplan Smalbandig              \\
+	387--389           & 374--376           & Fast radio              & Svensk kanalplan Smalbandig              \\
+	389--390           &                    & Militär användning      &  \\
+	390--395           & 380--385           & Landmobil radio         & Blocktillstånd Rakel                     \\
+	390--395           & 380--385           & TETRA                   & Blocktillstånd Rakel                     \\
+	395--399,9         &                    & Militär användning      &  \\
+	399,9--400,05      &                    & Satellitnavigering      &  \\
+	400,05--400,15     &                    & Satellit                & Standardfrekvens och tidssignal          \\
+	400,15--401        &                    & Satellit                & MSS nedlänk ERC/DEC/(99)05               \\
+	400,15--404        &                    & Radiosonder             & Ballongburna sonder                      \\
+	400,15--404        &                    & Meteorologi             &  \\
+	401--406           &                    & Medicinska implantat    & Undantag från tillståndsplikt            \\
+	402--403           &                    & Meteorologi             & Via satellit                             \\
+	404--406           &                    & Landmobil radio         &  \\
+	\textbf{Frekvens}  & \textbf{Duplex}    & \textbf{Användning}     & \textbf{Anmärkning}                      \\ \hline
+	406--406,1         &                    & Sjöfartsradio (EPIRB)   & Undantag från tillståndsplikt            \\
+	                   &                    &                         & (COSPAS-SARSAT)                          \\
+	406--406,1         &                    & PLB                     & Undantag från tillståndsplikt            \\
+	                   &                    &                         & (COSPAS-SARSAT)                          \\
+	406,1--410         &                    & Landmobil radio         &  \\
+	406,1--410         &                    & PMR                     &  \\
+	410--420           & 420--430           & Landmobil radio         &  \\
+	410--420           & 420--430           & PMR                     &  \\
+	410--420           & 420--430           & TETRA                   &  \\
+	420--430           & 410--420           & Landmobil radio         &  \\
+	420--430           & 410--420           & PMR                     &  \\
+	420--430           & 410--420           & TETRA                   &  \\
+	429,4375--429,4625 &                    & Larmöverföring          & Undantag från tillståndsplikt            \\
+	430--432           &                    & Landmobil radio         &  \\
+	432	438            &                    & Amatörradio             & Undantag från tillståndsplikt            \\
+	433,05--434,79     &                    & Allmän kortdist.radio   & Undantag från tillståndsplikt            \\
+	                   &                    &                         & 2006/771/EG 2013/752/EU                  \\
+	438--439,6875      &                    & Telemetri och radiosty. &  \\
+	438--439,6875      &                    & Kortdistansradio (SRD)  &  \\
+	439,6875--439,9875 &                    & Telemetri och radiost.  & Undantag från tillståndsplikt            \\
+	440--442           &                    & Landmobil radio         &  \\
+	442--444           & 448--450           & Landmobil radio         &  \\
+	442--444           & 448--450           & PMR                     &  \\
+	443,9875--444,4125 &                    & Telemetri och radiost.  & Undantag från tillståndsplikt            \\
+	444--444,5875      &                    & Landmobil radio         &  \\
+	444--444,5875      &                    & Telemetri och radiost.  &  \\
+	444,5875--444,9875 &                    & Landmobil radio         & Undantag från tillståndsplikt            \\
+	\textbf{Frekvens}  & \textbf{Duplex}    & \textbf{Användning}     & \textbf{Anmärkning}                      \\ \hline
+	444,5875--448      &                    & Landmobil radio         &  \\
+	444,5875--448      &                    & PMR                     &  \\
+	446--446,1         &                    & PMR 446                 & Undantag från tillståndsplikt            \\
+	446,1--446,2       &                    & Landmobil radio         & Undantag från tillståndsplikt            \\
+	                   &                    &                         & Digital PMR ECC/DEC/(05)12               \\
+	448--450           & 442--444           & Landmobil radio         &  \\
+	448--450           & 442--444           & PMR                     &  \\
+	450--452,5         & 460--462.5         & PMR                     &  \\
+	452,5--457,5       & 462.5--467.5       & CDMA 450                & Digitala cellulära system                \\
+	457,5--460         & 467.5--470         & PMR                     &  \\
+	457,5125--457,5875 & 467.5125--467.5875 & Kom. ombord fartyg      & 3 kanaler 25 kHz                         \\
+	                   &                    &                         & 5 kanaler 12,5 kHz                       \\
+	460--462,5         & 450--452.5         & PMR                     &  \\
+	462,5--467,5       & 452.5--457.5       & CDMA 450                & Digitala cellulära system                \\
+	467,5--470         & 457.5--460         & PMR                     &  \\
+	467,5125--467,5875 & 457.5125--457.5875 & Kom. ombord  fartyg     & 3 kanaler 25 kHz                         \\
+	                   &                    &                         & 5 kanaler 12,5 kHz                       \\
+	470--790           &                    & Ljudöverföring          & ERC/REC 70-03, Annex 10 e                \\
+	470--790           &                    & Rundradio (DVB-T)       & Äv. DVB-T2 Band IV/V, k. 21--60,         \\
+	                   &                    &                         & 470-694 MHz tom 31 mars 2020;            \\
+	                   &                    &                         & 694-790 MHz tom 31 mars 2017             \\
+	790--862           &                    & TRA-ECS	Block           & Undantag från tillståndsplikt            \\
+	823--832           &                    & Ljudöverföring          & Undantag från tillståndsplikt            \\
+	862--863           &                    & Övrigt                  &  \\
+	863--865           &                    & Allmän kortdistansradio & Undantag från tillståndsplikt            \\
+	863--865           &                    & Ljudöverföring          & Undantag från tillståndsplikt            \\
+	865--868           &                    & RFID                    & Undantag från tillståndsplikt            \\
+	\textbf{Frekvens}  & \textbf{Duplex}    & \textbf{Användning}     & \textbf{Anmärkning}                      \\ \hline
+	865--868           &                    & Allmän kortdist.radio   & Undantag från tillståndsplikt            \\
+	868--870           &                    & Allmän kortdist.radio   & Undantag från tillståndsplikt            \\
+	868,6--869,7       &                    & Larmöverföring          & Undantag från tillståndsplikt            \\
+	869,2--869,25      &                    & Trygghetslarm           & Undantag från tillståndsplikt            \\
+	870,5375--870,6625 &                    & Telemetri och radiost.  & Undantag från tillståndsplikt            \\
+	871--876           &                    & Kortdistansradio (SRD)  &  \\
+	876--880           & 921--925           & GSM-R                   & MobiSIR telefon till bas                 \\
+	880--915           & 925--960           & E-GSM                   & Telefon till bas                         \\
+	915--916           &                    & Övrigt                  & Skyddband GSM 900                        \\
+	916--921           &                    & Kortdistansradio (SRD)  &  \\
+	921--925           & 876--880           & GSM-R                   & MobiSIR Bas till telefon                 \\
+	925--960           & 880--915           & E-GSM                   & Bas till telefon                         \\
+	960--1164          &                    & Luftfart                & Radionavigering                          \\
+	960--1215          &                    & Militär användning      &  \\
+	960--1215          &                    & Luftfartsradio (DME)    &  \\
+	1026--1034         & 1086--1094         & Radionavigering         & För luftfart                             \\
+	1026--1034         & 1086--1094         & Luftfartsradio (SSR)    &  \\
+	1086--1094         & 1026--1034         & Radionavigering         & För luftfart                             \\
+	1086--1094         & 1026--1034         & Luftfartsradio (SSR)    &  \\
+	1164--1350         &                    & Radionavigering         & För luftfart                             \\
+	1164--1191,795     &                    & Satellitnavigering      & GPS                                      \\
+	1164--1215         &                    & Satellitnavigering      & GALILEO                                  \\
+	1191,795--1215     &                    & Satellitnavigering      & GLONASS                                  \\
+	1215--1355         &                    & Radiolokalisering       &  \\
+	1215--1237         &                    & Satellitnavigering      & GPS                                      \\
+	1237--1260         &                    & Satellitnavigering      & GLONASS                                  \\
+	1240--1300         &                    & Amatörradio             & Undantag från tillståndsplikt            \\
+	\textbf{Frekvens}  & \textbf{Duplex}    & \textbf{Användning}     & \textbf{Anmärkning}                      \\ \hline
+	1260--1300         &                    & Satellitnavigering      & GALILEO                                  \\
+	1300--1375         &                    & Militär användning      &  \\
+	1330--1427         &                    & Radioastronomi          & Onsala rymd - observatorium              \\
+	1375--1400         & 1427--1452         & Fast radio              & Kanalplan T/R 13-01                      \\
+	1400--1427         &                    & Satellit                & Jordutforskning via satellit             \\
+	1427--1452         & 1375--1400         & Fast radio              & Kanalplan T/R 13-01                      \\
+	1452--1492         &                    & MFCN                    &  \\
+	1492--1544         &                    & Militär användning      &  \\
+	1518--1525         &                    & Satellit                & MSS nedlänk                              \\
+	1525--1559         &                    & Satellit                & MSS nedlänk                              \\
+	1544--1545         &                    & Sjöfartsradio           & Nöd- och säkerhetstrafik                 \\
+	1545--1559         &                    & Militär användning      &  \\
+	1559--1591         &                    & Satellitnavigering      & GALILEO                                  \\
+	1563--1587         &                    & Satellitnavigering      & GPS                                      \\
+	1591--1610         &                    & Satellitnavigering      & GLONASS                                  \\
+	1610--1613,8       &                    & Satellit                & Jordstationer (mobila sat.system)        \\
+	                   &                    &                         & MSS upplänk                              \\
+	                   &                    &                         & Undantag från tillståndsplikt            \\
+	1610,6--1613,8     &                    & Radioastronomi          & Onsala rymd - observatorium              \\
+	1613,8--1626,5     &                    & Satellit                & Jordstationer (mobila sat.system)        \\
+	                   &                    &                         & MSS upplänk                              \\
+	                   &                    &                         & Undantag från tillståndsplikt            \\
+	1626,5--1645,5     &                    & Satellit                & Jordstationer (mobila sat.system)        \\
+	                   &                    &                         & MSS upplänk                              \\
+	                   &                    &                         & Undantag från tillståndsplikt            \\
+	1645,5--1646,5     &                    & Sjöfartsradio           & Nöd- och säkerhetstrafik                 \\
+	                   &                    &                         &  \\
+	\textbf{Frekvens}  & \textbf{Duplex}    & \textbf{Användning}     & \textbf{Anmärkning}                      \\ \hline
+	1646,5--1660,5     &                    & Satellit                & Jordstationer (mobila sat.system)        \\
+	                   &                    &                         & MSS upplänk                              \\
+	                   &                    &                         & Undantag från tillståndsplikt            \\
+	1660--1670         &                    & Radioastronomi          & Onsala rymd - observatorium              \\
+	1668--1670         &                    & Satellit                & Jordstationer (mobila sat.system)        \\
+	                   &                    &                         & MSS upplänk                              \\
+	1670--1675         &                    & Satellit                & Jordstationer (mobila sat.system)        \\
+	                   &                    &                         & MSS upplänk                              \\
+	1675--1710         &                    & Satellit                & Meteorologi via satellit                 \\
+	1710--1785         & 1805--1880         & DCS1800                 & Mobiltel. 1800-bandet mobil till bas     \\
+	1718,8--1722,2     &                    & Radioastronomi          & Onsala rymd - observatorium              \\
+	1785--1805         &                    & Ljudöverföring          &  \\
+	1805--1880         & 1710--1785         & DCS1800                 & Mobiltel. 1800-bandet bas till mobil     \\
+	1880--1900         &                    & DECT                    & Undantag från tillståndsplikt            \\
+	1900--1920         &                    & UMTS                    & Mobiltel. 2100-bandet TDD                \\
+	1920--1980         & 2110--2170         & UMTS                    & Mobiltel. 2100-bandet mobil till bas     \\
+	1980--2010         &                    & Satellit                & Jordstationer (mobila satellitsystem)    \\
+	                   &                    &                         & MSS upplänk Blocktillstånd               \\
+	                   &                    &                         & Undantag från tillståndsplikt            \\
+	2010--2025         &                    & ?                       & Digitala cellulära system                \\
+	2025--2110         &                    & Militär användning      &  \\
+	2025--2110         &                    & Rymdfarkostkontroll     & Upplänk Satellit-satellit                \\
+	2110--2170         & 1920--1980         & UMTS                    & Mobiltel. 2100-bandet bas till mobil \\
+	2170--2200         &                    & Satellit                & MSS nedlänk Blocktillstånd               \\
+	2200--2300         &                    & Militär användning      &  \\
+	2200--2290         &                    & Rymdfarkostkontroll     & Nedlänk Satellit-satellit                \\
+	2300--2400         &                    & MFCN                    & ECC/DEC/(14)02                           \\
+	\textbf{Frekvens}  & \textbf{Duplex}    & \textbf{Användning}     & \textbf{Anmärkning}                      \\ \hline
+	2400--2483,5       &                    & Militär användning      &  \\
+	2400--2450         &                    & Amatörradio             & Undantag från tillståndsplikt            \\
+	                   &                    &                         & Max 100 mW                               \\
+	2400--2483,5       &                    & Landmobil radio         &  \\
+	2400--2483,5       &                    & Allmän kortdist.radio   & Undantag från tillståndsplikt            \\
+	2400--2483,5       &                    & ISM                     & Mikrovågsugnar, bluetooth, wifi...        \\
+	2400--2483,5       &                    & Radiobestämning         & Undantag från tillståndsplikt            \\
+	2400--2483,5       &                    & Dataöverföring          & WIFI2100-bandet                          \\
+	                   &                    &                         & Undantag från tillståndsplikt            \\
+	2446--2454         &                    & RFID                    & Undantag från tillståndsplikt            \\
+	2483,5--2500       &                    & Medicinska implantat    & Undantag från tillståndsplikt            \\
+	2483,5--2500       &                    & Satellit                & MSS nedlänk                              \\
+	2500--2690         &                    & LTE-2600                & Mobiltelefoni 2600-bandet                \\
+	2655--2690         &                    & Radioastronomi          & Onsala rymd - observatorium              \\
+	2690--2700         &                    & Radioastronomi          & Onsala rymd - observatorium              \\
+	2700--2900         &                    & Radionavigering         & För luftfart                             \\
+	2700--2900         &                    & Radiolokalisering       &
 \end{longtable}
-
 \end{landscape}
-
-
-
 \end{document}
+
+
 
