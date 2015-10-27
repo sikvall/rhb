@@ -273,59 +273,40 @@ Effekten i tabellen är ustrålad effekt PEP om inte annat anges.
 \subsection{Jakt och jordbruksfrekvenser 155 MHz}
 \begin{tabular}{rlrl}
 	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde} \\ \hline
-	          155,425 & Jakt K1            &             5 W & Jakt, Jordbruk [M]         \\
-	          155,475 & Jakt K2            &             5 W & Jakt, Jordbruk [M]         \\
-	          155,475 & Jakt K3            &             5 W & Jakt, Jordbruk [M]         \\
-	          155,525 & Jakt K4            &             5 W & Jakt, Jordbruk [M]         \\
-	          156,000 & Jakt K5            &             5 W & Jakt, Jordbruk, PMR        \\
-	          155,400 & Jakt K6            &             5 W & Jakt, Jordbruk [M]         \\
-	          155,450 & Jakt K7            &             5 W & Jakt, Jordbruk [M]
+	          155,425 & Jakt K1            &             5 W & Jakt, Jordbruk         \\
+	          155,475 & Jakt K2            &             5 W & Jakt, Jordbruk         \\
+	          155,500 & Jakt K3            &             5 W & Jakt, Jordbruk$^M$         \\
+	          155,525 & Jakt K4            &             5 W & Jakt, Jordbruk$^M$         \\
+	          156,000 & Jakt K5            &             5 W & Generell landmobil radio$^P$       \\
+	          155,400 & Jakt K6            &             5 W & Jakt, Jordbruk         \\
+	          155,450 & Jakt K7            &             5 W & Jakt, Jordbruk
 \end{tabular}
 
-Jakt K5 är öppen att användas för andra ändamål och sammanfaller ej med marina VHF-bandet vilket de andra gör.
-
+\footnotesize
+\begin{itemize}
+	\item[$^M$] Delas med marina VHF-bandet, kanalerna L1 och L2 för fritidsbåtar.
+	\item[$^P$] PMR-kanal som kan användas till vad som helst så länge det är landmobil radio och effekten ej överskrids.
+\end{itemize}
+\normalsize
 
 \subsection{Öppna PMR-bandet på 446 MHz}
 \begin{tabular}{rlrl}
 	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde} \\ \hline
-	        446,00625 & PMR446 K1          &          500 mW & PMR [N]                    \\
-	        446,01875 & PMR446 K2          &          500 mW & PMR [N]                    \\
-	        446,03125 & PMR446 K3          &          500 mW & PMR [N]                    \\
-	        446,04375 & PMR446 K4          &          500 mW & PMR [N]                    \\
-	        446,05625 & PMR446 K5          &          500 mW & PMR [N]                    \\
-	        446,06875 & PMR446 K6          &          500 mW & PMR [N]                    \\
-	        446,08125 & PMR446 K7          &          500 mW & PMR [N]                    \\
-	        446,09375 & PMR446 K8          &          500 mW & PMR [N]
+	        446,00625 & PMR446 K1          &          500 mW & PMR$^N$                     \\
+	        446,01875 & PMR446 K2          &          500 mW & PMR$^N$                     \\
+	        446,03125 & PMR446 K3          &          500 mW & PMR$^N$                 \\
+	        446,04375 & PMR446 K4          &          500 mW & PMR$^N$                     \\
+	        446,05625 & PMR446 K5          &          500 mW & PMR$^N$                     \\
+	        446,06875 & PMR446 K6          &          500 mW & PMR$^N$                    \\
+	        446,08125 & PMR446 K7          &          500 mW & PMR$^N$                     \\
+	        446,09375 & PMR446 K8          &          500 mW & PMR$^N$ 
 \end{tabular}
 
-[M] Delas med marin VHF-radio. Får därför inte användas till sjöss inom landets gränser eller i svenska territorialvatten.
-
-[N] Smalbandig FM-modulation skall användas pga tätt liggande kanaler.
-
-\subsection{Marin VHF}
-
-Det marina VHF-bandet är ofta intressant att lyssna på. Det är dock ett licenspliktigt band och du får inte sända på detta band om du ej har klarat en särskild certifiering och har en licens för detta. Var uppmärksam på nödtrafik och annan trafik så den ej störs. Det marina VHF-bandet indelas i kanaler om 25~kHz och det finns både simplex och duplex-kanaler som kan användas i bandet. Bandet är avsett för kommunikation skepp till skepp samt mellan skepp och kustradiostationer.
-
-Svenska kustradiostationer inom (parentes).
-
-\begin{longtable}{rrrl}
-	\textbf{K} & \textbf{Skepp} & \textbf{Kust} & \textbf{Användning Sverige} \\ \hline
-	        L1 &        155,500 &       Simplex & Fritidsbåtar     \\
-	        L2 &        155,525 &       Simplex & Fritidsbåtar     \\
-	        F1 &        155,625 &       Simplex & Yrkesfiskefartyg \\
-	        L3 &        155,650 &       Simplex & ---              \\
-	        F2 &        155,775 &       Simplex & Yrkesfiskefartyg \\
-	        F3 &        155,825 &       Simplex & Yrkesfiskefartyg \\
-	         0 &        156,000 &       160,600 &  \\
-	         1 &        156,050 &       160,560 & (Kinnekulle)     \\
-	         2 &        156,100 &       160,700 &  \\
-	         3 &        156,150 &       160,750 &\\
-	         4 & 156,200 & 160,800 & \\
-	         5 & 156,250 & 160,850 & \\
-	         6 & 156,300 & 156,300 & \\
-	         
-\end{longtable}
-$>>>>>$ Ej klar tabell
+\footnotesize
+\begin{itemize}
+	\item[$^N$] Smalbandig FM-modulation skall användas pga tätt liggande kanaler.
+\end{itemize}
+\normalsize
 
 \subsection{Kortdistansradio (KDR)}
 
