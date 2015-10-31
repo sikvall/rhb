@@ -107,8 +107,8 @@ Det är svårare att veta exakt hur utländska signaler är uppbyggda. Eftersom 
 Sverige delas in i följande distrikt efter sina län:
 
 \begin{center}
-\begin{tabular}{cl}
-	\textbf{Dist.} & \textbf{Län}                                     \\ \hline
+\begin{longtable}{cl}
+	\textbf{Dist.} & \textbf{Län}                                     \\ \hline \endhead
 	      0        & Stockholm                                        \\
 	      1        & Gotland                                          \\
 	      2        & Västerbotten, Norrbotten                         \\
@@ -118,13 +118,13 @@ Sverige delas in i följande distrikt efter sina län:
 	      6        & Halland, Västra götaland                         \\
 	      7        & Skåne, Blekinge, Kronoberg, Jönköping, Kalmar    \\
 	      8        & Speciella stationer utanför landets gränser
-\end{tabular}
+\end{longtable}
 \end{center}
 
 \section{Terminologi och trafik}
 \subsection{Q-koder}
 \begin{longtable}{ll}
-	\textbf{Kod} & \textbf{Fråga / Svar}                                                 \\ \hline
+	\textbf{Kod} & \textbf{Fråga / Svar}                                                 \\ \hline 
 	QRA          & Vad heter er station?                                                 \\
 	             & Vår station heter ...                                                 \\ \hline
 	QRB          & Hur långt bort från min station befinner ni er?                       \\
@@ -289,7 +289,7 @@ Mottagarbandbredden (RBW) anges i kHz och brusgolvet i dBm (dB relaterat en styr
 \subsection{Return loss och VSWR}
 
 Return loss och VSWR anger samma sak. VSWR är vanligare inom amatörradio medan man i profesionella sammanhang föredrar att prata om return loss. RL är storleken på den reflekterade signalen i förhållande till den framåtgående signalen. Return loss mäts alltså i dB enligt formeln $10\log(P_F/P_R)$ där $P_F$ är den framåtgående effekten (forward) och  $P_R$ är den reflekterade signalen i retur.
-
+\clearpage
 \begin{longtable}{rrr|rrr|rrr}
 	\textbf{RL} & \textbf{VSWR} & \textbf{\%} & \textbf{RL} & \textbf{VSWR} & \textbf{\%} & \textbf{RL} & \textbf{VSWR} & \textbf{\%} \\ \hline 	\endhead
 	          1 &         17,39 &       79,43 &           8 &          2,32 &       15,85 &          20 &          1,22 &        1,00 \\
@@ -400,6 +400,7 @@ Rekommendationer för repeatrar i olika distrikt och län att använda CTCSS fö
 	Distrikt 7      &      79.7       &      156.7      &      210.7      &
 \end{longtable}
 
+\clearpage
 \section{Kanalnumrering för amatörradioband}
 
 Denna typ av kanalnumrering är överenskommen inom IARU region 1 för 6m, 2m och 70cm banden på amatörradiofrekvenser. Kanalnumreringen består av ett prefix som anger vilket band och här används F--6m, V--2m, U--70cm. Därefter används 2 siffror på 6m och 2m banden och tre siffror på 70cm bandet för att ange kanal. Repeaterfrekvenser anges med tillägget R före kanalnumret och innebär då normalt duplex med det skift som normalt används för bandet. Vid repeatrar är det repeaterns utfrekvens som anges, dvs den som mobilstationen lyssnar på. Exempel: RV48.
@@ -414,6 +415,122 @@ Denna typ av kanalnumrering är överenskommen inom IARU region 1 för 6m, 2m oc
 Eftersom amatörradiobanden ser lite olika ut i olika länder förekommer det kanaler i numreringen som inte är tillåtna på vissa ställen. Det är därför viktig att kontrollera att man fortfarande följer bandplanerna i den region man är.
 
 I 6 m bandet finns inga FM-kanaler definierade under 51 MHz. För 2m-bandet är FM-kanaler endast definierade från 145 MHz och uppåt. I 70 cm-bandet är inga kanaler definierade i intervallet 432.000--433.000 MHz.
+\clearpage
+\subsection{FM-kanaler 6m-bandet}
+
+\begin{longtable}{rrl|rrl}
+	 Kanal & Tidigare & Anm   &  Kanal & Tidigare & Anm \\ \hline
+	51,500 &     F50 &       & 51,750 &     F75 &  \\
+	51,510 &     F51 & Anrop & 51,760 &     F76 &  \\
+	51,520 &     F52 &       & 51,770 &     F77 &  \\
+	51,530 &     F53 &       & 51,780 &     F78 &  \\
+	51,540 &     F54 &       & 51,790 &     F79 &  \\
+	51,550 &     F55 &       & 51,800 &     F80 &  \\
+	51,560 &     F56 &       & 51,810 &    RF81 &  \\
+	51,570 &     F57 &       & 51,820 &    RF82 &  \\
+	51,580 &     F58 &       & 51,830 &    RF83 &  \\
+	51,590 &     F59 &       & 51,840 &    RF84 &  \\
+	51,600 &     F60 &       & 51,850 &    RF85 &  \\
+	51,610 &     F61 &       & 51,860 &    RF86 &  \\
+	51,620 &     F62 &       & 51,870 &    RF87 &  \\
+	51,630 &     F63 &       & 51,880 &    RF88 &  \\
+	51,640 &     F64 &       & 51,890 &    RF89 &  \\
+	51,650 &     F65 &       & 51,900 &    RF90 &  \\
+	51,660 &     F66 &       & 51,910 &    RF91 &  \\
+	51,670 &     F67 &       & 51,920 &    RF92 &  \\
+	51,680 &     F68 &       & 51,930 &    RF93 &  \\
+	51,690 &     F69 &       & 51,940 &    RF94 &  \\
+	51,700 &     F70 &       & 51,950 &    RF95 &  \\
+	51,710 &     F71 &       & 51,960 &    RF96 &  \\
+	51,720 &     F72 &       & 51,970 &    RF97 &  \\
+	51,730 &     F73 &       & 51,980 &    RF98 &  \\
+	51,740 &     F74 &       & 51,990 &    RF99 &
+\end{longtable}
+
+\clearpage
+\subsection{FM-kanaler 2m-bandet}
+
+\begin{longtable}{rrl|rrl}
+	Frekvens & Kanal & Anm.          & Frekvens & Kanal & Anm.          \\ \hline
+	145,2125 &   V17 &               & 145,5000 &   V40 & S20  FM Anrop \\
+	145,2250 &   V18 & S9            & 145,5125 &   V41 &  \\
+	145,2375 &   V19 & INET GW       & 145,5250 &   V42 & S21           \\
+	145,2500 &   V20 & S10           & 145,5375 &   V43 &  \\
+	145,2625 &   V21 &               & 145,5500 &   V44 & S22           \\
+	145,2750 &   V22 & S11           & 145,5625 &   V45 &  \\
+	145,2875 &   V23 & INET GW       & 145,5750 &   V46 & S23           \\
+	145,3000 &   V24 & S12  RTTY     & 145,5875 &   V47 &  \\
+	145,3125 &   V25 &               & 145,6000 &  RV48 & R0            \\
+	145,3250 &   V26 & S13           & 145,6125 &  RV49 & R0X           \\
+	145,3375 &   V27 & INET GW       & 145,6250 &  RV50 & R1            \\
+	145,3500 &   V28 & S14           & 145,6375 &  RV51 & R1X           \\
+	145,3625 &   V29 &               & 145,6500 &  RV52 & R2            \\
+	145,3750 &   V30 & S15  DV Anrop & 145,6625 &  RV53 & R2X           \\
+	145,3875 &   V31 &               & 145,6750 &  RV54 & R3            \\
+	145,4000 &   V32 & S16           & 145,6875 &  RV55 & R3X           \\
+	145,4125 &   V33 &               & 145,7000 &  RV56 & R4            \\
+	145,4250 &   V34 & S17           & 145,7125 &  RV57 & R4X           \\
+	145,4375 &   V35 &               & 145,7250 &  RV58 & R5            \\
+	145,4500 &   V36 & S18           & 145,7375 &  RV59 & R5X           \\
+	145,4625 &   V37 &               & 145,7500 &  RV60 & R6            \\
+	145,4750 &   V38 & S19           & 145,7625 &  RV61 & R6X           \\
+	145,4875 &   V39 &               & 145,7750 &  RV62 & R7            \\
+	         &       &               & 145,7875 &  RV63 & R7X
+\end{longtable}
+
+\clearpage
+\subsection{FM-kanaler 70cm-bandet}
+
+\begin{longtable}{rrl|rrl}
+	Frekvens & Kanal & Anm.    & Frekvens & Kanal & Anm  \\ \hline
+	433,4000 &  U272 & SSTV    & 433,7125 &  U297 &  \\
+	433,4125 &  U273 &         & 433,7250 &  U298 &  \\
+	433,4250 &  U274 &         & 433,7375 &  U299 &  \\
+	433,4375 &  U275 &         & 433,7500 &  U300 &  \\
+	433,4500 &  U276 & Digital & 433,7625 &  U301 &  \\
+	433,4625 &  U277 &         & 433,7750 &  U302 &  \\
+	433,4750 &  U278 &         & 433,7875 &  U303 &  \\
+	433,4875 &  U279 &         & 433,8000 &  U304 & APRS \\
+	433,5000 &  U280 & Anrop   & 433,8125 &  U305 &  \\
+	433,5125 &  U281 &         & 433,8250 &  U306 &  \\
+	433,5250 &  U282 &         & 433,8375 &  U307 &  \\
+	433,5375 &  U283 &         & 433,8500 &  U308 &  \\
+	433,5500 &  U284 &         & 433,8625 &  U309 &  \\
+	433,5625 &  U285 &         & 433,8750 &  U310 &  \\
+	433,5750 &  U286 &         & 433,8875 &  U311 &  \\
+	433,5875 &  U287 &         & 433,9000 &  U312 &  \\
+	433,6000 &  U288 & RTTY    & 433,9125 &  U313 &  \\
+	433,6125 &  U289 &         & 433,9250 &  U314 &  \\
+	433,6250 &  U290 &         & 433,9375 &  U315 &  \\
+	433,6375 &  U291 &         & 433,9500 &  U316 &  \\
+	433,6500 &  U292 &         & 433,9625 &  U317 &  \\
+	433,6625 &  U293 &         & 433,9750 &  U318 &  \\
+	433,6750 &  U294 &         & 433,9875 &  U319 &  \\
+	433,6875 &  U295 &         & 434,0000 &  U320 &  \\
+	433,7000 &  U296 & FAX     &          &       &
+\end{longtable}
+
+\clearpage
+\begin{longtable}{rrl|rrl}
+	Frekvens & Kanal & Anm. & Frekvens & Kanal & Anm. \\ \hline
+	434,6000 & RU368 & RU0  & 434,8000 & RU384 & RU8  \\
+	434,6125 & RU369 &      & 434,8125 & RU385 &  \\
+	434,6250 & RU370 & RU1  & 434,8250 & RU386 & RU9  \\
+	434,6375 & RU371 &      & 434,8375 & RU387 &  \\
+	434,6500 & RU372 & RU2  & 434,8500 & RU388 & RU10 \\
+	434,6625 & RU373 &      & 434,8625 & RU389 &  \\
+	434,6750 & RU374 & RU3  & 434,8750 & RU390 & RU11 \\
+	434,6875 & RU375 &      & 434,8875 & RU391 &  \\
+	434,7000 & RU376 & RU4  & 434,9000 & RU392 & RU12 \\
+	434,7125 & RU377 &      & 434,9125 & RU393 &  \\
+	434,7250 & RU378 & RU5  & 434,9250 & RU394 & RU13 \\
+	434,7375 & RU379 &      & 434,9375 & RU395 &  \\
+	434,7500 & RU380 & RU6  & 434,9500 & RU396 & RU14 \\
+	434,7625 & RU381 &      & 434,9625 & RU397 &  \\
+	434,7750 & RU382 & RU7  & 434,9750 & RU398 & RU15 \\
+	434,7875 & RU383 &      & 434,9875 & RU399 &  \\
+	         &       &      & 435,0000 & RU400 & RU16
+\end{longtable}
 
 \begin{landscape}
 \section{Repeatrar, länkar och fyrar}
