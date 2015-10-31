@@ -213,16 +213,18 @@ Sverige delas in i följande distrikt efter sina län:
 
 \section{Signal och brus}
 
+\subsection{Effekt i dBW och dBm}
+
 Effekter anges i W eller i decibel relaterat till 1 mW (dBm) eller relaterat 1W (dBW). Tabell över effekt och decibelwatt nedan:
 \begin{center}
-\begin{tabular}{rrr|rrr}
-	            \textbf{W} & \textbf{dBW} & \textbf{dBm} &    \textbf{W} & \textbf{dBW} & \textbf{dBm} \\ \hline
-	  1 \textmu W & -60 & -30 &  1 W &   0 &  30 \\
-	 10 \textmu W & -50 & -20 &  3 W &   5 &  35 \\
-	100 \textmu W & -40 & -10 &  5 W &   7 &  37 \\
-	         1 mW & -30 &   0 & 10 W &  10 &  40 \\
-	        10 mW & -20 &  10 & 20 W &  13 &  43 \\
-	       100 mW & -10 &  20 & 50 W &  17 &  47
+\begin{tabular}{rrr|rrr|rrr}
+	   \textbf{W} & \textbf{dBW} & \textbf{dBm} & \textbf{W} & \textbf{dBW} & \textbf{dBm} & \textbf{W} & \textbf{dBW} & \textbf{dBm} \\ \hline
+	  1 \textmu W &          -60 &          -30 &        1 W &            0 &           30 &      100 W &           20 &           50 \\
+	 10 \textmu W &          -50 &          -20 &        3 W &            5 &           35 &      250 W &           24 &           54 \\
+	100 \textmu W &          -40 &          -10 &        5 W &            7 &           37 &      500 W &           27 &           57 \\
+	         1 mW &          -30 &            0 &       10 W &           10 &           40 &       1 kW &           30 &           60 \\
+	        10 mW &          -20 &           10 &       20 W &           13 &           43 &     1.5 kW &           32 &           62 \\
+	       100 mW &          -10 &           20 &       50 W &           17 &           47 &     2.0 kW &           33 &           63
 \end{tabular}
 \end{center}
 
@@ -233,9 +235,9 @@ Signalstyrkan i amatörradio uttrycks oftast som S-värden. Dessa fås i regel g
 Standard kalibrering för S-metern är enligt följande skala:
 
 \begin{center}
-\begin{tabular}{r|rr|rr}
-	     & \multicolumn{2}{c|}{$<$ 30 MHz} & \multicolumn{2}{c}{$>$ 30 MHz} \\
-	   S &  dBm &                \textmu V &  dBm &               \textmu V \\ \hline
+\begin{longtable}{r|rr|rr}
+	     & \multicolumn{2}{c|}{$<$ 30 MHz} & \multicolumn{2}{c}{$>$ 30 MHz} \\ 
+	   \textbf{S} &  \textbf{dBm} &                \textbf{\textmu V} &  \textbf{dBm} &               \textbf{\textmu V} \\ \hline \endhead
 	   1 & -121 &                     0.21 & -141 &                    0.02 \\
 	   2 & -115 &                     0.40 & -135 &                    0.04 \\
 	   3 & -109 &                     0.80 & -129 &                    0.08 \\
@@ -249,7 +251,7 @@ Standard kalibrering för S-metern är enligt följande skala:
 	9+20 &  -53 &                      500 &  -73 &                      50 \\
 	9+30 &  -43 &                     1600 &  -63 &                     160 \\
 	9+40 &  -33 &                     5000 &  -53 &                     500
-\end{tabular}
+\end{longtable}
 \end{center}
 \subsection{Termiska brusgolvet}
 
@@ -265,6 +267,23 @@ Standard kalibrering för S-metern är enligt följande skala:
 
 Mottagarbandbredden (RBW) anges i kHz och brusgolvet i dBm (dB relaterat en styrka om 1 mW).
 
+\subsection{Return loss och VSWR}
+
+Return loss och VSWR anger samma sak. VSWR är vanligare inom amatörradio medan man i profesionella sammanhang föredrar att prata om return loss. RL är storleken på den reflekterade signalen i förhållande till den framåtgående signalen. Return loss mäts alltså i dB enligt formeln $10\log(P_F/P_R)$ där $P_F$ är den framåtgående effekten (forward) och  $P_R$ är den reflekterade signalen i retur.
+
+\begin{longtable}{rrr|rrr|rrr}
+	\textbf{RL} & \textbf{VSWR} & \textbf{\%} & \textbf{RL} & \textbf{VSWR} & \textbf{\%} & \textbf{RL} & \textbf{VSWR} & \textbf{\%} \\ \hline 	\endhead
+	          1 &         17,39 &       79,43 &           8 &          2,32 &       15,85 &          20 &          1,22 &        1,00 \\
+	          2 &          8,72 &       63,10 &          10 &          1,92 &       10,00 &          22 &          1,17 &        0,63 \\
+	          3 &          5,85 &       50,12 &          12 &          1,67 &        6,31 &          24 &          1,13 &        0,40 \\
+	          4 &          4,42 &       39,81 &          14 &          1,50 &        3,98 &          25 &          1,12 &        0,32 \\
+	          5 &          3,57 &       31,62 &          15 &          1,43 &        3,16 &          26 &          1,11 &        0,25 \\
+	          6 &          3,01 &       25,12 &          16 &          1,38 &        2,51 &          28 &          1,08 &        0,16 \\
+	          7 &          2,61 &       19,95 &          18 &          1,29 &        1,58 &          30 &          1,07 &        0,10
+\end{longtable}
+
+Acceptabelt RL är ungefär från 14 dB, riktigt bra från 20 dB och de bästa komponenterna ligger runt 30 dB. Många antenntuners som går med automatik startar avstämningen först när VSWR är 1:2 eller sämre som motsvarar ca 10 dB RL.
+
 \section{Frekvenser, ej amatörradio}
 
 Dessa frekvenser är avsedda för allmänhet eller för specifika ända\-mål som anges. Det innebär att de kan brukas för de ändamål som anges i PTS för\-fatt\-nings\-sam\-ling\-ar och sammanställning över ej tillståndspliktiga frekvenser. Observera att du är skyldig att själv kontrollera bestämmelserna innan en frekvens brukas.
@@ -272,16 +291,16 @@ Dessa frekvenser är avsedda för allmänhet eller för specifika ända\-mål so
 Effekten i tabellen är ustrålad effekt PEP om inte annat anges.
 
 \subsection{Jakt och jordbruksfrekvenser 155 MHz}
-\begin{tabular}{rlrl}
-	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde} \\ \hline
-	          155,425 & Jakt K1            &             5 W & Jakt, Jordbruk         \\
-	          155,475 & Jakt K2            &             5 W & Jakt, Jordbruk         \\
-	          155,500 & Jakt K3            &             5 W & Jakt, Jordbruk$^M$         \\
-	          155,525 & Jakt K4            &             5 W & Jakt, Jordbruk$^M$         \\
-	          156,000 & Jakt K5            &             5 W & Generell landmobil radio$^P$       \\
-	          155,400 & Jakt K6            &             5 W & Jakt, Jordbruk         \\
+\begin{longtable}{rlrl}
+	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde}   \\ \hline \endhead
+	          155,425 & Jakt K1            &             5 W & Jakt, Jordbruk               \\
+	          155,475 & Jakt K2            &             5 W & Jakt, Jordbruk               \\
+	          155,500 & Jakt K3            &             5 W & Jakt, Jordbruk$^M$           \\
+	          155,525 & Jakt K4            &             5 W & Jakt, Jordbruk$^M$           \\
+	          156,000 & Jakt K5            &             5 W & Generell landmobil radio$^P$ \\
+	          155,400 & Jakt K6            &             5 W & Jakt, Jordbruk               \\
 	          155,450 & Jakt K7            &             5 W & Jakt, Jordbruk
-\end{tabular}
+\end{longtable}
 
 \footnotesize
 \begin{itemize}
@@ -291,17 +310,17 @@ Effekten i tabellen är ustrålad effekt PEP om inte annat anges.
 \normalsize
 
 \subsection{Öppna PMR-bandet på 446 MHz}
-\begin{tabular}{rlrl}
-	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde} \\ \hline
-	        446,00625 & PMR446 K1          &          500 mW & PMR$^N$                     \\
-	        446,01875 & PMR446 K2          &          500 mW & PMR$^N$                     \\
-	        446,03125 & PMR446 K3          &          500 mW & PMR$^N$                 \\
-	        446,04375 & PMR446 K4          &          500 mW & PMR$^N$                     \\
-	        446,05625 & PMR446 K5          &          500 mW & PMR$^N$                     \\
+\begin{longtable}{rlrl}
+	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde} \\ \hline \endhead
+	        446,00625 & PMR446 K1          &          500 mW & PMR$^N$                    \\
+	        446,01875 & PMR446 K2          &          500 mW & PMR$^N$                    \\
+	        446,03125 & PMR446 K3          &          500 mW & PMR$^N$                    \\
+	        446,04375 & PMR446 K4          &          500 mW & PMR$^N$                    \\
+	        446,05625 & PMR446 K5          &          500 mW & PMR$^N$                    \\
 	        446,06875 & PMR446 K6          &          500 mW & PMR$^N$                    \\
-	        446,08125 & PMR446 K7          &          500 mW & PMR$^N$                     \\
-	        446,09375 & PMR446 K8          &          500 mW & PMR$^N$ 
-\end{tabular}
+	        446,08125 & PMR446 K7          &          500 mW & PMR$^N$                    \\
+	        446,09375 & PMR446 K8          &          500 mW & PMR$^N$
+\end{longtable}
 
 \footnotesize
 \begin{itemize}
@@ -313,8 +332,8 @@ Effekten i tabellen är ustrålad effekt PEP om inte annat anges.
 
 Kallas även SRBR för Short Range Business Radio.
 
-\begin{tabular}{rlrl}
-	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde} \\ \hline
+\begin{longtable}{rlrl}
+	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde} \\ \hline \endhead
 	          444,600 & SRBR K1            &             2 W & Short range business radio \\
 	          444,625 & SRBR K2            &             2 W & Short range business radio \\
 	          444,800 & SRBR K3            &             2 W & Short range business radio \\
@@ -323,7 +342,7 @@ Kallas även SRBR för Short Range Business Radio.
 	          444,875 & SRBR K6            &             2 W & Short range business radio \\
 	          444,925 & SRBR K7            &             2 W & Short range business radio \\
 	          444,975 & SRBR K8            &             2 W & Short range business radio
-\end{tabular}
+\end{longtable}
 
 SRBR är ett ej tillståndspliktigt frekvenssegment som används för yrkesmässig radiotrafik.
 
