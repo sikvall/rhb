@@ -406,9 +406,12 @@ Repeaterfrekvenser anges med tillägget R före kanalnumret och innebär då nor
 
 \begin{tabular}{crrll}
 	\textbf{Band} & \textbf{Startfrekvens} & \textbf{Kanalraster} & \textbf{Första kanal} & \textbf{Beräknas}    \\ \hline
-	     6 m      &             51.000 MHz &             10.0 kHz & F00                   & $f=51+k\cdot0.010$   \\
+	     6 m      &             51.000 MHz &             10.0 kHz & F00                   & $f=51+k\cdot0.01$   \\
+             & & & & $k=(f-51)/0,01$\\ \hline
 	     2 m      &            145.000 MHz &             12.5 kHz & V00                   & $f=145+k\cdot0.0125$ \\
-	    70 cm     &            430.000 MHz &             12.5 kHz & U000                  & $f=430+k\cdot0.0125$
+             & & & & $k=(f-145)/0,0125$\\ \hline
+	    70 cm     &            430.000 MHz &             12.5 kHz & U000                  & $f=430+k\cdot0.0125$\\
+& & & & $k=(f-430)/0,0125$ \\ \hline
 \end{tabular}
 
 Eftersom amatörradiobanden ser lite olika ut i olika länder förekommer det kanaler i numreringen som inte är tillåtna på vissa ställen. Det är därför viktig att kontrollera att man fortfarande följer bandplanerna i den region man är.
@@ -416,10 +419,12 @@ Eftersom amatörradiobanden ser lite olika ut i olika länder förekommer det ka
 \begin{itemize}
 \item I 6 m bandet finns inga FM-kanaler definierade under 51 MHz. 
 \item För 2m-bandet är FM-kanaler endast definierade från 145 MHz och uppåt. 
-\item I 70 cm-bandet är inga kanaler definierade i intervallet 432.000--433.000 MHz.
+\item I 70 cm-bandet är inga kanaler definierade i intervallet 432.000--433.000 MHz. Observera att startfrekvensen är utanför 70cm bandplanen i IARU region 1.
 \end{itemize}
-v
+
 Information om kanalnumreringen för 23cm-bandet tas tacksamt mot.
+
+
 
 \clearpage
 \subsection{FM-kanaler 6m-bandet}
