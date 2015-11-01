@@ -100,13 +100,13 @@ Eftersom denna handledning är för VHF/UHF tar vi inte med alla DXCC-signaler u
 \end{longtable}
 \end{center}
 
-\subsection{Distriktsiffror}
+\subsection{Svenska distrikten}
 
 Sverige delas in i följande distrikt efter sina län:
 
 \begin{center}
 \begin{longtable}{cl}
-	\textbf{Dist.} & \textbf{Län}                                     \\ \hline \endhead
+	\textbf{Distrikt} & \textbf{Län}                                     \\ \hline \endhead
 	      0        & Stockholm                                        \\
 	      1        & Gotland                                          \\
 	      2        & Västerbotten, Norrbotten                         \\
@@ -118,6 +118,10 @@ Sverige delas in i följande distrikt efter sina län:
 	      8        & Speciella stationer utanför landets gränser
 \end{longtable}
 \end{center}
+
+Distrikten förekommen som siffra i utdelade anropssignaler. Radioamatörer byter inte distriktsiffra under resa i annat distrikt, i stället används prefix som t.ex. /M för mobil. Ofta uppger man "SM0UEI mobilt i SM3-land" för att påvisa att man befinner sig utanför ordinarie distrikt.
+
+\section{Terminologi och trafik}
 
 \subsection{Bokstaveringsalfabetet (Svenska)}
 
@@ -163,8 +167,6 @@ Sverige delas in i följande distrikt efter sina län:
 \end{tabular}
 \end{center}
 
-
-\section{Terminologi och trafik}
 \subsection{Q-koder}
 \begin{longtable}{ll}
 	\textbf{Kod} & \textbf{Fråga / Svar}                                                         \\ \hline \endhead
@@ -229,6 +231,11 @@ Sverige delas in i följande distrikt efter sina län:
 	    & Rätt tid är ...                                                      \\ \hline
 \end{longtable}
 
+\subsection{Lokator}
+
+Lokator (Maidenhead locator) är ett praktiskt sätt att tala om sin ungefärliga position genom att ange endast sex stycken tecken. En lokator kan t.ex. se ut som JO89VK vilket täcker in nordvästa Järfälla. Det finns många verktyg för att räkna på lokator där ute, det är bra att känna sin egen. Det finns appar för detta till telefonerna som både kan räkna på bäring, distans mellan två rutor och dessutom via telefonens GPS bestämma vilken lokator du för närvarande befinner dig i.
+
+Första paret dela in jorden i 18x18 fält, dvs 20$\deg$ per fält longitud och 10 grader per fält latitud. Varje sådant fält delas sedan in i 10x10 rutor som numreras 0-9 på vardera axeln. Dessa i sin tur delas sedan in i 24x24 smårutor som då får storleksordningen 2.5 grader latitud och 5 grader long. vardera.
 
 \section{Signal och brus}
 
@@ -402,6 +409,8 @@ Rekommendationer för repeatrar i olika distrikt och län att använda CTCSS fö
 
 \section{Frekvenser amatörradio}
 
+I denna skrift försöker vi omfatta alla VHF och UHF-band vilket inkluderar 6m-bandet, 2m-bandet, 70cm-bandet och 23cm-bandet.
+
 \subsection{Kanalnumrering VHF/UHF}
 
 Denna typ av kanalnumrering är överenskommen inom IARU region 1 för 6m, 2m och 70cm banden på amatörradiofrekvenser. Kanalnumreringen består av ett prefix som anger vilket band och här används F--6m, V--2m, U--70cm. Därefter används 2 siffror på 6m och 2m banden och tre siffror på 70cm bandet för att ange kanal. 
@@ -426,7 +435,9 @@ Eftersom amatörradiobanden ser lite olika ut i olika länder förekommer det ka
 \item I 70 cm-bandet är inga kanaler definierade i intervallet 432.000--433.000 MHz. Observera att startfrekvensen är utanför 70cm bandplanen i IARU region 1.
 \end{itemize}
 
+OBS!\\
 Information om kanalnumreringen för 23cm-bandet tas tacksamt mot.
+Maila mig på anders@sikvall.se om du har korrekt information.
 
 
 
