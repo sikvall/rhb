@@ -127,21 +127,21 @@ Distrikten förekommen som siffra i utdelade anropssignaler. Radioamatörer byte
 
 \begin{center}
 \begin{tabular}{cl|cl|cl }
-	A & Adam   & O & Olof    & 1 & Ett \\
-	B & Bertil & P & Petter  & 2 & Tvåa \\
-	C & Cesar  & Q & Qvintus & 3 & Trea \\
-	D & David  & R & Rudolf  & 4 & Fyra \\
-	E & Erik   & S & Sigurd  & 5 & Femma \\
-	F & Filip  & T & Tore    & 6 & Sexa \\
-	G & Gustav & U & Urban   & 7 & Sju \\
-	H & Helge  & V & Viktor  & 8 & Åtta \\
-	I & Ivar   & W & Wilhelm & 9 & Nia \\
-	J & Johan  & X & Xerxes  & 0 & Nolla \\
-	K & Kalle  & Y & Yngve   & . & Punkt\\
-	L & Ludvig & Z & Zäta    & , & Komma\\
-	M & Martin & Å & Åke     & - & Minus\\
-	N & Niklas & Ä & Ärlig   & + & Plus\\
-	  &        & Ö & Östen   &   & Mellanslag\\
+	A & Adam   & O & Olof    & 1 & Ett        \\
+	B & Bertil & P & Petter  & 2 & Tvåa       \\
+	C & Cesar  & Q & Qvintus & 3 & Trea       \\
+	D & David  & R & Rudolf  & 4 & Fyra       \\
+	E & Erik   & S & Sigurd  & 5 & Femma      \\
+	F & Filip  & T & Tore    & 6 & Sexa       \\
+	G & Gustav & U & Urban   & 7 & Sju        \\
+	H & Helge  & V & Viktor  & 8 & Åtta       \\
+	I & Ivar   & W & Wilhelm & 9 & Nia        \\
+	J & Johan  & X & Xerxes  & 0 & Nolla      \\
+	K & Kalle  & Y & Yngve   & . & Punkt      \\
+	L & Ludvig & Z & Zäta    & , & Komma      \\
+	M & Martin & Å & Åke     & - & Minus      \\
+	N & Niklas & Ä & Ärlig   & + & Plus       \\
+	  &        & Ö & Östen   &   & Mellanslag \\
 \end{tabular}
 \end{center}
 
@@ -163,7 +163,7 @@ Distrikten förekommen som siffra i utdelade anropssignaler. Radioamatörer byte
 	L & Lima     & Å/AA & Alfa-Alfa  & , & Decimal \\
 	M & Mike     & Ä/AE & Alfa-Echo  & - & Minus   \\
 	N & November & Ö/OE & Oscar-Echo & + & Plus    \\
-	O & Oscar    &      &            &   & Space
+	O & Oscar    &      &            &   & Space   \\
 \end{tabular}
 \end{center}
 
@@ -235,7 +235,7 @@ Distrikten förekommen som siffra i utdelade anropssignaler. Radioamatörer byte
 
 Lokator (Maidenhead locator) är ett praktiskt sätt att tala om sin ungefärliga position genom att ange endast sex stycken tecken. En lokator kan t.ex. se ut som JO89VK vilket täcker in nordvästa Järfälla. Det finns många verktyg för att räkna på lokator där ute, det är bra att känna sin egen. Det finns appar för detta till telefonerna som både kan räkna på bäring, distans mellan två rutor och dessutom via telefonens GPS bestämma vilken lokator du för närvarande befinner dig i.
 
-Första paret dela in jorden i 18x18 fält, dvs 20$\deg$ per fält longitud och 10 grader per fält latitud. Varje sådant fält delas sedan in i 10x10 rutor som numreras 0-9 på vardera axeln. Dessa i sin tur delas sedan in i 24x24 smårutor som då får storleksordningen 2.5 grader latitud och 5 grader long. vardera.
+Första paret dela in jorden i 18x18 fält, dvs 20 grader per fält longitud och 10 grader per fält latitud. Varje sådant fält delas sedan in i 10x10 rutor som numreras 0-9 på vardera axeln. Dessa i sin tur delas sedan in i 24x24 smårutor som då får storleksordningen 2.5 grader latitud och 5 grader long. vardera.
 
 \section{Signal och brus}
 
@@ -244,7 +244,7 @@ Första paret dela in jorden i 18x18 fält, dvs 20$\deg$ per fält longitud och 
 Effekter anges i W eller i decibel relaterat till 1 mW (dBm) eller relaterat 1W (dBW). Tabell över effekt och decibelwatt nedan:
 \begin{center}
 \begin{tabular}{rrr|rrr|rrr}
-	   \textbf{W} & \textbf{dBW} & \textbf{dBm} & \textbf{W} & \textbf{dBW} & \textbf{dBm} & \textbf{W} & \textbf{dBW} & \textbf{dBm} \\ \hline
+	   \textbf{Effekt} & \textbf{dBW} & \textbf{dBm} & \textbf{Effekt} & \textbf{dBW} & \textbf{dBm} & \textbf{Effekt} & \textbf{dBW} & \textbf{dBm} \\ \hline
 	  1 \textmu W &          -60 &          -30 &        1 W &            0 &           30 &      100 W &           20 &           50 \\
 	 10 \textmu W &          -50 &          -20 &        3 W &            5 &           35 &      250 W &           24 &           54 \\
 	100 \textmu W &          -40 &          -10 &        5 W &            7 &           37 &      500 W &           27 &           57 \\
@@ -262,7 +262,7 @@ Standard kalibrering för S-metern är enligt följande skala:
 
 \begin{center}
 \begin{longtable}{r|rr|rr}
-	     & \multicolumn{2}{c|}{$<$ 30 MHz} & \multicolumn{2}{c}{$>$ 30 MHz} \\ 
+	     & \multicolumn{2}{c|}{\textbf{$<$ 30 MHz}} & \multicolumn{2}{c}{\textbf{$>$ 30 MHz}} \\ 
 	   \textbf{S} &  \textbf{dBm} &                \textbf{\textmu V} &  \textbf{dBm} &               \textbf{\textmu V} \\ \hline \endhead
 	   1 & -121 &                     0.21 & -141 &                    0.02 \\
 	   2 & -115 &                     0.40 & -135 &                    0.04 \\
@@ -445,7 +445,8 @@ Maila mig på anders@sikvall.se om du har korrekt information.
 \subsubsection{FM-kanaler 6m-bandet}
 
 \begin{longtable}{rrl|rrl}
-	 Kanal & Tidigare & Anm   &  Kanal & Tidigare & Anm \\ \hline
+\textbf{Kanal} & \textbf{Tidigare} & \textbf{Anm}   
+&  \textbf{Kanal} & \textbf{Tidigare} & \textbf{Anm} \\ \hline
 	51,500 &      F50 &       & 51,750 &      F75 &  \\
 	51,510 &      F51 & Anrop & 51,760 &      F76 &  \\
 	51,520 &      F52 &       & 51,770 &      F77 &  \\
@@ -477,7 +478,8 @@ Maila mig på anders@sikvall.se om du har korrekt information.
 \subsubsection{FM-kanaler 2m-bandet}
 
 \begin{longtable}{rrl|rrl}
-	Frekvens & Kanal & Anm.         & Frekvens & Kanal & Anm.          \\ \hline
+\textbf{Kanal} & \textbf{Tidigare} & \textbf{Anm}   
+&  \textbf{Kanal} & \textbf{Tidigare} & \textbf{Anm} \\ \hline
 	145,2125 &   V17 &              & 145,5000 &   V40 & S20  FM Anrop \\
 	145,2250 &   V18 & S9           & 145,5125 &   V41 &  \\
 	145,2375 &   V19 & INET GW      & 145,5250 &   V42 & S21           \\
@@ -508,7 +510,8 @@ Maila mig på anders@sikvall.se om du har korrekt information.
 \subsubsection{FM-kanaler 70cm-bandet}
 
 \begin{longtable}{rrl|rrl}
-	Frekvens & Kanal & Anm.    & Frekvens & Kanal & Anm  \\ \hline
+\textbf{Kanal} & \textbf{Tidigare} & \textbf{Anm}   
+&  \textbf{Kanal} & \textbf{Tidigare} & \textbf{Anm} \\ \hline
 	433,4000 &  U272 & SSTV    & 433,7125 &  U297 &      \\
 	433,4125 &  U273 &         & 433,7250 &  U298 &      \\
 	433,4250 &  U274 &         & 433,7375 &  U299 &      \\
@@ -538,7 +541,8 @@ Maila mig på anders@sikvall.se om du har korrekt information.
 
 \clearpage
 \begin{longtable}{rrl|rrl}
-	Frekvens & Kanal & Anm. & Frekvens & Kanal & Anm. \\ \hline
+\textbf{Kanal} & \textbf{Tidigare} & \textbf{Anm}   
+&  \textbf{Kanal} & \textbf{Tidigare} & \textbf{Anm} \\ \hline
 	434,6000 & RU368 & RU0  & 434,8000 & RU384 & RU8  \\
 	434,6125 & RU369 &      & 434,8125 & RU385 &      \\
 	434,6250 & RU370 & RU1  & 434,8250 & RU386 & RU9  \\
@@ -558,9 +562,11 @@ Maila mig på anders@sikvall.se om du har korrekt information.
 	         &       &      & 435,0000 & RU400 & RU16 \\
 \end{longtable}
 
+\clearpage
+
 \section{Scouters frekvenser}
 
-Scouter finns ofta QRV under vissa helger, Jamboree On The Air, JOTA, förekommer några gånger per år. Här är en sammanställning av de standardfrekvenser scouter nyttjar om de inte kör repeatrar eller leta upp motstationer själva. Scouter kan antingen ha egna signaler, köra under tillfälliga signaler eller vara second operator åt med någon klubbsignal.
+Scouter finns ofta QRV under vissa helger, \textit{Jamboree On The Air, JOTA}, förekommer några gånger per år. Här är en sammanställning av de standardfrekvenser scouter nyttjar om de inte kör repeatrar eller leta upp motstationer själva. Scouter kan antingen ha egna signaler, köra under tillfälliga signaler eller vara second operator åt med någon klubbsignal.
 
 \subsection{Nordiska scoutfrekvenser VHF}
 
