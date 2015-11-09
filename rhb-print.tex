@@ -3,7 +3,7 @@
 \documentclass[10pt,swedish,a5paper,twoside]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[swedish]{babel}
-\usepackage{longtable}
+\usepackage[hidelinks]{hyperref}
 \usepackage[a5paper,textwidth=12cm,
 	textheight=17cm,bindingoffset=1cm]{geometry}
 \usepackage{amsmath}
@@ -11,8 +11,9 @@
 \usepackage{longtable}
 \usepackage{textcomp}
 
-\input{init-vhf}
+\input{init-full}
 \input{body}
+\input{body-hf}
 \input{body-vhf}
 
 \end{document}
