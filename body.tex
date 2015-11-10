@@ -329,10 +329,10 @@ ELF            & Extremt låg frekvens & 3--30 &Hz          & 10--100 &Mm       
 SLF            & Superlåg frekvens    & 30--300 &Hz        & 1--10 &Mm          \\
 ULF            & Ultralåg frekvens    & 300--3000 &Hz      & 100--1000 &km      \\
 VLF            & Väldigt låg frekvens & 3--30 &kHz         & 10--100 &km        \\
-LF             & Låg frekvens         & 30--300 &kHz       & 1--10 &km          \\
-MF             & Mellanfrekvens       & 300--3000 &kHz     & 100--1000 &m       \\
-HF             & Högfrekvens          & 3--30 &MHz         & 1--10 &m           \\
-VHF            & Väldigt hög frekvens & 30--300 &MHz       & 1--10 &m           \\
+LF (LV)            & Låg frekvens         & 30--300 &kHz       & 1--10 &km          \\
+MF (MV)            & Mellanfrekvens       & 300--3000 &kHz     & 100--1000 &m       \\
+HF (KV)            & Högfrekvens          & 3--30 &MHz         & 1--10 &m           \\
+VHF (UKV)           & Väldigt hög frekvens & 30--300 &MHz       & 1--10 &m           \\
 UHF            & Ultrahög frekvens    & 300--3000 &MHz     & 100--1000 &mm      \\
 SHF            & Superhög frekvens    & 3--30 &GHz         & 10--100 &mm        \\
 EHF            & Extremt hög frekvens & 30--300 &GHz       & 1--10 &mm          \\
@@ -341,16 +341,6 @@ EHF            & Extremt hög frekvens & 30--300 &GHz       & 1--10 &mm         
 Benämningarna HF, MF och LF har också andra betydelser. Exempelvis an\-vänd\-s HF som beteckning av den signal en antenn tar mot eller sänder oavsett frekvensband, MF kan vara mellansignalen oavsett frekvens efter omvandling i en superheterodynmottagare och LF, ibland benämnt AF (audiofrekvens) är det hörbara ljudet, dvs den modulation som används på signalen.
 
 På engelska används i stället benämningarna RF för radio frequency, IF för intermediate frequency and AF för audio frequency vilket rekommenderas då sammanblandningsrisk med ITU-benämningarna på spektrum inte föreligger.
-
-\subsubsection{Vågländsegenskaper}
-
-\textbf{Långvåg} --- Markvågsutbredning, relativt höga sändareffekter, tillförlitliga förbindelser men i övre delen av frekvensbandet kortare förbindelser dagtid. På de lägsta frekvenserna erhålls med hög sändareffekt goda förbindelser på stora avstånd globalt och används även för t.ex. malmprospektering, kommunikation med ubåtar i undervattensläge.
-
-\textbf{Kortvåg} --- God rymdvågsutbredning med mycket lång räckvidd redan med låg effekt men samtidigt starkt avhängigt radiokonditionerna. Med ökande frekvens blir jonosfärreflektionen allt flackare vilket resulterar i en alltmer uttalad död zon (skip). Särskilt utmärkande för kortvågen är att den redan med låg effekt ger under gynnsamma konditioner extremt lång räckvidd via rymdvåg, ibland globalt.
-
-\textbf{Mellanvåg} --- Kombinerar egenskaperna hos angränsande delar av lång- och kortvåg, kan ge kraftig interferens mellan rymd- och markvåg som ofta upplevs som kraftig fädning. Särskilt utmärkande för mellanvågen är den i det närmaste avsaknanden av skipzon eftersom mark- och rymdvåg kompletterar varandra, jonosfärens D-skikt är heller inte särskilt uttalat i frekvensområdet dvs förbindelser via rymdvåg på korta avstånd mellan 100--300 km är möjliga även dagtid under perioder med kraftig solaktivitet.
-
-\textbf{Ultrakortvåg} --- Förbindeleser med låg effekt och små antenner, oberoende av jonosfären men då endast i form av frirumsutbredning, dvs fram till horisonten och under påverkan av terränghinder mm. Särskilt utmärkande för UKV är att rymdvåg saknar, markvågsdämpningen till lands är total och kommunikation på högre frekvenser i princip därför bara sker vid fri sikt mellan sändare och mottagare.
 
 \subsection{Rundradiobenämningar och frekvensband}
 
@@ -361,4 +351,15 @@ MW/MV          & Mellanvåg     & 526,5--1606,5               & kHz \\
 SW/KV          & Kortvåg       & 4,3--30                     & MHz \\
 UKV            & Ultrakortvåg  & 88--108                     & MHz \\
 \end{tabular}
+
+\subsubsection{Egenskaper olika frekvensband}
+
+\textbf{Långvåg} --- Markvågsutbredning, relativt höga sändareffekter, tillförlitliga förbindelser men i övre delen av frekvensbandet kortare förbindelser dagtid. På de lägsta frekvenserna erhålls med hög sändareffekt goda förbindelser på stora avstånd globalt och används även för t.ex. malmprospektering, kommunikation med ubåtar i undervattensläge.
+
+\textbf{Kortvåg} --- God rymdvågsutbredning med mycket lång räckvidd redan med låg effekt men samtidigt starkt avhängigt radiokonditionerna. Med ökande frekvens blir jonosfärreflektionen allt flackare vilket resulterar i en alltmer uttalad död zon (skip). Särskilt utmärkande för kortvågen är att den redan med låg effekt ger under gynnsamma konditioner extremt lång räckvidd via rymdvåg, ibland globalt.
+
+\textbf{Mellanvåg} --- Kombinerar egenskaperna hos angränsande delar av lång- och kortvåg, kan ge kraftig interferens mellan rymd- och markvåg som ofta upplevs som kraftig fädning. Särskilt utmärkande för mellanvågen är den i det närmaste avsaknanden av skipzon eftersom mark- och rymdvåg kompletterar varandra, jonosfärens D-skikt är heller inte särskilt uttalat i frekvensområdet dvs förbindelser via rymdvåg på korta avstånd mellan 100--300 km är möjliga även dagtid under perioder med kraftig solaktivitet.
+
+\textbf{Ultrakortvåg} --- Förbindeleser med låg effekt och små antenner, oberoende av jonosfären men då endast i form av frirumsutbredning, dvs fram till horisonten och under påverkan av terränghinder mm. Särskilt utmärkande för UKV är att rymdvåg saknar, markvågsdämpningen till lands är total och kommunikation på högre frekvenser i princip därför bara sker vid fri sikt mellan sändare och mottagare.
+
 
