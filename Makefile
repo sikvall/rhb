@@ -8,5 +8,6 @@ all:
 	pdflatex rhb-pad-vhf
 	pdflatex rhb-print-vhf
 	pdflatex rhb-print-vhf-A4
+	pdflatex rhb-pad-bponly
 	mkdir -p pdf
 	mv *.pdf pdf
