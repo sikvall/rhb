@@ -9,5 +9,10 @@ all:
 	pdflatex rhb-print-vhf
 	pdflatex rhb-print-vhf-A4
 	pdflatex rhb-pad-bponly
+	pdflatex rhb-pad-bponly
+	pdflatex rhb-print-bponly
+	pdflatex rhb-print-bponly
+	pdflatex rhb-print-A4-bponly
+	pdflatex rhb-print-A4-bponly
 	mkdir -p pdf
 	mv *.pdf pdf
