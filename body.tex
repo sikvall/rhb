@@ -255,6 +255,45 @@ Standard kalibrering för S-metern är enligt följande skala:
 	9+40 &  -33 &                     5000 &  -53 &                     500
 \end{longtable}
 \end{center}
+
+\subsection{Modulationer}
+
+\subsubsection{Telegrafi, CW}
+
+CW står för continuous waves och innebär en rent omodulerad bärvåg. I mottagaren används en oscillator för att återskapa hörbar signal. Detta används för telegrafi och modulationsslaget är oftast A1A. Ibland sänds telegrafi som modulerad AM-bärvåg också som då moduleras med t.ex. 440 Hz ton. Det är dock mindre vanligt. 
+
+Bandbredden för CW är i teorin mycket smal. I praktiken blir den lite beroende på frekvens från några Hz till något hundratal Hz beroende på frekvensband och sändarens beskaffenhet i form av jitter och frekvensstabilitet.
+
+\subsubsection{Amplitudmodulering, AM}
+
+Amplitudmodulering finns i flera olika varianter. Vanlig AM består av en bärvåg vars styra varieras i takt med signalen som skall sändas. Denna förändring av bärvågen producerar sidband och det är i dessa som den egentliga informationen återfinns. Bärvågen i sig får dock lejonparten av signalen varför det är en sändningsklass som nästan aldrig används inom amatörradiobanden.
+
+Bandbredden hos AM-modulerad signal kan beräknas genom att man tar två gånger högsta modulationsfrekvensen. Detta ger t.ex. vid en modulationsfrekvens som går från 300-3000 Hz en bandbredd som varierar med talet från 600 Hz -- 6 kHz.
+
+Enkelt sidband används av radioamatörer för att minska på bandbredden samt lägga radioenergin där den behövs mest. Eftersom båda sidbanden innehåller samma information kan man filtrera bort dessa samt bärvågen innan man matar sändarens förstärkarsteg med resultatet. I mottagaren behöver man dock återskapa en referenssignal, en så kallad beat-oscillator gör detta. När man ställer in frekvensen så försöker man därmed matcha den ursprungliga frekvensen. Ligger man för långt från låter det kalle anka, kommer man för nära sidbandet låter det dovt och basigt. 
+
+Enkelt sidband förkortas ESB eller SSB (single side-band) och man kan välja vilket sidband man vill använda sig av. På amatörradiofrekvenser under 10 MHz använder man LSB (lägre/lower sidbandet) och på frekvenser över 10 MHz används USB/ÖSB (upper/övre sidbandet). Detta är mycket av tradition. Använder man fel sorts sidband hörs det inget vettigt när man försöker lyssna. Språkrytmerna gör dock att vi uppfattar det som att mänskligt tal förekommer. I dag händer det att amatörer bryter mot regeln och sänder med ``fel'' sidband på fel frekvens.
+
+\subsubsection{Frekvensmodulering, FM}
+
+Frekvensmodulering består av att man tar en bärvåg och modulerar den med talet genom att skifta dess frekvens. Om skiftet i frekvens är mycket litet kallas moduleringen för fasmodulation. FM-modulering indelas i lite olika klasser beroende på hur stor deviation som används. På amatörradions VHF- och UHF-band talar vi om FM och NFM (Narrow FM, andra namn förekommer också). Ibland talar man om bred FM, normal FM och smal FM på svenska.
+
+Normal FM innebär att deviationen (hur mycket signalen avviker från grundfrekvensen) är lika stor som den högsta modulationsfrekvensen. Det är vanligt att kommunikationsradio använder sig av 3 kHz som högsta modulationsfrekvens och 5 kHz deviation. Deviationen är då något bredare och ger upphov till en viss modulationsvinst. När man talar om FM-radio på UKV-bandet för rundradio så är deviationen ca 75 kHz och högsta modulationsfrekvens ca 16 kHz. Där är alltså svinget betydligt bredare än modulationen och detta är bred FM.
+
+Nu för tiden förordas en minskning av bandbredden för FM-sändningar på amatörbanden, främst är det väl VHF och UHF där FM-sändning är vanligast förekommande och där vill man ha en kanalindelning om 12.5 kHz i stället för som tidigare 25 kHz. Om man studerar bandbredden hos olika FM-signaler kan man använda sig av Carsons bandbreddsbegrepp:
+
+$$B=2(f_M+f_D)$$
+
+Där $B$ är bandbredden $f_M$ högsta modulationsfrekvensen och $f_d$ är modulationens maximala deviation. Carsons bandbreddsbegrepp säger att 98\% av energin förekommer inom den stipulerade bandbredden. Det betyder att att grannkanalen kan få ungefär 17 dB lägre signal under sändning vilket fortfarande inte är enormt bra. Carson var för övrigt den som faktiskt uppfan SSB-modulationen.
+
+\begin{center}
+\begin{tabular}{rrrr}
+Deviation & Modulation & Bandbredd & Kanaldelning\\ \hline
+5 kHz & 3 kHz & 16 kHz & 25 kHz\\
+2.5 kHz & 3 kHz & 11 kHz & 12.5 kHz\\
+\end{tabular}
+\end{center}
+
 \subsection{Termiska brusgolvet}
 
 \begin{center}
