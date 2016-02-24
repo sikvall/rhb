@@ -8,6 +8,9 @@ all:
 	pdflatex rhb-pad-vhf
 	pdflatex rhb-print-vhf
 	pdflatex rhb-print-vhf-A4
+	pdflatex rhb-pad-hf
+	pdflatex rhb-print-vhf
+	pdflatex rhb-print-hf-A4
 	pdflatex rhb-pad-bponly
 	pdflatex rhb-pad-bponly
 	pdflatex rhb-print-bponly
