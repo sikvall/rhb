@@ -212,6 +212,46 @@ Lokator (Maidenhead locator) är ett praktiskt sätt att tala om sin ungefärlig
 
 Första paret dela in jorden i 18x18 fält, dvs 20 grader per fält longitud och 10 grader per fält latitud. Varje sådant fält delas sedan in i 10x10 rutor som numreras 0-9 på vardera axeln. Dessa i sin tur delas sedan in i 24x24 smårutor som då får storleksordningen 2.5 grader latitud och 5 grader long. vardera.
 
+\subsection{Uppträdande}
+
+När vi kör amatörradio finns det ett antal saker att tänka på som har att göra med hur vi beter oss mot varandra på banden. Se detta som en guide till hur man bör uppträda på banden.
+
+\subsection{Generellt}
+
+En radioamatör måste vara \textbf{tolerant}. Vi delar frekvenser med många andra personer, en del av dem kommer inte ha samma uppfattning som du själv har om saker och ting. Här gäller det att vara tolerant, förstående och framför allt inte bli upprörd över personer som kanske inte beter sig som du önskade att de betedde sig.
+
+Radioamatörer är \emph{aldrig ensamma på banden} helt oavsett om någon svarar på ditt allmänna anrop eller ej så finns det i det närmaste \textbf{garanterat någon som lyssnar}. 
+
+Tänk på vad du säger och att du undviker diskutera ämnen som kan verka \textbf{upprörande} eller \textbf{stötande}. Ämnen som bör undvikas är \textbf{religion} och livs\-å\-skå\-d\-ni\-ng, \textbf{politisk} ideologi, \textbf{ekonomiska} eller \textbf{sociala} frågor m.m. där motparter kan ha starka åsikter som inte nödvändigtvis stämmer med dina egna. Radion är inte ett agitationsrum för sådana frågor.
+
+\textbf{Svordomar}, \textbf{könsord} och liknande undviker vi helt. Språket skall vara vårdat men behöver inte vara strikt. Tänk på att din motpart är inte den enda som lyssnar utan det finns \textit{andra amatörer som lyssnar}, icke-amatörer som lyssnar, myndigheter som lyssnar och så vidare.
+
+Ha \textbf{förståelse} för att andra kanske inte har dina egna detaljkunskaper, professionalism med mera. Agera \textbf{ödmjukt} gentemot andra människor på banden.
+
+Blir du ändå upprörd, undvik att \emph{agera på det} över huvud taget. Sänd inte över annans sändning, s.k. ''gummitumme'', eller stör på annat vis för du är upprörd. Avsluta hellre QSO:t, byt frekvens eller återkom lite senare när du lugnat ned dig. Tänk på att \textit{de flesta konflikter orsakas av okunskap eller brist på förståelse}. \textbf{Agera vuxet} i sådana situationer och jobba för att \textbf{de-eskalera} situationen.
+
+En skicklig amatör \textit{lyssnar mycket innan sändning}. Vi anropar på ett korrekt sätt och avslutar på ett korrekt sätt. Vi försöker uppge våra respektive signaler på ett \emph{tydligt och läsligt sätt}, i dag finns det en tendens att sluddra över signalerna framför allt på 2m och 70cm banden, gör inte det. Tydlighet är en vinning i sig. 
+
+När någon ny i ringen inträder, räkna upp de deltagande signalerna så att personen tydligt får en bild av alla som är med och vem som är på turen före och efter hen.
+
+Vi pratar inte \textbf{nedvärderande} om personer varesig de är andra amatörer eller ej, eller en viss grupp av personer. Vi undviker \textbf{sexuella anspelningar} och vitsar ''\textbf{under bältet}'' liksom allt för \textbf{personliga detaljer}. Amatörradion är främst för \textbf{tekniska diskussioner} av rent \textbf{privat natur} eller av \textbf{allmänt intresse för hobbyn}, tester och prov med mera.
+
+Undvik väldigt \textbf{långa sändningspass}. Ibland händer det saker hos dina motstationer som att de får ett viktigt telefonsamtal eller måste springa ut i köket för katten har rivit ner något, ett barn ramlar eller annat som gör att man måste kvickt lämna radion. Att \textbf{långprata} i sådana lägen gör det svårt att tala om ''QRX --- jag måste ta hand om en sak, anropar dig igen om 5 min.''. Enstaka gånger kanske man behöver förklara något lite längre men gör det till en vana att lämna luckor så ofta som möjligt.
+
+Nödtrafik har alltid prioritet.
+
+\subsection{Repeatrar}
+
+Repeatrars syfte är främst att förlänga kommunikationen från mobila och portabla amatörsändare. Samtal mellan fasta stationer förekommer men om ni hör varandra på direkten, övergå gärna till en simplex-frekvens i stället för att belägga repeatern.
+
+Lämna luckor mellan er när ni växlar station som sänder. Gör det möjligt för andra att ''breaka-in'' särskilt om ert QSO fortsätter under längre tid. Ta hänsyn till att andra kanske vill använda repeatern för att nå personer som de inte kan nå annars. Hänsyn åt båda hållen förutsätts här. 
+
+Repeatern är en begränsad resurs. Det är inte okay att lägga beslag på den under långa perioder när andra kanske behöver den, var ödmjuk inför att någon driver repeatern och har satt upp den i första hand för att supporta mobila stationer.
+
+Nödtrafik har alltid prioritet.
+
+\include{qso}
+
 \section{Teknik}
 
 \subsection{Effekt i dBW och dBm}
@@ -269,9 +309,13 @@ Amplitudmodulering finns i flera olika varianter. Vanlig AM består av en bärv�
 
 Bandbredden hos AM-modulerad signal kan beräknas genom att man tar två gånger högsta modulationsfrekvensen. Detta ger t.ex. vid en modulationsfrekvens som går från 300-3000 Hz en bandbredd som varierar med talet från 600 Hz -- 6 kHz.
 
+\subsubsection{SSB/ESB --- Enkelt sidband, en AM-variant}
+
 Enkelt sidband används av radioamatörer för att minska på bandbredden samt lägga radioenergin där den behövs mest. Eftersom båda sidbanden innehåller samma information kan man filtrera bort dessa samt bärvågen innan man matar sändarens förstärkarsteg med resultatet. I mottagaren behöver man dock återskapa en referenssignal, en så kallad beat-oscillator gör detta. När man ställer in frekvensen så försöker man därmed matcha den ursprungliga frekvensen. Ligger man för långt från låter det kalle anka, kommer man för nära sidbandet låter det dovt och basigt. 
 
-Enkelt sidband förkortas ESB eller SSB (single side-band) och man kan välja vilket sidband man vill använda sig av. På amatörradiofrekvenser under 10 MHz använder man LSB (lägre/lower sidbandet) och på frekvenser över 10 MHz används USB/ÖSB (upper/övre sidbandet). Detta är mycket av tradition. Använder man fel sorts sidband hörs det inget vettigt när man försöker lyssna. Språkrytmerna gör dock att vi uppfattar det som att mänskligt tal förekommer. I dag händer det att amatörer bryter mot regeln och sänder med ``fel'' sidband på fel frekvens.
+Enkelt sidband förkortas ESB eller SSB (single side-band) och man kan välja vilket sidband man vill använda sig av. På amatörradiofrekvenser under 10 MHz använder man LSB (lägre/lower sidbandet) och på frekvenser över 10 MHz används USB/ÖSB (upper/övre sidbandet). 
+
+Detta är mycket av tradition. Använder man fel sorts sidband hörs det inget vettigt när man försöker lyssna. Språkrytmerna gör dock att vi uppfattar det som att mänskligt tal förekommer. I dag händer det att amatörer bryter mot regeln och sänder med ``fel'' sidband på fel frekvens.
 
 \subsubsection{Frekvensmodulering, FM}
 
@@ -357,28 +401,50 @@ Rekommendationer för repeatrar i olika distrikt och län att använda CTCSS fö
 	Distrikt 7      &      79.7       &      156.7      &      210.7      &
 \end{tabular}
 
+\section{Bandbredd olika modulationer}
+
+Olika modulationer upptar olika bandbredd. Detta är mycket viktigt att förstå när man ställer in sin radiostation. Detta gäller särskilt att beakta i närheten av nödfrekvenser eller bandkanten. När vi talar om bandbredder här förstås den bandbredd vari minst 98 \% av signalens effekt befinner sig.
+
+\begin{tabular}{lrl}
+	\textbf{Modulation} & \textbf{Bandbredd} & \textbf{Kommentarer}                  \\ \hline
+	CW                  &          $<$500 Hz & Smalbandigt                           \\
+	AM                  &              6 kHz & Amplitudmodulering med fullt sidband  \\
+	SSB*                &              3 kHz & Amplitudmodulering med enkelt sidband \\
+	NFM                 &           7-12 kHz & Smalbandig FM                         \\
+	FM                  &             16 kHz & Normal FM                             \\
+	WFM                 &          16-75 kHz & Bredbandig FM (t.ex. rundradio)
+\end{tabular}
+
+*) För SSB gäller att USB och LSB fungerar lite olika. När man beräknar den högsta eller lägsta frekvensen utgår man från den inställda frekvensen $f$. För USB gäller då att högsta frekvensen är $f+3$ kHz. För LSB blir det $f-3$ kHz. Detta innebär att om du sänder på 80m bandet och du får sända telefoni från 3600--3800 kHz och vill lägga dig i under bandkanten och köra LSB skall du ställa in din radio på 3603 kHz som lägsta frekvens. Använd gärna lite marginal och kör exempelvis 3605 kHz i stället.
+
+Det är vanligt att t.ex. utländska stationer kör överdriven bandbredd. Antingen som en följd av att man vill öka sin modulationsvinst, okunskap eller man har skruvat i sin radio.
+
 \section{Övergripande frekvensplan}
 
 \subsection{Indelning efter frekvens och våglängd}
+\label{frekvens-vaglangd}
 
 \begin{tabular}{llrlrl}
-\textbf{Förk.} & \textbf{Benämning}   & \textbf{Frekvens}& & \textbf{Våglängd} & \\ \hline
-ELF            & Extremt låg frekvens & 3--30 &Hz          & 10--100 &Mm        \\
-SLF            & Superlåg frekvens    & 30--300 &Hz        & 1--10 &Mm          \\
-ULF            & Ultralåg frekvens    & 300--3000 &Hz      & 100--1000 &km      \\
-VLF            & Väldigt låg frekvens & 3--30 &kHz         & 10--100 &km        \\
-LF (LV)            & Låg frekvens         & 30--300 &kHz       & 1--10 &km          \\
-MF (MV)            & Mellanfrekvens       & 300--3000 &kHz     & 100--1000 &m       \\
-HF (KV)            & Högfrekvens          & 3--30 &MHz         & 1--10 &m           \\
-VHF (UKV)           & Väldigt hög frekvens & 30--300 &MHz       & 1--10 &m           \\
-UHF            & Ultrahög frekvens    & 300--3000 &MHz     & 100--1000 &mm      \\
-SHF            & Superhög frekvens    & 3--30 &GHz         & 10--100 &mm        \\
-EHF            & Extremt hög frekvens & 30--300 &GHz       & 1--10 &mm          \\
+	\textbf{Förk.} & \textbf{Benämning}   & \textbf{Frekvens} &     & \textbf{Våglängd} &  \\ \hline
+	ELF            & Extremt låg frekvens &             3--30 & Hz  &           10--100 & Mm \\
+	SLF            & Superlåg frekvens    &           30--300 & Hz  &             1--10 & Mm \\
+	ULF            & Ultralåg frekvens    &         300--3000 & Hz  &         100--1000 & km \\
+	VLF            & Väldigt låg frekvens &             3--30 & kHz &           10--100 & km \\
+	LF (LV)        & Låg frekvens         &           30--300 & kHz &             1--10 & km \\
+	MF (MV)        & Mellanfrekvens       &         300--3000 & kHz &         100--1000 & m  \\
+	HF (KV)        & Högfrekvens          &             3--30 & MHz &             1--10 & m  \\
+	VHF (UKV)      & Väldigt hög frekvens &           30--300 & MHz &             1--10 & m  \\
+	UHF            & Ultrahög frekvens    &         300--3000 & MHz &         100--1000 & mm \\
+	SHF            & Superhög frekvens    &             3--30 & GHz &           10--100 & mm \\
+	EHF            & Extremt hög frekvens &           30--300 & GHz &             1--10 & mm \\
+	THF            & Terahertsfrekvens    &          300-3000 & GHz &         100--1000 & µm
 \end{tabular}
 
 Benämningarna HF, MF och LF har också andra betydelser. Exempelvis an\-vänd\-s HF som beteckning av den signal en antenn tar mot eller sänder oavsett frekvensband, MF kan vara mellansignalen oavsett frekvens efter omvandling i en superheterodynmottagare och LF, ibland benämnt AF (audiofrekvens) är det hörbara ljudet, dvs den modulation som används på signalen.
 
 På engelska används i stället benämningarna RF för radio frequency, IF för intermediate frequency and AF för audio frequency vilket rekommenderas då sammanblandningsrisk med ITU-benämningarna på spektrum inte föreligger.
+
+Amatörradioband finns inom de flesta av dessa frekvensband utom de högsta och lägsta frekvenserna.
 
 \subsection{Rundradiobenämningar och frekvensband}
 
@@ -390,14 +456,44 @@ SW/KV          & Kortvåg       & 4,3--30                     & MHz \\
 UKV            & Ultrakortvåg  & 88--108                     & MHz \\
 \end{tabular}
 
-\subsubsection{Egenskaper olika frekvensband}
+\subsection{Radarband och benämningar enligt ITU}
 
-\textbf{Långvåg} --- Markvågsutbredning, relativt höga sändareffekter, tillförlitliga förbindelser men i övre delen av frekvensbandet kortare förbindelser dagtid. På de lägsta frekvenserna erhålls med hög sändareffekt goda förbindelser på stora avstånd globalt och används även för t.ex. malmprospektering, kommunikation med ubåtar i undervattensläge.
+\begin{tabular}{lrl}
+	\textbf{Band} & \textbf{Frekvens} & \textbf{Benämning}          \\ \hline
+	HF            &   0.003--0.03 GHz & High frequency              \\
+	VHF           &     0.03--0.3 GHz & Very hgh frequency          \\
+	UHF           &        0.3--1 GHz & Ultra high frequency        \\
+	L             &          1--2 GHz & Long wave                   \\
+	S             &          2--4 GHz & Short wave                  \\
+	C             &          4--8 GHz &  \\
+	X             &         8--12 GHz & Anv. under 2:a världskriget \\
+	Ku            &        12--18 GHz & ''Kurz under''              \\
+	K             &        18--27 GHz & Tyska ''Kurz'' (kortvåg)    \\
+	Ka            &        27--40 GHz & Kurz-above (över)           \\
+	V             &        40--75 GHz &  \\
+	W             &       75--110 GHz &  \\
+	mm            &      110--300 GHz & Millimetervågor
+\end{tabular}
+
+\subsection{Egenskaper olika frekvensband}
+
+För radioamatörer delar man in frekvensbanden i långvåg, mellanvåg, kortvåg, VHF, UHF och SHF beroende på frekvens, se tabellen under avsnitt \ref{frekvens-vaglangd}. Dessa har lite olika utbredningsegenskaper.
+
+\textbf{Långvåg} --- Markvågsutbredning, relativt höga sändareffekter, tillförlitliga för\-bind\-el\-ser men i övre delen av frekvensbandet kortare förbindelser dagtid. På de lägsta frekvenserna erhålls med hög sändareffekt goda förbindelser på stora avstånd globalt och används även för t.ex. malmprospektering, kommunikation med ubåtar i undervattensläge.
 
 \textbf{Kortvåg} --- God rymdvågsutbredning med mycket lång räckvidd redan med låg effekt men samtidigt starkt avhängigt radiokonditionerna. Med ökande frekvens blir jonosfärreflektionen allt flackare vilket resulterar i en alltmer uttalad död zon (skip). Särskilt utmärkande för kortvågen är att den redan med låg effekt ger under gynnsamma konditioner extremt lång räckvidd via rymdvåg, ibland globalt.
 
 \textbf{Mellanvåg} --- Kombinerar egenskaperna hos angränsande delar av lång- och kortvåg, kan ge kraftig interferens mellan rymd- och markvåg som ofta upplevs som kraftig fädning. Särskilt utmärkande för mellanvågen är den i det närmaste avsaknanden av skipzon eftersom mark- och rymdvåg kompletterar varandra, jonosfärens D-skikt är heller inte särskilt uttalat i frekvensområdet dvs förbindelser via rymdvåg på korta avstånd mellan 100--300 km är möjliga även dagtid under perioder med kraftig solaktivitet.
 
-\textbf{Ultrakortvåg} --- Förbindeleser med låg effekt och små antenner, oberoende av jonosfären men då endast i form av frirumsutbredning, dvs fram till horisonten och under påverkan av terränghinder mm. Särskilt utmärkande för UKV är att rymdvåg saknar, markvågsdämpningen till lands är total och kommunikation på högre frekvenser i princip därför bara sker vid fri sikt mellan sändare och mottagare.
+\textbf{Ultrakortvåg (VHF)} --- Förbindeleser med låg effekt och små antenner, oberoende av jonosfären men då endast i form av frirumsutbredning, dvs fram till horisonten och under påverkan av terränghinder mm. Särskilt utmärkande för UKV är att rymdvåg saknar, markvågsdämpningen till lands är total och kommunikation på högre frekvenser i princip därför bara sker vid fri sikt mellan sändare och mottagare.
+
+
+
+
+
+
+
+
+
 
 
