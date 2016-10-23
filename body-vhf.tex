@@ -65,6 +65,127 @@ SRBR är ett ej tillståndspliktigt frekvenssegment som används för yrkesmäss
 
 Rekommendationen är att man skall använda CTCSS eller motsvarande för att undvika störa och bli störd av andra stationer som delar frekvenserna.
 
+\subsection{Maritima VHF-frekvenser}
+
+Marinbandet på VHF består både av duplex- och simplexkanaler. Simplexkanalerna används skepp-till-skepp och även ibland mot kustradio. Duplexfrekvenserna används t.ex. vid telefonsamtal som sätts upp av kuststation till skepp eller liknande. På dessa arbetskanaler sänder man även ut sjörapporter, navigationsvarningar och annan information t.ex. säkerhetsvarningar som är viktiga för sjöfarten.
+
+I tabellen listas de kanaler som gäller i svenska farvatten. Andra länder kan ha andra kanaler eller för olika ändamål. Det krävs en särskild licens från PTS för att få nyttja dessa frekvenser och radiooperatören skall ha ett SRC-certifikat (Short Range Communication).
+
+Anropskanal och nödkanal är kanal 16.
+
+Vid duplextrafik är skiftet -4,6 MHz.
+
+\subsubsection{Kanalnummer och frekvens maritima kanaler}
+
+\begin{longtable}{rrr|rrr}
+	\textbf{Kanal} & \textbf{Skepp} & \textbf{Kust} & \textbf{Kanal} & \textbf{Skepp} & \textbf{Kust} \\ \hline
+	   \endhead
+01 & 156,050 & 160,650 & 60 & 156,025 & 160,625 \\
+02 & 156,100 & 160,700 & 61 & 156,075 & 160,675 \\
+03 & 156,150 & 160,750 & 62 & 156,125 & 160,725 \\
+04 & 156,200 & 160,800 & 63 & 156,175 & 160,775 \\
+05 & 156,250 & 160,850 & 64 & 156,225 & 160,825 \\
+06 & 156,300 &         & 65 & 156,275 & 160,875 \\
+07 & 156,350 & 160,950 & 66 & 156,325 & 160,925 \\
+08 & 156,400 &         & 67 & 156,375 & \\
+09 & 156,450 &         & 68 & 156,425 & \\
+10 & 156,500 &         & 69 & 156,475 & \\
+11 & 156,550 &         & 70 & 156,525 & DSC \\
+12 & 156,600 &         & 71 & 156,575 & \\
+13 & 156,650 &         & 72 & 156,625 & \\
+14 & 156,700 &         & 73 & 156,675 & \\
+15 & 156,750 &         & 74 & 156,725 & \\
+16 & 156,800 & Anrop   & 75 & 156,775 & \\
+17 & 156,850 &         & 76 & 156,825 & \\
+18 & 156,900 & 161,500 & 77 & 156,875 & \\
+19 & 156,950 & 161,550 & 78 & 156,925 & 161,525 \\
+20 & 157,000 & 161,600 & 79 & 156,975 & 161,575 \\
+21 & 157,050 & 161,650 & 80 & 157,025 & 161,625 \\
+22 & 157,100 & 161,700 & 81 & 157,075 & 161,675 \\
+23 & 157,150 & 161,750 & 82 & 157,125 & 161,725 \\
+24 & 157,200 & 161,800 & 83 & 157,175 & 161,775 \\
+25 & 157,250 & 161,850 & 84 & 157,225 & 161,825 \\
+26 & 157,300 & 161,950 & 85 & 157,325 & 161,925 \\
+27 & 157,350 & 161,950 & 86 & 157,325 & 161,925 \\
+28 & 157,400 & 162,000 & 87 & 157,375 & \\
+   &         &         & 88 & 157,425 & \\
+   &         &         &    &         & \\
+L1 & 155,500 &         & F1 & 155,625 & \\
+L2 & 155,525 &         & F2 & 155,775 & \\
+   &         &         & F3 & 155,825 & \\
+\end{longtable}
+
+I tabellen är kanaler som saknar kustfrekvens alltså simplexkanaler. DSC står för ''Digital Selective Call'' ett sätt att digitalt anropa skepp eller kustsI tabellen är kanaler som saknar kustfrekvens alltså simplexkanaler. DSC står för ''Digital Selective Call'' ett sätt att digitalt anropa skepp eller kuststationer, kanaler vikta för DSC får inte användas för vanliga samtal.
+
+Kanal 16 är anropsfrekvens om man inte vet motstationen passar en annan kanal. Den är också nödfrekvens eftersom den passas av de flesta. 
+
+Kanalerna L1 osv är frekvenser avsedda för fritidsbåtar (Leisure) och frekvenserna F1 osv är avsedda för yrkesfisktationer, kanaler vikta för DSC får inte användas för vanliga samtal.
+
+Kanal 16 är anropsfrekvens om man inte vet motstationen passar en annan kanal. Den är också nödfrekvens eftersom den passas av de flesta. 
+
+Kanalerna L1 osv är frekvenser avsedda för fritidsbåtar (Leisure) och frekvenserna F1 osv är avsedda för yrkesfiske.
+
+\subsubsection{Transponderkanaler}
+\begin{longtable}{rrl}
+	\textbf{Kanal} & \textbf{Skepp} & \textbf{Not} \\ \hline
+	   \endhead
+AIS1 & 161,975 & Digital trafik, transponder\\
+AIS2 & 162,025 & Digital trafik, transponder\\
+\end{longtable}
+
+
+
+\subsubsection{Stockholm radio}
+
+Radiohorisonten är beräknad i nautiska mil, skeppet lägger till sin egen radiohorisont för att bestämma om det går att nå kuststationen eller ej.
+
+\textbf{Ostkusten}
+
+\begin{longtable}{lrr|lrr}
+\textbf{Kuststation} & \textbf{Kanal} & \textbf{Horisont} & \textbf{Kuststation} & \textbf{Kanal}& \textbf{Horisont}\\
+\hline
+\endhead
+Kalix          & 25 & 39 & Luleå         & 24 & 26 \\
+Skellefteå     & 23 & 44 & Umeå          & 26 & 54 \\
+Örnsköldsvik   & 28 & 42 & Mjällom       & 64 & 43 \\
+Kramfors       & 84 & 43 & Härnösand     & 23 & 36 \\
+Sundsvall      & 24 & 36 & Hudiksvall    & 25 & 54 \\
+Gävle          & 23 & 37 & Östhammar     & 24 & 44 \\
+Väddö          & 78 & 32 & Nacka         & 26, 23* & 43 \\
+Sv. högarna    & 84 & 15 & Södertälje    & 66 & 30 \\
+Torö           & 24 & 26 & Gotska sandön & 65 & 22 \\
+Norrköping     & 64 & 43 & Västervik     & 23 & 45 \\
+Fårö           & 28 & 25 & Visby         & 25 & 23 \\
+Hoburgen       & 24 & 25 & Kalmar        & 26 & 40 \\
+Ölands s. udde & 78 & 23 & Karlskrona    & 81 & 24 \\
+Karlshamn      & 25 & 48 & Kivik         & 21 & 39\\
+\end{longtable}
+*) Sänder ej väder, varningar eller andra listor
+
+\textbf{Västkusten}
+
+\begin{longtable}{lrr|lrr}
+\textbf{Kuststation} & \textbf{Kanal} & \textbf{Horisont} & \textbf{Kuststation} & \textbf{Kanal}& \textbf{Horisont}\\
+\hline
+\endhead
+Strömstad & 22 & 25 & Grebbestad & 26 & 25 \\
+Kungshamn & 23 & 23 & Uddevalla & 84 & 47 \\
+Tjörn & 81 & 26 & Göteborg & 24 & 43 \\
+Grimeton & 22 & 35 & Halmstad & 62 & 52 \\
+Helsingborg & 24 & 28 & Malmö & 27 & 25 \\
+\end{longtable}
+
+\textbf{Insjöarna}
+
+\begin{longtable}{lrr|lrr}
+\textbf{Kuststation} & \textbf{Kanal} & \textbf{Horisont} & \textbf{Kuststation} & \textbf{Kanal}& \textbf{Horisont}\\
+\hline
+\endhead
+Västerås & 25 & 40 & Trollhättan & 25 & 32 \\
+Bäckefors & 78 & 50 & Kinnekulle & 01 & 43 \\
+Karlstad & 65 & 36 & Jönköping & 23 & 49 \\
+Motala & 26 & 47 & & & \\
+\end{longtable}
 
 \subsection{Frekvenser amatörradio VHF--UHF}
 
