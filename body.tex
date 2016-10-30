@@ -303,11 +303,17 @@ CW står för continuous waves och innebär en rent omodulerad bärvåg. I motta
 
 Bandbredden för CW är i teorin mycket smal. I praktiken blir den lite beroende på frekvens från några Hz till något hundratal Hz beroende på frekvensband och sändarens beskaffenhet i form av jitter och frekvensstabilitet.
 
+Bandbredden hos CW består av fasbruset vilket normalt är så undertryckt att det egentligen inte betyder så mycker samt stig- respektive falltiden när man nycklar eller släpper nyckeln. Sker detta mjukt är bandbredden låg, har man skarp in- eller urkoppling av bärvågen nyttjar man mer bandbredd.
+
 \subsubsection{Amplitudmodulering, AM}
 
 Amplitudmodulering finns i flera olika varianter. Vanlig AM består av en bärvåg vars styra varieras i takt med signalen som skall sändas. Denna förändring av bärvågen producerar sidband och det är i dessa som den egentliga informationen återfinns. Bärvågen i sig får dock lejonparten av signalen varför det är en sändningsklass som nästan aldrig används inom amatörradiobanden.
 
 Bandbredden hos AM-modulerad signal kan beräknas genom att man tar två gånger högsta modulationsfrekvensen. Detta ger t.ex. vid en modulationsfrekvens som går från 300-3000 Hz en bandbredd som varierar med talet från 600 Hz -- 6 kHz.
+
+$$B=2f_m$$
+
+Där $f_m$ är högsta modulationsfrekvensen.
 
 \subsubsection{SSB/ESB --- Enkelt sidband, en AM-variant}
 
@@ -316,6 +322,12 @@ Enkelt sidband används av radioamatörer för att minska på bandbredden samt l
 Enkelt sidband förkortas ESB eller SSB (single side-band) och man kan välja vilket sidband man vill använda sig av. På amatörradiofrekvenser under 10 MHz använder man LSB (lägre/lower sidbandet) och på frekvenser över 10 MHz används USB/ÖSB (upper/övre sidbandet). 
 
 Detta är mycket av tradition. Använder man fel sorts sidband hörs det inget vettigt när man försöker lyssna. Språkrytmerna gör dock att vi uppfattar det som att mänskligt tal förekommer. I dag händer det att amatörer bryter mot regeln och sänder med ``fel'' sidband på fel frekvens.
+
+Bandbredden hos SSB är halva den för normal AM egentligen. Den kan därmed beräknas som för AM och halveras.
+
+$$B=f_m$$
+
+Där $f_m$ är högsta modulationsfrekvensen.
 
 \subsubsection{Frekvensmodulering, FM}
 
@@ -327,7 +339,7 @@ Nu för tiden förordas en minskning av bandbredden för FM-sändningar på amat
 
 $$B=2(f_M+f_D)$$
 
-Där $B$ är bandbredden $f_M$ högsta modulationsfrekvensen och $f_d$ är modulationens maximala deviation. Carsons bandbreddsbegrepp säger att 98\% av energin förekommer inom den stipulerade bandbredden. Det betyder att att grannkanalen kan få ungefär 17 dB lägre signal under sändning vilket fortfarande inte är enormt bra. Carson var för övrigt den som faktiskt uppfan SSB-modulationen.
+Där $B$ är bandbredden $f_M$ högsta modulationsfrekvensen och $f_d$ är FM-signalens maximala deviation (även kallat sving). Carsons bandbreddsbegrepp säger att 98\% av energin förekommer inom den stipulerade bandbredden. Det betyder att att grannkanalen kan få ungefär 17 dB lägre signal under sändning vilket fortfarande inte är enormt bra. Carson var för övrigt den som faktiskt uppfan SSB-modulationen.
 
 \begin{center}
 \begin{tabular}{rrrr}
