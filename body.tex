@@ -296,6 +296,24 @@ Standard kalibrering för S-metern är enligt följande skala:
 
 \subsection{Modulationer}
 
+\subsubsection{Bandbredd olika modulationer}
+
+Olika modulationer upptar olika bandbredd. Detta är mycket viktigt att förstå när man ställer in sin radiostation. Detta gäller särskilt att beakta i närheten av nödfrekvenser eller bandkanten. När vi talar om bandbredder här förstås den bandbredd vari minst 98 \% av signalens effekt befinner sig.
+
+\begin{tabular}{lrl}
+	\textbf{Modulation} & \textbf{Bandbredd} & \textbf{Kommentarer}                  \\ \hline
+	CW                  &          $<$500 Hz & Smalbandigt                           \\
+	AM                  &              6 kHz & Amplitudmodulering med fullt sidband  \\
+	SSB*                &              3 kHz & Amplitudmodulering med enkelt sidband \\
+	NFM                 &           7-12 kHz & Smalbandig FM                         \\
+	FM                  &             16 kHz & Normal FM                             \\
+	WFM                 &          16-75 kHz & Bredbandig FM (t.ex. rundradio)
+\end{tabular}
+
+*) För SSB gäller att USB och LSB fungerar lite olika. När man beräknar den högsta eller lägsta frekvensen utgår man från den inställda frekvensen $f$. För USB gäller då att högsta frekvensen är $f+3$ kHz. För LSB blir det $f-3$ kHz. Detta innebär att om du sänder på 80m bandet och du får sända telefoni från 3600--3800 kHz och vill lägga dig i under bandkanten och köra LSB skall du ställa in din radio på 3603 kHz som lägsta frekvens. Använd gärna lite marginal och kör exempelvis 3605 kHz i stället.
+
+Det är vanligt att man märker stationer som kör överdriven bandbredd. Antingen som en följd av att man vill öka sin modulationsvinst, okunskap eller man har skruvat i sin radio. Syftet kan var att få bättre genomslag vid långväga förbindelser.
+
 \subsubsection{Telegrafi, CW}
 
 CW står för continuous waves och innebär en rent omodulerad bärvåg. I mottagaren används en oscillator för att återskapa hörbar signal. Detta används för telegrafi och modulationsslaget är oftast A1A. Ibland sänds telegrafi som modulerad AM-bärvåg också som då moduleras med t.ex. 440 Hz ton. Det är dock mindre vanligt. 
@@ -347,6 +365,8 @@ Deviation & Modulation & Bandbredd & Kanaldelning\\ \hline
 2.5 kHz & 3 kHz & 11 kHz & 12.5 kHz\\
 \end{tabular}
 \end{center}
+
+
 
 \subsection{Termiska brusgolvet}
 
@@ -411,24 +431,6 @@ Rekommendationer för repeatrar i olika distrikt och län att använda CTCSS fö
 	Distrikt 6      &      114.8      &      118,8      &      94.8       &      131.8      \\
 	Distrikt 7      &      79.7       &      156.7      &      210.7      &
 \end{tabular}
-
-\section{Bandbredd olika modulationer}
-
-Olika modulationer upptar olika bandbredd. Detta är mycket viktigt att förstå när man ställer in sin radiostation. Detta gäller särskilt att beakta i närheten av nödfrekvenser eller bandkanten. När vi talar om bandbredder här förstås den bandbredd vari minst 98 \% av signalens effekt befinner sig.
-
-\begin{tabular}{lrl}
-	\textbf{Modulation} & \textbf{Bandbredd} & \textbf{Kommentarer}                  \\ \hline
-	CW                  &          $<$500 Hz & Smalbandigt                           \\
-	AM                  &              6 kHz & Amplitudmodulering med fullt sidband  \\
-	SSB*                &              3 kHz & Amplitudmodulering med enkelt sidband \\
-	NFM                 &           7-12 kHz & Smalbandig FM                         \\
-	FM                  &             16 kHz & Normal FM                             \\
-	WFM                 &          16-75 kHz & Bredbandig FM (t.ex. rundradio)
-\end{tabular}
-
-*) För SSB gäller att USB och LSB fungerar lite olika. När man beräknar den högsta eller lägsta frekvensen utgår man från den inställda frekvensen $f$. För USB gäller då att högsta frekvensen är $f+3$ kHz. För LSB blir det $f-3$ kHz. Detta innebär att om du sänder på 80m bandet och du får sända telefoni från 3600--3800 kHz och vill lägga dig i under bandkanten och köra LSB skall du ställa in din radio på 3603 kHz som lägsta frekvens. Använd gärna lite marginal och kör exempelvis 3605 kHz i stället.
-
-Det är vanligt att t.ex. utländska stationer kör överdriven bandbredd. Antingen som en följd av att man vill öka sin modulationsvinst, okunskap eller man har skruvat i sin radio.
 
 \section{Övergripande frekvensplan}
 
