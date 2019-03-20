@@ -1,0 +1,12 @@
+
+*.aux
+
+*.log
+
+rhb-print-A4\.out
+
+rhb-print-A4\.pdf
+
+rhb-print-A4\.synctex\.gz
+
+rhb-print-A4\.toc
