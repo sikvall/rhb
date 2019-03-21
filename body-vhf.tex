@@ -13,7 +13,10 @@ Frekvenserna på detta band var tidigare till för enbart jakt. I dag är de öp
 
 Högsta effekt är 5\,W och maximal sändningscykel är 10\% vilket betyder att under en timme får man sända maximalt 6 minuter. 
 
-I oktober 2012 utökades de gamla jaktkanalerna med ett antal nya kanaler vilket skedde i oktober 2012. De har ingen officiell benämning men jag har valt att numrera upp dem efter de traditionella numren med början på 25. Kanal 24 har tidigare haft en frekvens som inte längre är i bruk så det vore förvirrande att använda den. Nya kanaler är markerade i listan med asterisk.
+I oktober 2012 utökades de gamla jaktkanalerna med ett antal nya kanaler vilket skedde i oktober 2012. De har ingen officiell kanalnumrering eller egentlig benämning men jag har valt att numrera upp dem efter de traditionella numren med början på 25.
+
+Kanal 24 har dock tidigare haft en frekvens som inte längre är i bruk, så det vore förvirrande att använda den -- den saknas därför i listan. 
+Nya kanaler är markerade i listan med asterisk och har fått nummer från kanal 25 och uppåt efter frekvens. Detta gör att listan blir en smula oordnad.
 
 \begin{longtable}{rll}
 \textbf{Frekvens} & \textbf{Benämning} & \textbf{Tidigare benämning} \\ \hline \endhead
@@ -60,62 +63,115 @@ I oktober 2012 utökades de gamla jaktkanalerna med ett antal nya kanaler vilket
 
 
 \subsubsection{Jakt och jordbruksfrekvenser 155\,MHz}
-\begin{longtable}{rlrl}
-\textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde}   \\ \hline \endhead
-155,425           & Jakt K1            & 5 W             & Jakt, Jordbruk               \\
-155,475           & Jakt K2            & 5 W             & Jakt, Jordbruk               \\
-155,500           & Jakt K3            & 5 W             & Jakt, Jordbruk$^M$           \\
-155,525           & Jakt K4            & 5 W             & Jakt, Jordbruk$^M$           \\
-156,000           & Jakt K5            & 5 W             & Generell landmobil radio$^P$ \\
-155,400           & Jakt K6            & 5 W             & Jakt, Jordbruk               \\
-155,450           & Jakt K7            & 5 W             & Jakt, Jordbruk
-\end{longtable}
+
+Observera att kanalnumren som är traditionella och frekvenserna inte kommer helt i ordning. Vid svenskt territorialvatten samt inre svenskt vatten skall \textbf{inte frekvenserna markerade med * användas}.
+
+\begin{tabular}{rlrl}
+	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde}            \\ \hline
+	          155,425 & Jakt K1            &             5 W & Jakt, Jordbruk$^R$                    \\
+	          155,475 & Jakt K2            &             5 W & Jakt, Jordbruk$^R$                    \\
+	          155,500 & Jakt K3 VHF-M L1   &             5 W & Jakt, Jordbruk, Skogsbruk, Marin$^M$ \\
+	          155,525 & Jakt K4 VHF-M L2   &             5 W & Jakt, Jordbruk, Skogsbruk Marin$^M$  \\
+	          156,000 & Jakt K5            &             5 W & Jakt, PMR, Friluftskanal$^P$          \\
+	          155,400 & Jakt K6            &             5 W & Jakt, Jordbruk, Skogsbruk$^R$         \\
+	          155,450 & Jakt K7*           &             5 W & Jakt, Jordbruk, Skogsbruk$^R$
+\end{tabular}
 
 \footnotesize
 \begin{itemize}
 	\item[$^M$] Delas med marina VHF-bandet, kanalerna L1 och L2 för fritidsbåtar.
-	\item[$^P$] PMR-kanal som kan användas till vad som helst så länge det är landmobil radio och effekten ej överskrids.
+	\item[$^P$] PMR-kanal som kan användas till allmän privatradio.
+	\item[$^R$] Dessa kanaler \textit{får ej användas} på svenskt territorialvatten eller svenskt inre vatten. Se \href{https://pts.se/globalassets/startpage/dokument/legala-dokument/foreskrifter/radio/beslutade_ptsfs-2018-3-undantagsforeskrifter.pdf}{PTSFS2018:3} för mer information.
 \end{itemize}
 \normalsize
 
 \subsubsection{Öppna PMR-bandet på 446\,MHz}
-\begin{longtable}{rlrl}
-\textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde} \\ \hline \endhead
-446,00625         & PMR446 K1          & 500 mW          & PMR$^N$                    \\
-446,01875         & PMR446 K2          & 500 mW          & PMR$^N$                    \\
-446,03125         & PMR446 K3          & 500 mW          & PMR$^N$                    \\
-446,04375         & PMR446 K4          & 500 mW          & PMR$^N$                    \\
-446,05625         & PMR446 K5          & 500 mW          & PMR$^N$                    \\
-446,06875         & PMR446 K6          & 500 mW          & PMR$^N$                    \\
-446,08125         & PMR446 K7          & 500 mW          & PMR$^N$                    \\
-446,09375         & PMR446 K8          & 500 mW          & PMR$^N$
-\end{longtable}
 
-\footnotesize
-\begin{itemize}
-	\item[$^N$] Smalbandig FM-modulation skall användas pga tätt liggande kanaler.
-\end{itemize}
-\normalsize
+I nya författningssamlingen står det uttrycklingen att repeateranvändning är förbjuden. De exakta kanalerna har också inte heller bestämts utan bandet är upplåtet 446,0--446,2\,MHz. Traditionellt används nedanstående kanaler. Max effekt är 500\,mW och antennen får ej vara av löstagbar sort. Utrustningen skall vara godkänd för ändamålet.
+
+Sedan sist har ytterligare spektrum tillförts och bandet har nu 16 kanaler. Det medges också digital PMR på alla frekvenserna men rekommendationen är att använda K1--K8 för analogt och K9--K16 för digitalt eftersom äldre apparater inte kan gå på de nya kanalerna medan alla digitala kan det.
+
+Vi vissa numreringar numreras de digitala kanalerna med start på kanalnummer 1 på K9. I listan står de som D1--D8 där D står för digitalt.
+
+Endast smalbandig modulation med FM-deviation max 2.5 kHz skall användas för att inte störa närliggande kanaler. Kanalrastret är 12,5\,kHz så modulationen bör rymmas inom den bandbredden.
+\clearpage
+\begin{longtable}{rlrl}
+	 \textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde} \\ \hline
+	\endhead
+446,00625 & PMR446 K1          &          500 mW & PMR$^N$                    \\
+	         446,01875 & PMR446 K2          &          500 mW & PMR / DPMR                 \\
+	         446,03125 & PMR446 K3          &          500 mW & PMR / DPMR                 \\
+	         446,04375 & PMR446 K4          &          500 mW & PMR / DPMR                 \\
+	         446,05625 & PMR446 K5          &          500 mW & PMR / DPMR                 \\
+	         446,06875 & PMR446 K6          &          500 mW & PMR / DPMR                 \\
+	         446,08125 & PMR446 K7          &          500 mW & PMR / DPMR                 \\
+	         446,09375 & PMR446 K8          &          500 mW & PMR / DPMR                 \\ \hline
+	         446,10625 & PMR446 K9/D1       &          500 mW & PMR / DPMR                 \\
+	         446,11875 & PMR446 K10/D2      &          500 mW & PMR / DPMR                 \\
+	         446,13125 & PMR446 K11/D3      &          500 mW & PMR / DPMR                 \\
+	         446,14375 & PMR446 K12/D4      &          500 mW & PMR / DPMR                 \\
+	         446,15625 & PMR446 K13/D5      &          500 mW & PMR / DPMR                 \\
+	         446,16875 & PMR446 K14/D6      &          500 mW & PMR / DPMR                 \\
+	         446,18125 & PMR446 K15/D7      &          500 mW & PMR / DPMR                 \\
+	         446,19375 & PMR446 K16/D8      &          500 mW & PMR / DPMR
+\end{longtable}
 
 \subsubsection{Kortdistansradio (KDR)}
 
 Kallas även SRBR för Short Range Business Radio.
 
-\begin{longtable}{rlrl}
-	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde} \\ \hline \endhead
-	          444,600 & SRBR K1            & 2 W             & Short range business radio \\
-	          444,625 & SRBR K2            & 2 W             & Short range business radio \\
-	          444,800 & SRBR K3            & 2 W             & Short range business radio \\
-	          444,825 & SRBR K4            & 2 W             & Short range business radio \\
-	          444,850 & SRBR K5            & 2 W             & Short range business radio \\
-	          444,875 & SRBR K6            & 2 W             & Short range business radio \\
-	          444,925 & SRBR K7            & 2 W             & Short range business radio \\
-	          444,975 & SRBR K8            & 2 W             & Short range business radio
-\end{longtable}
+\begin{table}[h]
+	\centering
+\begin{tabular}{rlrl}
+\textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde} \\ \hline
+444,600 & SRBR K1            & 2 W             & Short range business radio \\
+444,625 & SRBR K2            & 2 W             & Short range business radio \\
+444,800 & SRBR K3            & 2 W             & Short range business radio \\
+444,825 & SRBR K4            & 2 W             & Short range business radio \\
+444,850 & SRBR K5            & 2 W             & Short range business radio \\
+444,875 & SRBR K6            & 2 W             & Short range business radio \\
+444,925 & SRBR K7            & 2 W             & Short range business radio \\
+444,975 & SRBR K8            & 2 W             & Short range business radio
+\end{tabular}
+\caption{Frekvenser för SRBR}
+\end{table}	
 
 SRBR är ett ej tillståndspliktigt frekvenssegment som används för yrkesmässig radiotrafik.
 
 Rekommendationen är att man skall använda CTCSS eller motsvarande för att undvika störa och bli störd av andra stationer som delar frekvenserna.
+
+Från PTSFS2018:3 så har bandet fått nya bärvågsfrekvenser och det har blivit öppet för att köra med 25, 12,5 eller 6,25\,kHz Kanalraster. Denna frekvenstabell blir lite mer komplicerad.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|l|l|l|l|l|}
+		\hline
+		\textbf{25 kHz}                                & \textbf{12,5 kHz}                               & \textbf{6,25 kHz}               & \textbf{25 kHz}                               & \textbf{12,5 kHz}                               & \textbf{6,25 kHz}               \\ \hline
+		\multicolumn{1}{|c|}{\multirow{4}{*}{444,600}} & \multicolumn{1}{c|}{\multirow{2}{*}{444,59375}} & \multicolumn{1}{c|}{444,590625} & \multicolumn{1}{l|}{\multirow{4}{*}{444,850}} & \multicolumn{1}{l|}{\multirow{2}{*}{444,84375}} & \multicolumn{1}{l|}{444,840625} \\ \cline{3-3}\cline{6-6}
+		\multicolumn{1}{|c|}{}                         & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{444,596875} & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                           & \multicolumn{1}{l|}{444,846875} \\ \cline{2-3}\cline{5-6}
+		\multicolumn{1}{|c|}{}                         & \multicolumn{1}{c|}{\multirow{2}{*}{444,60625}} & \multicolumn{1}{c|}{444,603125} & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{\multirow{2}{*}{444,85625}} & \multicolumn{1}{l|}{444,853125} \\ \cline{3-3}\cline{6-6}
+		\multicolumn{1}{|c|}{}                         & \multicolumn{1}{c|}{}                           & \multicolumn{1}{c|}{444,609375} & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                           & \multicolumn{1}{l|}{444,859375} \\ \hline
+		\multirow{4}{*}{444,650}                       & \multirow{2}{*}{444,64375}                      & 444,640625                      & \multicolumn{1}{l|}{\multirow{4}{*}{444,875}} & \multicolumn{1}{l|}{\multirow{2}{*}{444,86875}} & \multicolumn{1}{l|}{444,865625} \\ \cline{3-3}\cline{6-6}
+		                                               &                                                 & 444,646875                      & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                           & \multicolumn{1}{l|}{444,871875} \\ \cline{2-3}\cline{5-6}
+		                                               & \multirow{2}{*}{444,65625}                      & 444,653125                      & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{\multirow{2}{*}{444,88125}} & \multicolumn{1}{l|}{444,878125} \\ \cline{3-3}\cline{6-6}
+		                                               &                                                 & 444,659375                      & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                           & \multicolumn{1}{l|}{444,884375} \\ \hline
+		\multirow{4}{*}{Saknas}                        & \multirow{2}{*}{444,66875}                      & 444,665625                      & \multicolumn{1}{l|}{\multirow{4}{*}{444,925}} & \multicolumn{1}{l|}{\multirow{2}{*}{444,91875}} & \multicolumn{1}{l|}{444,915625} \\ \cline{3-3}\cline{6-6}
+		                                               &                                                 & 444,671875                      & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                           & \multicolumn{1}{l|}{444,921875} \\ \cline{2-3}\cline{5-6}
+		                                               & \multirow{2}{*}{444,68125}                      & 444,678125                      & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{\multirow{2}{*}{444,93125}} & \multicolumn{1}{l|}{444,928125} \\ \cline{3-3}\cline{6-6}
+		                                               &                                                 & 444,684375                      & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                           & \multicolumn{1}{l|}{444,934375} \\ \hline
+		\multirow{4}{*}{444,800}                       & \multirow{2}{*}{444,79375}                      & 444,790625                      & \multicolumn{1}{l|}{\multirow{4}{*}{444,975}} & \multicolumn{1}{l|}{\multirow{2}{*}{444,91875}} & \multicolumn{1}{l|}{444,915625} \\ \cline{3-3}\cline{6-6}
+		                                               &                                                 & 444,796875                      & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                           & \multicolumn{1}{l|}{444,921875} \\ \cline{2-3}\cline{5-6}
+		                                               & \multirow{2}{*}{444,80625}                      & 444,803125                      & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{\multirow{2}{*}{444,93125}} & \multicolumn{1}{l|}{444,928125} \\ \cline{3-3}\cline{6-6}
+		                                               &                                                 & 444,809375                      & \multicolumn{1}{l|}{}                         & \multicolumn{1}{l|}{}                           & \multicolumn{1}{l|}{444,934375} \\ \hline
+		\multirow{4}{*}{444,825}                       & \multirow{2}{*}{444,81875}                      & 444,815625                      & \multicolumn{3}{l}{\multirow{4}{*}{}}                                                                                             \\ \cline{3-3}
+		                                               &                                                 & 444,821875                      & \multicolumn{3}{l}{}                                                                                                              \\ \cline{2-3}
+		                                               & \multirow{2}{*}{444,83125}                      & 444,828125                      & \multicolumn{3}{l}{}                                                                                                              \\ \cline{3-3}
+		                                               &                                                 & 444,834375                      & \multicolumn{3}{l}{}                                                                                                              \\ \cline{1-3}
+	\end{tabular}
+\caption{Nya frekvensindelningen på kortdistansradiobandet}
+\end{table}
 
 \subsection{Maritima VHF-frekvenser}
 
@@ -400,7 +456,7 @@ RU0X osv är här en efterkonstruktion. Egentligen så användes sällan ``X-fre
 
 \clearpage
 
-\subsection{JOTA, Scouters frekvenser}
+\subsection{Scouters frekvenser, JOTA}
 
 Scouter finns ofta QRV under vissa helger, \textit{Jamboree On The Air, JOTA}, förekommer några gånger per år. Här är en sammanställning av de standardfrekvenser scouter nyttjar om de inte kör repeatrar eller leta upp motstationer själva. Scouter kan antingen ha egna signaler, köra under
 tillfälliga signaler eller vara second operator åt med någon klubbsignal.
