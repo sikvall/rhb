@@ -76,30 +76,29 @@ Vi vissa numreringar numreras de digitala kanalerna med start på kanalnummer 1 
 
 Endast smalbandig modulation med FM-deviation max 2.5 kHz skall användas för att inte störa närliggande kanaler. Kanalrastret är 12,5\,kHz så modulationen bör rymmas inom den bandbredden.
  
-\begin{longtable}{rlrl}
-	 \textbf{Frekvens} & \textbf{Benämning} & \textbf{Effekt} & \textbf{Användningsområde} \\ \hline
-	\endhead
-446,00625 & PMR446 K1          &          500 mW & PMR                    \\
-	         446,01875 & PMR446 K2          &          500 mW & PMR / DPMR                 \\
-	         446,03125 & PMR446 K3          &          500 mW & PMR / DPMR                 \\
-	         446,04375 & PMR446 K4          &          500 mW & PMR / DPMR                 \\
-	         446,05625 & PMR446 K5          &          500 mW & PMR / DPMR                 \\
-	         446,06875 & PMR446 K6          &          500 mW & PMR / DPMR                 \\
-	         446,08125 & PMR446 K7          &          500 mW & PMR / DPMR                 \\
-	         446,09375 & PMR446 K8          &          500 mW & PMR / DPMR                 \\ \hline
-	         446,10625 & PMR446 K9/D1       &          500 mW & PMR / DPMR                 \\
-	         446,11875 & PMR446 K10/D2      &          500 mW & PMR / DPMR                 \\
-	         446,13125 & PMR446 K11/D3      &          500 mW & PMR / DPMR                 \\
-	         446,14375 & PMR446 K12/D4      &          500 mW & PMR / DPMR                 \\
-	         446,15625 & PMR446 K13/D5      &          500 mW & PMR / DPMR                 \\
-	         446,16875 & PMR446 K14/D6      &          500 mW & PMR / DPMR                 \\
-	         446,18125 & PMR446 K15/D7      &          500 mW & PMR / DPMR                 \\
-	         446,19375 & PMR446 K16/D8      &          500 mW & PMR / DPMR
-\end{longtable}
+\begin{table}[H]
+\centering
+\begin{tabular}{rll|rll}
+	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Rek. Anv.}& 
+	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Rek. Anv.}      \\ \hline
+	446,00625 & PMR446 K1          & PMR                                   &          446,10625 & PMR446 K9\ \,\,/D1       & DPMR \\
+	446,01875 & PMR446 K2          & PMR                                   &          446,11875 & PMR446 K10/D2      & DPMR \\
+	446,03125 & PMR446 K3          & PMR                                   &          446,13125 & PMR446 K11/D3      & DPMR \\
+	446,04375 & PMR446 K4          & PMR                                   &          446,14375 & PMR446 K12/D4      & DPMR \\
+	446,05625 & PMR446 K5          & PMR                                   &          446,15625 & PMR446 K13/D5      & DPMR \\
+	446,06875 & PMR446 K6          & PMR                                   &          446,16875 & PMR446 K14/D6      & DPMR \\
+	446,08125 & PMR446 K7          & PMR                                   &          446,18125 & PMR446 K15/D7      & DPMR \\
+	446,09375 & PMR446 K8          & PMR                                   &          446,19375 & PMR446 K16/D8      & DPMR
+\end{tabular}
+\caption{PMR-frekvenser}
+\label{tab:pmr-frekvenser}
+\end{table}
 
-\subsubsection{Kortdistansradio (KDR)}
+\clearpage
+\subsubsection{Kortdistansradio (KDR, SRBR)}
 
-Kallas även SRBR för Short Range Business Radio.
+Kallas även SRBR för Short Range Business Radio. 
+Den traditionella frekvenslistan ser ut som följer. En ny variant med frekvenser för 12,5\,kHz samt 6,25\,kHz kanaler finns också ute nu och kan ses i tabell \ref{tab:SRBR-frekvenser}.
 
 \begin{table}[h]
 	\centering
@@ -152,23 +151,21 @@ Från PTSFS2018:3 så har bandet fått nya bärvågsfrekvenser och det har blivi
 		                                               &                                                 & 444,834375                      & \multicolumn{3}{l}{}                                                                                                              \\ \cline{1-3}
 	\end{tabular}
 \caption{Nya frekvensindelningen på kortdistansradiobandet}
+\label{tab:SRBR-frekvenser}
 \end{table}
+
+\clearpage
 
 \subsection{Maritima VHF-frekvenser}
 
 Marinbandet på VHF består både av duplex- och simplexkanaler. Simplexkanalerna används skepp-till-skepp och även ibland mot kustradio. Duplexfrekvenserna används t.ex. vid telefonsamtal som sätts upp av kuststation till skepp eller liknande. På dessa arbetskanaler sänder man även ut sjörapporter, navigationsvarningar och annan information t.ex. säkerhetsvarningar som är viktiga för sjöfarten.
 
-I tabellen listas de kanaler som gäller i svenska farvatten. Andra länder kan ha andra kanaler eller för olika ändamål. Det krävs en särskild licens från PTS för att få nyttja dessa frekvenser och radiooperatören skall ha ett SRC-certifikat (Short Range Communication).
-
-Anropskanal och nödkanal är kanal 16.
-
-Vid duplextrafik är skiftet -4,6\,MHz.
-\clearpage
 \subsubsection{Kanalnummer och frekvens maritima kanaler}
 
-\begin{longtable}{rrr|rrr}
-	\textbf{Kanal} & \textbf{Skepp} & \textbf{Kust} & \textbf{Kanal} & \textbf{Skepp} & \textbf{Kust} \\ \hline
-	   \endhead
+\begin{table}[H]
+\centering
+\begin{tabular}{rrr|rrr}
+\textbf{Kanal} & \textbf{Skepp} & \textbf{Kust} & \textbf{Kanal} & \textbf{Skepp} & \textbf{Kust} \\ \hline
 01 & 156,050 & 160,650 & 60 & 156,025 & 160,625 \\
 02 & 156,100 & 160,700 & 61 & 156,075 & 160,675 \\
 03 & 156,150 & 160,750 & 62 & 156,125 & 160,725 \\
@@ -184,7 +181,7 @@ Vid duplextrafik är skiftet -4,6\,MHz.
 13 & 156,650 &         & 72 & 156,625 & \\
 14 & 156,700 &         & 73 & 156,675 & \\
 15 & 156,750 &         & 74 & 156,725 & \\
-16 & 156,800 & Anrop   & 75 & 156,775 & \\
+16 & 156,800 & Anrop/Nöd   & 75 & 156,775 & \\
 17 & 156,850 &         & 76 & 156,825 & \\
 18 & 156,900 & 161,500 & 77 & 156,875 & \\
 19 & 156,950 & 161,550 & 78 & 156,925 & 161,525 \\
@@ -199,16 +196,24 @@ Vid duplextrafik är skiftet -4,6\,MHz.
 28 & 157,400 & 162,000 & 87 & 157,375 & \\
    &         &         & 88 & 157,425 & \\
    &         &         &    &         & \\
-L1 & 155,500 &         & F1 & 155,625 & \\
-L2 & 155,525 &         & F2 & 155,775 & \\
-   &         &         & F3 & 155,825 & \\
-\end{longtable}
+L1 & 155,500 & Leisure        & F1 & 155,625 &Fishing \\
+L2 & 155,525 & Leisure        & F2 & 155,775 &Fishing \\
+   &         &         & F3 & 155,825 & Fishing\\
+\end{tabular}
+\caption{Marin VHF, frekvenslista}
+\end{table}
 
-I tabellen är de kanaler som saknar kustfrekvens alltså simplexkanaler. DSC står för ''Digital Selective Call'' ett sätt att digitalt anropa skepp eller kustsI tabellen är kanaler som saknar kustfrekvens alltså simplexkanaler. DSC står för ''Digital Selective Call'' ett sätt att digitalt anropa skepp eller kuststationer, kanaler vikta för DSC får inte användas för vanliga samtal.
+I tabellen listas de kanaler som gäller i svenska farvatten. Andra länder kan ha andra kanaler eller för olika ändamål. Det krävs en särskild licens från PTS för att få nyttja dessa frekvenser och radiooperatören skall ha ett SRC-certifikat (Short Range Communication).
+
+Anropskanal och nödkanal är kanal 16.
+
+Vid duplextrafik är skiftet -4,6\,MHz.
+
+I tabellen är kanaler som saknar kustfrekvens alltså simplexkanaler. DSC står för ''Digital Selective Call'' ett sätt att digitalt anropa skepp eller kuststationer, kanaler vikta för DSC får inte användas för vanliga samtal.
 
 Kanal 16 är anropsfrekvens om man inte vet motstationen passar en annan kanal. Den är också nödfrekvens eftersom den passas av de flesta. 
 
-Kanalerna L1--L2 är frekvenser avsedda för fritidsbåtar (Leisure) och frekvenserna F1--F3 osv är avsedda för yrkesfiske.
+Kanalerna L1--L2 är frekvenser avsedda för fritidsbåtar (Leisure) och frekvenserna F1--F3 osv är avsedda för yrkesfiske. L1 och L2 delas med kanal 3 och 4 på jaktradion vilket kan vara bra att känna till.
 
 \subsubsection{Transponderkanaler}
 \begin{longtable}{rrl}
@@ -245,6 +250,7 @@ Karlshamn      & 25 & 48 & Kivik         & 21 & 39\\
 \end{longtable}
 *) Sänder ej väder, varningar eller andra listor
 
+\clearpage
 \textbf{Västkusten}
 
 \begin{longtable}{lrr|lrr}
@@ -258,8 +264,6 @@ Tjörn       & 81 & 26 & Göteborg   & 24 & 43 \\
 Grimeton    & 22 & 35 & Halmstad   & 62 & 52 \\
 Helsingborg & 24 & 28 & Malmö      & 27 & 25 \\
 \end{longtable}
-
-\clearpage
 
 \textbf{Insjöarna}
 
