@@ -1,20 +1,195 @@
 % !TeX encoding = UTF-8
-% !TeX spellcheck = sv_SE
-\documentclass[12pt,swedish,a4paper,twoside]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[swedish]{babel}
-\usepackage[hidelinks]{hyperref}
+% !TeX spellcheck = en_US
+\documentclass[10pt,swedish,a4paper]{article}
 \usepackage[a4paper,bindingoffset=1cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[swedish]{babel}
+\usepackage[colorlinks,linkcolor=black,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\usepackage{multirow}
 \usepackage{amsmath}
+%\usepackage{wasysym}
+\usepackage{tabularx}
+%\usepackage{textcomp}
+%\usepackage{newcent}
+%\usepackage{eulervm}
+%\usepackage{fourier}
+\usepackage{graphicx}
+\usepackage[table,x11names]{xcolor}
+\usepackage{fancyhdr}
+\usepackage[yyyymmdd]{datetime} \renewcommand{\dateseparator}{-}
+\usepackage{lastpage}
+\usepackage{newpxtext,newpxmath}
+\usepackage{pdfpages}
+\usepackage{icomma}
 \usepackage{pdflscape}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage[bottom]{footmisc}
 \usepackage{longtable}
-\usepackage{textcomp}
+%\usepackage{tikz}
+%\usetikzlibrary{arrows,chains,positioning,patterns,calc}
+\newif\iftitlefoot
+\raggedbottom
+\setlist{nosep}
+\usepackage{todonotes}
+%\usepackage{draftwatermark}
 \raggedbottom
 
-\input{init-hf}
-\input{body}
-\input{body-hf}
-%\input{qso}
-\input{logbook}
+
+%\SetWatermarkText{GRANSKAS}
+%\SetWatermarkScale{.7}
+%\SetWatermarkLightness{.7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Definiera diverse saker här som används i dokumentet
+\newcommand{\TitleText}{Radiohandbok}
+\newcommand{\SubtitleText}{För Sändaramatörer\\ och Privatradioanvändare}
+\newcommand{\Forfattare}{Täpp-Anders Sikvall}
+\newcommand{\Initialer}{SMØUEI}
+\newcommand{\DokYear}{19}
+\newcommand{\DokVersion}{2.0.0}
+\newcommand{\DokumentRevision}{x.y.z}
+\newcommand{\DokumentDatum}{\today}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Tables are getting a little squashed without this
+\renewcommand{\arraystretch}{1.15}
+
+%\titlefootfalse % Använd denna för ren förstasida
+\titlefoottrue % Använd denna för en footer på första sidan
+%\newcommand{\titlefootcontent}{%
+%	\begin{tabularx}{.9\textwidth}{X X X X}	%
+%		\textbf{Intressegrupp} & \textbf{Författare} & \textbf{Datum}  & \textbf{Utgåva} \\		%
+%		\Mottagare       & \Forfattare          & \DokumentDatum & \DokumentNummer   \\		%            
+%	\end{tabularx}%
+%}
+
+%\addtolength{\headsep}{3mm}
+%\addtolength{\textheight}{15mm}
+
+\begin{document}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%% Bygger förstasidan här
+	
+	\newgeometry{left=2cm,right=2cm,bottom=1cm,top=1cm}
+	\pagestyle{empty}
+	\vfill
+	%	\begin{flushright}
+	%		\includegraphics[width=0.1\textwidth]{logo/logo}
+	%	\end{flushright}
+	\vspace*{4cm}
+	\centerline{\includegraphics[width=\paperwidth]{logo/rubrikbild}}
+	\begin{flushright}
+		\Huge{\bfseries{\TitleText}} \\[3mm]
+		\Large{\bfseries{\SubtitleText}}
+	\end{flushright}
+	
+	\vfill
+	
+	%	\small
+	%	\begin{tabular}{llll}
+	%		\textbf{Rev} & \textbf{Date} & \textbf{Responsible} & \textbf{Description}       \\ \hline
+	%		B            & 2019-03-16    & ANSI                 & Uppdateringar med mer info \\
+	%		A            & 2019-03-15    & ANSI                 & Initial version
+	%	\end{tabular}
+	%	\normalsize 
+	%	\vfill
+	
+	%	\iftitlefoot
+	%	\scriptsize
+	%	\vspace*{-1em}
+	%	\hrule
+	%	\begin{center}
+	%		\begin{tabularx}{.9\textwidth}{X X X X}
+	%			\titlefootcontent &
+	%		\end{tabularx}
+	%	\end{center}
+	%	\normalsize
+	%	\fi
+	\newpage
+	
+	%\restoregeometry
+	
+	\newgeometry{top=3cm}
+	
+	\pagestyle{fancy}
+	%\setlength{\headheight}{53pt} 
+	
+	%	\lhead{\includegraphics[height=10pt]{logo/logo}}
+	\lhead{\leftmark}	
+	\rhead{
+		\scriptsize
+		\begin{tabular}{ll}
+			\textbf{Version} & \textbf{Datum}\\
+			\DokVersion & \DokumentDatum\\
+		\end{tabular}
+	}
+	
+	\chead{}
+	
+	\lfoot{
+		\scriptsize
+		www.sm0uei.se
+	}
+	
+	\cfoot{\scriptsize \thepage\ / \pageref{LastPage}}
+	
+	\rfoot{\scriptsize
+		anders@sikvall.se
+	}
+	
+	\renewcommand{\footrulewidth}{0.2pt}
+	
+	\widowpenalty=9999
+	\clubpenalty=9999
+	
+	%	\setlength{\headsep}{1em}2
+	
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%% Här börjar dokumentet som skall redigeras
+	%
+	
+	\cleardoublepage
+	%\newgeometry{left=3.2cm,right=3.2cm,bottom=2.5cm,top=2.5cm}
+	
+	%%% Innehållsförteckning
+	\tableofcontents
+	
+	\newpage
+	
+	% Lista bilagor här
+	
+	%\listoffigures
+	
+	%\listoftables
+	
+	%\listoftodos
+	
+	
+	%%% Justera här om du föredrar indrag som i löpande text. Teknisk dokumentation
+	%%% tycker jag fungerar bättre med styckenmellanrum utan indrag. \parskip
+	%%% justerar styckemellanrum och \parindent är indrag.
+	
+	
+	
+	\setlength{\parskip}{0.5em}
+	\setlength{\parindent}{0pt}
+	
+	\input{init-full}
+	
+	\input{body}
+	
+	\input{body-vhf}
+	
+	\input{body-hf}
+	
+	\input{logbook}
 
 \end{document}
