@@ -1,10 +1,10 @@
 all:
-	pdflatex rhb-print-A4
-	pdflatex rhb-print-A4
-	pdflatex rhb-print-hf-A4
-	pdflatex rhb-print-hf-A4
-	pdflatex rhb-print-vhf-A4
-	pdflatex rhb-print-vhf-A4
+	pdflatex rhb-full
+	pdflatex rhb-full
+	pdflatex rhb-hf
+	pdflatex rhb-hf
+	pdflatex rhb-vhf
+	pdflatex rhb-vhf
 	mkdir -p pdf
 	mv *.pdf pdf
 
