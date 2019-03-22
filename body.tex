@@ -150,8 +150,12 @@ I de tidigare SMnXYZ-signalerna förekom amatörens bokstavskombination endast e
 \end{table}
 
 \subsection{Q-koder}
+I tabellen listas några av de vanligast förekommande Q-koderna på amatörradiobanden. Det finns förstås många fler koder men detta anses som de vanligaste.
 \begin{longtable}{ll}
-	\textbf{Kod} & \textbf{Fråga / Svar}                                                         \\ \hline \endhead
+	\textbf{Kod} & \textbf{Fråga / Svar}                                                         \\ \hline 
+	\endhead
+	\caption{Q-koder}\\    
+\endlastfoot
 	QRA & Vad heter er station?                                                \\
 	    & Vår station heter ...                                                \\ \hline
 	QRB & Hur långt bort från min station befinner ni er?                      \\
@@ -210,7 +214,7 @@ I de tidigare SMnXYZ-signalerna förekom amatörens bokstavskombination endast e
 	QTH & Vilken är er geografiska position?                                   \\
 	    & Min geografiska position är ...                                      \\ \hline
 	QTR & Kan ni ge mig rätt tid?                                              \\
-	    & Rätt tid är ...                                                      \\ \hline
+	    & Rätt tid är ...                                                      \\ 
 \end{longtable}
 
 \subsection{Lokator}
@@ -264,6 +268,7 @@ Nödtrafik har alltid prioritet.
 
 Effekter anges i W eller i decibel relaterat till 1 mW (dBm) eller relaterat 1W (dBW). Tabell över effekt och decibelwatt nedan:
 \begin{table}[h]
+\centering
 \begin{tabular}{rrr|rrr|rrr}
 	\textbf{Effekt} & \textbf{dBW} & \textbf{dBm} & \textbf{Effekt} & \textbf{dBW} & \textbf{dBm} & \textbf{Effekt} & \textbf{dBW} & \textbf{dBm} \\ \hline
 	    1 \textmu W &          -60 &          -30 &             1 W &            0 &           30 &           100 W &           20 &           50 \\
@@ -283,6 +288,7 @@ Signalstyrkan i amatörradio uttrycks oftast som S-värden. Dessa fås i regel g
 Standard kalibrering för S-metern är enligt skalan i tabellen \ref{tab:s-varden}
 
 \begin{table}[h]
+\centering
 \begin{tabular}{r|rr|rr||r|rr|rr}
       & \multicolumn{2}{c|}{\textbf{$<$ 30 MHz}} &
   \multicolumn{2}{c}{\textbf{$>$ 30 MHz}}       && \multicolumn{2}{c|}{\textbf{$<$ 30 MHz}} &
@@ -310,6 +316,8 @@ Standard kalibrering för S-metern är enligt skalan i tabellen \ref{tab:s-varde
 
 Olika modulationer upptar olika bandbredd. Detta är mycket viktigt att förstå när man ställer in sin radiostation. Detta gäller särskilt att beakta i närheten av nödfrekvenser eller bandkanten. När vi talar om bandbredder här förstås den bandbredd vari minst 98\% av signalens effekt befinner sig.
 
+\begin{table}[h]
+\centering
 \begin{tabular}{lrl}
 	\textbf{Modulation} & \textbf{Bandbredd} & \textbf{Kommentarer}                  \\ \hline
 	CW                  &          $<$500 Hz & Smalbandigt                           \\
@@ -319,6 +327,8 @@ Olika modulationer upptar olika bandbredd. Detta är mycket viktigt att förstå
 	FM                  &             16 kHz & Normal FM                             \\
 	WFM                 &          16-75 kHz & Bredbandig FM (t.ex. rundradio)
 \end{tabular}
+\caption{text}
+\end{table}
 
 *) För SSB gäller att USB och LSB fungerar lite olika. När man beräknar den högsta eller lägsta frekvensen utgår man från den inställda frekvensen $f$. För USB gäller då att högsta frekvensen är $f+3$\,kHz. För LSB blir det $f-3$\,kHz. Detta innebär att om du sänder på 80\,m-bandet och du får sända telefoni från 3600--3800\,kHz och vill lägga dig i under bandkanten och köra LSB skall du ställa in din radio på 3603\,kHz som lägsta frekvens. Använd gärna lite marginal och kör exempelvis 3605\,kHz i stället.
 
@@ -379,18 +389,46 @@ Deviation & Modulation & Bandbredd & Kanaldelning\\ \hline
 \end{center}
 
 \subsection{Termiska brusgolvet}
+När man lyssnar i radion på en frekvens där ingen nyttosignal finns hörs ett brus. Detta brus består av olika komponenter men en av de viktigaste är det termiska brusgolvet. Detta sätter en nedre gräns för hur svaga signaler en mottagare kan uppfatta.
 
-\begin{center}
+Mottagaren har i sig också ett termiskt brus, detta beskrivs vanligen med något som kallas \textit{brusfaktor} och säger hur mycket över det termiska brusgolvet mottagaren bidrar med eget brus. 
+
+Bruset är avhängigt temperaturen som mottagarantennen ''ser'' och vanligtvis inomhus använder man närmevärdet 300\,K när man räknar på detta vilket motsvarar 27\,\textdegree C. När man riktar antennerna mot rymden eller på vintern kan man räkna med en lägre brusfaktor pga den lägre antenntemperaturen.
+
+Brusgolvet kan beräknas med hjälp av Boltzmanns konstant och temperaturen i Kelvin. Detta ger oss formeln:
+
+$$P=k_BT\Delta f$$
+
+Där:
+
+\begin{tabular}{lll}
+	$k_B$      & Boltzmanns konstant, $1,38065\cdot 10^{-23}$ & [J/K] \\
+	$T$        & Temperaturen                                 & [K]   \\
+	$\Delta f$ & Bandbredden i mottagaren                     & [Hz]
+\end{tabular}
+
+Om vi vet detta kan vi beräkna det termiska brusgolvet:
+
+$$P = 1,38065\cdot 10^{-23} \cdot 300 \cdot 1 = 4.1495\cdot 10^{-21}$$
+
+Om vi räknar om detta i dBm får vi i stället -173,8\,dBm. Detta avrundas normalt till -174\,dBm och är brusgolvet för 1\,Hz. En mottagare som har en mottagarbandbredd på 25\,kHz kommer därmed att se ett brus som är 20\,000 ggr större. I decibel får vi då $-174 + 44 dB = -130$\,dBm.
+
+För att en signal skall kunna detekteras får vi lägga på mottagarens brusgolv, kanske 3\,dB samt hur mycket signal till brus i förhållande vi behöver, för FM ca 12\,dB. När vi gjort detta får vi mottagarens känslighet när den är helt ostörd som bör ligga runt $-130 + 3 + 12 = -115$\,dBm.
+
+\begin{table}[h]
+\centering
 \begin{tabular}{rr|rr|rr}
 	\textbf{RBW} & \textbf{N$_0$} & \textbf{RBW} & \textbf{N$_0$} & \textbf{RBW} & \textbf{N$_0$} \\ \hline
 	         0.5 &           -141 &         6.25 &           -136 &          100 &           -124 \\
 	         1.0 &           -144 &        12.50 &           -133 &          200 &           -121 \\
 	         3.0 &           -139 &        25.00 &           -130 &         5000 &           -107 \\
-	         5.0 &           -137 &        50.00 &           -127 &        10000 &           -104
+	         5.0 &           -137 &        50.00 &           -127 &        10\,000 &           -104
 \end{tabular}
-\end{center}
+\caption{Termiska brusgolvet vid några vanliga bandbredder}
+\end{table}
 
-Mottagarbandbredden (RBW) anges i kHz och brusgolvet i dBm (dB relaterat en styrka om 1 mW).
+Tabellen ovan visar hur brusgolvet ser ut för olika mottagarbandbretter. RBW är Receive Band Width i kHz. $N_0$ är beteckningen för det termiska brusgolvet. Som ni ser dubblas bruseffekten om man dubblar bandbredden vilket kanske inte är så märkligt. Det gör att smalbandig kommunikation har ett bättre läge pga lägre bruseffekt i mottagaren.
+
 
 \subsection{Return loss och VSWR}
 
