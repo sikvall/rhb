@@ -16,3 +16,9 @@ pdf/rhb-print-vhf-A4\.pdf
 rhb-print-vhf-A4\.out
 
 rhb-print-vhf-A4\.toc
+
+pdf/
+
+*.out
+
+*.toc
