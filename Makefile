@@ -1,11 +1,12 @@
 all:
-	pdflatex rhb-print-A4
-	pdflatex rhb-print-A4
-	pdflatex rhb-print-vhf-A4
-	pdflatex rhb-print-vhf-A4
-	pdflatex rhb-print-hf-A4
-	pdflatex rhb-print-hf-A4
-	pdflatex rhb-print-A4-bponly
-	pdflatex rhb-print-A4-bponly
+	pdflatex rhb-full
+	pdflatex rhb-full
+	pdflatex rhb-hf
+	pdflatex rhb-hf
+	pdflatex rhb-vhf
+	pdflatex rhb-vhf
 	mkdir -p pdf
 	mv *.pdf pdf
+
+clean:
+	rm *.log *.aux *.pdf *.out *.toc
