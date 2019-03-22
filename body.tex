@@ -316,7 +316,7 @@ Standard kalibrering för S-metern är enligt skalan i tabellen \ref{tab:s-varde
 
 Olika modulationer upptar olika bandbredd. Detta är mycket viktigt att förstå när man ställer in sin radiostation. Detta gäller särskilt att beakta i närheten av nödfrekvenser eller bandkanten. När vi talar om bandbredder här förstås den bandbredd vari minst 98\% av signalens effekt befinner sig.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}{lrl}
 	\textbf{Modulation} & \textbf{Bandbredd} & \textbf{Kommentarer}                  \\ \hline
@@ -415,7 +415,7 @@ Om vi räknar om detta i dBm får vi i stället -173,8\,dBm. Detta avrundas norm
 
 För att en signal skall kunna detekteras får vi lägga på mottagarens brusgolv, kanske 3\,dB samt hur mycket signal till brus i förhållande vi behöver, för FM ca 12\,dB. När vi gjort detta får vi mottagarens känslighet när den är helt ostörd som bör ligga runt $-130 + 3 + 12 = -115$\,dBm.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}{rr|rr|rr}
 	\textbf{RBW} & \textbf{N$_0$} & \textbf{RBW} & \textbf{N$_0$} & \textbf{RBW} & \textbf{N$_0$} \\ \hline
@@ -454,7 +454,7 @@ Acceptabelt RL är ungefär från 12\,dB, riktigt bra från 20 dB och de bästa 
 
 Inom amatörradio används ofta pilottoner (subtoner) som CTCSS\footnote{Contnuous Tone-Conded Squelch System} för repeatrar och liknande. På PMR446 används subtoner för att skapa virtuella grupper och sub-kanaler. De som används är följande toner och frekvenser:
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}{rr|rr|rr|rr|rr}
 	 1 &  67,0 &  2 &  69,3 &  3 &  74,4 &  4 &  77,0 &  5 &  79,7 \\ \hline
@@ -473,7 +473,7 @@ Inom amatörradio används ofta pilottoner (subtoner) som CTCSS\footnote{Contnuo
 
 Rekommendationer för repeatrar i olika distrikt och län att använda CTCSS för att hindra att störningar uppkommer vid conds mm. Det ger också möjligheten för sändaramatörer att öppna just den repeater man önskar om man har flera på samma frekvens omkring sig.
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
 \begin{tabular}{lcccc}
 	\textbf{Område}    & \textbf{Primär} & \textbf{Sek. 1} & \textbf{Sek. 2} & \textbf{Sek. 3} \\ \hline
@@ -496,19 +496,23 @@ Lägg märke till att decimalsiffran är i de flesta fall samma som distriktssif
 
 Olika modulationer upptar olika bandbredd. Detta är mycket viktigt att förstå när man ställer in sin radiostation. Detta gäller särskilt att beakta i närheten av nödfrekvenser eller bandkanten. När vi talar om bandbredder här förstås den bandbredd vari minst 98 \% av signalens effekt befinner sig.
 
+\begin{table}[H]
+\centering
 \begin{tabular}{lrl}
 	\textbf{Modulation} & \textbf{Bandbredd} & \textbf{Kommentarer}                  \\ \hline
 	CW                  &          $<$500 Hz & Smalbandigt                           \\
 	AM                  &              6 kHz & Amplitudmodulering med fullt sidband  \\
-	SSB*                &              3 kHz & Amplitudmodulering med enkelt sidband \\
-	NFM**               &           7-12 kHz & Smalbandig FM                         \\
+	SSB$^1$                &              3 kHz & Amplitudmodulering med enkelt sidband \\
+	NFM$^2$               &           7-12 kHz & Smalbandig FM                         \\
 	FM                  &             16 kHz & Normal FM                             \\
 	WFM                 &          16-75 kHz & Bredbandig FM (t.ex. rundradio)
 \end{tabular}
+\caption{Bandbredd vid olika modulationstyper}
+\end{table}
 
-*) För SSB gäller att USB och LSB fungerar lite olika. När man beräknar den högsta eller lägsta frekvensen utgår man från den inställda frekvensen $f$. För USB gäller då att högsta frekvensen är $f+3$ kHz. För LSB blir det $f-3$ kHz. Detta innebär att om du sänder på 80m bandet och du får sända telefoni från 3600--3800 kHz och vill lägga dig i under bandkanten och köra LSB skall du ställa in din radio på 3603 kHz som lägsta frekvens. Använd gärna lite marginal och kör exempelvis 3605 kHz i stället.
+$^1$ För SSB gäller att USB och LSB fungerar lite olika. När man beräknar den högsta eller lägsta frekvensen utgår man från den inställda frekvensen $f$. För USB gäller då att högsta frekvensen är $f+3$ kHz. För LSB blir det $f-3$ kHz. Detta innebär att om du sänder på 80m bandet och du får sända telefoni från 3600--3800 kHz och vill lägga dig i under bandkanten och köra LSB skall du ställa in din radio på 3603 kHz som lägsta frekvens. Använd gärna lite marginal och kör exempelvis 3605 kHz i stället.
 
-*) På kortvågen används smalbandig FM med max 10 kHz modulationsbandbredd. På VHF/UHF är smalbandig FM ca 11 kHz bred med Carssons bandbreddsbegrepp.
+$^2$ På kortvågen används smalbandig FM med max 10 kHz modulationsbandbredd. På VHF/UHF är smalbandig FM ca 11 kHz bred med Carssons bandbreddsbegrepp.
 
 Det är vanligt att t.ex. utländska stationer kör överdriven bandbredd. Antingen som en följd av att man vill öka sin modulationsvinst, okunskap eller man har skruvat i sin radio.
 
@@ -516,7 +520,8 @@ Det är vanligt att t.ex. utländska stationer kör överdriven bandbredd. Antin
 
 \subsection{Indelning efter frekvens och våglängd}
 \label{frekvens-vaglangd}
-
+\begin{table}[H]
+\centering
 \begin{tabular}{llrlrl}
 	\textbf{Förk.} & \textbf{Benämning}   & \textbf{Frekvens} &     & \textbf{Våglängd} &  \\ \hline
 	ELF            & Extremt låg frekvens &             3--30 & Hz  &           10--100 & Mm \\
@@ -532,6 +537,8 @@ Det är vanligt att t.ex. utländska stationer kör överdriven bandbredd. Antin
 	EHF            & Extremt hög frekvens &           30--300 & GHz &             1--10 & mm \\
 	THF            & Terahertsfrekvens    &          300-3000 & GHz &         100--1000 & µm
 \end{tabular}
+\caption{Frekvens och våglängd övergripande}
+\end{table}
 
 Benämningarna HF, MF och LF har också andra betydelser. Exempelvis an\-vänd\-s HF som beteckning av den signal en antenn tar mot eller sänder oavsett frekvensband, MF kan vara mellansignalen oavsett frekvens efter omvandling i en superheterodynmottagare och LF, ibland benämnt AF (audiofrekvens) är det hörbara ljudet, dvs den modulation som används på signalen.
 
@@ -541,6 +548,8 @@ Amatörradioband finns inom de flesta av dessa frekvensband utom de högsta och 
 
 \subsection{Rundradiobenämningar och frekvensband}
 
+\begin{table}[H]
+\centering
 \begin{tabular}{llrl}
 \textbf{Förk.} & \textbf{Namn} & \textbf{Frekvens Rundradio} &     \\ \hline
 LW/LV          & Långvåg       & 148,5--285                  & kHz \\
@@ -548,8 +557,13 @@ MW/MV          & Mellanvåg     & 526,5--1606,5               & kHz \\
 SW/KV          & Kortvåg       & 4,3--30                     & MHz \\
 UKV            & Ultrakortvåg  & 88--108                     & MHz \\
 \end{tabular}
+\caption{Rundradiobanden}
+\end{table}
 
 \subsection{Radarband och benämningar enligt ITU}
+
+\begin{table}[H]
+\centering
 
 \begin{tabular}{lrl}
 	\textbf{Band} & \textbf{Frekvens} & \textbf{Benämning}          \\ \hline
@@ -567,6 +581,8 @@ UKV            & Ultrakortvåg  & 88--108                     & MHz \\
 	W             &       75--110 GHz &  \\
 	mm            &      110--300 GHz & Millimetervågor
 \end{tabular}
+\caption{ITU-benämningar på radarband mm}
+\end{table}
 
 \subsection{Egenskaper olika frekvensband}
 
