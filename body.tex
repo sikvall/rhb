@@ -435,6 +435,9 @@ Tabellen ovan visar hur brusgolvet ser ut för olika mottagarbandbretter. RBW ä
 Return loss och VSWR anger samma sak. VSWR är vanligare inom amatörradio medan man i profesionella sammanhang föredrar att prata om return loss. RL är storleken på den reflekterade signalen i förhållande till den framåtgående signalen. Return loss mäts alltså i dB enligt formeln $10\log(P_F/P_R)$ där $P_F$ är den framåtgående effekten (forward) och  $P_R$ är den reflekterade signalen i retur.
 
 \begin{longtable}{rrr|rrr|rrr}
+	\caption{VSWR och return loss}\\
+		\textbf{RL} & \textbf{VSWR} & \textbf{\%} & \textbf{RL} & \textbf{VSWR} & \textbf{\%} & \textbf{RL} & \textbf{VSWR} & \textbf{\%} \\ \hline 
+	\endfirsthead
 	\textbf{RL} & \textbf{VSWR} & \textbf{\%} & \textbf{RL} & \textbf{VSWR} & \textbf{\%} & \textbf{RL} & \textbf{VSWR} & \textbf{\%} \\ \hline 	\endhead
 	          1 &         17,39 &       79,43 &           8 &          2,32 &       15,85 &          20 &          1,22 &        1,00 \\
 	          2 &          8,72 &       63,10 &          10 &          1,92 &       10,00 &          22 &          1,17 &        0,63 \\
@@ -451,6 +454,8 @@ Acceptabelt RL är ungefär från 12\,dB, riktigt bra från 20 dB och de bästa 
 
 Inom amatörradio används ofta pilottoner (subtoner) som CTCSS\footnote{Contnuous Tone-Conded Squelch System} för repeatrar och liknande. På PMR446 används subtoner för att skapa virtuella grupper och sub-kanaler. De som används är följande toner och frekvenser:
 
+\begin{table}[h]
+\centering
 \begin{tabular}{rr|rr|rr|rr|rr}
 	 1 &  67,0 &  2 &  69,3 &  3 &  74,4 &  4 &  77,0 &  5 &  79,7 \\ \hline
 	 6 &  82,5 &  7 &  85,4 &  8 &  88,5 &  9 &  91,5 & 10 &  94,8 \\ \hline
@@ -461,6 +466,8 @@ Inom amatörradio används ofta pilottoner (subtoner) som CTCSS\footnote{Contnuo
 	31 & 192,8 & 32 & 203,5 & 33 & 210,7 & 34 & 218,1 & 35 & 225,7 \\ \hline
 	36 & 233,6 & 37 & 241,8 & 38 & 250,3 &    &       &    &
 \end{tabular}
+\caption{CTCSS-toner, nummer och frekvens}
+\end{table}
 
 \subsection{CTCSS-zoner i Sverige}
 
