@@ -22,3 +22,11 @@ pdf/
 *.out
 
 *.toc
+
+*.bbl
+
+*.blg
+
+*.pdf
+
+*.gz
