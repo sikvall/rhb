@@ -30,3 +30,5 @@ pdf/
 *.pdf
 
 *.gz
+
+*.tex~
