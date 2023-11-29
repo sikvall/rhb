@@ -1,43 +1,31 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% diverse saker här som används i dokumentet %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\TitleText}{Radiohandbok}
-\newcommand{\SubtitleText}{För Sändaramatörer\\ och Privatradioanvändare}
-\newcommand{\Forfattare}{Täpp-Anders Sikvall}
-\newcommand{\Initialer}{SMØUEI}
-\newcommand{\DokYear}{19}
-\newcommand{\DokVersion}{2.2.0}
-\newcommand{\DokumentRevision}{x.y.z}
-\newcommand{\DokumentDatum}{2023-11-26}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\documentclass[10pt,swedish,a4paper]{article}    % De viktigaste inställningarna för dokumentet
+\usepackage[a4paper,bindingoffset=1cm]{geometry} % Särskilda dokumentinställningar 
+\usepackage[utf8]{inputenc}            % Indata som UTF-8 är väldigt bra för t.ex. svenska
+\usepackage[T1]{fontenc}               % Fontkodning enligt modern standard
+\usepackage[swedish]{babel}            % Svensk avstavning och mycket mer
+\usepackage[colorlinks,linkcolor=black,urlcolor=blue]{hyperref}
+                                       % Hyperref möjliggör länkar utanför dokumentet
+\usepackage{enumitem}                  % Enumrering 
+\usepackage{multirow}                  % Tabeller med tabellrader som spänner över mer än en textrad
+\usepackage{amsmath}                   % Utökade matematiska symboler
+\usepackage{tabularx}                  % Tabulering med fler optioner än original
+\usepackage{graphicx}                  % Kunna sätta bilder bättre
+\usepackage[table,x11names]{xcolor}    % Referera till färger med deras X11-namn
+\usepackage{fancyhdr}                  % Kunna snyggare typsätta huvud och fot på varje sida
+\usepackage[yyyymmdd]{datetime}        % Mer europeiskt datumformat (ISO)
+  \renewcommand{\dateseparator}{-}
+\usepackage{lastpage}                  % Kunna referera till sista sidan i dokumentet
+\usepackage{pdfpages}                  % Kunna lägga in PDF-kommentarer
+\usepackage{icomma}                    % Intelligenta kommatteringar för stora och små tal
+\usepackage{pdflscape}                 % Kunna göra vissa sidor liggande i PDF
+\usepackage{wrapfig}                   % Kunna wrappa figurer
+\usepackage{float}                     % Utökade optioner för floats
+\usepackage[bottom]{footmisc}          % Optioner för fotnoter, sätt alltid på slutet av samma sida
+\usepackage{longtable}                 % Tabeller som sidbryter
+\usepackage{fbb}                       % En font inspirerad av Bembo
+\newif\iftitlefoot
+\raggedbottom                          % Stretcha inte sidor mer än nödvändigt
+\setlist{nosep}                        % Separera inte numrerade och punktlistor mer
+\usepackage{todonotes}                 % Kunna lägga in att-göra i dokumentet
 \renewcommand{\arraystretch}{1.15}
 
-\documentclass[10pt,swedish,a4paper]{article}
-\usepackage[a4paper,bindingoffset=1cm]{geometry}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[swedish]{babel}
-\usepackage[colorlinks,linkcolor=black,urlcolor=blue]{hyperref}
-\usepackage{enumitem}
-\usepackage{multirow}
-\usepackage{amsmath}
-\usepackage{tabularx}
-\usepackage{graphicx}
-\usepackage[table,x11names]{xcolor}
-\usepackage{fancyhdr}
-\usepackage[yyyymmdd]{datetime} \renewcommand{\dateseparator}{-}
-\usepackage{lastpage}
-%\usepackage{newpxtext,newpxmath}
-\usepackage{pdfpages}
-\usepackage{icomma}
-\usepackage{pdflscape}
-\usepackage{wrapfig}
-\usepackage{float}
-\usepackage[bottom]{footmisc}
-\usepackage{longtable}
-\usepackage{fbb}
-\newif\iftitlefoot
-\raggedbottom
-\setlist{nosep}
-\usepackage{todonotes}
-\raggedbottom
