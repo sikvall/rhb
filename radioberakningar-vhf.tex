@@ -1,0 +1,53 @@
+% Radioberäkningar för VHF och UHF
+
+\subsection{Radioberäkningar för VHF och UHF}
+
+\subsubsection{Beräkning av radiohorisonten}
+
+Radiohorisonten är den sträcka som markvågen kan nå utan särskilda hjälpmedel och i frånvaro av andra effekter som särskilda kondisioner (tropo eller duktning) och liknande. Avståndet kan beräknas med hjälp av en enkel formel. Radiohorisonten gäller egentligen bara när inget annat är i vägen men kan ge en ledning till den längsta utbredning man kan förvänta sig med markvåg givet en viss höjd.
+
+För skepp på havet stämmer radiohorisonten ganska väl så man hittar denna formel ofta i utbildningsmaterial för marin VHF men då med distansen i nautiska mil i stället för km. För att få detta byter man konstanten 3,57 till 2,2 i stället.
+
+\begin{equation*}
+	r = 3,57 \left(\sqrt{h_1}+\sqrt{h_2}\right)
+\end{equation*}
+
+Där $r$ är avståndet till radiohorisonten givet i kilometer, $h_1$ är den ena stationens antennhöjd över marken givet i meter och $h_2$ är den andra stationens antennhöjd över marken också givet i meter.
+
+\subsubsection{Sträckdämpning}
+
+Sträckdämpningen beror på flera olika faktorer, inte minst terrängen och det som finns mellan sändaren och mottagaren. I den fria rymden följer den en enkel geometrisk utbredning men närmare marken behöver man stoppa in en del kompensationsfaktorer.
+
+\begin{equation*}
+	PL_0 = 20 \cdot \log(f) + 20 \cdot \log(d) - 27,55
+\end{equation*}
+
+Där $PL_{0}$ är sträckdämpningen i decibel(dB) (Eng: Path Loss) mellan två sändare givet avståndet $d$ i meter och frekvensen $f$ i MHz. Om man anger $d$ i kilometer i stället adderar man 60 till konstanten och får då 32,45.
+
+För sträckdämpning vid mark får man mäta eller skatta en utbredningsdämpning som en konstant $k$ som man använder för att modifiera formeln med och får då följande variant:
+
+
+\begin{equation*}
+	PL_m = 20 \cdot \log(f) + (20+k) \cdot \log(d) - 27,55
+\end{equation*}
+
+Där $PL_m$ är sträckdämpningen vid marken. Faktorn $k$ kan uppskattas enligt följande tabell:
+
+\begin{table}[h]
+	\begin{centering}
+		\begin{tabular}{r|l}
+			\textbf{k} & \textbf{Beskrivning} \\ \hline
+			0 & Över öppen terräng med högre frekvenser och fri sikt\\
+			5 & Lättare terräng, mindre kullar, gräs och få träd \\
+			10 & Tuffare terräng med mer höjdvariation, klippblock, tätare skog \\
+			15 & Urban miljö, större hus, höghus \\
+			20 & Extremt urband miljö (tänk Manhattan)\\
+		\end{tabular}
+	\end{centering}
+	\label{tab:frirum-faktor}
+	\caption{Tabell över korrigeringsfaktor för frirumsutbredning vid marken}
+\end{table}
+
+I vanlig svensk terräng är det nog vanligast man hamnar i storleksordningen 5--10.
+
+\clearpage
