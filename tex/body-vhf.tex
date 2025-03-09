@@ -46,7 +46,7 @@ Nya kanaler är markerade i listan med asterisk och har fått nummer från kanal
 	           31,170 & Jakt 31*           &                   &   31,370          &                    &
 \end{longtable}
 
-\input{pr-bandet-69mhz}
+\input{tex/pr-bandet-69mhz}
 
 
 \subsubsection{Jakt och jordbruksfrekvenser 155\,MHz}
@@ -323,7 +323,25 @@ Eftersom amatörradiobanden ser lite olika ut i olika länder förekommer det ka
 
 \textit{OBS!\\ Information om kanalnumreringen för 23\,cm-bandet tas tacksamt mot. Maila mig på anders@sikvall.se om du har korrekt information.}
 
-\clearpage
+\subsubsection{Införande av 12.5~kHz kanalavstånd}
+
+För ett antal år sedan beslutade man sig att gå mot ett smalare kanalraster på VHF och UHF och införde härmed kanalavstånd på 12.5~kHz i bandplanerna. Ustrustning med 25~kHz kanalraster är fortsatt tillåten och detta är en rekommendation. Vid införandet av detta så kom även ett nytt numreringsalternativ för kanalsystemen baserat på en basfrekvens (som ibland på svenska band ligger utanför vårt band) och därefter numrerade man i ordning för respektive 12.5~kHz steg och 10~kHz för kortvåg.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{rrrr}
+Kod & Basfrekvens & Kanalavstånd & Repeaterskift \\
+    & [MHz]       & [kHz]        & [kHz] \\ \hline
+H & 29,500 & 10,0 & -100 \\
+F & 51,000 & 10,0 & -600 \\
+V & 145,000& 12,5 & -600 \\
+U & 430,000& 12,5 & -2000 \\
+M & 1240,000 & 25 & -6000 \\
+\end{tabular}
+\label{tab:kanalavstand}
+\caption{Kanalavstånd och beteckning olika frekvensband}
+\end{table}
+
 \subsubsection{FM-kanaler 6m-bandet}
 
 \begin{longtable}{rrl|rrl}
@@ -481,8 +499,8 @@ Sändningarna skall dock alltid ske under direkt överinseende av en radioamatö
 men var beredd på att det kommer vara en viss ovana och ske en del misstag. 
 Strunta i det och ge scouterna en kul radioupplevelse.
 
-\input{radioberakningar-vhf.tex}
+\input{tex/radioberakningar-vhf.tex}
 
-\input{repeatrar-vhf.tex}
+\input{tex/repeatrar-vhf.tex}
 
-\input{bandplan-vhfuhf}
+\input{tex/bandplan-vhfuhf}

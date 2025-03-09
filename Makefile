@@ -1,12 +1,15 @@
+VERSION=2.2.3
+
 all:
-	pdflatex rhb-full
-	pdflatex rhb-full
-	pdflatex rhb-hf
-	pdflatex rhb-hf
-	pdflatex rhb-vhf
-	pdflatex rhb-vhf
+	pdflatex -jobname="rhb-full-${VERSION}.pdf" rhb-full
+	pdflatex -jobname="rhb-full-${VERSION}.pdf" rhb-full
+	pdflatex -jobname="rhb-hf-${VERSION}.pdf" rhb-hf
+	pdflatex -jobname="rhb-hf-${VERSION}.pdf" rhb-hf
+	pdflatex -jobname="rhb-vhf-${VERSION}.pdf" rhb-vhf
+	pdflatex -jobname="rhb-vhf-${VERSION}.pdf" rhb-vhf
 	mkdir -p pdf
 	mv *.pdf pdf
 
 clean:
-	rm *.log *.aux *.pdf *.out *.toc
+	rm *.log *.aux *.out *.toc pdf/*.pdf
+

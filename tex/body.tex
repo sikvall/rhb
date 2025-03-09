@@ -1,3 +1,5 @@
+
+
 \section{Signaler och anrop}
 \subsection{Landsprefix}
 
@@ -92,6 +94,15 @@ Sverige delas in i följande distrikt efter sina län:
 \caption{Distriktssiffor i Sverige}
 \end{table}
 
+\subsubsection{Karta över svenska amatörradiodistrikt}
+
+\begin{wrapfigure}{R}{15cm}
+	\centering
+	\includegraphics[width=15cm]{pic/sm-distrikt-stor}
+	\label{fig:sm-distrikt}
+	\caption{Svenska distrikt, karta med tillståpnd från \href{https://SSA.SE}{ssa.se}}
+\end{wrapfigure}
+
 Distrikten förekommer som siffra i utdelade anropssignaler. Radioamatörer 
 byter inte distriktsiffra under resa i annat distrikt, i stället används 
 suffix (tillägg efter ordinarie signal) som t.ex. /M för mobil. Ofta uppger 
@@ -108,6 +119,9 @@ portabel om man så önskar.
 Det unika för en radioamatörs signal är alltså prefixet + suffixet,
 som exempel är identifieraren för SM0UEI prefixet SM och suffixet UEI
 eftersom distriktsiffran kan ändra sig. 
+
+\clearpage
+
 
 \section{Terminologi och trafik}
 
@@ -271,11 +285,13 @@ Repeatern är en begränsad resurs. Det är inte okay att lägga beslag på den 
 
 Nödtrafik har alltid prioritet.
 
-\input{qso}
+\input{tex/qso}
 
 \newpage
 
 \section{Teknik}
+
+\input{tex/amatorradiocertifikat}
 
 \subsection{Effekt i dBW och dBm}
 
@@ -505,8 +521,6 @@ Generellt för dessa är att sista siffran i CTCSS-frekvensen är samma som dist
 \caption{Distrikt och CTCSS-toner}
 \end{table}
 
-\newpage
-
 \section{Övergripande frekvensplan}
 
 \subsection{Indelning efter frekvens och våglängd}
@@ -575,6 +589,72 @@ UKV            & Ultrakortvåg  & 88--108                     & MHz \\
 \caption{ITU-benämningar på radarband mm}
 \end{table}
 
+\subsection{IEEE-benämningar på frekvensband}
+\label{sec:IEEE-benamningar}
+
+\subsubsection{Äldre benämmomgar}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lr}
+		\textbf{Band} & \textbf{Frekvens} \\ \hline
+		A             &        0--250 MHz \\
+		B             &      250--500 MHz \\
+		C             &     100--1000 MHz \\
+		D             &          1--2 GHz \\
+		E             &          2--3 GHz \\
+		F             &          3--4 GHz \\
+		G             &          4--6 GHz \\
+		H             &          6--8 GHz \\
+		I             &         8--10 GHz \\
+		J             &        10--20 GHz \\
+		K             &        20--45 GHz \\
+		L             &        40--60 GHz \\
+		M             &       60--100 GHz \\
+		N             &      100--200 GHz \\
+		O             &      100--200 GJz
+	\end{tabular}
+	\caption{Äldre IEEE-benämningar på frekvensband}
+\end{table}
+
+\subsubsection{Nuvarande benämningar}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lr}
+		\textbf{Band} & \textbf{Frekvens} \\ \hline
+		I             &      100--150 MHz \\
+		G             &      250--500 MHz \\
+		P             &      225--390 MHz \\
+		L             &     390--1550 MHz \\
+		S             &    1550--3900 MHz \\
+		C             &    3900--6200 MHz \\
+		X             &   6200--10900 MHz \\
+		Ku            &    10,9--20,0 GHz \\
+		Ka            &        20--36 GHz \\
+		Q             &        36--46 GHz \\
+		V             &         46-56 GHz \\
+		W             &       56--100 GHz
+	\end{tabular}
+	\caption{Nyare IEEE-benämningar på frekvensband}
+\end{table}
+
+\subsubsection{Rundradioband}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lrl}
+		\textbf{Band} & \textbf{Frekvens} &                                                 \\ \hline
+		Band I        &        47--68 MHz & Tidigare TV-band också ''6-metersbandet''       \\
+		Band II       &   87,5--108,0 MHz & Nuvarande FM-rundradionbandet                   \\
+		Band III      &      174--230 MHz & Används i dag för DAB                           \\
+		Band IV       &      470--582 MHz & I dag refarmerat till främst landmobil komradio \\
+		Band V        &      582--862 MHz & Marksänd TV
+	\end{tabular}
+	\caption{IEEE-benämningar på rundradioband}
+\end{table}
+
+
 \subsection{Egenskaper olika frekvensband}
 
 För radioamatörer delar man in frekvensbanden i långvåg, mellanvåg, kortvåg, VHF, UHF och SHF beroende på frekvens, se tabellen under avsnitt \ref{frekvens-vaglangd}. Dessa har lite olika utbredningsegenskaper.
@@ -606,3 +686,4 @@ Bandet är utmärkt för kommunikation mellan fordon, särskilt i urban miljö f
 Radioamatörer har också ett av sina större tilldelningar i detta band, mellan 432--438\,MHz. Här finns också en LPD\footnote{Low Power Devices, små radiostyrningsutrustningar, t.ex. väderstationer, garageportsöppnare med mera.}-del som vi får samsas med. Främst kör man FM på bandet men det förekommer SSB och kanske ibland också CW. Det finns ett stort repeaterband med 2\,MHz shift mellan mottagare och sändare och det är ett praktiskt band för man kan enkelt bygga antenner med ganska rejält med förstärkning.
 
 Det är också ett populärt band för satellitkommunikation.
+
