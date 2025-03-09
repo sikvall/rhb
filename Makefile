@@ -11,5 +11,5 @@ all:
 	mv *.pdf pdf
 
 clean:
-	rm *.log *.aux *.pdf *.out *.toc pdf/*.pdf
+	rm *.log *.aux *.out *.toc pdf/*.pdf
 
