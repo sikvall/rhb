@@ -40,5 +40,64 @@
 \usepackage{todonotes}                 % Kunna lägga in att-göra i dokumentet
 \renewcommand{\arraystretch}{1.15}
 \headheight=20pt
+\begin{document}
+
+\newgeometry{left=2cm,right=2cm,bottom=1cm,top=1cm}
+\pagestyle{empty}
+\vfill
+\vspace*{4cm}
+\centerline{\includegraphics[width=\paperwidth]{logo/rubrikbild}}
+\begin{flushright}
+	\Huge{\bfseries{\TitleText}} \\[3mm]
+	\Large{\bfseries{\SubtitleText}}
+\end{flushright}
+
+\vfill
+	
+Version: \DokVersion\ \hfill SMØUEI \hfill Datum: \DokumentDatum
+
+\newpage
+
+\newgeometry{top=3cm}
+
+\pagestyle{fancy}
+\lhead{\leftmark}
+\rhead{
+	\scriptsize
+	\begin{tabular}{ll}
+		\textbf{Version} & \textbf{Datum}\\
+		\ \DokVersion & \DokumentDatum\\
+	\end{tabular}
+}
+
+\chead{}
+
+\lfoot{
+	\scriptsize
+	www.sm0uei.se
+}
+
+\cfoot{\scriptsize \thepage\ / \pageref{LastPage}}
+
+\rfoot{\scriptsize
+	anders@sikvall.se
+}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+\widowpenalty=9999
+\clubpenalty=9999
+
+%	\setlength{\headsep}{1em}2
+
+\cleardoublepage
+
+%%% Innehållsförteckning
+\tableofcontents
+
+\newpage
+
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
 
 
