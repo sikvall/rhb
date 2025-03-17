@@ -263,7 +263,8 @@ som är viktiga för sjöfarten.
 \begin{table}[H]
 \centering
 \begin{tabular}{rrr|rrr}
-\textbf{Kanal} & \textbf{Skepp} & \textbf{Kust} & \textbf{Kanal} & \textbf{Skepp} & \textbf{Kust} \\ \hline
+\textbf{Kanal} & \textbf{Skepp} & \textbf{Kust} &
+\textbf{Kanal} & \textbf{Skepp} & \textbf{Kust} \\ \hline
 01 & 156,050 & 160,650 & 60 & 156,025 & 160,625 \\
 02 & 156,100 & 160,700 & 61 & 156,075 & 160,675 \\
 03 & 156,150 & 160,750 & 62 & 156,125 & 160,725 \\
@@ -363,7 +364,8 @@ Karlshamn      & 25 & 48 & Kivik         & 21 & 39\\
 \textbf{Västkusten}
 
 \begin{longtable}{lrr|lrr}
-\textbf{Kuststation} & \textbf{Kanal} & \textbf{Horisont} & \textbf{Kuststation} & \textbf{Kanal} & \textbf{Horisont} \\
+\textbf{Kuststation} & \textbf{Kanal} & \textbf{Horisont} &
+\textbf{Kuststation} & \textbf{Kanal} & \textbf{Horisont} \\
 \hline
 \endhead
 
@@ -377,7 +379,8 @@ Helsingborg & 24 & 28 & Malmö      & 27 & 25 \\
 \textbf{Insjöarna}
 
 \begin{longtable}{lrr|lrr}
-\textbf{Kuststation} & \textbf{Kanal} & \textbf{Horisont} & \textbf{Kuststation} & \textbf{Kanal} & \textbf{Horisont} \\
+\textbf{Kuststation} & \textbf{Kanal} & \textbf{Horisont} &
+\textbf{Kuststation} & \textbf{Kanal} & \textbf{Horisont} \\
 \hline
 \endhead
 
@@ -408,14 +411,13 @@ repeatrar är det repeaterns utfrekvens som anges, dvs den som
 mobilstationen lyssnar på. Exempel: RV48.
 
 \begin{tabular}{crrlll}
-	\textbf{Band} & \textbf{Startfrekvens} & \textbf{Kanalraster} & \textbf{Duplexskift} & \textbf{Första kanal} & \textbf{Beräknas}    \\ \hline
-
-	6\,m &	51.000\,MHz & 10.0\,kHz & -100\,kHz & F00  & $f=51+k\cdot0.01$    \\
-		&	&	&	&	& $k=(f-51)/0,01$      \\ \hline
-2\,m   & 145.000\,MHz & 12.5\,kHz & -600\,kHz & V00  & $f=145+k\cdot0.0125$ \\
-	  &             &          &      &      & $k=(f-145)/0,0125$   \\ \hline
-70\,cm & 430.000\,MHz & 12.5\,kHz & -2000\,kHz & U000 & $f=430+k\cdot0.0125$ \\
-	  &             &          &      &      & $k=(f-430)/0,0125$   \\ \hline
+	\textbf{Band} & \textbf{Startfrekvens} & \textbf{Kanalraster} & \textbf{Duplex} & \textbf{Första kanal} & \textbf{Beräknas}    \\ \hline
+	    6\,m      &            51.000\,MHz &            10.0\,kHz & -100\,kHz       & F00                   & $f=51+k\cdot0.01$    \\
+	              &                        &                      &                 &                       & $k=(f-51)/0,01$      \\ \hline
+	    2\,m      &           145.000\,MHz &            12.5\,kHz & -600\,kHz       & V00                   & $f=145+k\cdot0.0125$ \\
+	              &                        &                      &                 &                       & $k=(f-145)/0,0125$   \\ \hline
+	   70\,cm     &           430.000\,MHz &            12.5\,kHz & -2000\,kHz      & U000                  & $f=430+k\cdot0.0125$ \\
+	              &                        &                      &                 &                       & $k=(f-430)/0,0125$   \\ \hline
 \end{tabular}
 
 Eftersom amatörradiobanden ser lite olika ut i olika länder förekommer
