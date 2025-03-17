@@ -1,0 +1,35 @@
+VERSION=2.2.3
+
+all: 
+	pdflatex -jobname="rhb-full-${VERSION}.pdf" rhb-full
+	pdflatex -jobname="rhb-full-${VERSION}.pdf" rhb-full
+	pdflatex -jobname="rhb-hf-${VERSION}.pdf" rhb-hf
+	pdflatex -jobname="rhb-hf-${VERSION}.pdf" rhb-hf
+	pdflatex -jobname="rhb-vhf-${VERSION}.pdf" rhb-vhf
+	pdflatex -jobname="rhb-vhf-${VERSION}.pdf" rhb-vhf
+	if not exist pdf mkdir pdf
+	move *.pdf pdf
+
+full: 
+	pdflatex -jobname="rhb-full-${VERSION}.pdf" rhb-full
+	pdflatex -jobname="rhb-full-${VERSION}.pdf" rhb-full
+	if not exist pdf mkdir pdf
+	move *.pdf pdf
+
+hf: 
+	pdflatex -jobname="rhb-hf-${VERSION}.pdf" rhb-hf
+	pdflatex -jobname="rhb-hf-${VERSION}.pdf" rhb-hf
+	if not exist pdf mkdir pdf
+	move *.pdf pdf
+
+vhf: 
+	pdflatex -jobname="rhb-vhf-${VERSION}.pdf" rhb-vhf
+	pdflatex -jobname="rhb-vhf-${VERSION}.pdf" rhb-vhf
+	if not exist pdf mkdir pdf
+	move *.pdf pdf
+
+clean:
+	powershell -Command "Remove-Item -Path *.log, *.aux, *.out, *.toc -ErrorAction Ignore"
+	powershell -Command "Remove-Item -Path pdf\*.pdf -ErrorAction Ignore"
+	powershell -Command "Remove-Item -Path pdf\ -ErrorAction Ignore"
+	
