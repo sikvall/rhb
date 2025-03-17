@@ -11,5 +11,5 @@ all:
 	mv *.pdf pdf
 
 clean:
-	rm *.log *.aux *.out *.toc pdf/*.pdf
+	rm -f *.log *.aux *.out *.toc pdf/*.pdf *.tdo *.tar *.gz *.bz2
 
