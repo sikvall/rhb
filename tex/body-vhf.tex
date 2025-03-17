@@ -58,8 +58,54 @@ smula oordnad.
 	           31,170 & Jakt 31*           &                   &   31,370          &                    &
 \end{longtable}
 
-\input{tex/pr-bandet-69mhz}
+\subsubsection{Åkeribandet 69 MHz öppet för PMR}
 
+Sedan några år tillbaka finns nu ett nytt band som kan användas för privat
+landmobil radio (PMR). Bandet kallas allmänt för 69\,MHz-bandet och har blivit
+mycket populärt på sina ställen.
+
+Anledningen är bland annat en stor tillgång på FM-radio för bandet från gamla
+åkeriradio som säljs för billiga pengar på diverse begagnatsajter och som
+därmed gör det enkelt att komma igång.
+
+Antennstorlekarna är moderata och det är ett ypperligt band för mobilradio där
+våglängden är ungefär den dubbla mot 2-metersbandet och fungerar bra i många
+sammanhang.
+
+Nackdelen som den delar med 27\,MHz är att många antenner för fordon är
+förkortade vilket minskar verkningsgraden på dessa en del men trots detta
+fungerar det bra. Antennerna är dock betydligt mindre skrymmande än de för
+27\,MHz.
+
+På bandet kör man FM uteslutande och det rekommenderas att man skaffar en
+radio med signalstyrkemätare då man på FM inte kan höra lika väl om man är
+störd, däremot syns det ju på S-metern om man har störningar. Bandet lider
+något av störningar i urbana miljöer men på landsbygden brukar det vara tyst
+och fint.
+
+Användningen av bandet regleras i PTS föreskrift Undantag från Tillståndsplikt
+och innebär att man får använda max 25\,W ERP (dvs för en dipolantenn), max
+10\% sändningscykel (dvs 6 min/timme), en kanalbredd om 25\,kHz och det finns
+8 stycken kanaler upplåtna för landmobil radio. I strikt mening är inte
+kommunikation bas-bas egentligen tillåten eftersom det är landmobil trafik som
+avses i PTS bestämmelser. Kanal 1 får enbart användas för mobil-mobil trafik
+inom Västra Götaland och Hallands län.
+
+\begin{table}[ht]
+  \centering
+\begin{tabular}{rrl}
+  Kanal & Frekvens & Noteringar                         \\ \hline
+  1     & 69,0125  & End. mobil i V. Götaland o Halland \\
+  2     & 69,0375  &                                    \\
+  3     & 69,0625  &                                    \\
+  4     & 69,0875  &                                    \\
+  5     & 69,1125  &                                    \\
+  6     & 69,1375  &                                    \\
+  7     & 69,1625  &                                    \\
+  8     & 69,1875  & Anv. som anropskanal               \\
+\end{tabular}
+\caption{Frekvenser 69 MHz}
+\end{table}
 
 \subsubsection{Jakt och jordbruksfrekvenser 155 MHz}
 
@@ -115,11 +161,11 @@ digitalt.
 Endast smalbandig modulation med FM-deviation max 2.5 kHz skall
 användas för att inte störa närliggande kanaler. Kanalrastret är
 12,5\,kHz så modulationen bör rymmas inom den bandbredden.
- 
+
 \begin{table}[H]
 \centering
 \begin{tabular}{rll|rll}
-	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Rek. Anv.}& 
+	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Rek. Anv.}&
 	\textbf{Frekvens} & \textbf{Benämning} & \textbf{Rek. Anv.}      \\ \hline
 	446,00625 & PMR446 K1          & PMR                                   &          446,10625 & PMR446 K9\ \,\,/D1       & DPMR \\
 	446,01875 & PMR446 K2          & PMR                                   &          446,11875 & PMR446 K10/D2      & DPMR \\
@@ -155,7 +201,7 @@ tabell \ref{tab:SRBR-frekvenser}.
 444,975 & SRBR K8            & 2 W             & Short range business radio
 \end{tabular}
 \caption{Frekvenser för SRBR}
-\end{table}	
+\end{table}
 
 SRBR är ett ej tillståndspliktigt frekvenssegment som används för
 yrkesmässig radiotrafik.
@@ -418,7 +464,7 @@ M & 1240,000 & 25 & -6000 \\
 \subsubsection{FM-kanaler 6m-bandet}
 
 \begin{longtable}{rrl|rrl}
-\textbf{Kanal} & \textbf{Tidigare} & \textbf{Anm}   
+\textbf{Kanal} & \textbf{Tidigare} & \textbf{Anm}
 &  \textbf{Kanal} & \textbf{Tidigare} & \textbf{Anm} \\ \hline
 	51,500 &      F50 &       & 51,750 &      F75 &  \\
 	51,510 &      F51 & Anrop & 51,760 &      F76 &  \\
@@ -452,7 +498,7 @@ M & 1240,000 & 25 & -6000 \\
 
 \begin{longtable}{rrl|rrl}
 
-\textbf{Frekvens} & \textbf{Kanal} & \textbf{Anm} & 
+\textbf{Frekvens} & \textbf{Kanal} & \textbf{Anm} &
 \textbf{Frekvens} & \textbf{Kanal} & \textbf{Anm} \\ \hline
 
 145,2125 & V17 &              & 145,5000 & V40  & S20  FM Anrop \\
@@ -492,7 +538,7 @@ aktivitetscenter som det numera kallas).
 \subsubsection{FM-kanaler 70cm-bandet}
 
 \begin{longtable}{rrl|rrl}
-\textbf{Frekvens} & \textbf{Kanal} & \textbf{Anm} &  
+\textbf{Frekvens} & \textbf{Kanal} & \textbf{Anm} &
 \textbf{Frekvens} & \textbf{Kanal} & \textbf{Anm} \\ \hline
 
 433,4000 & U272 & SSTV    & 433,7125 & U297 &      \\
@@ -525,7 +571,7 @@ aktivitetscenter som det numera kallas).
 
 \clearpage
 \begin{longtable}{rrl|rrl}
-\textbf{Frekvens} & \textbf{Kanal} & \textbf{Anm}   
+\textbf{Frekvens} & \textbf{Kanal} & \textbf{Anm}
 &  \textbf{Frekvens} & \textbf{Kanal} & \textbf{Anm} \\ \hline
 
 434,6000 & RU368 & RU0  & 434,8000 & RU384 & RU8   \\
