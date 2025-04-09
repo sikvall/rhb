@@ -1,5 +1,6 @@
 
 \section{Tillståndsfri radio}
+\todo{Hela avsnittet behöver omarbetas lite}
 
 Det är i undantagsföreskriften du hittar alla villkor som hänger samman med
 tillståndsfri radiosändning. Här står effekter, modulationstyper och
@@ -32,6 +33,33 @@ Däremot krävs det numera inget särskilt tillstånd som det gjorde tidigare f�
 att få använda amatörradio, annat än att den som opererar radioutrustningen
 skall ha, eller stå under uppsikt av, en person med giltigt
 amatörradiocertifikat.
+
+\subsection{Undantag från tillståndsplikt}
+
+I sverige regleras all radioanvändning med sändare som inte kräver att man söker
+tillstånd för det i en skrift som ges ut av Post- och Telestyrelsen (PTS) och
+som bär namnet "Untandag från tillståndsplikt". Denna skrift uppdateras lite då
+och då när det finns behov av det och här regleras all radiotrafik som inte
+kräver särskilt tillstånd.
+
+\subsubsection{Banden som omfattas}
+
+Detta gäller då PR-radio, 69 MHz radio, PMR-bandet på 446 MHz och 444 MHz som
+ofta används på byggen eller säkerhetsarrangemang för arenor med mera liksom
+Jakt- och jordbruksfrekvenserna på 31 och 155 MHz med mera. Inget av dessa band
+kräver licens eller tillstånd men det krävs att man följer reglerna i hänseende
+till vad bandet är tänkt att användas till.
+
+Det finns också en rad med andra tillämpningar som går under detta dokument från
+tekniska och medicinska och mycket mer. Det rekommenderas att skumma igenom
+dokumentet då det faktiskt är ganska intressant.
+
+\subsubsection{Endast godkända radioapparater}
+
+Radioapparaterna måste ochså vara godkända och CE-märkta för att man ska
+uppfylla villkoren och här blir det ofta en del problem med gråimporterade
+radioapparater från asien som ibland kan ha förskräckligt dåliga sändare. Det är
+straffbart att använda icke godkänd radioutrustning.
 
 \subsection{Amatörradiocertifikat}
 
@@ -146,13 +174,7 @@ HAREC-baserade, amatörradiocertifikatet gör. Du får därför i de flesta fall
 ta med din radiosändare till andra länder och använda den där på
 instegscertifikatet.
 
-\section{Undantag från tillståndsplikt}
-
-I sverige regleras all radioanvändning med sändare som inte kräver att man söker
-tillstånd för det i en skrift som ges ut av Post- och Telestyrelsen (PTS) och
-som bär namnet "Untandag från tillståndsplikt". Denna skrift uppdateras lite då
-och då när det finns behov av det och här regleras all radiotrafik som inte
-kräver särskilt tillstånd.
+\section{Tillståndsgiven radioverksamhet}
 
 Radiotrafik som kräver tillstånd regleras i andra dokument eller av respektive
 myndighet som svarar för examinering och tillståndsgivning exempelvis
@@ -160,8 +182,61 @@ luftfartsverket för luftfartsradio och så vidare. Försvarsmakten svarar ocks�
 för användning av militär radio och har långt gående möjligheter att sända på
 frekvenser som i fredstid används för annat.
 
+\subsection{Föreningsdrivna radionät}
+
+Kommersiell radio får tillstånd genom ansökan om frekvenser för basstation och
+mobila stationer efter behov och betalar då en licensavgift årligen för
+detta. Det finns inget som hindrar privatpersoner egentligen att söka sådana
+tillstånd och det finns exempel på privatpersoner som satt upp repeatrar och där
+användarna genom att vara medlem i en förening då kan använda dessa utan att
+vara radioamatörer eller ha särskilda egna tillstånd.
+
+Detta förfarande finns bland annat i dag på några orter kring Stockholm och i
+Malmö och är populärt som sambandsmedel inte minst för preppers och för
+radiointresserade som vill lära sig mer om radio. Företrädesvis kör dessa på
+VHF-bandet i 2-metersområdet (150 MHz) eller UHF-bandet i 75 cm området (400
+MHz).
+
 Enklast finner man det gällande dokumentet genom att söka efter det på PTS
-hemsida pts.se.
+hemsida \url{https://pts.se} där det alltid finns den senaste versionen.
+
+Det finns också andra föreningar som exempelvis scouter med flera som har
+tillstånd att bedriva radiotrafik.
+
+\subsection{Kommersiella radionät}
+
+Det finns också exempel på kommersiella radionät, det som tidigirare var
+åkeriradionätet på 69 MHz men numera får användas rent allmänt är ett sådant
+exempel. Det finns också lokala aktörer som har exempelvis taxiradio,
+byggföretag som har allmän kommunikationsradio på sina byggen och många andra
+varianter.
+
+Dessa behöver tillståndssökas och en licensavgift ska betalas årligen. 
+
+\subsection{Myndigheters radionät}
+
+Myndigheters radionät består i regel av de radionät som behövs för flera olika
+verksamheter så som brandbekämpning, räddningstjänst, polisens arbete samt även
+försvarsmakten räknas ibland in här. Från att ha haft flera olika system så har
+dessa system numera gått samman i RAKEL (radiokommunikation för effektiv
+ledning) i ett gemensamt radionät för alla blåljustjänster. RAKEL
+tillhandahåller också visst skydd mot avlyssning som standard men kan även
+förses med stark kryptografi för att skydda särskilt känslig information, så
+kallat ''end-to-end'' krypto (E2E).
+
+Rakel används främst av sammhällsnyttiga tjänster och myndigheter men det finns
+också exempel på när mindre aktörer och även lokaltrafik har fått använda nätet
+så det är väl använt. RAKEL kommer på sikt fasas ut till förmån för ett nytt
+kommunikationsnät som bygger på 5G-teknik via de kommersiella operatörernas nät
+i viss mån samt där det behövs egna radiobasstationer på 700~MHz-bandet. Detta
+nya nät kallas ibland för SWEN (swedish emergency network) och befinner sig ännu
+på planeringsstadet även om prov kan komma ganska snart.
+
+Enligt myndigheten för samhällsskydd och beredskap (MSB) planerar man avveckla
+RAKEL till 2030 men sannolikt kommer det ta lite länge än så innan SWEN är helt
+redo att ersätta det.
+
+\clearpage
 
 \section{Signaler och anrop}
 
