@@ -1,6 +1,4 @@
-
 \section{Tillståndsfri radio}
-\todo{Hela avsnittet behöver omarbetas lite}
 
 Det är i undantagsföreskriften du hittar alla villkor som hänger samman med
 tillståndsfri radiosändning. Här står effekter, modulationstyper och
@@ -147,7 +145,7 @@ denna utgåva av PTS undantagsföreskrift.
 
 \subsubsection{Effektrestriktioner instegscertifikat}
 
-På frekvensbanden 7, 14, 21, 28 och 15 MHz tillåter man 25 W PEP tillfört
+På frekvensbanden 7, 14, 21, 28 och 15\,MHz tillåter man 25\,W PEP tillfört
 antennsystemet. Detta är effekten vid en key-down på morsenyckel. Antennvinsten
 är inte medräknad på dessa frekvensband.
 
@@ -194,8 +192,8 @@ vara radioamatörer eller ha särskilda egna tillstånd.
 Detta förfarande finns bland annat i dag på några orter kring Stockholm och i
 Malmö och är populärt som sambandsmedel inte minst för preppers och för
 radiointresserade som vill lära sig mer om radio. Företrädesvis kör dessa på
-VHF-bandet i 2-metersområdet (150 MHz) eller UHF-bandet i 75 cm området (400
-MHz).
+VHF-bandet i 2-metersområdet (150\,MHz) eller UHF-bandet i 75\,cm området
+(400\,MHz).
 
 Enklast finner man det gällande dokumentet genom att söka efter det på PTS
 hemsida \url{https://pts.se} där det alltid finns den senaste versionen.
@@ -224,7 +222,7 @@ tillhandahåller också visst skydd mot avlyssning som standard men kan även
 förses med stark kryptografi för att skydda särskilt känslig information, så
 kallat ''end-to-end'' krypto (E2E).
 
-Rakel används främst av sammhällsnyttiga tjänster och myndigheter men det finns
+RAKEL används främst av sammhällsnyttiga tjänster och myndigheter men det finns
 också exempel på när mindre aktörer och även lokaltrafik har fått använda nätet
 så det är väl använt. RAKEL kommer på sikt fasas ut till förmån för ett nytt
 kommunikationsnät som bygger på 5G-teknik via de kommersiella operatörernas nät
@@ -245,10 +243,10 @@ redo att ersätta det.
 Här är inte alla länder med utan de vanligaste som körs från Sverige.
 
 \begin{center}
-	\begin{footnotesize}
-		\begin{longtable}{lll}
-			\caption{Utvalda landsprefix} \\
-			\textbf{Land}                 & \textbf{DXCC}  & \textbf{Prefixserier}                             \\ \hline
+  \begin{footnotesize}
+    \begin{longtable}{lll}
+      \caption{Utvalda landsprefix} \\
+      \textbf{Land}                 & \textbf{DXCC}  & \textbf{Prefixserier}                             \\ \hline
 			Belgien                       & ON             & ONA--OTZ                                          \\
 			Canada                        & VE             & CYA--CZZ, VAA--VGZ, VOA--VOZ, VXA--VYZ, XJA--XOZ  \\
 			Frankrike                     & F              & FAA--FZZ, HWA--HWZ, THA--THZ, TKA--TKZ, TMA--TMZ, \\
@@ -290,7 +288,7 @@ Dessa har används till varierande ändamål, exempelvis har flyget signaler i
 serien SE-AAA--ZZZ. Polisen har tidigare använt signaler i serien SHA plus fyra
 siffror, detta är nu ersatt med nytt system i.o.m. RAKEL. Räddningstjänsten
 använde SDA med fyra siffror. Signaler som 7SA + 4 siffror används för mindre
-yrkesbåtar SC + 4 siffror för fritidsbåtar.
+yrkesbåtar SC+4 siffror för fritidsbåtar.
 
 Amatörradion använder ett antal signaler, de viktigaste är:
 
@@ -905,7 +903,14 @@ beroende på hur stor deviation som används. På amatörradions VHF- och UHF-ba
 talar vi om FM och NFM (Narrow FM, andra namn förekommer också). Ibland talar
 man om bred FM, normal FM och smal FM på svenska.
 
-Normal FM innebär att deviationen (hur mycket signalen avviker från grundfrekvensen) är lika stor som den högsta modulationsfrekvensen. Det är vanligt att kommunikationsradio använder sig av 3 kHz som högsta modulationsfrekvens och 5 kHz deviation. Deviationen är då något bredare och ger upphov till en viss modulationsvinst. När man talar om FM-radio på UKV-bandet för rundradio så är deviationen ca 75\,kHz och högsta modulationsfrekvens ca 16\,kHz. Där är alltså svinget betydligt bredare än modulationen och detta är bred FM.
+Normal FM innebär att deviationen (hur mycket signalen avviker från
+grundfrekvensen) är lika stor som den högsta modulationsfrekvensen. Det är
+vanligt att kommunikationsradio använder sig av 3 kHz som högsta
+modulationsfrekvens och 5 kHz deviation. Deviationen är då något bredare och ger
+upphov till en viss modulationsvinst. När man talar om FM-radio på UKV-bandet
+för rundradio så är deviationen ca 75\,kHz och högsta modulationsfrekvens ca
+16\,kHz. Där är alltså svinget betydligt bredare än modulationen och detta är
+bred FM.
 
 Nu för tiden förordas en minskning av bandbredden för FM-sändningar på
 amatörbanden, främst är det väl VHF och UHF där FM-sändning är vanligast
@@ -985,11 +990,11 @@ ostörd som bör ligga runt $-130 + 3 + 12 = -115$\,dBm.
 \caption{Termiska brusgolvet vid några vanliga bandbredder}
 \end{table}
 
-Tabellen ovan visar hur brusgolvet ser ut för olika mottagarbandbretter. RBW
-är Receive Band Width i kHz. $N_0$ är beteckningen för det termiska
-brusgolvet. Som ni ser dubblas bruseffekten om man dubblar bandbredden vilket
-kanske inte är så märkligt. Det gör att smalbandig kommunikation har ett
-bättre läge pga lägre bruseffekt i mottagaren.
+Tabellen ovan visar hur brusgolvet ser ut för olika mottagarbandbretter. RBW är
+Receive Band Width i kHz. $N_0$ är beteckningen för det termiska brusgolvet. Som
+ni ser dubblas bruseffekten om man dubblar bandbredden vilket kanske inte är så
+märkligt. Det gör att smalbandig kommunikation har ett bättre läge pga lägre
+bruseffekt i mottagaren.
 
 
 \subsection{Return loss och VSWR}
@@ -1221,9 +1226,9 @@ VHF, UHF och SHF beroende på frekvens, se tabellen under avsnitt
 
 Markvågsutbredning, relativt höga sändareffekter, tillförlitliga
 för\-bind\-el\-ser men i övre delen av frekvensbandet kortare förbindelser
-dagtid. På de lägsta frekvenserna erhålls med hög sändareffekt goda
-förbindelser på stora avstånd globalt och används även för
-t.ex. malmprospektering, kommunikation med ubåtar i undervattensläge.
+dagtid. På de lägsta frekvenserna erhålls med hög sändareffekt goda förbindelser
+på stora avstånd globalt och används även för t.ex. malmprospektering,
+kommunikation med ubåtar i undervattensläge.
 
 \subsubsection{Kortvåg}
 
@@ -1239,48 +1244,47 @@ globalt.
 Kombinerar egenskaperna hos angränsande delar av lång- och kortvåg, kan ge
 kraftig interferens mellan rymd- och markvåg som ofta upplevs som kraftig
 fädning. Särskilt utmärkande för mellanvågen är den i det närmaste avsaknanden
-av skipzon eftersom mark- och rymdvåg kompletterar varandra, jonosfärens
-D-skikt är heller inte särskilt uttalat i frekvensområdet dvs förbindelser via
-rymdvåg på korta avstånd mellan 100--300\,km är möjliga även dagtid under
-perioder med kraftig solaktivitet.
+av skipzon eftersom mark- och rymdvåg kompletterar varandra, jonosfärens D-skikt
+är heller inte särskilt uttalat i frekvensområdet dvs förbindelser via rymdvåg
+på korta avstånd mellan 100--300\,km är möjliga även dagtid under perioder med
+kraftig solaktivitet.
 
 \subsubsection{Ultrakortvåg, väldigt hög frekvens (VHF)}
 
 Förbindeleser med låg effekt och små antenner, oberoende av jonosfären men då
-endast i form av frirumsutbredning, dvs fram till horisonten och under
-påverkan av terränghinder mm. Särskilt utmärkande för UKV är att rymdvåg
-saknas, markvågsdämpningen till lands är total och kommunikation på högre
-frekvenser i princip därför bara sker vid fri sikt mellan sändare och
-mottagare.
+endast i form av frirumsutbredning, dvs fram till horisonten och under påverkan
+av terränghinder mm. Särskilt utmärkande för UKV är att rymdvåg saknas,
+markvågsdämpningen till lands är total och kommunikation på högre frekvenser i
+princip därför bara sker vid fri sikt mellan sändare och mottagare.
 
 Eftersom signalerna kan passera jonosfären fungerar det att kommunicera med
-satelliter och rymdstationer på frekvenserna över ca
-100\,MHz. Amatörradiobandet på 144--146\,MHz (2-metersbandet) har en avdelning
-frekvenser vikta för rymdkommunikaton.
+satelliter och rymdstationer på frekvenserna över ca 100\,MHz. Amatörradiobandet
+på 144--146\,MHz (2-metersbandet) har en avdelning frekvenser vikta för
+rymdkommunikaton.
 
 \subsubsection{Ultrahög frekvens (UHF)}
 
-Bandet är ett av de mest populära för landmobil radio. I dag rymms i detta
-band mellan 300--3000\- \,MHz nära nog all landmobil professionell
-kommunikation då mycket har lämnat VHF-bandet till förmån för
-400\,MHz-bandet. I skrivande stund ryms även alla mobiltelefoniband inom UHF,
-det gäller 700, 800, 900, 1800, 2100 och 2600. I framtiden kan det komma
-frekvensband som ligger högre, exempelvis 3,5\,GHz eller 5\,GHz.
+Bandet är ett av de mest populära för landmobil radio. I dag rymms i detta band
+mellan 300--3000\- \,MHz nära nog all landmobil professionell kommunikation då
+mycket har lämnat VHF-bandet till förmån för 400\,MHz-bandet. I skrivande stund
+ryms även alla mobiltelefoniband inom UHF, det gäller 700, 800, 900, 1800, 2100
+och 2600. I framtiden kan det komma frekvensband som ligger högre, exempelvis
+3,5\,GHz eller 5\,GHz.
 
 Bandet är utmärkt för kommunikation mellan fordon, särskilt i urban miljö
 fungerar den kortare våglängden bra. Den reflekteras också bättre mellan husen
-och frekvenser på främst 400\,MHz har en fantastisk förmåga att leta sig in
-fast man befinner sig i radioskugga. Tillsammans med 6-meter, 4-meter och
-2-meter i glesbygden fyller 70\,cm-bandet en nisch för landmobil kommunikation
-som få andra frekvenser fungerar.
+och frekvenser på främst 400\,MHz har en fantastisk förmåga att leta sig in fast
+man befinner sig i radioskugga. Tillsammans med 6-meter, 4-meter och 2-meter i
+glesbygden fyller 70\,cm-bandet en nisch för landmobil kommunikation som få
+andra frekvenser fungerar.
 
 Radioamatörer har också ett av sina större tilldelningar i detta band, mellan
 432--438\,MHz. Här finns också en LPD\footnote{Low Power Devices, små
 radiostyrningsutrustningar, t.ex. väderstationer, garageportsöppnare med
-mera.}-del som vi får samsas med. Främst kör man FM på bandet men det
-förekommer SSB och kanske ibland också CW. Det finns ett stort repeaterband
-med 2\,MHz shift mellan mottagare och sändare och det är ett praktiskt band
-för man kan enkelt bygga antenner med ganska rejält med förstärkning.
+mera.}-del som vi får samsas med. Främst kör man FM på bandet men det förekommer
+SSB och kanske ibland också CW. Det finns ett stort repeaterband med 2\,MHz
+shift mellan mottagare och sändare och det är ett praktiskt band för man kan
+enkelt bygga antenner med ganska rejält med förstärkning.
 
 Det är också ett populärt band för satellitkommunikation.
 
