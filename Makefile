@@ -1,4 +1,4 @@
-VERSION=2.2.3
+VERSION=2.3.0
 
 all:
 	pdflatex -jobname="rhb-full-${VERSION}" rhb-full

@@ -5,9 +5,11 @@
 	och andra radiointresserade}
 \newcommand{\Forfattare}{Täpp-Anders Sikvall}
 \newcommand{\Initialer}{SM5UEI}
+\newcommand{\Epostadress}{anders@sikvall.se}
 \newcommand{\DokYear}{19}
-\newcommand{\DokVersion}{2.2.3} % Glöm inte fixa versionen här!
+\newcommand{\DokVersion}{2.3.0} % Glöm inte fixa versionen här!
 \newcommand{\DokumentDatum}{\today}
+\newcommand{\Linkhome}{www.sikvall.se}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[10pt,swedish,a4paper]{article}    % De viktigaste inställningarna för dokumentet
 \usepackage[a4paper,bindingoffset=1cm]{geometry} % Särskilda dokumentinställningar
@@ -58,7 +60,7 @@
 
 \vfill
 
-Version: \DokVersion\ \hfill SMØUEI \hfill Datum: \DokumentDatum
+Version: \DokVersion\ \hfill \Initialer \hfill Datum: \DokumentDatum
 
 \newpage
 
@@ -73,19 +75,10 @@ Version: \DokVersion\ \hfill SMØUEI \hfill Datum: \DokumentDatum
 		\ \DokVersion & \DokumentDatum\\
 	\end{tabular}
 }
-
 \chead{}
-
-\lfoot{
-	\scriptsize
-	www.sm0uei.se
-}
-
+\lfoot{\scriptsize \Linkhome}
 \cfoot{\scriptsize \thepage\ / \pageref{LastPage}}
-
-\rfoot{\scriptsize
-	anders@sikvall.se
-}
+\rfoot{\scriptsize \Epostadress}
 
 \renewcommand{\footrulewidth}{0.2pt}
 
@@ -103,5 +96,3 @@ Version: \DokVersion\ \hfill SMØUEI \hfill Datum: \DokumentDatum
 
 \setlength{\parskip}{0.5em}
 \setlength{\parindent}{0pt}
-
-
