@@ -3,17 +3,17 @@
 
 \chapter{Teknik}
 
-I teknikkapitlet kommer vi titta på en mängd begrepp som har med
-radioteknik att göra. Det är effekt och brus, beräkning av
-radiohorisont och utbredning och mycket mer i detta kapitel som kan
-vara till nytta för radiooperatören att känna till.
+I teknikkapitlet kommer vi titta på en mängd begrepp som har med radioteknik
+att göra. Det är effekt och brus, beräkning av radiohorisont och utbredning
+och mycket mer i detta kapitel som kan vara till nytta för radiooperatören att
+känna till.
 
 \clearpage
 
 \section{Effekt i dBW och dBm}
 
-Effekter anges i W eller i decibel relaterat till 1 mW (dBm) eller
-relaterat 1W (dBW). Tabell över effekt och decibelwatt nedan:
+Effekter anges i W eller i decibel relaterat till 1 mW (dBm) eller relaterat
+1W (dBW). Tabell över effekt och decibelwatt nedan:
 
 \begin{table}[H]
 \centering
@@ -66,9 +66,9 @@ Standard kalibrering för S-metern är enligt skalan i tabellen
 \subsection{Bandbredd olika modulationer}
 
 Olika modulationer upptar olika bandbredd. Detta är mycket viktigt att förstå
-när man ställer in sin radiostation. Detta gäller särskilt att beakta i närheten
-av nödfrekvenser eller bandkanten. När vi talar om bandbredder här förstås den
-bandbredd vari minst 98\% av signalens effekt befinner sig.
+när man ställer in sin radiostation. Detta gäller särskilt att beakta i
+närheten av nödfrekvenser eller bandkanten. När vi talar om bandbredder här
+förstås den bandbredd vari minst 98\% av signalens effekt befinner sig.
 
 \begin{table}[H]
 \centering
@@ -84,19 +84,19 @@ bandbredd vari minst 98\% av signalens effekt befinner sig.
 \caption{Normal bandbredd vid olika modulationsslag}
 \end{table}
 
-*) För SSB gäller att USB och LSB fungerar lite olika. När man beräknar den
-högsta eller lägsta frekvensen utgår man från den inställda frekvensen $f$. För
-USB gäller då att högsta frekvensen är $f+3$\,kHz. För LSB blir det
+För SSB gäller att USB och LSB fungerar lite olika. När man beräknar den
+högsta eller lägsta frekvensen utgår man från den inställda frekvensen $f$.
+För USB gäller då att högsta frekvensen är $f+3$\,kHz. För LSB blir det
 $f-3$\,kHz. Detta innebär att om du sänder på 80\,m-bandet och du får sända
-telefoni från 3600--3800\,kHz och vill lägga dig i undre bandkanten och köra LSB
-skall du ställa in din radio på 3603\,kHz som lägsta frekvens. Använd gärna lite
-marginal och kör exempelvis 3605\,kHz i stället.
+telefoni från 3600--3800\,kHz och vill lägga dig i undre bandkanten och köra
+LSB skall du ställa in din radio på 3603\,kHz som lägsta frekvens. Använd
+gärna lite marginal och kör exempelvis 3605\,kHz i stället.
 
-Den egentliga modulationsfrekvensen är dock lite mer komplicerad. Normalt anges
-den verkliga modulationsfrekvensen som ca 2,7\,kHz och det beror på att man i
-regel filtrerar bort ljudet under 300\,Hz och det över 3000\,Hz. Detta innebär
-att det akustiska frekvensomfånget blir 300--3000\,Hz och därmed upptar signalen
-inte mer än 2,7\,kHz.
+Den egentliga modulationsfrekvensen är dock lite mer komplicerad. Normalt
+anges den verkliga modulationsfrekvensen som ca 2,7\,kHz och det beror på att
+man i regel filtrerar bort ljudet under 300\,Hz och det över 3000\,Hz. Detta
+innebär att det akustiska frekvensomfånget blir 300--3000\,Hz och därmed
+upptar signalen inte mer än 2,7\,kHz.
 
 Det är vanligt att man märker stationer som kör överdriven bandbredd. Antingen
 som en följd av att man vill öka sin modulationsvinst, okunskap eller man har
@@ -105,11 +105,11 @@ förbindelser.
 
 \subsection{Telegrafi, CW}
 
-CW står för continuous waves och innebär en rent omodulerad bärvåg. I mottagaren
-används en oscillator för att återskapa hörbar signal. Detta används för
-telegrafi och modulationsslaget är oftast A1A. Ibland sänds telegrafi som
-modulerad AM-bärvåg också som då moduleras med t.ex. 700\,Hz ton. Det är dock
-mindre vanligt.
+CW står för continuous waves och innebär en rent omodulerad bärvåg. I
+mottagaren används en oscillator för att återskapa hörbar signal. Detta
+används för telegrafi och modulationsslaget är oftast A1A. Ibland sänds
+telegrafi som modulerad AM-bärvåg också som då moduleras med t.ex. 700\,Hz
+ton. Det är dock mindre vanligt.
 
 Bandbredden för CW är i teorin mycket smal. I praktiken blir den lite beroende
 på frekvens från några Hz till något hundratal Hz beroende på frekvensband och
@@ -513,7 +513,9 @@ markvågen kommer att glida i fas mot varandra och i bland samverka, ibland
 motverka varandra. Tiden mellan två toppar eller dalar i sådan fädning brukar
 vara ungefär 2-5 sekunder.
 
-Det finns även andra typer av fädning som kan uppstå genom reflexer eller andra utbredningsfenomen men de är mer sällsynta på mellanvåg och ses främst på VHF/UHF.}.
+Det finns även andra typer av fädning som kan uppstå genom reflexer eller
+andra utbredningsfenomen men de är mer sällsynta på mellanvåg och ses främst
+på VHF/UHF.}.
 
 Särskilt utmärkande för mellanvågen är den i det närmaste avsaknanden av
 skipzon eftersom mark- och rymdvåg kompletterar och i regel överlappar
@@ -543,76 +545,158 @@ några år. I stället har ju Internet tagit över som nyhetsförmedlare.
 \subsection{Ultrakortvåg (UKV) eller väldigt hög frekvens (VHF)}
 
 Förbindeleser med låg effekt och små antenner, oberoende av jonosfären men då
-endast i form av frirumsutbredning, dvs fram till horisonten och under påverkan
-av terränghinder mm. Särskilt utmärkande för UKV är att rymdvåg saknas,
-markvågsdämpningen till lands är total och kommunikation på högre frekvenser i
-princip därför bara sker vid fri sikt mellan sändare och mottagare.
+endast i form av frirumsutbredning, dvs fram till horisonten och under
+påverkan av terränghinder mm. Särskilt utmärkande för UKV är att rymdvåg
+saknas, markvågsdämpningen till lands är total och kommunikation på högre
+frekvenser i princip därför bara sker vid fri sikt mellan sändare och
+mottagare.
 
 Eftersom signalerna kan passera jonosfären fungerar det att kommunicera med
-satelliter och rymdstationer på frekvenserna över ca 100\,MHz. Amatörradiobandet
-på 144--146\,MHz (2-metersbandet) har en avdelning frekvenser vikta för
-rymdkommunikaton.
+satelliter och rymdstationer på frekvenserna över ca 100\,MHz.
+Amatörradiobandet på 144--146\,MHz (2-metersbandet) har en avdelning
+frekvenser vikta för rymdkommunikaton.
 
 \subsection{Ultrahög frekvens (UHF)}
 
-Bandet är ett av de mest populära för landmobil radio. I dag rymms i detta band
-mellan 300--3000\- \,MHz nära nog all landmobil professionell kommunikation då
-mycket har lämnat VHF-bandet till förmån för 400\,MHz-bandet. I skrivande stund
-ryms även alla mobiltelefoniband inom UHF, det gäller 700, 800, 900, 1800, 2100
-och 2600. I framtiden kan det komma frekvensband som ligger högre, exempelvis
-3,5\,GHz eller 5\,GHz.
+Bandet är ett av de mest populära för landmobil radio. I dag rymms i detta
+band mellan 300--3000\- \,MHz nära nog all landmobil professionell
+kommunikation då mycket har lämnat VHF-bandet till förmån för 400\,MHz-bandet.
+I skrivande stund ryms även alla mobiltelefoniband inom UHF, det gäller 700,
+800, 900, 1800, 2100 och 2600. I framtiden kan det komma frekvensband som
+ligger högre, exempelvis 3,5\,GHz eller 5\,GHz.
 
 Bandet är utmärkt för kommunikation mellan fordon, särskilt i urban miljö
 fungerar den kortare våglängden bra. Den reflekteras också bättre mellan husen
-och frekvenser på främst 400\,MHz har en fantastisk förmåga att leta sig in fast
-man befinner sig i radioskugga. Tillsammans med 6-meter, 4-meter och 2-meter i
-glesbygden fyller 70\,cm-bandet en nisch för landmobil kommunikation som få
-andra frekvenser fungerar.
+och frekvenser på främst 400\,MHz har en fantastisk förmåga att leta sig in
+fast man befinner sig i radioskugga. Tillsammans med 6-meter, 4-meter och
+2-meter i glesbygden fyller 70\,cm-bandet en nisch för landmobil kommunikation
+som få andra frekvenser fungerar.
 
 Radioamatörer har också ett av sina större tilldelningar i detta band, mellan
 432--438\,MHz. Här finns också en LPD\footnote{Low Power Devices, små
 radiostyrningsutrustningar, t.ex. väderstationer, garageportsöppnare med
-mera.}-del som vi får samsas med. Främst kör man FM på bandet men det förekommer
-SSB och kanske ibland också CW. Det finns ett stort repeaterband med 2\,MHz
-shift mellan mottagare och sändare och det är ett praktiskt band för man kan
-enkelt bygga antenner med ganska rejält med förstärkning.
+mera.}-del som vi får samsas med. Främst kör man FM på bandet men det
+förekommer SSB och kanske ibland också CW. Det finns ett stort repeaterband
+med 2\,MHz shift mellan mottagare och sändare och det är ett praktiskt band
+för man kan enkelt bygga antenner med ganska rejält med förstärkning.
 
 Det är också ett populärt band för satellitkommunikation.
 
-\todo{Kolla om rätt indentering rubrikmässigt}
+\section{Missanpassning}
+
+För maximal överföring av radioenergi från en sändare till en antenn eller
+från antennen till en mottagare krävs att man har en bra anpassning mellan de
+olika delarna. Dessa brukar vara tre saker som behöver "matchas" med varandra
+så att man har en snarlik impedans hos alla tre.
+
+Dessa är radioapparaten, transmissionsledningen och antennen. I de flesta fall
+är radioapparaten en sändtagare som kan växla mellan sändning och mottagning.
+Transmissionsledningen är vanligtvis någon form av koaxialkabel som har en så
+kallad "karaktäristisk impedans" som i dessa sammanhang vanligtvis är
+50\,$\Omega$.
+
+\subsection{Stående våg}
+
+Om anpassningen inte stämmer kommer man förlora energi på vägen och man får
+ett felaktigt stående vågförhållande. På engelska kallas detta för Voltage
+Standing Wave Ratio (spänningens ståendevågförhållande) och betecknas VSWR.
+Det finns två vanligen förekommande sätt att mäta den och det ena är att man
+mäter förhållandet mellan den framåtgående effekten och den reflekterade och
+man betecknar dessa som ett bråktal, vanligen som 1:1,2.
+
+\subsection{Return loss}
+
+Man kan även uttrycka den i så kallad "return loss" eller RL. Detta begrepp
+talar i stället om hur många decibel lägre den på grund av missanpassningen
+reflekterade signalen är i förhållande till den framåtgående och utrycks i
+decibel, vanligen som 20\,dB\,RL. Just denna siffra betyder att den
+reflekterade signalen är 20\,dB lägre än den framåtgående signalen och det är
+alltså 1\,\% som reflekteras.
+
+\subsection{Bra och dålig anpassning}
+
+En missanpassning kan sägas vara bra om den är bättre än 20\,dB\,RL och vi kan
+säga att den är dålig om den är sämre än 10\,dB\,RL. I VSWR är det ungefär
+1:1,2 och 1:2 ungefär.
+
+\subsection{Konvertera mellan VSWR och RL}
+
+\begin{equation}
+	\text{RL} = 20 \cdot \log_{10} \frac{\text{VSWR}-1}{\text{VSWR}+1}
+\end{equation}
+
+\begin{equation}
+	\text{VSWR} = \frac{1+10^\frac{\text{-RL}}{20}}{1-10^\frac{\text{-RL}}{20}}
+\end{equation}
+
+Där RL är return loss i dB och VSWR är ståendevågförhållandet, exempelvis 1,2.
+
+\subsection{Tabell över stående våg och return loss}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{rr|rr|rr}
+	\textbf{RL} & \textbf{VSWR} & \textbf{RL} & \textbf{VSWR} & \textbf{RL} & \textbf{VSWR} \\ \hline
+	         40 &        1:1,02 &          18 &        1:1,29 &           8 &        1:2,32 \\
+	         35 &        1:1,04 &          16 &        1:1,38 &           6 &        1:3,01 \\
+	         30 &        1:1,07 &          14 &        1:1,50 &           4 &        1:4,42 \\
+	         25 &        1:1,12 &          12 &        1:1,67 &           2 &        1:8,72 \\
+	         20 &        1:1,22 &          10 &        1:1,92 &           1 &        1:17,4
+\end{tabular}
+\caption{Stående våg och return loss}
+\label{tab:vswr-rl}
+\end{table}
 
 \section{Radioberäkningar för VHF och UHF}
 
 \subsection{Beräkning av radiohorisonten}
 
-Radiohorisonten är den sträcka som markvågen kan nå utan särskilda hjälpmedel och i frånvaro av andra effekter som särskilda kondisioner (tropo eller duktning) och liknande. Avståndet kan beräknas med hjälp av en enkel formel. Radiohorisonten gäller egentligen bara när inget annat är i vägen men kan ge en ledning till den längsta utbredning man kan förvänta sig med markvåg givet en viss höjd.
+Radiohorisonten är den sträcka som markvågen kan nå utan särskilda hjälpmedel
+och i frånvaro av andra effekter som särskilda kondisioner (tropo eller
+duktning) och liknande. Avståndet kan beräknas med hjälp av en enkel formel.
+Radiohorisonten gäller egentligen bara när inget annat är i vägen men kan ge
+en ledning till den längsta utbredning man kan förvänta sig med markvåg givet
+en viss höjd.
 
-För skepp på havet stämmer radiohorisonten ganska väl så man hittar denna formel ofta i utbildningsmaterial för marin VHF men då med distansen i nautiska mil i stället för km. För att få detta byter man konstanten 3,57 till 2,2 i stället.
+För skepp på havet stämmer radiohorisonten ganska väl så man hittar denna
+formel ofta i utbildningsmaterial för marin VHF men då med distansen i
+nautiska mil i stället för km. För att få detta byter man konstanten 3,57 till
+2,2 i stället.
 
-\begin{equation*}
+\begin{equation}
 	r = 3,57 \left(\sqrt{h_1}+\sqrt{h_2}\right)
-\end{equation*}
+\end{equation}
 
-Där $r$ är avståndet till radiohorisonten givet i kilometer, $h_1$ är den ena stationens antennhöjd över marken givet i meter och $h_2$ är den andra stationens antennhöjd över marken också givet i meter.
+Där $r$ är avståndet till radiohorisonten givet i kilometer, $h_1$ är den ena
+stationens antennhöjd över marken givet i meter och $h_2$ är den andra
+stationens antennhöjd över marken också givet i meter.
 
 \subsection{Sträckdämpning}
 
-Sträckdämpningen beror på flera olika faktorer, inte minst terrängen och det som finns mellan sändaren och mottagaren. I den fria rymden följer den en enkel geometrisk utbredning men närmare marken behöver man stoppa in en del kompensationsfaktorer.
+Sträckdämpningen beror på flera olika faktorer, inte minst terrängen och det
+som finns mellan sändaren och mottagaren. I den fria rymden följer den en
+enkel geometrisk utbredning men närmare marken behöver man stoppa in en del
+kompensationsfaktorer.
 
-\begin{equation*}
+\begin{equation}
 	PL_0 = 20 \cdot \log(f) + 20 \cdot \log(d) - 27,55
-\end{equation*}
+\end{equation}
 
-Där $PL_{0}$ är sträckdämpningen i decibel(dB) (Eng: Path Loss) mellan två sändare givet avståndet $d$ i meter och frekvensen $f$ i MHz. Om man anger $d$ i kilometer i stället adderar man 60 till konstanten och får då 32,45.
+Där $PL_{0}$ är sträckdämpningen i decibel(dB) (Eng: Path Loss) mellan två
+sändare givet avståndet $d$ i meter och frekvensen $f$ i MHz. Om man anger $d$
+i kilometer i stället adderar man 60 till konstanten och får då 32,45.
 
-För sträckdämpning vid mark får man mäta eller skatta en utbredningsdämpning som en konstant $k$ som man använder för att modifiera formeln med och får då följande variant:
+För sträckdämpning vid mark får man mäta eller skatta en utbredningsdämpning
+som en konstant $k$ som man använder för att modifiera formeln med och får då
+följande variant:
 
 
-\begin{equation*}
+\begin{equation}
 	PL_m = 20 \cdot \log(f) + (20+k) \cdot \log(d) - 27,55
-\end{equation*}
+\end{equation}
 
-Där $PL_m$ är sträckdämpningen vid marken. Faktorn $k$ kan uppskattas enligt följande tabell:
+Där $PL_m$ är sträckdämpningen vid marken. Faktorn $k$ kan uppskattas enligt
+följande tabell:
 
 \begin{table}[h]
 	\begin{centering}
@@ -629,6 +713,7 @@ Där $PL_m$ är sträckdämpningen vid marken. Faktorn $k$ kan uppskattas enligt
 	\caption{Tabell över korrigeringsfaktor för frirumsutbredning vid marken}
 \end{table}
 
-I vanlig svensk terräng är det nog vanligast man hamnar i storleksordningen 5--10.
+I vanlig svensk terräng är det nog vanligast man hamnar i storleksordningen
+5--10.
 
 

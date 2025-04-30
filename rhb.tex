@@ -21,11 +21,12 @@
 \usepackage[a4paper]{geometry}         % Särskilda dokumentinställningar
 \usepackage[utf8]{inputenc}            % Indata som UTF-8 är väldigt bra för t.ex. svenska
 \usepackage[T1]{fontenc}               % Fontkodning enligt modern standard
+\usepackage{fbb}                       % En font inspirerad av Bembo
 \usepackage[swedish]{babel}            % Svensk avstavning och mycket mer
 \usepackage[colorlinks,
   linkcolor=black,
   urlcolor=blue]{hyperref}             % Hyperref möjliggör länkar utanför dokumentet
-\usepackage{listings}
+\usepackage{listings}                  % Används för morsekoden
 \usepackage{enumitem}                  % Enumrering
 \usepackage{multirow}                  % Tabeller med tabellrader som spänner över mer än en textrad
 \usepackage{amsmath}                   % Utökade matematiska symboler
@@ -43,7 +44,6 @@
 \usepackage{float}                     % Utökade optioner för floats
 \usepackage[bottom]{footmisc}          % Optioner för fotnoter, sätt alltid på slutet av samma sida
 \usepackage{longtable}                 % Tabeller som sidbryter
-\usepackage{fbb}                       % En font inspirerad av Bembo
 \newif\iftitlefoot
 \raggedbottom                          % Stretcha inte sidor mer än nödvändigt
 \setlist{nosep}                        % Separera inte numrerade och punktlistor mer
@@ -134,8 +134,8 @@
 
 \newpage
 
-\setlength{\parskip}{1 em}
-\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2 ex}
+\setlength{\parindent}{0 pt}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
