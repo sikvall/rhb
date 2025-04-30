@@ -13,12 +13,15 @@
 \newcommand{\ISBN}{ISBN: ej definierad}
 \newcommand{\Linkhome}{www.sikvall.se}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[10pt,swedish,a4paper]{report} % De viktigaste inställningarna för dokumentet
-\usepackage[a4paper,bindingoffset=1cm]{geometry} % Särskilda dokumentinställningar
+\documentclass[10pt,swedish,a4paper,
+  twoside]{book}                       % De viktigaste inställningarna för dokumentet
+\usepackage[a4paper]{geometry}         % Särskilda dokumentinställningar
 \usepackage[utf8]{inputenc}            % Indata som UTF-8 är väldigt bra för t.ex. svenska
 \usepackage[T1]{fontenc}               % Fontkodning enligt modern standard
 \usepackage[swedish]{babel}            % Svensk avstavning och mycket mer
-\usepackage[colorlinks,linkcolor=black,urlcolor=blue]{hyperref}
+\usepackage[colorlinks,
+  linkcolor=black,
+  urlcolor=blue]{hyperref}
                                        % Hyperref möjliggör länkar utanför dokumentet
 \usepackage{enumitem}                  % Enumrering
 \usepackage{multirow}                  % Tabeller med tabellrader som spänner över mer än en textrad
