@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % diverse saker här som används i dokumentet %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\TitleText}{Radiohandbok}
+\newcommand{\TitleText}{Radiohandboken}
 \newcommand{\SubtitleText}{För Sändaramatörer, privatradioanvändare\\
 	och andra radiointresserade}
 \newcommand{\Forfattare}{Täpp-Anders Sikvall}
@@ -10,7 +10,7 @@
 \newcommand{\DokVersion}{2.3.0}
 \newcommand{\DokYear}{2025}
 \newcommand{\DokumentDatum}{\today}
-\newcommand{\ISBN}{ISBN: ej definierad}
+\newcommand{\ISBN}{---}
 \newcommand{\Linkhome}{www.sikvall.se}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[10pt,swedish,a4paper,
@@ -21,8 +21,8 @@
 \usepackage[swedish]{babel}            % Svensk avstavning och mycket mer
 \usepackage[colorlinks,
   linkcolor=black,
-  urlcolor=blue]{hyperref}
-                                       % Hyperref möjliggör länkar utanför dokumentet
+  urlcolor=blue]{hyperref}             % Hyperref möjliggör länkar utanför dokumentet
+\usepackage{listings}
 \usepackage{enumitem}                  % Enumrering
 \usepackage{multirow}                  % Tabeller med tabellrader som spänner över mer än en textrad
 \usepackage{amsmath}                   % Utökade matematiska symboler
@@ -49,8 +49,12 @@
 \headheight=20pt
 \begin{document}
 
-%\newgeometry{left=2cm,right=2cm,bottom=1cm,top=1cm}
 \pagestyle{empty}
+
+\input{tex/morse}
+
+\newgeometry{bottom=3cm,top=3cm}
+
 \vfill
 \vspace*{4cm}
 \centerline{\includegraphics[width=\paperwidth]{logo/rubrikbild}}
@@ -59,31 +63,45 @@
 	\Large{\bfseries{\SubtitleText}}
 \end{flushright}
 
-\vfill
-\listoftodos
-\vfill
+\newpage
 
-Version: \DokVersion\ \hfill \Initialer \hfill Datum: \DokumentDatum
+\vspace*{\fill}
+
+\noindent \TitleText
+
+\vspace{1 em}
+
+\noindent \Forfattare, \Initialer 
+
+\noindent Karlholmsbruk 
+
+\noindent Version \DokVersion
+
+\noindent Datum \DokumentDatum
+
+\noindent ISBN: \ISBN
 
 \newpage
 
-\newgeometry{top=3cm}
+%\newgeometry{top=3cm}
+
+\renewcommand{\headrulewidth}{0.2 pt}
+\renewcommand{\footrulewidth}{0.2 pt}
+
+\fancyhead[RE]{\small\nouppercase{\leftmark}}      % Chapter in the right on even pages
+\fancyhead[RO]{\small\nouppercase{\rightmark}}     % Section in the left on odd pages
+\fancyhead[LE]{\small\nouppercase{\rightmark}}      % Chapter in the right on even pages
+\fancyhead[LO]{\small\nouppercase{\leftmark}}     % Section in the left on odd pages
+
+\fancyfoot[RE]{\small Radiohandboken}
+\fancyfoot[RO]{\small \DokVersion}
+\fancyfoot[LE]{\small \DokVersion}
+\fancyfoot[LO]{\small Radiohandboken}
+
+
+\cfoot{\small \thepage}
 
 \pagestyle{fancy}
-\lhead{\leftmark}
-\rhead{
-	\scriptsize
-	\begin{tabular}{ll}
-		\textbf{Version} & \textbf{Datum}\\
-		\ \DokVersion & \DokumentDatum\\
-	\end{tabular}
-}
-\chead{}
-\lfoot{\scriptsize \Linkhome}
-\cfoot{\scriptsize \thepage\ / \pageref{LastPage}}
-\rfoot{\scriptsize \Epostadress}
-
-\renewcommand{\footrulewidth}{0.2pt}
 
 \widowpenalty=9999
 \clubpenalty=9999
@@ -99,7 +117,7 @@ Version: \DokVersion\ \hfill \Initialer \hfill Datum: \DokumentDatum
 
 \newpage
 
-\setlength{\parskip}{0.5em}
+\setlength{\parskip}{1 ex}
 \setlength{\parindent}{0pt}
 
 
@@ -108,9 +126,11 @@ Version: \DokVersion\ \hfill \Initialer \hfill Datum: \DokumentDatum
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{tex/forord}
+\pagestyle{fancy}
 \input{tex/kap-reglemente}
 \input{tex/kap-trafik}
 \input{tex/kap-teknik}
 \input{tex/kap-frekvenser}
 
 \end{document}
+
