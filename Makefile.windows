@@ -1,14 +1,8 @@
 VERSION=2.2.3
 
 all: 
-	pdflatex -jobname="rhb-full-${VERSION}.pdf" rhb-full
-	pdflatex -jobname="rhb-full-${VERSION}.pdf" rhb-full
-	if not exist pdf mkdir pdf
-	move *.pdf pdf
-
-full: 
-	pdflatex -jobname="rhb-full-${VERSION}.pdf" rhb-full
-	pdflatex -jobname="rhb-full-${VERSION}.pdf" rhb-full
+	pdflatex -jobname="rhb-${VERSION}.pdf" rhb
+	pdflatex -jobname="rhb-${VERSION}.pdf" rhb
 	if not exist pdf mkdir pdf
 	move *.pdf pdf
 
