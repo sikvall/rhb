@@ -1,16 +1,111 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % diverse saker här som används i dokumentet %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\TitleText}{Radiohandbok HF/VHF/UHF}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\TitleText}{Radiohandbok}
+\newcommand{\SubtitleText}{För Sändaramatörer, privatradioanvändare\\
+	och andra radiointresserade}
+\newcommand{\Forfattare}{Täpp-Anders Sikvall}
+\newcommand{\Initialer}{SM5UEI}
+\newcommand{\Epostadress}{anders@sikvall.se}
+\newcommand{\DokVersion}{2.3.0}
+\newcommand{\DokYear}{2025}
+\newcommand{\DokumentDatum}{\today}
+\newcommand{\Linkhome}{www.sikvall.se}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt,swedish,a4paper]{report} % De viktigaste inställningarna för dokumentet
+\usepackage[a4paper,bindingoffset=1cm]{geometry} % Särskilda dokumentinställningar
+\usepackage[utf8]{inputenc}            % Indata som UTF-8 är väldigt bra för t.ex. svenska
+\usepackage[T1]{fontenc}               % Fontkodning enligt modern standard
+\usepackage[swedish]{babel}            % Svensk avstavning och mycket mer
+\usepackage[colorlinks,linkcolor=black,urlcolor=blue]{hyperref}
+                                       % Hyperref möjliggör länkar utanför dokumentet
+\usepackage{enumitem}                  % Enumrering
+\usepackage{multirow}                  % Tabeller med tabellrader som spänner över mer än en textrad
+\usepackage{amsmath}                   % Utökade matematiska symboler
+\usepackage{tabularx}                  % Tabulering med fler optioner än original
+\usepackage{graphicx}                  % Kunna sätta bilder bättre
+\usepackage[table,x11names]{xcolor}    % Referera till färger med deras X11-namn
+\usepackage{fancyhdr}                  % Kunna snyggare typsätta huvud och fot på varje sida
+\usepackage[yyyymmdd]{datetime}        % Mer europeiskt datumformat (ISO)
+  \renewcommand{\dateseparator}{-}
+\usepackage{lastpage}                  % Kunna referera till sista sidan i dokumentet
+\usepackage{pdfpages}                  % Kunna lägga in PDF-kommentarer
+\usepackage{icomma}                    % Intelligenta kommatteringar för stora och små tal
+\usepackage{pdflscape}                 % Kunna göra vissa sidor liggande i PDF
+\usepackage{wrapfig}                   % Kunna wrappa figurer
+\usepackage{float}                     % Utökade optioner för floats
+\usepackage[bottom]{footmisc}          % Optioner för fotnoter, sätt alltid på slutet av samma sida
+\usepackage{longtable}                 % Tabeller som sidbryter
+\usepackage{fbb}                       % En font inspirerad av Bembo
+\newif\iftitlefoot
+\raggedbottom                          % Stretcha inte sidor mer än nödvändigt
+\setlist{nosep}                        % Separera inte numrerade och punktlistor mer
+\usepackage{todonotes}                 % Kunna lägga in att-göra i dokumentet
+\renewcommand{\arraystretch}{1.15}
+\headheight=20pt
+\begin{document}
+
+\newgeometry{left=2cm,right=2cm,bottom=1cm,top=1cm}
+\pagestyle{empty}
+\vfill
+\vspace*{4cm}
+\centerline{\includegraphics[width=\paperwidth]{logo/rubrikbild}}
+\begin{flushright}
+	\Huge{\bfseries{\TitleText}} \\[3mm]
+	\Large{\bfseries{\SubtitleText}}
+\end{flushright}
+
+\vfill
+
+\listoftodos
+
+\vfill
+
+Version: \DokVersion\ \hfill \Initialer \hfill Datum: \DokumentDatum
+
+\newpage
+
+\newgeometry{top=3cm}
+
+\pagestyle{fancy}
+\lhead{\leftmark}
+\rhead{
+	\scriptsize
+	\begin{tabular}{ll}
+		\textbf{Version} & \textbf{Datum}\\
+		\ \DokVersion & \DokumentDatum\\
+	\end{tabular}
+}
+\chead{}
+\lfoot{\scriptsize \Linkhome}
+\cfoot{\scriptsize \thepage\ / \pageref{LastPage}}
+\rfoot{\scriptsize \Epostadress}
+
+\renewcommand{\footrulewidth}{0.2pt}
+
+\widowpenalty=9999
+\clubpenalty=9999
+
+%	\setlength{\headsep}{1em}2
+
+\cleardoublepage
+
+%%% Innehållsförteckning
+\tableofcontents
+
+\newpage
+
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% diverse saker här som används i dokumentet %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{tex/init-1st}
-\input{tex/rhb-forord}
-
+\input{tex/forord}
 \input{tex/kap-reglemente}
 \input{tex/kap-trafik}
 \input{tex/kap-teknik}
 \input{tex/kap-frekvenser}
-
-%\input{logbook}
 
 \end{document}
