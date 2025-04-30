@@ -1,0 +1,546 @@
+\section{Signaler och anrop}
+
+\subsection{Landsprefix}
+
+Här är inte alla länder med utan de vanligaste som körs från Sverige.
+
+\begin{center}
+  \begin{footnotesize}
+    \begin{longtable}{lll}
+      \caption{Utvalda landsprefix} \\
+      \textbf{Land}                 & \textbf{DXCC}  & \textbf{Prefixserier}                             \\ \hline
+			Belgien                       & ON             & ONA--OTZ                                          \\
+			Canada                        & VE             & CYA--CZZ, VAA--VGZ, VOA--VOZ, VXA--VYZ, XJA--XOZ  \\
+			Frankrike                     & F              & FAA--FZZ, HWA--HWZ, THA--THZ, TKA--TKZ, TMA--TMZ, \\
+			                              &                & TOA--TQZ, TVA--TXZ                                \\
+			Frankr. särsk.                & FG FH FK       &                                                   \\
+			                              & FM, FO, FP, FR &                                                   \\
+			                              & FS, FT, FW, FY &                                                   \\
+			Förenta Staterna              & K              & AAA--ALZ, KAA--KZZ, NAA--NZZ, WAA--WZZ            \\
+			Grekland                      & SV             & J4A--J4Z, SVA--SVZ                                \\
+			Italien                       & I              & IAA--IZZ                                          \\
+			Japan                         & JA             & 7JA--7NZ, 8JA--8NZ, JAA--JSZ                      \\
+			Kroatien                      & 9A             & 9AA--9AZ                                          \\
+			Nederländerna                 & PA             & PAA--PLZ                                          \\
+			Polen                         & SP             & 3ZA--3ZZ, HFA--HFZ, SNA--SRZ                      \\
+			Rumänien                      & YO             & YOA--YRZ                                          \\
+			Ryssland (Eur.)               & UA1 3 4 5 6 7  & RAA--RZZ, UAA-UIZ                                 \\
+			Ryssland (Asi.)               & UA8 9 0        & RAA--RZZ, UAA-UIZ                                 \\
+			Schweiz                       & HB             & HBA--HBZ HEA--HEZ                                 \\
+			Spanien                       & EA             & AMA--AOZ, EAA--EHZ                                \\
+			Storbritt. England            & G, 2E, M       & 2AA--2ZZ, GAA--GZZ, MAA--MZZ, VPA--VQZ,           \\
+			                              &                & VSA--VSZ,ZBA--ZJZ, ZNA--ZOZ, ZQA--ZQZ             \\
+			Storbritt. Skottland          & GM, 2M, MM     &                                                   \\
+			Storbritt. Övrigt             & VP2, VP6, VP8  &                                                   \\
+			                              & VP9, VQ9, ZB   &                                                   \\
+			Sverige                       & SM             & 7SA--7SZ, 8SA--8SZ, SAA--SMZ                      \\
+			Tyskland                      & DL             & DAA--DRZ, Y2A--Y9Z                                \\
+			Ukraina                       & UT             & EMA--EOZ, URA--UZA                                \\
+			Ungern                        & HA             & HAA--HAZ, HGA--HGZ                                \\
+			Österrike                     & OE             & OEA--OEZ\\
+		\end{longtable}
+	\end{footnotesize}
+\end{center}
+
+\subsection{Svenska signaler}
+
+Svenska signaler förekommer inom ett antal prefix. Enligt ITU disponerar Sverige
+förljande signalserier: 7SA--7SZ samt 8SA--8SZ och vidare de mer kända SAA--SMZ.
+Dessa har används till varierande ändamål, exempelvis har flyget signaler i
+serien SE-AAA--ZZZ. Polisen har tidigare använt signaler i serien SHA plus fyra
+siffror, detta är nu ersatt med nytt system i.o.m. RAKEL. Räddningstjänsten
+använde SDA med fyra siffror. Signaler som 7SA + 4 siffror används för mindre
+yrkesbåtar SC+4 siffror för fritidsbåtar.
+
+Amatörradion använder ett antal signaler, de viktigaste är:
+
+\begin{tabular}{ll}
+	SM & Amatörradiosignal utdelad av PTS (nya signaler tilldelas ej i
+        serien) \\ SA & Amatörradiosignal tilldelad av SSA \\ SK & Klubbsignaler
+        (som regel tvåställiga efter distriktsiffran) \\ & numera tilldelas även
+        klubbar SA-signaler som är tvåställiga efter distriktssiffran \\ SL &
+        Militära signaler (som regel två- eller treställiga efter
+        distriktsiffran)
+\end{tabular}
+
+Dessa signaler följs av en \textit{distriktsiffra} se särskilt avsnitt och sedan
+2-ställiga eller 3-ställiga bokstavskombinationer som är den personliga
+signalen. Exempel är SM0UEI som är min egen signal, distriktsiffran är 0 dvs
+hemmavarande i Stockholms län. Ett annat exempel kan vara SK5JV tidigare
+Fagersta amatörradioklubb.
+
+Repeatrar som tillhör klubbar får ofta signal efter klubben med tillägg /R för
+repeater.
+
+Det finns numera även ett stort antal signaler som är tillfälliga eller knutna
+till särskilda event, exempelvis scoutverksamhet som ibland sänder amatörradio
+och särskilda forskningsfartyg, flyg- och rymdfart mm.
+
+Som suffix används följande:
+
+\begin{tabular}{ll}
+	/M  & Mobil (rörlig) sändaramatör, även portabel \\
+	/MM & Mobil till sjöss (mobil maritime)          \\
+	/AM & Mobil i luften (aeromobile)                \\
+	/P  & Portabel (för stunden uppsatt station)     \\
+	/R  & Repeaterstation
+\end{tabular}
+
+\subsection{Svenska distrikten}
+
+Sverige delas in i följande distrikt efter sina län:
+
+\begin{table}[h]
+	\centering
+\begin{tabular}{cl}
+	\textbf{Distrikt} & \textbf{Län}                                     \\ \hline %\endhead
+	      0        & Stockholm                                        \\
+	      1        & Gotland                                          \\
+	      2        & Västerbotten, Norrbotten                         \\
+	      3        & Gävleborg, Jämtland, Västernorrland              \\
+	      4        & Örebro, Värmland, Dalarna                        \\
+	      5        & Östergötland, Södermanland, Västmanland, Uppsala \\
+	      6        & Halland, Västra götaland                         \\
+	      7        & Skåne, Blekinge, Kronoberg, Jönköping, Kalmar    \\
+	      8        & Speciella stationer utanför landets gränser
+\end{tabular}
+\caption{Distriktssiffor i Sverige}
+\end{table}
+
+\subsubsection{Karta över svenska amatörradiodistrikt}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=12cm]{pic/sm-distrikt-stor}
+	\label{fig:sm-distrikt}
+	\caption{Svenska distrikt, karta med tillstånd från
+          \href{https://SSA.SE}{ssa.se}}
+\end{figure}
+
+Distrikten förekommer som siffra i utdelade anropssignaler. Radioamatörer byter
+inte distriktsiffra under resa i annat distrikt, i stället används suffix
+(tillägg efter ordinarie signal) som t.ex. /M för mobil. Ofta uppger man "SM0UEI
+mobilt i SM3-land" (SM0UEI/3/M) ibland (SM0UEI/3M) för att påvisa att man
+befinner sig utanför ordinarie distrikt.
+
+En radioamatör kan byta sin distriktsiffra om den sänder från ett annat distrikt
+än sitt hemmavarande. Man kan också göra ett tillägg med /n där n är den siffra
+för det distrikt man befinner sig i. En stockholmsamatör som befinner sig i
+Gävleborgs län kan alltså antingen använda SM3UEI eller SM0UEI/3 även med
+tillägget M för mobil och P för portabel om man så önskar.
+
+Det unika för en radioamatörs signal är alltså prefixet + suffixet, som exempel
+är identifieraren för SM0UEI prefixet SM och suffixet UEI eftersom
+distriktsiffran kan ändra sig.
+
+\clearpage
+
+
+\section{Terminologi och trafik}
+
+\subsection{Bokstaveringsalfabetet (Svenska)}
+
+\begin{table}[H]
+	\centering
+\begin{longtable}{cl|cl|cl }
+	A & Adam   & O & Olof    & 1 & Ett        \\
+	B & Bertil & P & Petter  & 2 & Tvåa       \\
+	C & Cesar  & Q & Qvintus & 3 & Trea       \\
+	D & David  & R & Rudolf  & 4 & Fyra       \\
+	E & Erik   & S & Sigurd  & 5 & Femma      \\
+	F & Filip  & T & Tore    & 6 & Sexa       \\
+	G & Gustav & U & Urban   & 7 & Sju        \\
+	H & Helge  & V & Viktor  & 8 & Åtta       \\
+	I & Ivar   & W & Wilhelm & 9 & Nia        \\
+	J & Johan  & X & Xerxes  & 0 & Nolla      \\
+	K & Kalle  & Y & Yngve   & . & Punkt      \\
+	L & Ludvig & Z & Zäta    & , & Komma      \\
+	M & Martin & Å & Åke     & - & Minus      \\
+	N & Niklas & Ä & Ärlig   & + & Plus       \\
+	  &        & Ö & Östen   &   & Mellanslag \\
+\end{longtable}
+\caption{Svenska bokstaveringsalfabetet}
+\end{table}
+
+\subsection{Bokstaveringsalfabetet (Internationella)}
+\begin{table}[H]
+\centering
+\begin{tabular}{cl|cl|cl}
+	A & Alfa     &  P   & Papa       & 0 & Zero    \\
+	B & Bravo    &  Q   & Quebec     & 1 & One     \\
+	C & Charlie  &  R   & Romeo      & 2 & Two     \\
+	D & Delta    &  S   & Sierra     & 3 & Tree    \\
+	E & Echo     &  T   & Tango      & 4 & Fower   \\
+	F & Foxtrot  &  U   & Uniform    & 5 & Fife    \\
+	G & Golf     &  V   & Victor     & 6 & Six     \\
+	H & Hotel    &  W   & Whiskey    & 7 & Seven   \\
+	I & India    &  X   & X-ray      & 8 & Ait     \\
+	J & Juliet   &  Y   & Yankee     & 9 & Niner   \\
+	K & Kilo     &  Z   & Zulu       & . & Stop    \\
+	L & Lima     & Å/AA & Alfa-Alfa  & , & Decimal \\
+	M & Mike     & Ä/AE & Alfa-Echo  & - & Minus   \\
+	N & November & Ö/OE & Oscar-Echo & + & Plus    \\
+	O & Oscar    &      &            &   & Space   \\
+\end{tabular}
+\caption{Internationella bokstaveringsalfabetet (ITU-alfabetet)}
+\end{table}
+
+\subsection{Q-koder}
+I tabellen listas några av de vanligast förekommande Q-koderna på amatörradiobanden.
+Det finns förstås många fler koder men detta anses som de vanligaste.
+
+\begin{longtable}{ll}
+	\textbf{Kod} & \textbf{Fråga / Svar}                                                         \\ \hline
+	\endhead
+	\caption{Q-koder}\\
+\endlastfoot
+	QRA & Vad heter er station?                                                \\
+	    & Vår station heter ...                                                \\ \hline
+	QRB & Hur långt bort från min station befinner ni er?                      \\
+	    & Avståndet mellan oss är ungefär ...                                  \\ \hline
+	QRG & Kan ni ange min exakta frekvens?                                     \\
+	    & Er exakta frekvens är ... (MHz/kHz)                                  \\ \hline
+	QRH & Varierar min frekvens/våglängd?                                      \\
+	    & Er frekvens/våglängd varierar.                                       \\ \hline
+	QRI & Hur är min sändningston (CW)?                                        \\
+	    & Er sändningston är 1--God, 2--Varierande, 3--Dålig                   \\ \hline
+	QRK & Vilken uppfattbarhet har mina signaler?                              \\
+	    & Uppfattbarheten hos dina signaler är:                                \\
+	    & 1--Dålig, 2--Bristfällig, 3--Ganska god, 4--God, 5--Utmärkt          \\ \hline
+	QRL & Är ni upptagen?                                                      \\
+	    & Jag är upptagen med ... (namn/signal) stör ej.                       \\ \hline
+	QRM & Är ni störd av annan station?                                        \\
+	    & Störningarna är:                                                     \\
+	    & 1--Obef., 2--Svaga, 3--Måttliga, 4--Starka, 5--Mycket starka         \\ \hline
+	QRN & Besväras ni av atmosfäriska störningar?                              \\
+	    & Störningarna är:                                                     \\
+	    & 1--Obef., 2--Svaga, 3--Måttliga, 4--Starka, 5--Mycket starka         \\ \hline
+	QRO & Kan jag (ska jag) öka sändareffekten?                                \\
+	    & Öka sändareffekten.                                                  \\ \hline
+	QRP & Kan jag (ska jag) minska sändareffekten?                             \\
+	    & Minska sändareffekten.                                               \\ \hline
+	QRQ & Kan jag (får jag) öka sändningshastigheten?                          \\
+	    & Öka sändningshastigheten.                                            \\ \hline
+	QRS & Kan jag (skall jag) sända långsammare?                               \\
+	    & Sänd långsammare.                                                    \\ \hline
+	QRT & Skall jag avbryta sändningen?                                        \\
+	    & Avbryt sändningen                                                    \\ \hline
+	QRU & Har ni något till mig?                                               \\
+	    & Jag har inget till er. Se även QTC.                                  \\ \hline
+	QRV & Är ni redo?                                                          \\
+	    & Jag är redo.                                                         \\ \hline
+	QRX & När anropar ni mig härnäst?                                          \\
+	    & Jag anropar er kl ... (på ... MHz/kHz)                               \\ \hline
+	QRZ & Vem anropar mig?                                                     \\
+	    & Ni anropas av ... (på ... MHz/kHz).                                  \\ \hline
+	QSA & Vilken styrka har mina signaler?                                     \\
+	    & Era signaler är:                                                     \\
+	    & 1--Ej uppf., 2--Svaga, 3--Ganska starka, 4--Starka, 5--Mycket starka \\ \hline
+	QSB & Svajar styrkan på mina signaler?                                     \\
+	    & Styrkan på era signaler svajar.                                      \\ \hline
+	QSK & Kan du höra mig mellan dina tecken och får jag avbryta dig?          \\
+	    & Jag kan höra dig mellan mina tecken och du får avbryta.              \\ \hline
+	QSL & Kan ni ge mig kvittens?                                              \\
+	    & Jag kvitterar.                                                       \\ \hline
+	QSO & Ha ni förbindelse med ... eller ... (förmedlat)?                     \\
+	    & Jag har förbindelse med ... (via ...)                                \\ \hline
+	QST & Har tidigare använts som allmänt anrop men ersatts av CQ             \\ \hline
+	QSY & Skall jag övergå till att sända på annan frekvens?                   \\
+	    & Gå över till att sända på annan frekvens (eller ... kHz/MHz).        \\ \hline
+	QTC & Hur många telegram har ni att sända?                                 \\
+	    & Jag har ... telegram till dig (eller ...).                           \\ \hline
+	QTH & Vilken är er geografiska position?                                   \\
+	    & Min geografiska position är ...                                      \\ \hline
+	QTR & Kan ni ge mig rätt tid?                                              \\
+	    & Rätt tid är ...                                                      \\
+\end{longtable}
+
+\subsection{Lokator}
+
+Lokator (Maidenhead locator) är ett praktiskt sätt att tala om sin ungefärliga
+position genom att ange endast sex stycken tecken. En lokator kan t.ex. se ut
+som JO89VK vilket täcker in nordvästa Järfälla. Det finns många verktyg för att
+räkna på lokator där ute, det är bra att känna sin egen. Det finns appar för
+detta till telefonerna som både kan räkna på bäring, distans mellan två rutor
+och dessutom via telefonens GPS bestämma vilken lokator du för närvarande
+befinner dig i.
+
+Första paret dela in jorden i 18x18 fält, dvs 20 grader per fält longitud och 10
+grader per fält latitud. Varje sådant fält delas sedan in i 10x10 rutor som
+numreras 0-9 på vardera axeln. Dessa i sin tur delas sedan in i 24x24 smårutor
+som då får storleksordningen 2.5 grader latitud och 5 grader long. vardera.
+
+\subsection{Uppträdande}
+
+När vi kör amatörradio finns det ett antal saker att tänka på som har att göra
+med hur vi beter oss mot varandra på banden. Se detta som en guide till hur man
+bör uppträda på banden.
+
+En radioamatör måste vara \textbf{tolerant}. Vi delar frekvenser med många andra
+personer, en del av dem kommer inte ha samma uppfattning som du själv har om
+saker och ting. Här gäller det att vara tolerant, förstående och framför allt
+inte bli upprörd över personer som kanske inte beter sig som du önskade att de
+betedde sig.
+
+Radioamatörer är \emph{aldrig ensamma på banden} helt oavsett om någon svarar på
+ditt allmänna anrop eller ej så finns det i det närmaste \textbf{garanterat
+  någon som lyssnar}.
+
+Tänk på vad du säger och att du undviker diskutera ämnen som kan verka
+\textbf{upprörande} eller \textbf{stötande}. Ämnen som bör undvikas är
+\textbf{religion} och livs\-å\-skå\-d\-ni\-ng, \textbf{politisk} ideologi,
+\textbf{ekonomiska} eller \textbf{sociala} frågor m.m. där motparter kan ha
+starka åsikter som inte nödvändigtvis stämmer med dina egna. Radion är inte ett
+agitationsrum för sådana frågor.
+
+\textbf{Svordomar}, \textbf{könsord} och liknande undviker vi helt. Språket
+skall vara vårdat men behöver inte vara strikt. Tänk på att din motpart är inte
+den enda som lyssnar utan det finns \textit{andra amatörer som lyssnar},
+icke-amatörer som lyssnar, myndigheter som lyssnar och så vidare.
+
+Ha \textbf{förståelse} för att andra kanske inte har dina egna detaljkunskaper,
+professionalism med mera. Agera \textbf{ödmjukt} gentemot andra människor på
+banden.
+
+Blir du ändå upprörd, undvik att \emph{agera på det} över huvud taget. Sänd inte
+över annans sändning, s.k. ''gummitumme'', eller stör på annat vis för du är
+upprörd. Avsluta hellre QSO:t, byt frekvens eller återkom lite senare när du
+lugnat ned dig. Tänk på att \textit{de flesta konflikter orsakas av okunskap
+  eller brist på förståelse}. \textbf{Agera vuxet} i sådana situationer och
+jobba för att \textbf{de-eskalera} situationen.
+
+En skicklig amatör \textit{lyssnar mycket innan sändning}. Vi anropar på ett
+korrekt sätt och avslutar på ett korrekt sätt. Vi försöker uppge våra respektive
+signaler på ett \emph{tydligt och läsligt sätt}, i dag finns det en tendens att
+sluddra över signalerna framför allt på 2m och 70cm banden, gör inte
+det. Tydlighet är en vinning i sig.
+
+När någon ny i ringen inträder, räkna upp de deltagande signalerna så att
+personen tydligt får en bild av alla som är med och vem som är på turen före och
+efter hen.
+
+Vi pratar inte \textbf{nedvärderande} om personer varesig de är andra amatörer
+eller ej, eller en viss grupp av personer. Vi undviker \textbf{sexuella
+  anspelningar} och vitsar ''\textbf{under bältet}'' liksom allt för
+\textbf{personliga detaljer}. Amatörradion är främst
+för \textbf{tekniska diskussioner} av rent \textbf{privat natur} eller
+av \textbf{allmänt intresse för hobbyn}, tester och prov med mera.
+
+Undvik väldigt \textbf{långa sändningspass}. Ibland händer det saker hos dina
+motstationer som att de får ett viktigt telefonsamtal eller måste springa ut i
+köket för katten har rivit ner något, ett barn ramlar eller annat som gör att
+man måste kvickt lämna radion. Att \textbf{långprata} i sådana lägen gör det
+svårt att tala om ''QRX --- jag måste ta hand om en sak, anropar dig igen om 5
+min.''. Enstaka gånger kanske man behöver förklara något lite längre men gör det
+till en vana att lämna luckor så ofta som möjligt.
+
+\textbf{Nödtrafik har alltid prioritet} och måste respekteras på alla
+frekvenser.
+
+\subsection{Repeatrar}
+
+Repeatrars syfte är främst att förlänga kommunikationen från mobila och portabla
+amatörsändare. Samtal mellan fasta stationer förekommer men om ni hör varandra
+på direkten, övergå gärna till en simplex-frekvens i stället för att belägga
+repeatern.
+
+Lämna luckor mellan er när ni växlar station som sänder. Gör det möjligt för
+andra att ''breaka-in'' särskilt om ert QSO fortsätter under längre tid. Ta
+hänsyn till att andra kanske vill använda repeatern för att nå personer som de
+inte kan nå annars. Hänsyn åt båda hållen förutsätts här.
+
+Repeatern är en begränsad resurs. Det är inte okay att lägga beslag på den under
+långa perioder när andra kanske behöver den, var ödmjuk inför att någon driver
+repeatern och har satt upp den i första hand för att supporta mobila stationer.
+
+Nödtrafik har alltid prioritet.
+
+\subsection{QSO}
+
+Konsten att genomföra ett radiosamtal (QSO) i olika sammanhang. Ofta blir folk
+nervösa i början för hur detta går till. Man säger sin signal och motstationens
+i fel ordning eller liknande.
+
+Man börjar alltid med motstationens signal. Det bör fallas naturligt att ropa så
+och man avslutar anropet med sin egen signal så att motstationen dels vet vem
+som anropar men också andra hör. Kanske vill en annan station ha ett utbyte med
+dig om du inte får svar från den tilltänkta.
+
+Ett radiosamtal består som regel av tre delar. Först sker ett anrop, när kontakt
+etablerats utväxlas ett antal meddelande (dialog) och när man är klarar avslutas
+samtalet. Dessa tre delar är ganska standard. Man följer detta ganska strikt
+t.ex. på kortvågen där telefoni oftast innebär SSB. Anledningen är enkel, det
+går inte höra när någon släpper sändtangenten eller bara är tyst och tänker.
+
+När man kör FM över repeatrar på VHF/UHF är det inte lika vanligt att man både
+öppnar och avslutar varje sändning med motparten och sin egen signal. Men man
+skall regelbundet upprepa signalerna och i praktiken är det lämpligt att göra
+kanske var femte minut eller oftare.
+
+\subsubsection{Anropet}
+
+Ett anrop kan se ut ungefär såhär:
+
+\begin{tabular}{ll}
+	Station & Meddelande                            \\ \hline
+	SMØUEI  & SAØMAD från SMØUEI, SAØMAD kom.       \\
+	SAØMAD  & SMØUEI från SAØMAD, jag lyssnar, kom.
+\end{tabular}
+
+Därefter övergår radiosamtalet i dialog eller meddelandesändning.
+
+\subsubsection{Allmänt anrop}
+
+Används när man inte ropar på någon särskild motstation utan önskar samtal med
+vem som helst. På svenska använder man ofta just orden ''allmänt anrop'' medan
+på engelska är det vanligare att man uttalar CQ (seek you). Ett allmänt androp
+kan se ut såhär:
+
+-- Allmänt anrop, allmänt anrop, allmänt anrop från SM0UEI SM0UEI SM0UEI kallar
+allmänt anrop och lyssnar.
+
+Eller på engelska:
+
+-- CQ CQ CQ this is SMØUEI calling CQ CQ CQ and standing by.
+
+\subsubsection{Meddelandesändning}
+
+-- SA0MAD från SM0UEI, tack för svaret. Din signal är 59 hos mig, mitt QTH är
+JO89WA och namnet är Anders. SA0MAD från SM0UEI kom.
+
+-- SM0UEI från SA0MAD, tack för rapporten. Din signal är 57 hos mig, jag
+befinner mig i JO89VK men kommer under kvällen byta QTH. Jag kommer då vara QRV
+på 3663 kHz. QSL? SM0UEI från SA0MAD.
+
+-- SA0MAD från SM0UEI, QSL på det, QRX 19.30 på frekvens 3663 kHz.
+
+\subsubsection{Avslutning}
+
+-- SA0MAD från SM0UEI, tack för rapport och vi hörs senare, 73, slut kom
+
+-- SM0UEI från SA0MAD, 73 tillbaka, klart slut.
+
+\subsubsection{Pile-up och tävling}
+
+Ibland kan det bli väldigt många motstationer samtidigt som ropar. Nu
+gäller det att spetsa öronen! Först gäller det att sålla. Rara
+signaler från långtbortistan ger mer poäng i en contest som regel
+eller från länder du inte kört osv beroende på regler. Försök att
+sålla med ''du som sänder från Florida'' eller ''VK7 kom igen'' osv
+till det är en station kvar. Kör den snabbt, ropa CQ igen och börja
+sålla igen. Stationer du hör signalen på kör du direkt.
+
+Direkt när det uppstår en pile-up är det effektivt att köra split. Dvs
+du lyssnar 5--10\,kHz upp eller ned från den frekvens du sänder
+på. Det gör det lättare för dig att behålla kommandot under
+pile-up. Ligger du och sänder i ett frekvensområde som är särskilt
+ägnat för DX är det smart att lägga Rx-frekvensen strax utanför. Det
+undviker att man stökar ned i DX-bandet.
+
+Kör du split skall du säga det efter varje sändning. "CQ CQ CQ de Sierra Mike
+Zero Uniform Echo India listening 5 up" exempelvis. På CW bör en split vara
+minst 2 kHz och på SSB bör den vara minst 5 kHz ännu hellre 10 kHz. Tänk på att
+när du startar din split måste du kolla så att båda frekvenserna är ok. Låt inte
+din pile-up sprida ut sig för mycket även om det är kanske enklare för dig så är
+risken stor att den stör någon annan.
+
+Kör korta QSO. Utbyt snabbt den information som behövs och ta sedan nästa. Ha
+förståelse för att det kan bli krockar i en pile-up. När du hör en partiell
+signal eller station du vill prata med håll fast vid den. Om du har svårt att
+läsa den be den repetera tills ni är klara. Genom att du är auktoriteten på
+frekvensen kommer pile-up:en att lugna ned sig och vänta på sin tur. Om du
+''hattar omkring'' är risken att all radiodisciplin far ut genom fönstret.
+
+Ofta är det 1 kHz upp som gäller vid CW och digitala trafiksätt.  Du vill
+försöka få tag i Södra Shetlandsöarna, ett mycket ovanligt DX, som har en stor
+pile up och ropar på 14.195 MHz
+
+\begin{tabular}{lrl}
+	Station & Frekvens & Meddelande                     \\ \hline
+	VP8SSI  &   14.195 & QRZ VP8SSI  5 to 15 UP         \\
+	SMØUEI  &   14.203 & SM0UEI                         \\
+	VP8SSI  &   14.195 & SM0UEI 59                      \\
+	SMØUEI  &   14.203 & 59 thank you                   \\
+	VP8SSI  &   14.195 & Thanks. QRZ VP8SSI 5 to 15 up.
+\end{tabular}
+
+Du kommer troligtvis att behöva upprepa din anropssignal flera gånger, men
+lyssna efter varje gång du ropat så att du hör vem han svarar. Svarar han inte
+dig så får du vänta tills han ropar något som indikerar att han avslutat
+kontakten. Exempelvis: Thanks, VP8SSI eller VP8SSI 5 to 15 up.
+
+Du deltar i en tävling där man skall ange singnalrapport och löpnumret från
+start av tävlingenpå den kontakt du har. Du har hitintills kontaktat 30
+stationer i tävlingen. Du har hittat en ledig frekvens och ropar CQ.
+
+\begin{tabular}{ll}
+	Station & Meddelande                       \\ \hline
+	SMØUEI  & CQ contest SM0UEI SM0UEI contest \\
+	ON3XYZ  & ON3XYZ                           \\
+	SMØUEI  & ON3XYZ you are 59 031            \\
+	ON3XYZ  & Thanks 031 you are 59 044        \\
+	SMØUEI  & 44 Thanks. QRZ SM0UEI
+\end{tabular}
+
+Notera att både när man jagar DX och när man deltar i tävlingar så ger man och
+får man signalrapporten 59 om man kör foni och 599 telegrafi åtminstone i
+internationella tävlingar för att minska risken för fel. Får du en annan
+signalrapport än 59 eller 599 i en tävling så är det viktigt du anger korrekt i
+din logg. I mer lokala tester som NAC och SAC förekommer det att man ger
+korrekta signalrapporter, alltså efter hur väl man hörs.
+
+Om du försöker nå en motstation med pile-up var uppmärksam på dennes sändningar
+och vänta på din tur. Tala gärna om signal och var du sänder från men släpp
+sedan fram andra. Tänk på hur du själv skulle vilja att en pile-up på din egen
+station skulle vilja agera. Den gyllene regeln är också alltid lyssna först ---
+sänd sedan!
+
+\clearpage
+
+\section{Trafik- och tumregler HF}
+\subsection{Kort sammanfattning av reglemente}
+
+OBS! Detta är inte fullständigt radioreglemente naturligtvis utan endast
+sammanfattning av några viktiga punkter.
+
+\subsubsection{Begrepp i bandplanerna}
+
+\begin{itemize}
+\item QRP: Aktivitetscentrum för låg effekt ($<$5W), svaga signaler
+      förekommer, visa hänsyn.
+\item QRS: Aktivitetscenter för långsam CW.
+\item QRSS: Extremt långsam CW med dator.
+\item DV: Digital Voice.
+\item Image: Bildmoder exempelvis SSTV och Fax som ryms inom den specificerade
+	  maximala bandbredden.
+\end{itemize}
+
+\subsubsection{Trafikregler och tumregler}
+
+\begin{itemize}
+\item Vid SSB-telefoni används LSB på frekvenser under 10 MHz och USB
+      på frekvenser över 10 MHz.
+\item Lägsta acceptabla inställda frekvens för LSB är 3 kHz över
+      under bandkant!
+\item Högsta acceptable inställda frekvens för USB är 3 kHz under
+      övre bandkant!
+\item IBP är International Beacon Project. Fyrarna sänder med 3 min
+      intervaller och används för att studera utbredningen av
+      radiosignaler globalt. Fyrarna sänder anrop och fyra 1 s toner.
+      Anropet och första tonen sänds med 100W, därefter sänds tonerna
+      med 10W, 1W samt 100mW.
+\item Vid AM (A3J) skall hänsyn tas så att störningar på annan trafik ej fö\-re\-kom\-mer
+      med de sidband som då uppstår, det gäller då både övre och undre
+      sidbandet.
+\item Ingen som helst sändning är tillåtet inom fyrsegmenten. Detta skall respekteras.
+      Lyssna gärna på nödfrekvenserna men används dem icke, om det
+      inte är du som svarar på ett nödsamtal! Undvik QSO allt för nära
+      dessa också.
+\item Var särskilt uppmärksam på satelliters nerlänksfrekvenser på 10\,m-bandet.
+      I detta segment skall endast lyssning ske. Ingen sändning är
+      tillåten här eller i skyddssegmentet strax ovanför
+      satellitsegmentet. Tänk på att satelliters frekvens kan
+      dopplerskiftas uppåt en hel del när de rör sig mot mottagaren.
+\end{itemize}
+
+
