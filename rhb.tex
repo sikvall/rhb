@@ -42,10 +42,14 @@
 \usepackage{pdflscape}                 % Kunna göra vissa sidor liggande i PDF
 \usepackage{wrapfig}                   % Kunna wrappa figurer
 \usepackage{float}                     % Utökade optioner för floats
+\usepackage{makeidx}                   % Indexering
+\makeindex
 \usepackage[bottom]{footmisc}          % Optioner för fotnoter, sätt alltid på slutet av samma sida
 \usepackage{longtable}                 % Tabeller som sidbryter
 \newif\iftitlefoot
 \raggedbottom                          % Stretcha inte sidor mer än nödvändigt
+\frenchspacing                         % Anpassa typsättningen till modern standard
+
 \setlist{nosep}                        % Separera inte numrerade och punktlistor mer
 \usepackage{todonotes}                 % Kunna lägga in att-göra i dokumentet
 \renewcommand{\arraystretch}{1.15}
@@ -148,6 +152,16 @@
 \input{tex/kap-trafik}
 \input{tex/kap-teknik}
 \input{tex/kap-frekvenser}
+
+
+%%\cleardoublepage
+%%\appendix
+%%\printindex
+%%\clearpage
+%%\listoftables
+%%\clearpage
+%%\listoffigures
+%%\clearpage
 
 \end{document}
 

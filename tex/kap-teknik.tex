@@ -134,7 +134,9 @@ högsta modulationsfrekvensen. Detta ger t.ex. vid en modulationsfrekvens som
 går från 300-3000\,Hz en bandbredd som varierar med talet från upp till
 6\,kHz.
 
-$$B=2f_m$$
+\begin{equation}
+	B=2f_m
+\end{equation}
 
 Där $f_m$ är högsta modulationsfrekvensen.
 
@@ -162,7 +164,9 @@ regeln och sänder med ``fel'' sidband på fel frekvens.
 Bandbredden hos SSB är halva den för normal AM egentligen. Den kan därmed
 beräknas som för AM och halveras.
 
-$$B=f_m$$
+\begin{equation}
+	B=f_m
+\end{equation}
 
 Där $f_m$ är högsta modulationsfrekvensen.
 
@@ -190,7 +194,9 @@ förekommande och där vill man ha en kanalindelning om 12,5\,kHz i stället fö
 som tidigare 25\,kHz. Om man studerar bandbredden hos olika FM-signaler kan
 man använda sig av Carsons bandbreddsbegrepp:
 
-$$B=2(f_M+f_D)$$
+\begin{equation}
+	B=2(f_M+f_D)
+\end{equation}
 
 Där $B$ är bandbredden $f_M$ högsta modulationsfrekvensen och $f_d$ är
 FM-signalens maximala deviation (även kallat sving). Carsons bandbreddsbegrepp
@@ -226,7 +232,9 @@ antenntemperaturen.
 Brusgolvet kan beräknas med hjälp av Boltzmanns konstant och temperaturen i
 Kelvin. Detta ger oss formeln:
 
-$$P=k_BT\Delta f$$
+\begin{equation}
+	P=k_BT\Delta f
+\end{equation}
 
 Där:
 
@@ -240,10 +248,11 @@ Om vi vet detta kan vi beräkna det termiska brusgolvet:
 
 $$P = 1,38065\cdot 10^{-23} \cdot 300 \cdot 1 = 4.1495\cdot 10^{-21}$$
 
-Om vi räknar om detta i dBm får vi i stället -173,8\,dBm. Detta avrundas
-normalt till -174\,dBm och är brusgolvet för 1\,Hz. En mottagare som har en
-mottagarbandbredd på 25\,kHz kommer därmed att se ett brus som är 20\,000 ggr
-större. I decibel får vi då $-174 + 44 dB = -130$\,dBm.
+Om vi räknar om detta i dBm genon att ta 10-logaritmen av värdet och sedan
+multiplicera med 10 samt addera 30 så får vi i stället -173,8\,dBm. Detta
+avrundas normalt till -174\,dBm och är brusgolvet för 1\,Hz. En mottagare som
+har en mottagarbandbredd på 25\,kHz kommer därmed att se ett brus som är
+20\,000 ggr större. I decibel får vi då $-174 + 44 dB = -130$\,dBm.
 
 För att en signal skall kunna detekteras får vi lägga på mottagarens brusgolv,
 kanske 3\,dB samt hur mycket signal till brus i förhållande vi behöver, för FM

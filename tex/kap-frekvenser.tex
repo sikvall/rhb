@@ -70,7 +70,7 @@ efter frekvens. Detta gör att listan blir en smula oordnad.
 	           31,140 & Jakt 11            &                   &   31,340          &   Jakt 38*         &                   \\
 	           31,150 & Jakt 12            &                   &   31,350          &   Jakt 39*        &                   \\
 	           31,160 & Jakt 13            & Kanal 3 Eller B   &   31,360          &   Jakt 40*         &                   \\
-	           31,170 & Jakt 31*           &                   &   31,370          &                    &
+	           31,170 & Jakt 31*           &                   &   31,370          &                    &\\
 \end{longtable}
 
 \subsection{Åkeribandet 69 MHz}
@@ -109,15 +109,15 @@ inom Västra Götaland och Hallands län.
 \begin{table}[ht]
   \centering
 \begin{tabular}{rrl}
-  Kanal & Frekvens & Noteringar                         \\ \hline
-  1     & 69,0125  & End. mobil i V. Götaland o Halland \\
-  2     & 69,0375  &                                    \\
-  3     & 69,0625  &                                    \\
-  4     & 69,0875  &                                    \\
-  5     & 69,1125  &                                    \\
-  6     & 69,1375  &                                    \\
-  7     & 69,1625  &                                    \\
-  8     & 69,1875  & Anv. som anropskanal               \\
+	\bf Kanal & \bf Frekvens & \bf Noteringar                     \\ \hline
+	        1 &      69,0125 & End. mobil i V. Götaland o Halland \\
+	        2 &      69,0375 &                                    \\
+	        3 &      69,0625 &                                    \\
+	        4 &      69,0875 &                                    \\
+	        5 &      69,1125 &                                    \\
+	        6 &      69,1375 &                                    \\
+	        7 &      69,1625 &                                    \\
+	        8 &      69,1875 & Anv. som anropskanal
 \end{tabular}
 \caption{Frekvenser 69 MHz}
 \end{table}
@@ -338,12 +338,16 @@ frekvenserna F1--F3 osv är avsedda för yrkesfiske. L1 och L2 delas med
 kanal 3 och 4 på jaktradion vilket kan vara bra att känna till.
 
 \subsection{Transponderkanaler}
-\begin{longtable}{rrl}
-	\textbf{Kanal} & \textbf{Skepp} & \textbf{Not} \\ \hline
-	   \endhead
-AIS1 & 161,975 & Digital trafik, transponder\\
-AIS2 & 162,025 & Digital trafik, transponder\\
-\end{longtable}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrl}
+	\textbf{Kanal} & \textbf{Skepp} & \textbf{Not}                \\ \hline
+	AIS1           &        161,975 & Digital trafik, transponder \\
+	AIS2           &        162,025 & Digital trafik, transponder
+\end{tabular}
+\caption{AIS-frekvenser marin}
+\end{table}
 
 \subsection{Stockholm radio}
 % Frekvenser kontrollerade 250428
@@ -352,12 +356,12 @@ AIS2 & 162,025 & Digital trafik, transponder\\
 Radiohorisonten är beräknad i nautiska mil, skeppet lägger till sin egen
 radiohorisont för att bestämma om det går att nå kuststationen eller ej.
 
-\textbf{Ostkusten}
+\subsubsection{Ostkusten}
 
-\begin{longtable}{lrr|lrr}
+\begin{table}[h]
+\begin{tabular}{lrr|lrr}
 \textbf{Kuststation} & \textbf{Kanal} & \textbf{Horisont} & \textbf{Kuststation} & \textbf{Kanal}& \textbf{Horisont}\\
 \hline
-\endhead
 Kalix          & 60 & 39 & Luleå         & 61 & 26 \\
 Skellefteå     & 23 & 44 & Umeå          & 62 & 54 \\
 Örnsköldsvik   & 63 & 42 & Mjällom       & 64 & 43 \\
@@ -372,38 +376,43 @@ Fårö           & 62 & 25 & Visby         & 63 & 23 \\
 Hoburgen       & 61 & 25 & Kalmar        & 60 & 40 \\
 Ölands s. udde & 22 & 23 & Karlskrona    & 81 & 24 \\
 Karlshamn      & 62 & 48 & Kivik         & 21 & 39\\
-\end{longtable}
+\end{tabular}
+\caption{Stockholm radio, kanaler och radiohorisont för ostkusten}
+\end{table}
+
 *) Sänder ej väder, varningar eller andra listor
 
 \clearpage
-\textbf{Västkusten}
+\subsubsection{Västkusten}
 
-\begin{longtable}{lrr|lrr}
+\begin{table}[h]
+\begin{tabular}{lrr|lrr}
 \textbf{Kuststation} & \textbf{Kanal} & \textbf{Horisont} &
 \textbf{Kuststation} & \textbf{Kanal} & \textbf{Horisont} \\
 \hline
-\endhead
-
 Strömstad   & 22 & 25 & Grebbestad & 62 & 25 \\
 Kungshamn   & 23 & 23 & Uddevalla  & 61 & 47 \\
 Tjörn       & 81 & 26 & Göteborg   & 60 & 43 \\
 Grimeton    & 22 & 35 & Halmstad   & 62 & 52 \\
 Helsingborg & 60 & 28 & Malmö      & 65 & 25 \\
-\end{longtable}
+\end{tabular}
+\caption{Stockholm radio, kanaler och radiohorisont för västkusten}
+\end{table}
 
-\textbf{Insjöarna}
+\subsubsection{Insjöarna}
 
-\begin{longtable}{lrr|lrr}
+\begin{table}[h]
+\begin{tabular}{lrr|lrr}
 \textbf{Kuststation} & \textbf{Kanal} & \textbf{Horisont} &
 \textbf{Kuststation} & \textbf{Kanal} & \textbf{Horisont} \\
 \hline
-\endhead
-
 Västerås  & 63 & 40 & Trollhättan & 03 & 32 \\
 Bäckefors & 05 & 50 & Kinnekulle  & 01 & 43 \\
 Karlstad  & 65 & 36 & Jönköping   & 23 & 49 \\
-Motala    & 62 & 47 & Hjälmaren   & $\dagger$   &    \\
-\end{longtable}
+Motala    & 62 & 47 & Hjälmaren     & $\dagger$  &    \\
+\end{tabular}
+\caption{Stockholm radio, kanaler och radiohorisont för insjöarna}
+\end{table}
 
 $\dagger$) Hjälmaren är permanent tagen ur drift.
 
@@ -431,6 +440,7 @@ då normalt duplex med det skift som normalt används för bandet. Vid
 repeatrar är det repeaterns utfrekvens som anges, dvs den som
 mobilstationen lyssnar på. Exempel: RV48.
 
+\begin{table}[h]
 \begin{tabular}{crrlll}
 	\textbf{Band} & \textbf{Startfrekvens} & \textbf{Kanalraster} & \textbf{Duplex} & \textbf{Första kanal} & \textbf{Beräknas}    \\ \hline
 	    6\,m      &            51.000\,MHz &            10.0\,kHz & -100\,kHz       & F00                   & $f=51+k\cdot0.01$    \\
@@ -438,8 +448,10 @@ mobilstationen lyssnar på. Exempel: RV48.
 	    2\,m      &           145.000\,MHz &            12.5\,kHz & -600\,kHz       & V00                   & $f=145+k\cdot0.0125$ \\
 	              &                        &                      &                 &                       & $k=(f-145)/0,0125$   \\ \hline
 	   70\,cm     &           430.000\,MHz &            12.5\,kHz & -2000\,kHz      & U000                  & $f=430+k\cdot0.0125$ \\
-	              &                        &                      &                 &                       & $k=(f-430)/0,0125$   \\ \hline
+	                                       &                      &                 &                       & $k=(f-430)/0,0125$   \\ \hline
 \end{tabular}
+\caption{Kanalnumrering amatörradion VHF/UHF}
+\end{table}
 
 Eftersom amatörradiobanden ser lite olika ut i olika länder förekommer det
 kanaler i numreringen som inte är tillåtna på vissa ställen. Det är därför
@@ -484,6 +496,7 @@ M & 1240,000 & 25 & -6000 \\
 \subsection{FM-kanaler 6m-bandet}
 
 \begin{longtable}{rrl|rrl}
+\caption{FM-kanaler 6-metersbandet}\\
 \textbf{Kanal} & \textbf{Tidigare} & \textbf{Anm}
 &  \textbf{Kanal} & \textbf{Tidigare} & \textbf{Anm} \\ \hline
 	51,500 &      F50 &       & 51,750 &      F75 &  \\
@@ -554,9 +567,12 @@ rikligt t.ex. i Tyskland med S20 som anropsfrekvens (eller
 aktivitetscenter som det numera kallas).
 
 
-\subsection{FM-kanaler 70cm-bandet}
+\subsection{FM-kanaler 70\,cm-bandet}
+
+\small
 
 \begin{longtable}{rrl|rrl}
+\caption{FM-kanaler amatörradion 70\,cm-bandet}\\
 \textbf{Frekvens} & \textbf{Kanal} & \textbf{Anm} &
 \textbf{Frekvens} & \textbf{Kanal} & \textbf{Anm} \\ \hline
 
@@ -589,6 +605,7 @@ aktivitetscenter som det numera kallas).
 \end{longtable}
 
 \begin{longtable}{rrl|rrl}
+\caption{Amatörradio repeaterkanaler 70 cm-bandet}\\
 \textbf{Frekvens} & \textbf{Kanal} & \textbf{Anm}
 &  \textbf{Frekvens} & \textbf{Kanal} & \textbf{Anm} \\ \hline
 
@@ -609,16 +626,17 @@ aktivitetscenter som det numera kallas).
 434,7750 & RU382 & RU7  & 434,9750 & RU398 & RU15  \\
 434,7875 & RU383 & RU7X & 434,9875 & RU399 & RU15X \\
          &       &      & 435,0000 & RU400 &       \\
-
 \end{longtable}
 
-RU0X osv är här en efterkonstruktion. Egentligen så användes sällan
-``X-frekvenserna'' på 70cm eftersom man dels hade nästan dubbla
-antalet frekvenser för repeatrar och sedan gammalt ville man
-egentligen inte ha ett smalare kanalraster, i tidernas begynnelse
-körde många amatörer 70cm genom frekvenstrippling från 2m. $144,000
-\cdot 3 = 432,000$\,MHz och $144,025 \cdot 3 = 432,075$\,MHz varför
-man till och med hade bredare kanalraster de-facto.
+\normalsize
+
+%RU0X osv är här en efterkonstruktion. Egentligen så användes sällan
+%``X-frekvenserna'' på 70cm eftersom man dels hade nästan dubbla
+%antalet frekvenser för repeatrar och sedan gammalt ville man
+%egentligen inte ha ett smalare kanalraster, i tidernas begynnelse
+%körde många amatörer 70cm genom frekvenstrippling från 2m. $144,000
+%\cdot 3 = 432,000$\,MHz och $144,025 \cdot 3 = 432,075$\,MHz varför
+%man till och med hade bredare kanalraster de-facto.
 
 \clearpage
 
@@ -694,6 +712,7 @@ Repeater & FM/DMR      & SKØEN    & Älmsta      & 145.7375     & -0.600     & 
 \end{longtable}
 \normalsize
 
+\clearpage
 
 \subsection{Repeatrar distrikt 1}
 
@@ -1229,28 +1248,23 @@ Repeater & FM/DMR          & SK7REE   & Örkelljunga  & 434.9750     & -2.000   
       dopplerskiftas uppåt en hel del när de rör sig mot mottagaren.
 \end{itemize}
 
-\scriptsize
-
+\small
 \subsection{Bandplaner VHF--UHF}
 
 \subsection{Bandplan 6m 50--52 MHz}
 
 \begin{tabular}{rrrll}
-
-\textbf{Frekvens} &  & \textbf{BW} & \textbf{Trafik} & \textbf{Noteringar} \\ \hline
-
-50.000 & 50.100 & 500 Hz  & CW          & \textbf{CW anrp. 50.050 och 50.090 (interkont.)}             \\ \hline
-50.100 & 50.130 & 2.7 kHz & CW, SSB     & Interkontinental DX-trafik. Ej QSO inom Europa               \\ \hline
-50.100 & 50.200 & 2.7 kHz & CW,SSB      & DX 50.110--50.130, \textbf{50.110 50.150 anrop (interkont.)} \\ \hline
-50.200 & 50.300 & 2.7 kHz & CW,SSB      & Generell användning. 50.285 för crossband                    \\ \hline
-50.300 & 50.400 & 2.7 kHz & CW, MGM     & PSK 50.305, EME 50.310 – 50.320                              \\
-       &        &         &             & MS 50.350 – 50.380                                           \\ \hline
-50.400 & 50.500 & 1 kHz   & CW, MGM     & Endast fyrar, 50.401 ±500 Hz WSPR-fyrar                      \\ \hline
-51.210 & 51.390 & 12 kHz  & FM          & Repeater Repeater in, 20/10 kHz kanalavstånd                 \\
-       &        &         &             & RF81 – RF99                                                  \\ \hline
-50.500 & 52.000 & 12 kHz  & Alla moder  & SSTV 50.510, RTTY 50.600, FM 51.510                          \\ \hline
-51.810 & 51.990 & 12 kHz  & FM Repeater & Repeater ut, 20/10 kHz kanalavstånd                          \\
-       &        &         &             & RF81 – RF99                                                  \\ \hline
+	\textbf{Frekvens} &        & \textbf{BW} & \textbf{Trafik} & \textbf{Noteringar}                                          \\ \hline
+	           50.000 & 50.100 &      500 Hz & CW              & \textbf{CW anrp. 50.050 och 50.090 (interkont.)}             \\ \hline
+	           50.100 & 50.130 &     2.7 kHz & CW, SSB         & Interkontinental DX-trafik. Ej QSO inom Europa               \\ \hline
+	           50.100 & 50.200 &     2.7 kHz & CW,SSB          & DX 50.110--50.130, \textbf{50.110 50.150 anrop (interkont.)} \\ \hline
+	           50.200 & 50.300 &     2.7 kHz & CW,SSB          & Generell användning. 50.285 för crossband                    \\ \hline
+	           50.300 & 50.400 &     2.7 kHz & CW, MGM         & PSK 50.305, EME 50.310 – 50.320, MS 50.350 – 50.380          \\ \hline
+	           50.400 & 50.500 &       1 kHz & CW, MGM         & Endast fyrar, 50.401 ±500 Hz WSPR-fyrar                      \\ \hline
+	           51.210 & 51.390 &      12 kHz & FM              & Repeater Repeater in, 20/10 kHz kanalavstånd RF81 – RF99     \\ \hline
+	           50.500 & 52.000 &      12 kHz & Alla moder      & SSTV 50.510, RTTY 50.600, FM 51.510                          \\ \hline
+	           51.810 & 51.990 &      12 kHz & FM Repeater     & Repeater ut, 20/10 kHz kanalavstånd                          \\
+	                  &        &             &                 & RF81 – RF99                                                  \\ \hline
 \end{tabular}
 
 \subsection{Bandplan 2m 144--146 MHz}
@@ -1340,6 +1354,8 @@ Repeater & FM/DMR          & SK7REE   & Örkelljunga  & 434.9750     & -2.000   
 	         1299.750         & 1300.000      & 20 kHz      & Alla moder      & 8 st FM/DV 25 kHz kan. 1299.775--1299.975
 \end{tabular}
 \normalsize
+
+\clearpage
 
 \section{Allmänna Frekvenser HF}
 
@@ -1559,9 +1575,9 @@ Alla frekvenser i kHz, bandbredder i Hz.
 
 18\,068 & 18\,095 & 200  & CW         & CW exklusivt. QRP 18\,086             \\ \hline
 18\,095 & 18\,109 & 500  & Smalband   & Digimoder PSK 18\,100,150             \\
-        &         &      &            & Automatiska Digimoder 18\,105-–109 \\ \hline
+        &         &      &            & Automatiska Digimoder 18\,105--109 \\ \hline
 18\,109 & 18\,111 & 200  & Fyrar      & Exklusivt fyrar, IBP fyrnät           \\ \hline
-18\,111 & 18\,168 & 2700 & Alla moder & Digi 18\,111–-120                   \\
+18\,111 & 18\,168 & 2700 & Alla moder & Digi 18\,111--120                   \\
         &         &      &            & SSB QRP 18\,130, DV 18\,150           \\
         &         &      &            & Global nödfrekv. 18\,160              \\ \hline
 \end{tabular}
