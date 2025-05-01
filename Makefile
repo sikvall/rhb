@@ -1,6 +1,7 @@
 VERSION=2.3.0
 
 all:
+	makeindex rhb
 	pdflatex -jobname="rhb-${VERSION}" rhb
 	pdflatex -jobname="rhb-${VERSION}" rhb
 	mkdir -p pdf
