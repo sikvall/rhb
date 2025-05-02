@@ -1,4 +1,4 @@
-VERSION=2.3.0
+VERSION=11
 
 all:
 	makeindex rhb.tex
