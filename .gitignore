@@ -9,3 +9,6 @@ pdf/
 *.tdo
 *.aux
 *.log
+*.idx
+*.ilg
+*.ind
