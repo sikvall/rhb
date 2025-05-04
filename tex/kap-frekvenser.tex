@@ -1,7 +1,7 @@
 % !TeX encoding = UTF-8
 % !TeX spellcheck = sv_SE
 
-\chapter{Frekvenslistor}
+\chapter{Frekvenser}
 
 Här hittar du frekvenslistor för ett stort gäng olika radioanvändare från
 Marin VHF och MF/HF till kanaler för jakt och kortdistansradio,
@@ -14,6 +14,328 @@ exempel marin VHF och MF/HF då dessa kan tänkas ses som av stort
 allmänintresse.
 
 \clearpage
+
+\section{Övergripande frekvensplan}
+
+\subsection{Indelning efter frekvens och våglängd}
+\label{frekvens-vaglangd}
+\begin{table}[H]
+\centering
+\begin{tabular}{llrlrl}
+	\textbf{Förk.} & \textbf{Benämning}   & \textbf{Frekvens} &     & \textbf{Våglängd} &  \\ \hline
+	ELF            & Extremt låg frekvens &             3--30 & Hz  &           10--100 & Mm \\
+	SLF            & Superlåg frekvens    &           30--300 & Hz  &             1--10 & Mm \\
+	ULF            & Ultralåg frekvens    &         300--3000 & Hz  &         100--1000 & km \\
+	VLF            & Väldigt låg frekvens &             3--30 & kHz &           10--100 & km \\
+	LF (LV)        & Låg frekvens         &           30--300 & kHz &             1--10 & km \\
+	MF (MV)        & Mellanfrekvens       &         300--3000 & kHz &         100--1000 & m  \\
+	HF (KV)        & Högfrekvens          &             3--30 & MHz &             10--100 & m  \\
+	VHF (UKV)      & Väldigt hög frekvens &           30--300 & MHz &             1--10 & m  \\
+	UHF            & Ultrahög frekvens    &         300--3000 & MHz &         100--1000 & mm \\
+	SHF            & Superhög frekvens    &             3--30 & GHz &           10--100 & mm \\
+	EHF            & Extremt hög frekvens &           30--300 & GHz &             1--10 & mm \\
+	THF            & Terahertsfrekvens    &          300-3000 & GHz &         100--1000 & µm
+\end{tabular}
+\caption{Frekvens och våglängd övergripande}
+\end{table}
+
+Benämningarna HF, MF och LF har också andra betydelser. Exempelvis an\-vänd\-s
+HF som beteckning av den signal en antenn tar mot eller sänder oavsett
+frekvensband, MF kan vara mellansignalen oavsett frekvens efter omvandling i
+en superheterodynmottagare och LF, ibland benämnt AF (audiofrekvens) är det
+hörbara ljudet, dvs den modulation som används på signalen.
+
+På engelska används i stället be\-nämn\-ing\-ar\-na RF för radio frequency, IF
+för intermediate frequency and AF för audio frequency vilket rekommenderas då
+sammanblandningsrisk med ITU-be\-nämn\-ing\-ar\-na på spektrum inte
+föreligger.
+
+Amatörradioband finns inom de flesta av dessa frekvensband utom de högsta och
+lägsta frekvenserna.
+
+\subsection{Radarband och benämningar enligt ITU}
+
+\begin{table}[H]
+\centering
+
+\begin{tabular}{lrl}
+	\textbf{Band} & \textbf{Frekvens} & \textbf{Benämning}          \\ \hline
+	HF            &   0.003--0.03 GHz & High frequency              \\
+	VHF           &     0.03--0.3 GHz & Very hgh frequency          \\
+	UHF           &        0.3--1 GHz & Ultra high frequency        \\
+	L             &          1--2 GHz & Long wave                   \\
+	S             &          2--4 GHz & Short wave                  \\
+	C             &          4--8 GHz &  \\
+	X             &         8--12 GHz & Anv. under 2:a världskriget \\
+	Ku            &        12--18 GHz & ''Kurz under''              \\
+	K             &        18--27 GHz & Tyska ''Kurz'' (kortvåg)    \\
+	Ka            &        27--40 GHz & Kurz-above (över)           \\
+	V             &        40--75 GHz &  \\
+	W             &       75--110 GHz &  \\
+	mm            &      110--300 GHz & Millimetervågor
+\end{tabular}
+\caption{ITU-benämningar på radarband mm}
+\end{table}
+
+\section{IEEE-benämningar på frekvensband}
+\label{sec:IEEE-benamningar}
+
+\subsection{Äldre benämningar}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lr}
+		\textbf{Band} & \textbf{Frekvens} \\ \hline
+		A             &        0--250 MHz \\
+		B             &      250--500 MHz \\
+		C             &     100--1000 MHz \\
+		D             &          1--2 GHz \\
+		E             &          2--3 GHz \\
+		F             &          3--4 GHz \\
+		G             &          4--6 GHz \\
+		H             &          6--8 GHz \\
+		I             &         8--10 GHz \\
+		J             &        10--20 GHz \\
+		K             &        20--45 GHz \\
+		L             &        40--60 GHz \\
+		M             &       60--100 GHz \\
+		N             &      100--200 GHz \\
+		O             &      100--200 GJz
+	\end{tabular}
+	\caption{Äldre IEEE-benämningar på frekvensband}
+\end{table}
+
+\subsection{Nuvarande benämningar}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lr}
+		\textbf{Band} & \textbf{Frekvens} \\ \hline
+		I             &      100--150 MHz \\
+		G             &      250--500 MHz \\
+		P             &      225--390 MHz \\
+		L             &     390--1550 MHz \\
+		S             &    1550--3900 MHz \\
+		C             &    3900--6200 MHz \\
+		X             &   6200--10900 MHz \\
+		Ku            &    10,9--20,0 GHz \\
+		Ka            &        20--36 GHz \\
+		Q             &        36--46 GHz \\
+		V             &         46-56 GHz \\
+		W             &       56--100 GHz
+	\end{tabular}
+	\caption{Nyare IEEE-benämningar på frekvensband}
+\end{table}
+
+\section{Egenskaper olika frekvensband}
+
+För radioamatörer delar man in frekvensbanden i långvåg, mellanvåg, kortvåg,
+VHF, UHF och SHF beroende på frekvens, se tabellen under avsnitt
+\ref{frekvens-vaglangd}. Dessa har lite olika utbredningsegenskaper.
+
+\subsection{Långvåg}
+
+Markvågsutbredning, relativt höga sändareffekter, tillförlitliga
+för\-bind\-el\-ser men i övre delen av frekvensbandet kortare förbindelser
+dagtid. På de lägsta frekvenserna erhålls med hög sändareffekt goda förbindelser
+på stora avstånd globalt och används även för t.ex. malmprospektering,
+kommunikation med ubåtar i undervattensläge.
+
+\subsection{Mellanvåg}
+
+Kombinerar egenskaperna hos angränsande delar av lång- och kortvåg, kan ge
+kraftig interferens mellan rymd- och markvåg som då ofta upplevs som markerad
+fädning\footnote{Fädning är när signalstyrkan kraftigt varierar pga olika
+typer av utbredningsförhållanden, i just detta fall är det för att rymd- och
+markvågen kommer att glida i fas mot varandra och i bland samverka, ibland
+motverka varandra. Tiden mellan två toppar eller dalar i sådan fädning brukar
+vara ungefär 2-5 sekunder.
+
+Det finns även andra typer av fädning som kan uppstå genom reflexer eller
+andra utbredningsfenomen men de är mer sällsynta på mellanvåg och ses främst
+på VHF/UHF.}.
+
+Särskilt utmärkande för mellanvågen är den i det närmaste avsaknanden av
+skipzon eftersom mark- och rymdvåg kompletterar och i regel överlappar
+varandra. Jonosfärens D-skikt är heller inte särskilt uttalat i
+frekvensområdet, det vill säga, förbindelser via rymdvåg på korta avstånd
+mellan 100--300\,km är möjliga även dagtid också under perioder med högre
+solaktivitet.
+
+\subsection{Kortvåg}
+
+God rymdvågsutbredning med mycket lång räckvidd redan med låg effekt men
+samtidigt starkt avhängigt radiokonditionerna som styrs i väldigt hög grad av
+både rymdvädret, tidpunkten på dagen och på året.
+
+Med ökande frekvens blir jonosfärreflektionen allt flackare vilket resulterar
+i en alltmer uttalad död zon (skipzon) där signalen endast med svårighet eller
+inte alls kan tas mot. Särskilt utmärkande för kortvågen är att den redan med
+låg effekt ger under gynnsamma konditioner extremt lång räckvidd via rymdvåg,
+inte sällan globalt vilket traditionellt har nyttjats för att sända nyheter
+runt hela världen, se exempelvis BBC World Service och liknande.
+
+I dag för kortvågssändning för rundradio en mer tynande tillvaro, Kina sänder
+fortfarande ett ganska stort antal kanaler och det finns några sändare kvar
+för BBC i UK och även tyskland men det är tveksamt om de lever kvar ens om
+några år. I stället har ju Internet tagit över som nyhetsförmedlare.
+
+\subsection{Ultrakortvåg (UKV) eller väldigt hög frekvens (VHF)}
+
+Förbindelser med låg effekt och små antenner, oberoende av jonosfären men då
+endast i form av frirumsutbredning, dvs fram till horisonten och under
+påverkan av terränghinder mm. Särskilt utmärkande för UKV är att rymdvåg
+saknas, markvågsdämpningen till lands är total och kommunikation på högre
+frekvenser i princip därför bara sker vid fri sikt mellan sändare och
+mottagare.
+
+Eftersom signalerna kan passera jonosfären fungerar det att kommunicera med
+satelliter och rymdstationer på frekvenserna över ca 100\,MHz.
+Amatörradiobandet på 144--146\,MHz (2-metersbandet) har en avdelning
+frekvenser vikta för rymdkommunikaton.
+
+\subsection{Ultrahög frekvens (UHF)}
+
+Bandet är ett av de mest populära för landmobil radio. I dag rymms i detta
+band mellan 300--3000\- \,MHz nära nog all landmobil professionell
+kommunikation då mycket har lämnat VHF-bandet till förmån för 400\,MHz-bandet.
+I skrivande stund ryms även alla mobiltelefoniband inom UHF, det gäller 700,
+800, 900, 1800, 2100 och 2600. I framtiden kan det komma frekvensband som
+ligger högre, exempelvis 3,5\,GHz eller 5\,GHz.
+
+Bandet är utmärkt för kommunikation mellan fordon, särskilt i urban miljö
+fungerar den kortare våglängden bra. Den reflekteras också bättre mellan husen
+och frekvenser på främst 400\,MHz har en fantastisk förmåga att leta sig in
+fast man befinner sig i radioskugga. Tillsammans med 6-meter, 4-meter och
+2-meter i glesbygden fyller 70\,cm-bandet en nisch för landmobil kommunikation
+som få andra frekvenser fungerar.
+
+Radioamatörer har också ett av sina större tilldelningar i detta band, mellan
+432--438\,MHz. Här finns också en LPD\footnote{Low Power Devices, små
+radiostyrningsutrustningar, t.ex. väderstationer, garageportsöppnare med
+mera.}-del som vi får samsas med. Främst kör man FM på bandet men det
+förekommer SSB och kanske ibland också CW. Det finns ett stort repeaterband
+med 2\,MHz shift mellan mottagare och sändare och det är ett praktiskt band
+för man kan enkelt bygga antenner med ganska rejält med förstärkning.
+
+Det är också ett populärt band för satellitkommunikation.
+
+\section{Rundradio}
+
+För rundradio på AM-banden, dvs långvåg, mellanvåg och kortvåg används 10
+eller 9\,kHz breda kanaler med AM-modulation. Digital rundradio finns på några
+håll och använder då ett digitalt sändarsystem som kallas för DRM, Digital
+Radio Mondiale.
+
+\subsection{Rundradiobenämningar på frekvensband}
+\label{rundradioband}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{llrl}
+	\textbf{Förk.} & \textbf{Namn} & \textbf{Frekvens Rundradio} &     \\ \hline
+	LW/LV          & Långvåg       &                  148,5--285 & kHz \\
+	MW/MV          & Mellanvåg     &               526,5--1606,5 & kHz \\
+	SW/KV          & Kortvåg       &                     4,3--30 & MHz \\
+	UKV/VHF        & Ultrakortvåg  &                     88--108 & MHz
+\end{tabular}
+\caption{Rundradiobanden}
+\end{table}
+
+\subsection{Långvåg}
+
+Långvåg används i princip bara inom ITU region 1, det vill säga Europa,
+Nordafrika och Mongoliet. Utbredningen är vanligtvis mycket god nattetid och
+en långvågsstation kan typiskt täcka en betydligt större yta än en
+mellanvågsstation. Långvåg har dock inte rymdvågsutbredning som kortvåg har
+utan det är en markvåg som i regel följer jordytans krökning mycket långt.
+
+Långvåg saknas normalt på de flesta radiomottagare i dag.
+
+\subsection{Mellanvåg}
+\label{rundradio-frekvenser-mellanvåg}
+
+I dag används mellanvågsbanden mycket sparsamt i Europa. Det finns fortfarande
+kvar rundradiostationer på några ställen och i Asien är det ibland väl använt.
+Den största användaren annars är faktiskt USA som har ganska många
+licensierade radiostationer på mellanvågsbandet.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrr}
+	\bf Område            &  \bf Frekvens & \bf Kanalraster & \bf Kanaler \\ \hline
+	Europa, Asien, Afrika & 531--1602 kHz &          9  kHz &         120 \\
+	Australien            & 531--1701 kHz &           9 kHz &         131 \\
+	Nord- och Sydamerika  & 530--1700 kHz &          10 kHz &         118
+\end{tabular}
+\end{table}
+
+Mellanvågsbandet har liknande frekvenser i hela världen men start- och
+stoppfrekvenserna varierar lite. Australien har ett utökat band med bara
+lågeffektstationer ovanför 1610\,kHz.
+
+Mellanvåg finns påfallande ofta på rundradiomottagare i dag då det används
+flitigt bland annat i USA.
+
+
+\subsection{Kortvåg}
+\label{rundradio-frekvenser-kortvåg}
+
+Det finns ganska många kortvågsband för rundradio. En del delas med andra
+tjänster som t.ex. amatörradio och ibland skiljer sig frekvenserna åt i olika
+delar.
+
+\begin{table}[H]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{rrl}
+	\bf Band &     \bf Frekvens & \bf Noteringar                                                                                          \\
+	 \bf [m] &        \bf [kHz] & \bf                                                                                                     \\ \hline
+	     120 &       2300--2495 & Mestadels använt i tropikerna, tidsangivelse på 2500 kHz.                                               \\
+	      90 &       3200--3400 & Tropikband, begränsad utbredning nattetid. Tidsstation i Kanada på 3330 kHz.                            \\
+	      75 &       3900--4000 & Mestadels östra halvklotet mörka timmar. Delas med amerikanska 80 m amatörradiobandet.                  \\
+	      60 &       4750--4995 & Tropikband. särskilt använt i Brasilien. Tidsreferenser använder 5000 kHz.                              \\
+	      49 &       5900--6200 & Bra åretruntband men sämre mottagning dagtid.                                                           \\
+	      41 &       7200--7450 & Mottagning varierar per region. God nattmottagning, särskilt vintertid. Delas med radioamatörer         \\
+	      31 &       9400--9900 & Det mest använda bandet. Hyggligt året runt, bra på vintern, tidsreferenser ca 10 MHz.                  \\
+	      25 & 11\,600--12\,100 & Bättre på sommaren än på vintern samt vid ''greyline'' precis före och efter solens upp- och nedgång.   \\
+	      22 & 13\,570--13\,870 & Tidigare väl använt inom Europa och Asien                                                               \\
+	      19 & 15\,100--15\,830 & Varierande mottagning över dygnet, bäst sommartid, Tidsstationer använder 15 MHz.                       \\
+	      16 & 17\,480--17\,900 & Dagtid bra, nattetid varierar kraftigt med årstiden, bäst på sommaren.                                  \\
+	      15 & 18\,900--19\,020 & Samma egenskaper som 16\,m. Kan bli ett DRM-band. Används ganska sällan just nu.                        \\
+	      13 & 21\,450--21\,850 & Sämre mottagning dagtid, kraftigt varierande med ryndvädret både dag och natt. Mycket likt 11\,m.       \\
+	      11 & 25\,670--26\,100 & Sällan använt. Dagtid dåligt vid låg solcykelaktivitet men kan fullständigt briljera vid hög aktivitet. \\
+	         &                  & Nattlig aktivitet oftast mycket dålig förutom markvågsutbredningen. Ligger nära PR-radiobandet.
+\end{tabular}}
+\caption{Rundradiofrekvenser på kortvåg.}
+\end{table}
+
+Kortvåg saknas oftast på moderna rundradiomottagare.
+
+\subsection{VHF/UKV}
+
+I dag används rundradio på VHF i stort sett bara i band II (FM-radio) och i band III (DAB-radio).
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lrl}
+		\textbf{Band} & \textbf{Frekvens} &                                              \\ \hline
+		Band I        &        47--68 MHz & Tidigare TV-band också ''6-metersbandet''    \\
+		Band II       &   87,5--108,0 MHz & Nuvarande FM-rundradionbandet                \\
+		Band III      &      174--230 MHz & Används i dag för DAB                        \\
+		Band IV       &      470--582 MHz & I dag refarmerat till främst landmobil radio \\
+		Band V        &      582--862 MHz & Marksänd TV
+	\end{tabular}
+	\caption{IEEE-benämningar på rundradioband}
+\end{table}
+
+Alla radiomottagare för rundradio har Band II. De som har DAB har även band
+III och ibland även band IV.
+
+
+\subsection{UHF}
+
+Mycket sällan använt för rundradio.
+I föregående tabell ligger band IV och band V inom gränserna för UHF.
 
 \section{Allmänna frekvenser VHF--UHF}
 

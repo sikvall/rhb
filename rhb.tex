@@ -16,13 +16,11 @@
 \newcommand{\ISBN}{---}
 \newcommand{\Linkhome}{www.sikvall.se}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[10pt,swedish,a4paper,
-  twoside]{book}                       % De viktigaste inställningarna för dokumentet
+\documentclass[10pt, swedish,
+a4paper, twoside]{book}                % De viktigaste inställningarna för dokumentet
 \usepackage[a4paper]{geometry}         % Särskilda dokumentinställningar
 \usepackage[utf8]{inputenc}            % Indata som UTF-8 är väldigt bra för t.ex. svenska
 \usepackage[T1]{fontenc}               % Fontkodning enligt modern standard
-%\usepackage{fbb}                       % En font inspirerad av Bembo
-%\usepackage[adobe-utopia]{mathdesign}  % Font: Adobe Utopia
 \usepackage{fourier}
 \usepackage[swedish]{babel}            % Svensk avstavning och mycket mer
 \usepackage[colorlinks,
@@ -44,6 +42,8 @@
 \usepackage{pdflscape}                 % Kunna göra vissa sidor liggande i PDF
 \usepackage{wrapfig}                   % Kunna wrappa figurer
 \usepackage{float}                     % Utökade optioner för floats
+\usepackage{caption}
+%\captionsetup{justification=raggedright,singlelinecheck=false}
 \usepackage{makeidx}                   % Indexering
 \makeindex
 \usepackage[bottom]{footmisc}          % Optioner för fotnoter, sätt alltid på slutet av samma sida
