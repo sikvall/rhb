@@ -76,6 +76,8 @@ a4paper, twoside]{book}                % De viktigaste inställningarna för dok
         \normalsize{\DokVersion}
 \end{flushright}
 
+\listoftodos
+
 \newpage
 
 
@@ -155,6 +157,7 @@ a4paper, twoside]{book}                % De viktigaste inställningarna för dok
 
 %% Hämta in underfilerna i rätt ordning
 
+
 \input{tex/forord}
 \pagestyle{fancy}
 \input{tex/kap-reglemente}
@@ -163,16 +166,6 @@ a4paper, twoside]{book}                % De viktigaste inställningarna för dok
 \input{tex/kap-frekvenser}
 \input{tex/appendix}
 
-
-%% Appendix
-
-%%\cleardoublepage
-%%\appendix
-%%\printindex
-%%\clearpage
-%%\listoftables
-%%\clearpage
-%%\listoffigures
-%%\clearpage
+\printindex
 
 \end{document}

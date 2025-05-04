@@ -268,21 +268,108 @@ uppfan SSB-modulationen.
 
 \begin{center}
 \begin{tabular}{rrrr}
-Deviation & Modulation & Bandbredd & Kanaldelning\\ \hline
-5 kHz & 3 kHz & 16 kHz & 25 kHz\\
-2.5 kHz & 3 kHz & 11 kHz & 12.5 kHz\\
+	Deviation & Modulation & Bandbredd & Kanaldelning \\ \hline
+	    5 kHz &      3 kHz &    16 kHz &       25 kHz \\
+	  2.5 kHz &      3 kHz &    11 kHz &     12.5 kHz
 \end{tabular}
 \end{center}
 
 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \section{Vågutbredning}
+\label{vågutbredning}
+\index{vågutbredning}
 \todo{Vågutbredning}
 
+Vågutbredning är något som är väldigt viktigt för radiokommunikation och
+beroende på vilken frekvens som används kan vågutbredningen se mycket olika ut
+för olika radiosändningar. För VHF och uppåt är det i princip bara markvåg men
+för lägre frekvenser kan också rymdvågsutbredning ske.
+
 \subsection{Markvåg}
+\index{markvåg}
+
+Markvågen är den vanligaste radioutbredningen vi tänker oss, här får man hjälp
+av att placera antennan över terrängen och på hustak för att få så fri sik som
+möjligt vilket ökar längden på markvågsutbredningen. Det är också den
+utbredning som handhållna radioapparater nyttjar men i och med att man som
+regel då kommer vara mycket nära marken blir oftast utbredningen begränsad.
+
+I närheten av vatten kan markvågen ofta gå längre än till lands. Det är mindre
+saker som hindrar den och skillnaden i vattnets och luftens dielektricitet gör
+att radiosignalen kan följa ytan lite längre innan den klingat av.
 
 \subsection{Rymdvåg}
+\index{rymdvåg}
+
+Rymdvåg är något som framför allt uppträder på kortvåg. När strålningen från
+solen träffar de övre lagren i atmosfären uppstår laddade partiklar, så
+kallade joner. Dessa består av fria elektroner och ibland också protoner. Fria
+elektroner är ju som vi vet kännetecknet för ett ledande material så även om
+luften är mycket tunn där uppe så uppstår ändå en elektriskt ledande plasma.
+
+En sådan kan fungera som en spegel för radiosignaler som sänds mot dem och
+beroende på hur kraftig joniseringen är finns det en högsta frekvens som
+fortfarande reflekteras medan frekvenser över denna går igenom jonosfären och
+knappt reflekteras alls. Denna högsta frekvens kallas för MUF vilket utläses
+Maximum Useable Frequency, then högsta användbara frekvensen (för
+jonosfärreflektion).
+
+MUF påverka sockså av ett par andra viktiga saker, dels är det dagens längd av
+dygnet, sommartid kan man förvänta sig en högre MUF på grund av kraftigare
+jonisering, på vintern lägre. Eftersom solen har sina solfläcksmaximum i
+11-årscykler så har vi också en variation, vid solfläcksmaximum kan
+joniseringen vara enormt mycket kraftigare än vid minima och detta påverkar
+väldigt mycket rymdvågsutbredningen.
 
 \subsection{Skipzon}
+\index{skipzon}
+
+Beroende på frekvens och avstånd, antennhöjd, uteffekt mm så når markvågen en
+viss sträcka. Rymdvågen kommer inte vara hörbar överallt utan det beror mycket
+på vilken vinkel den reflekteras mot. För att komma så långt som möjligt vill
+man ha en flack vinkel, kanske 10$\deg$ över horisonten vilket ger en mycekt
+lång skipzon.
+
+Skipzonen är den zon mellan sändaren och där rymdvågen återvänder efter att ha
+reflekterats. Denna är ofta mycket längre bort än markvågen så det finns en
+död zon mellan där markvågen inte orkar täcka längre och innan rymdvågen
+faller in och det är denna zon som kallas för skipzonen (radiovågen ''hoppar
+över denna zon'').
+
+\subsection{NVIS}
+
+Det finns en variant av detta där man i princip eliminerar skipzonen och det
+är om man nyttjar NVIS som sändningsmetod. Man placerar då antennen ganska
+nära marken och på så vis riktar man större delen av energin rakt uppåt. När
+denna träffar jonosfären uppstår mycket skapra vinklar som gör att signalen
+återvänder över ett mycket stort område. Detta kan nyttjas och i princip
+eliminera skipzonen och används ofta av militära kortvågsstationer. Med
+begränsad markvåg har det också fördelen att vara mycket svårt att pejla!
+
+NVIS är engelska och betyder Near Vertical Incident Skywave, alltså att man
+sänder nästan vertikalt uppåt. Utbredningen kommer som regel ner i en cirkel
+runt sändaren som beroende på frekvens, jonosfäriska förhållanden med mera
+brukar kunna bli mellan 300--600 km.
+
+Det betyder att man kan prata från mellansverige med större delen av
+skandinavien och norra europa på NVIS.
+
+\subsection{Atmosfäriska utbredningar}
+\index{tropo}
+\index{atmosfärisk utbredning}
+
+\todo{Atmosfäriska utbredningar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 
