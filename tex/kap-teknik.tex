@@ -10,7 +10,40 @@ känna till.
 
 \clearpage
 
-\section{Effekt i dBW och dBm}
+\section{Decibel}
+
+Decibel är en logaritmisk skala som bygger på tiologaritmen. Från början
+använde man begreppet Bel [B] (efter Alexander Graham Bell) men det blir ofta
+decimaltal så i stället så kör man decibel. Det går 10 dB på 1 B.
+
+Definitionen på decibel är enligt följande:
+
+\begin{equation}
+  \text{dB} = 10 \cdot \log_{10} \left( \frac{P_{ut}}{P_{in}} \right)
+\end{equation}
+
+där dB är antalet decibel, $P_{up}$ är effekten som kommer ut ur något och
+$P_{in}$ är effekten som går in. Detta något kan vara en förstärkare, en
+dämpare, en kabel eller nästan vad som helst som radiosignalen går igenom.
+
+Som minnesregel kan man minnas att +3 dB betyder att effekten dubblats. Om vi
+matar in 10 W i en förstärkare och får ut 20 W är förstärkningen 3 dB. På
+samma sätt är -3 dB en förlust av 50 \% så om vi har en kabel med förlusten 3
+dB för en viss frekvens så tappar vi halva effekten i kabeln.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{rr|rr|rr|rr}
+	\bf dB & \bf faktor & \bf dB & \bf faktor & \bf dB & \bf faktor & \bf dB & \bf faktor \\ \hline
+	     1 &       1,26 &     10 &         10 &     -1 &       0,79 &    -10 &        0,1 \\
+	     2 &       1,58 &     20 &        100 &     -2 &       0,63 &    -20 &       0,01 \\
+	     3 &       2,00 &     30 &     1\,000 &     -3 &       0,50 &    -30 &      0,001 \\
+	     5 &       3,16 &     50 &   100\,000 &     -5 &       0,32 &    -50 &  0,000\,01
+\end{tabular}
+\caption{Decibel och omräkningsfaktorer}
+\end{table}
+
+\subsection{Effekt i dBW och dBm}
 
 Effekter anges i W eller i decibel relaterat till 1 mW (dBm) eller relaterat
 1W (dBW). Tabell över effekt och decibelwatt nedan:
@@ -28,6 +61,33 @@ Effekter anges i W eller i decibel relaterat till 1 mW (dBm) eller relaterat
 \end{tabular}
 \caption{Tabell över effekt och decibelskalor}
 \end{table}
+
+\subsection{Antennvinst i dBi och dBd}
+
+Riktantenner sägs ha en så kallad antennvinst och den berättar något om
+antennens riktverkan. En riktantenn har en (eller några få) riktningar som den
+fungerar mycket bra i, övriga riktningar är den sämre än en rundstrålande
+antenn.
+
+En rundstrålande antenn strålar lika mycket i alla riktningar i ett plan.
+Detta gäller exempelvis en vertikalt monterad dipol eller kvartsvågsantenn på
+ett jordplan.
+
+Antennvinsten kan jämföras med en vanlig dipol och då använder man begreppet
+dBd där den sista bokstaven står för "jämfört med en dipolantenn". I
+professionella radiosammanhang använder man dock en tänkt teoretisk antenn som
+strålar exakt likadant i alla riktningar, inte bara i planet utan även uppåt
+och nedåt. En sådan antenn finns egentligen bara i teorin men gör det möjligt
+att skapa ett referensmått för just riktverkan, denna teoretiska antenn kallas
+för "isotrop antenn" och då använder man beteckningen dBi där i på slutet står
+för just isotrop antenn.
+
+Skillnaden i de båda måtten kan räknas om enligt följande:
+
+\begin{align}
+\text{dBi} &= \text{dBd} + 2,15\\
+\text{dBd} &= \text{dBi} - 2,15
+\end{align}
 
 \section{S-värden, signalvärde, S-meter}
 
@@ -679,6 +739,23 @@ nautiska mil i stället för km. För att få detta byter man konstanten 3,57 ti
 Där $r$ är avståndet till radiohorisonten givet i kilometer, $h_1$ är den ena
 stationens antennhöjd över marken givet i meter och $h_2$ är den andra
 stationens antennhöjd över marken också givet i meter.
+
+Om motstationen befinner sig i markhöjd och det inte finns terräng som
+blockerar kan man räkna ut hur lång din radiohorisont är på VHF-bandet baserat
+enbart på din egen höjd med denna formel:
+
+\begin{equation}
+	r = \sqrt{17 \cdot h}
+\end{equation}
+
+För optisk sikt kan man säga följande:
+
+\begin{equation}
+	r = \sqrt{13 \cdot h}
+\end{equation}
+
+I båda ovanstående är radien $r$ i kilometer och höjden $h$ i meter.
+
 
 \subsection{Sträckdämpning}
 
