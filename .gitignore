@@ -12,3 +12,5 @@ pdf/
 *.idx
 *.ilg
 *.ind
+*.lof
+*.lot
