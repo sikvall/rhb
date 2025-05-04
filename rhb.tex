@@ -2,7 +2,7 @@
 % !TeX spellcheck = sv_SE
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% diverse saker här som används i dokumentet %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Diverse saker här som används i dokumentet                              %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\TitleText}{Radiohandboken}
 \newcommand{\SubtitleText}{För sändaramatörer, privatradioanvändare\\
@@ -52,16 +52,20 @@
 
 \setlist{nosep}                        % Separera inte numrerade och punktlistor mer
 \usepackage{todonotes}                 % Kunna lägga in att-göra i dokumentet
-\renewcommand{\arraystretch}{1.15}
-\headheight=20pt
+\renewcommand{\arraystretch}{1.15}     % Sätt ett mer lämpligt avstånd
+%\headheight=20pt                       % Justera dokumentets huvud
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DOKUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
 
+%%% Förstasidan
 \pagestyle{empty}
-
 \input{tex/init-morse}
-
 \newgeometry{bottom=3cm,top=3cm}
-
 \vfill
 \vspace*{4cm}
 \centerline{\includegraphics[width=\paperwidth]{logo/rubrikbild}}
@@ -72,6 +76,9 @@
 \end{flushright}
 
 \newpage
+
+
+%%% Tryckortssidan
 
 \vspace*{\fill}
 
@@ -103,6 +110,9 @@
 
 %\newgeometry{top=3cm}
 
+
+%%% Sätt upp sidhuvud och sidfot
+
 \renewcommand{\headrulewidth}{0.2 pt}
 \renewcommand{\footrulewidth}{0.2 pt}
 
@@ -120,6 +130,8 @@
 
 \pagestyle{fancy}
 
+
+%%% Horungekontroll
 \widowpenalty=9999
 \clubpenalty=9999
 
@@ -140,10 +152,7 @@
 \setlength{\parskip}{1.2 ex}
 \setlength{\parindent}{0 pt}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% diverse saker här som används i dokumentet %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Hämta in underfilerna i rätt ordning
 
 \input{tex/forord}
 \pagestyle{fancy}
@@ -152,6 +161,8 @@
 \input{tex/kap-teknik}
 \input{tex/kap-frekvenser}
 
+
+%% Appendix
 
 %%\cleardoublepage
 %%\appendix
@@ -163,4 +174,3 @@
 %%\clearpage
 
 \end{document}
-
