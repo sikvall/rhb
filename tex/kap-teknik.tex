@@ -96,7 +96,11 @@ Signalstyrkan i amatörradio uttrycks oftast som S-värden. Dessa fås i regel
 genom nivån på AGC hos mottagaren. Därför ser man sälla utslag vid riktigt
 låga signaler.
 
-Standard kalibrering för S-metern är enligt skalan i tabellen
+Standard kalibrering för S-metern är enligt skalan i tabellen. Som syns
+kalibreras tabellen olika för om man är under 30\,MHz (kortvåg och lägre
+frekvenser) och skillnaden är 20\,dB med högre känslighet över 30\,MHz dvs VHF
+och uppåt.
+
 \ref{tab:s-varden}
 
 \begin{table}[ht]
@@ -274,15 +278,6 @@ uppfan SSB-modulationen.
 \end{tabular}
 \end{center}
 
-
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \section{Vågutbredning}
 \label{vågutbredning}
 \index{vågutbredning}
@@ -394,11 +389,6 @@ ibland att nå mer än tiofallt den vanliga markvågsutbredningen.
 
 Tropo uppträder främst på sommarhalvåret vid våra breddgrader.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
 \section{Termiska brusgolvet}
 När man lyssnar i radion på en frekvens där ingen nyttosignal finns hörs ett
 brus. Detta brus består av olika komponenter men en av de viktigaste är det
@@ -435,10 +425,10 @@ Om vi vet detta kan vi beräkna det termiska brusgolvet:
 $$P = 1,38065\cdot 10^{-23} \cdot 300 \cdot 1 = 4.1495\cdot 10^{-21}$$
 
 Om vi räknar om detta i dBm genon att ta 10-logaritmen av värdet och sedan
-multiplicera med 10 samt addera 30 så får vi i stället -173,8\,dBm. Detta
-avrundas normalt till -174\,dBm och är brusgolvet för 1\,Hz. En mottagare som
+multiplicera med 10 samt addera 30 så får vi i stället -173,8\,dBm/Hz. Detta
+avrundas normalt till -174\,dBm/Hz och är brusgolvet för 1\,Hz. En mottagare som
 har en mottagarbandbredd på 25\,kHz kommer därmed att se ett brus som är
-20\,000 ggr större. I decibel får vi då $-174 + 44 dB = -130$\,dBm.
+25\,000 ggr större. I decibel får vi då $-174 + 44 dB = -130$\,dBm.
 
 För att en signal skall kunna detekteras får vi lägga på mottagarens brusgolv,
 kanske 3\,dB samt hur mycket signal till brus i förhållande vi behöver, för FM
