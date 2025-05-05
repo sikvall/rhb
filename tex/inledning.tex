@@ -1,0 +1,93 @@
+%%% Förstasidan
+\pagestyle{empty}
+\input{tex/init-morse}
+\newgeometry{bottom=3cm,top=3cm}
+\vfill
+\vspace*{4cm}
+\centerline{\includegraphics[width=\paperwidth]{logo/rubrikbild}}
+\begin{flushright}
+	\Huge{\bfseries{\TitleText}} \\[3mm]
+	\Large{\bfseries{\SubtitleText}}\\[3mm]
+        \normalsize{\DokVersion}
+\end{flushright}
+
+\listoftodos
+
+\newpage
+
+
+%%% Tryckortssidan
+
+\vspace*{\fill}
+
+\noindent {\bf \TitleText}
+
+\noindent \SubtitleText
+
+\vspace{1 em}
+
+\noindent \DokVersion
+
+\noindent ISBN: \ISBN
+
+\vspace{1 em}
+
+\noindent \Forfattare, \Initialer
+
+\noindent \Epostadress
+
+\noindent \Linkhome
+
+\noindent Karlholmsbruk
+
+\vspace{1 em}
+
+\noindent Datum \DokumentDatum
+
+\clearpage
+
+%\newgeometry{top=3cm}
+
+
+%%% Sätt upp sidhuvud och sidfot
+
+\renewcommand{\headrulewidth}{0.2 pt}
+\renewcommand{\footrulewidth}{0.2 pt}
+
+\fancyhead[RE]{\small\nouppercase{\leftmark}}      % Chapter in the right on even pages
+\fancyhead[RO]{\small\nouppercase{\rightmark}}     % Section in the left on odd pages
+\fancyhead[LE]{\small\nouppercase{\rightmark}}      % Chapter in the right on even pages
+\fancyhead[LO]{\small\nouppercase{\leftmark}}     % Section in the left on odd pages
+
+\fancyfoot[RE]{\small Radiohandboken}
+\fancyfoot[RO]{\small \DokVersion}
+\fancyfoot[LE]{\small \DokVersion}
+\fancyfoot[LO]{\small Radiohandboken}
+
+\cfoot{\small \thepage}
+
+\pagestyle{fancy}
+
+
+%%% Horungekontroll
+\widowpenalty=9999
+\clubpenalty=9999
+
+%	\setlength{\headsep}{1em}2
+
+\clearpage
+
+%%% Innehållsförteckning
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\setlength{\parskip}{1.2 ex}
+\setlength{\parindent}{0 pt}
+
+%% Hämta in underfilerna i rätt ordning
