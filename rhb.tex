@@ -24,9 +24,6 @@ a4paper, twoside]{book}                % De viktigaste inställningarna för dok
 \usepackage[T1]{fontenc}               % Fontkodning enligt modern standard
 \usepackage{fourier}
 \usepackage[swedish]{babel}            % Svensk avstavning och mycket mer
-\usepackage[colorlinks,
-  linkcolor=black,
-  urlcolor=blue]{hyperref}             % Hyperref möjliggör länkar utanför dokumentet
 \usepackage{listings}                  % Används för morsekoden
 \usepackage{enumitem}                  % Enumrering
 \usepackage{multirow}                  % Tabeller med tabellrader som spänner över mer än en textrad
@@ -58,6 +55,9 @@ a4paper, twoside]{book}                % De viktigaste inställningarna för dok
 \usepackage{todonotes}                 % Kunna lägga in att-göra i dokumentet
 \renewcommand{\arraystretch}{1.15}     % Sätt ett mer lämpligt avstånd
 %\headheight=15pt                       % Justera dokumentets huvud
+\usepackage[colorlinks,
+  linkcolor=black,                     % Hyperref should always be loaded last
+  urlcolor=blue]{hyperref}             % Hyperref möjliggör länkar utanför dokumentet
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% DOKUMENT
