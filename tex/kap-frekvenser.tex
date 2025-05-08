@@ -547,7 +547,7 @@ Kanalraster. Denna frekvenstabell blir lite mer komplicerad.
 
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
-\begin{table}[h]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{|l|l|l|l|l|l|}
 		\hline
@@ -577,9 +577,18 @@ Kanalraster. Denna frekvenstabell blir lite mer komplicerad.
 \label{tab:SRBR-frekvenser}
 \end{table}
 
-\clearpage
+\section{Marina VHF-frekvenser (SRC)}
 
-\subsection{Marina VHF-frekvenser}
+För användning av marin VHF krävs tillstånd efter att man genomgått en kurs
+och klarat en examinering för ett kompetensbevis. All tillståndshantering sker
+via PTS hemsida. SRC betyder {\textit{short range communication }till skillnad från marin HF/MF som benämns som LRC, {\textit long range communication}.
+
+För att ta provet kan man kontakta NFB, nämnden för båtlivsutbildning. De har
+kurser och digital examinering för kompetensbeviset.
+
+På de marina frekvenserna använder man det internationella (ITU)
+bokstaveringsalfabetet oavsett vilket språk man sedan kommunicerar på. Det
+gäller SRC såväl som LRC.
 
 Marinbandet på VHF består både av duplex- och simplexkanaler. Simplexkanalerna
 används skepp-till-skepp och även ibland mot kustradio. Duplexfrekvenserna
@@ -588,13 +597,13 @@ liknande. På dessa arbetskanaler sänder man även ut sjörapporter,
 navigationsvarningar och annan information t.ex. säkerhetsvarningar som är
 viktiga för sjöfarten.
 
+\clearpage
 \subsection{Kanalnummer och frekvens marina VHF-kanaler}
 
-\begin{table}[H]
-\centering
-\begin{tabular}{rrr|rrr}
+\begin{longtable}{rrr|rrr}
+\caption{Marin VHF, frekvenslista} \\
 \textbf{Kanal} & \textbf{Skepp} & \textbf{Kust} &
-\textbf{Kanal} & \textbf{Skepp} & \textbf{Kust} \\ \hline
+\textbf{Kanal} & \textbf{Skepp} & \textbf{Kust} \\ \hline \endhead
 01 & 156,050 & 160,650 & 60 & 156,025 & 160,625 \\
 02 & 156,100 & 160,700 & 61 & 156,075 & 160,675 \\
 03 & 156,150 & 160,750 & 62 & 156,125 & 160,725 \\
@@ -610,7 +619,7 @@ viktiga för sjöfarten.
 13 & 156,650 &         & 72 & 156,625 & \\
 14 & 156,700 &         & 73 & 156,675 & \\
 15 & 156,750 &         & 74 & 156,725 & \\
-16 & 156,800 & Anrop/Nöd   & 75 & 156,775 & \\
+16 & 156,800 & \bf Anrop/Nöd    & 75 & 156,775 & \\
 17 & 156,850 &         & 76 & 156,825 & \\
 18 & 156,900 & 161,500 & 77 & 156,875 & \\
 19 & 156,950 & 161,550 & 78 & 156,925 & 161,525 \\
@@ -628,9 +637,7 @@ viktiga för sjöfarten.
 L1 & 155,500 & Leisure        & F1 & 155,625 &Fishing \\
 L2 & 155,525 & Leisure        & F2 & 155,775 &Fishing \\
    &         &         & F3 & 155,825 & Fishing\\
-\end{tabular}
-\caption{Marin VHF, frekvenslista}
-\end{table}
+\end{longtable}
 
 I tabellen listas de kanaler som gäller i svenska farvatten. Andra
 länder kan ha andra kanaler eller för olika ändamål. Det krävs en
@@ -701,7 +708,6 @@ Karlshamn      & 62 & 48 & Kivik         & 21 & 39\\
 
 *) Sänder ej väder, varningar eller andra listor
 
-\clearpage
 \subsubsection{Västkusten}
 
 \begin{table}[h]
@@ -719,6 +725,7 @@ Helsingborg & 60 & 28 & Malmö      & 65 & 25 \\
 \caption{Stockholm radio, kanaler och radiohorisont för västkusten}
 \end{table}
 
+\clearpage
 \subsubsection{Insjöarna}
 
 \begin{table}[h]
@@ -736,6 +743,9 @@ Motala    & 62 & 47 & Hjälmaren     & $\dagger$  &    \\
 \end{table}
 
 $\dagger$) Hjälmaren är permanent tagen ur drift.
+
+
+
 
 \section{Frekvenser amatörradio VHF--UHF}
 
@@ -851,6 +861,7 @@ för respektive 12,5~kHz steg och 10~kHz för kortvåg.
 	51,740 &      F74 &       & 51,990 &     RF99 &
 \end{longtable}
 
+\clearpage
 \subsection{FM-kanaler 2 m-bandet}
 
 \begin{longtable}{rrl|rrl}
@@ -1682,7 +1693,15 @@ kan bandet användas som man vill och det är på sina håll god aktivitet.
 
 Kom ihåg att inte överskrida effektbegränsningarna bara.
 
-\subsection{Marina MF/HF-frekvenser}
+\section{Marina MF/HF-frekvenser (LRC)}
+
+Tillträde till marina banden på MF och HF kräver ett godkänt kompetensprov och
+licens från PTS. LRC {\textit long range communication} inkluderar även marin
+VHF, dvs SRC.
+
+På de marina frekvenserna använder man det internationella (ITU)
+bokstaveringsalfabetet oavsett vilket språk man sedan kommunicerar på. Det
+gäller SRC såväl som LRC.
 
 De marina HF-banden är uppdelade på ett antal band. Det finns en
 generell kanalindelning med 3 kHz per kanal och SSB som
@@ -2067,43 +2086,45 @@ använder.
 \section{Mobiltelefonifrekvenser}
 \label{mobiltelefoni}
 
-Frekvenser i MHz.
+Frekvenser, bandbredd och duplexskift i MHz.
 
-\begin{longtable}{rlrrrrrr}
-	    \bf Band & \bf Operatör    & \bf UL Start & \bf UL Stop & \bf DL Start & \bf DL Stop & \bf Bandbredd & \bf Duplex \\ \hline
-	\endhead
-450     & Net1 Sverige AB        & 452,0  & 457,0  & 462,5  & 467,5  & 5   & 10  \\ \hline
-700     & Telia                  & 713,0  & 723,0  & 768,0  & 778,0  & 10  & 55  \\ 
-        & Net4Mobility           & 723,0  & 733,0  & 783,0  & 788,0  & 10  & 55  \\ \hline
-  800   & Hi3G                   & 832,0  & 842,0  & 791,0  & 801,0  & 10  & -41 \\
-        & TeliaSonera            & 842,0  & 852,0  & 801,0  & 811,0  & 10  & -41 \\
-        & Net4Mobility           & 852,0  & 862,0  & 811,0  & 821,0  & 10  & -41 \\ \hline
-E-GSM-R & Ej i bruk              & 873,0  & 876,0  & 918,0  & 921,0  & 3   & 45  \\
-GSM-R   & MobiSIR                & 876,0  & 880,0  & 921,0  & 925,0  & 4   & 45  \\ \hline
-900     & Hi3G                   & 880,0  & 885,0  & 925,0  & 930,0  & 5   & 45  \\
-        & Net4Mobility           & 885,0  & 891,0  & 930,0  & 936,0  & 6   & 45  \\
-        & Tele2                  & 891,0  & 900,0  & 936,0  & 945,0  & 9   & 45  \\
-        & Telenor                & 900,0  & 905,0  & 945,0  & 950,0  & 5   & 45  \\
-        & Telia                  & 905,0  & 915,0  & 950,0  & 960,0  & 10  & 45  \\ \hline
-1800    & Telia                  & 1710,0 & 1745,0 & 1805,0 & 1840,0 & 35  & 95  \\
-        & Net4Mobility           & 1745,0 & 1775,0 & 1840,0 & 1870,0 & 30  & 95  \\
-        & Tre                    & 1775,0 & 1780,0 & 1870,0 & 1875,0 & 5   & 95  \\
-        & Ej tillstånd          & 1783,1 & 1784,9 & 1878,1 & 1879,9 & 2   & 95  \\ \hline
-2100    & SUNAB/SULAB            & 1905,0 & 1910,0 & 1905,0 & 1910,0 & 5   & TDD \\
-        & Hi3G                   & 1910,0 & 1915,0 & 1910,0 & 1915,0 & 5   & TDD \\
-        & Telenor                & 1915,0 & 1920,0 & 1915,0 & 1920,0 & 5   & TDD \\
-        & Telenor                & 1920,3 & 1940,1 & 2110,3 & 2130,1 & 20  & 190 \\
-        & Hi3G                   & 1940,1 & 1959,9 & 2130,1 & 2149,9 & 20  & 190 \\
-        & SUNAB/SULAB            & 1959,9 & 1979,7 & 2149,9 & 2169,7 & 20  & 190 \\ \hline
-2300 	& Teracom	         & 2300,0 & 2380,0 & 2300,0 & 2380,0 & 80  & TDD \\ \hline
-2600    & Net4Mobility           & 2500,0 & 2520,0 & 2620,0 & 2640,0 & 20  & 120 \\
-        & Hi3G                   & 2520,0 & 2530,0 & 2640,0 & 2650,0 & 10  & 120 \\
-        & TeliaSonera            & 2530,0 & 2550,0 & 2650,0 & 2670,0 & 20  & 120 \\
-        & Net4Mobility           & 2550,0 & 2570,0 & 2670,0 & 2690,0 & 20  & 120 \\
-        & Hi3G                   & 2570,0 & 2620,0 & 2570,0 & 2620,0 & 50  & TDD \\ \hline
-3500    & Hi3G                   & 3400,0 & 3500,0 & 3400,0 & 3500,0 & 100 & TDD \\
-        & Telia                  & 3500,0 & 3620,0 & 3500,0 & 3620,0 & 120 & TDD \\
-        & Net4Mobility           & 3620,0 & 3720,0 & 3620,0 & 3720,0 & 80  & TDD 
+\begin{longtable}{rlrrrr}
+	    \bf Band & \bf Nätoperatör    & \bf Frekv. UL & \bf Frekv. DL & \bf Bandbredd & \bf Duplex \\ \hline
+	    \endhead
+
+450     & Net1 Sverige AB & 452,0--457,0   & 462,5--467,5   & 5   & 10  \\ \hline
+700     & Telia           & 713,0--723,0   & 768,0--778,0   & 10  & 55  \\
+        & Net4Mobility    & 723,0--733,0   & 783,0--788,0   & 10  & 55  \\ \hline
+800     & Hi3G            & 832,0--842,0   & 791,0--801,0   & 10  & -41 \\
+        & TeliaSonera     & 842,0--852,0   & 801,0--811,0   & 10  & -41 \\
+        & Net4Mobility    & 852,0--862,0   & 811,0--821,0   & 10  & -41 \\ \hline
+E-GSM-R & Ej i bruk       & 873,0--876,0   & 918,0--921,0   & 3   & 45  \\
+GSM-R   & MobiSIR         & 876,0--880,0   & 921,0--925,0   & 4   & 45  \\ \hline
+900     & Hi3G            & 880,0--885,0   & 925,0--930,0   & 5   & 45  \\
+        & Net4Mobility    & 885,0--891,0   & 930,0--936,0   & 6   & 45  \\
+        & Tele2           & 891,0--900,0   & 936,0--945,0   & 9   & 45  \\
+        & Telenor         & 900,0--905,0   & 945,0--950,0   & 5   & 45  \\
+        & Telia           & 905,0--915,0   & 950,0--960,0   & 10  & 45  \\ \hline
+1800    & Telia           & 1710,0--1745,0 & 1805,0--1840,0 & 35  & 95  \\
+        & Net4Mobility    & 1745,0--1775,0 & 1840,0--1870,0 & 30  & 95  \\
+        & Tre             & 1775,0--1780,0 & 1870,0--1875,0 & 5   & 95  \\
+        & Priv. nät       & 1783,1--1784,9 & 1878,1--1879,9 & 2   & 95  \\ \hline
+2100    & SUNAB/SULAB     & 1905,0--1910,0 & 1905,0--1910,0 & 5   & TDD \\
+        & Hi3G            & 1910,0--1915,0 & 1910,0--1915,0 & 5   & TDD \\
+        & Telenor         & 1915,0--1920,0 & 1915,0--1920,0 & 5   & TDD \\
+        & Telenor         & 1920,3--1940,1 & 2110,3--2130,1 & 20  & 190 \\
+        & Hi3G            & 1940,1--1959,9 & 2130,1--2149,9 & 20  & 190 \\
+        & SUNAB/SULAB     & 1959,9--1979,7 & 2149,9--2169,7 & 20  & 190 \\ \hline
+2300 	& Teracom	  & 2300,0--2380,0 & 2300,0--2380,0 & 80  & TDD \\ \hline
+2600    & Net4Mobility    & 2500,0--2520,0 & 2620,0--2640,0 & 20  & 120 \\
+        & Hi3G            & 2520,0--2530,0 & 2640,0--2650,0 & 10  & 120 \\
+        & TeliaSonera     & 2530,0--2550,0 & 2650,0--2670,0 & 20  & 120 \\
+        & Net4Mobility    & 2550,0--2570,0 & 2670,0--2690,0 & 20  & 120 \\
+        & Hi3G            & 2570,0--2620,0 & 2570,0--2620,0 & 50  & TDD \\ \hline
+3500    & Hi3G            & 3400,0--3500,0 & 3400,0--3500,0 & 100 & TDD \\
+        & Telia           & 3500,0--3620,0 & 3500,0--3620,0 & 120 & TDD \\
+        & Net4Mobility    & 3620,0--3720,0 & 3620,0--3720,0 & 80  & TDD \\
+        & Priv. nät       & 3720,0--3800,0 & 3720,0--3800,0 & 80  & TDD \\ \hline
 \end{longtable}
 
 MobiSIR är Trafikverkets system för GSM-R som används för
