@@ -5,18 +5,19 @@
 \vfill
 \vspace*{4cm}
 
+%% Logobilden här
 \hspace{-30.2mm}\includegraphics[width=\paperwidth]{logo/rubrikbild}
 
+%% Rubriken här
 \begin{flushright}
 	\Huge{\bfseries{\TitleText}} \\[3mm]
 	\Large{\bfseries{\SubtitleText}}\\[3mm]
         \normalsize{\DokVersion}
 \end{flushright}
 
-\listoftodos
+%\listoftodos % Används bara under dev
 
 \newpage
-
 
 %%% Tryckortssidan
 
@@ -36,7 +37,7 @@
 	\Linkhome               \\
 	Karlholmsbruk           \\
 	                        \\
-	Datum:\DokumentDatum    \\
+	Datum: \DokumentDatum   \\
 	Licens: \Licens
 \end{tabular}
 \normalsize
@@ -53,8 +54,8 @@
 
 \fancyhead[RE]{\small\nouppercase{\leftmark}}      % Chapter in the right on even pages
 \fancyhead[RO]{\small\nouppercase{\rightmark}}     % Section in the left on odd pages
-\fancyhead[LE]{\small\nouppercase{\rightmark}}      % Chapter in the right on even pages
-\fancyhead[LO]{\small\nouppercase{\leftmark}}     % Section in the left on odd pages
+\fancyhead[LE]{\small\nouppercase{\rightmark}}     % Chapter in the right on even pages
+\fancyhead[LO]{\small\nouppercase{\leftmark}}      % Section in the left on odd pages
 
 \fancyfoot[RE]{\small Radiohandboken}
 \fancyfoot[RO]{\small \DokVersion}
@@ -65,7 +66,6 @@
 
 \pagestyle{fancy}
 
-
 %%% Horungekontroll
 \widowpenalty=9999
 \clubpenalty=9999
@@ -73,18 +73,5 @@
 %	\setlength{\headsep}{1em}2
 
 \clearpage
-
-%%% Innehållsförteckning
-\setcounter{secnumdepth}{5}
-\setcounter{tocdepth}{5}
-
-\newpage
-
-\tableofcontents
-
-\newpage
-
-\setlength{\parskip}{1.2 ex}
-\setlength{\parindent}{0 pt}
 
 %% Hämta in underfilerna i rätt ordning

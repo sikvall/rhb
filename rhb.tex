@@ -65,10 +65,24 @@ a4paper, twoside]{book}                % De viktigaste inställningarna för dok
 
 \begin{document}
 
+%% De inledande rubrikerna ska vara satta annorlunda
+\renewcommand\thesection{\Roman{section}}
+
 \input{tex/inledning}             % Förstasida, tryckortssida och innehållsförteckning
-\input{tex/forord}                % Förord att uppdatera för respektive upplaga
 
 \pagestyle{fancy}
+
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+\tableofcontents
+
+\setlength{\parskip}{1.2 ex}
+\setlength{\parindent}{0 pt}
+
+\input{tex/forord}                % Förord att uppdatera för respektive upplaga
+
+%% De inledande rubrikerna ska vara satta annorlunda
+\renewcommand\thesection{\arabic{section}}
 
 \input{tex/kap-reglemente}        % Lagar, regler mm
 \input{tex/kap-trafik}            % Hur radiotrafik genomförs
