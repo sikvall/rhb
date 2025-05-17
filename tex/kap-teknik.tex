@@ -25,9 +25,14 @@ Definitionen på decibel är enligt följande:
 
 där dB är antalet decibel, $P_{up}$ är effekten som kommer ut ur något och
 $P_{in}$ är effekten som går in. Detta något kan vara en förstärkare, en
-dämpare, en kabel eller nästan vad som helst som radiosignalen går igenom.
+dämpare, en kabel eller nästan vad som helst som radiosignalen går igenom,
+till och med fria rymden eller i luften.
 
-Som minnesregel kan man minnas att +3 dB betyder att effekten dubblats. Om vi
+Decibel är alltså ett mått på skillnaden i effekt före och efter ett visst
+steg i en {\it signalkedja}. Är den positiv finns det mer signal efter steget
+än före. Är det negativ finns det mindra signal än du hade innan.
+
+Som minnesregel kan man minnas att 3 dB betyder att effekten dubblats. Om vi
 matar in 10 W i en förstärkare och får ut 20 W är förstärkningen 3 dB. På
 samma sätt är -3 dB en förlust av 50 \% så om vi har en kabel med förlusten 3
 dB för en viss frekvens så tappar vi halva effekten i kabeln.
@@ -46,8 +51,9 @@ dB för en viss frekvens så tappar vi halva effekten i kabeln.
 
 \subsection{Effekt i dBW och dBm}
 
-Effekter anges i W eller i decibel relaterat till 1 mW (dBm) eller relaterat
-1W (dBW). Tabell över effekt och decibelwatt nedan:
+Effekter anges i W eller i decibel relaterat till 1 mW (dBm) dvs ''decibel
+milliwatt'' eller relaterat 1W (dBW) ''decibel watt''. Tabell över effekt och
+decibelwatt nedan:
 
 \begin{table}[H]
 \centering
@@ -70,6 +76,18 @@ antennens riktverkan. En riktantenn har en (eller några få) riktningar som den
 fungerar mycket bra i, övriga riktningar är den sämre än en rundstrålande
 antenn.
 
+Ingen antenn kan skapa energi som inte matats in eller tagits mot, den kan
+däremot fokusera energin i vissa riktningar (eller från vissa riktningar)
+genom att offta känsligheten i andra riktningar. Det är detta man menar med
+antennvinst. Det innebär också att en stor antennvinst också innebär en smal
+öppningsvinkel och antennen blir mycket riktningskänslig.
+
+Exempel på riktantenner är t.ex. Yagi-Uda som är vanliga på VHF och högre
+frekvenser. Från mitten av UHF-bandet ser man också parabolernas antågande som
+kan ha extremt höga antennvinster och därmed väldigt smala
+öppningsvinklar. Dessa är vanliga exempelvis på 1296 MHz för ''månstuds''
+eller EME ({\it earth-moon-earth}), som det också kallas.
+
 En rundstrålande antenn strålar lika mycket i alla riktningar i ett plan.
 Detta gäller exempelvis en vertikalt monterad dipol eller kvartsvågsantenn på
 ett jordplan.
@@ -80,7 +98,7 @@ professionella radiosammanhang använder man dock en tänkt teoretisk antenn som
 strålar exakt likadant i alla riktningar, inte bara i planet utan även uppåt
 och nedåt. En sådan antenn finns egentligen bara i teorin men gör det möjligt
 att skapa ett referensmått för just riktverkan, denna teoretiska antenn kallas
-för ''isotrop antenn'' och då använder man beteckningen dBi där i på slutet står
+för {\it isotrop antenn} och då använder man beteckningen dBi där i på slutet står
 för just isotrop antenn.
 
 Skillnaden i de båda måtten kan räknas om enligt följande:
@@ -90,19 +108,55 @@ Skillnaden i de båda måtten kan räknas om enligt följande:
 \text{dBd} &= \text{dBi} - 2,15
 \end{align}
 
+\subsection{Anntenvinst och effekter i ERP och EIRP}
+När man anger uteffekt på en radiosändare är det också vanligt att man
+relaterar det till den strålningen som skulle kommit från dipol, även om en
+helt annan antenn används.
+
+I de fall som man exempelvis har specificerat en max effekt för ett
+amatörradioband som exempelvis för instegscertifikatet där man begränsat
+effekten till 25\,W ERP på 2\,m-bandet så innebär det att om man använder en
+antenn med högre antennvinst än en dipol (som har 0\,dBd eller 2,15\,dBi)
+måste man sänka radions effekt i motsvarande grad. Förlusterna i matarkabeln
+får räknas bort.
+
+I andra fall som exempelvis 60\,m-bandet anges i villkoren från PTS
+användningen med en maximal effekt om 15\,W EIRP vilket innebär att effekten
+jämförs mot vad en isotrop antenn skulle ha strålat. En isotrop antenn är en
+antenn som strålar verkligen lika mycket i alla riktningar, som en badboll,
+alltså inte bara runt hela horisonten utan även uppåt och nedåt. Sådana
+antenner finns inte men de är praktiska för att räkna på
+utbredningsförhållanden, antenner och effekter i fältstyrkor.
+
+Det innebär att om du opererar på 60\,m med en dipol som ju i teorin har en
+antennvinst på 2,15\,dBi så behöver du dra ner radions effekt med en faktor
+1,64 eller 2,15\,dB vilket betyder att du får maximalt sända med ca 9\,W ut
+från radion (om du har en kort och i stort sett förslustfri matarledning till
+den).
+
+\clearpage
+
 \section{S-värden, signalvärde, S-meter}
 
 Signalstyrkan i amatörradio uttrycks oftast som S-värden. Dessa fås i regel
-genom nivån på AGC hos mottagaren. Därför ser man sällan utslag vid riktigt
-låga signaler.
+genom nivån på AGC\footnote{AGC betyder automatic gain control, en funktion
+hos i princip alla moderna mottagare för att justera förstärkningen i
+mottagarsteget till en korrekt nivå. Baserat på denna mätpunkt kan man även
+mäta hur stark signalen är på en inställd frekvens.} hos mottagaren. Därför
+ser man sällan utslag vid riktigt låga signaler.
 
 Standard kalibrering för S-metern är enligt skalan i tabellen
 \ref{tab:s-varden}. Som syns kalibreras tabellen olika för om man är under
 30\,MHz (kortvåg och lägre frekvenser) och skillnaden är 20\,dB med högre
 känslighet över 30\,MHz dvs VHF och uppåt.
 
+Man kan inte fullständigt lita på tabellen och olika radiotillverkare har av
+olika skäl valt att jobba lite olika med S-mätarskalan. Vissa modeller från
+ICOM exempelvis använder 3\,dB mellan skalstrecken och inte 6\,dB som är det
+som det borde vara vilket är bra att vara uppmärksam på.
 
-\begin{table}[ht]
+
+\begin{table}[H]
 \centering
 \begin{tabular}{r|rr|rr||r|rr|rr}
       & \multicolumn{2}{c|}{\textbf{$<$ 30 MHz}} &
@@ -269,13 +323,17 @@ betyder att att grannkanalen kan få ungefär 17\,dB lägre signal under sändni
 vilket fortfarande inte är enormt bra. Carson var för övrigt den som faktiskt
 uppfan SSB-modulationen.
 
-\begin{center}
-\begin{tabular}{rrrr}
-	Deviation & Modulation & Bandbredd & Kanaldelning \\ \hline
-	    5 kHz &      3 kHz &    16 kHz &       25 kHz \\
-	  2.5 kHz &      3 kHz &    11 kHz &     12.5 kHz
-\end{tabular}
-\end{center}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{lrrrr}
+    \bf Systemtyp             & \bf Deviation & \bf Modulation & \bf Bandbredd & \bf Kanaldelning \\ \hline
+Vanlig (äldre) komradio       & 5 kHz         & 3 kHz          & 16 kHz        & 25 kHz           \\
+Smalbandig (nyare) komradio   & 2.5 kHz       & 3 kHz          & 11 kHz        & 12.5 kHz         \\
+Rundradio (sveriges radio P1) & 75 kHz        & 16 kHz         & 182 kHz       & 200 kHz          \\
+  \end{tabular}
+  \caption{Några vanliga FM-modulationers egenskaper}
+\end{table}
+
 
 \section{Vågutbredning}
 \label{vågutbredning}
@@ -290,14 +348,15 @@ för lägre frekvenser kan också rymdvågsutbredning ske.
 \index{markvåg}
 
 Markvågen är den vanligaste radioutbredningen vi tänker oss, här får man hjälp
-av att placera antennan över terrängen och på hustak för att få så fri sik som
-möjligt vilket ökar längden på markvågsutbredningen. Det är också den
+av att placera antennan över terrängen och på hustak för att få så fri sikt
+som möjligt vilket ökar längden på markvågsutbredningen. Det är också den
 utbredning som handhållna radioapparater nyttjar men i och med att man som
 regel då kommer vara mycket nära marken blir oftast utbredningen begränsad.
 
-I närheten av vatten kan markvågen ofta gå längre än till lands. Det är mindre
-saker som hindrar den och skillnaden i vattnets och luftens dielektricitet gör
-att radiosignalen kan följa ytan lite längre innan den klingat av.
+I närheten av vatten kan markvågen ofta gå längre än till lands. Det är färre
+hinder till sjöss som hindrar signalen samt skillnaden i vattnets och luftens
+dielektricitet gör att radiosignalen kan följa ytan lite längre innan den
+klingat av.
 
 \subsection{Rymdvåg}
 \index{rymdvåg}
@@ -308,14 +367,14 @@ kallade joner. Dessa består av fria elektroner och ibland också protoner. Fria
 elektroner är ju som vi vet kännetecknet för ett ledande material så även om
 luften är mycket tunn där uppe så uppstår ändå en elektriskt ledande plasma.
 
-En sådan kan fungera som en spegel för radiosignaler som sänds mot dem och
-beroende på hur kraftig joniseringen är finns det en högsta frekvens som
+Ett sådant skikt kan fungera som en spegel för radiosignaler som sänds mot det
+och beroende på hur kraftig joniseringen är finns det en högsta frekvens som
 fortfarande reflekteras medan frekvenser över denna går igenom jonosfären och
 knappt reflekteras alls. Denna högsta frekvens kallas för MUF vilket utläses
-Maximum Useable Frequency, then högsta användbara frekvensen (för
+{\it Maximum Useable Frequency}, then högsta användbara frekvensen (för
 jonosfärreflektion).
 
-MUF påverka sockså av ett par andra viktiga saker, dels är det dagens längd av
+MUF påverkas också av ett par andra viktiga saker, dels är det dagens längd av
 dygnet, sommartid kan man förvänta sig en högre MUF på grund av kraftigare
 jonisering, på vintern lägre. Eftersom solen har sina solfläcksmaximum i
 11-årscykler så har vi också en variation, vid solfläcksmaximum kan
@@ -362,8 +421,8 @@ skandinavien och norra europa på NVIS.
 Ibland kan E-skiktet i jonosfären joniseras och då kan det bli riktigt fin
 vågutbredning även på 6\,m bandet och förstås de övre frekvenserna på
 kortvågen där man kan få riktigt bra långväga förbindelser. Sådant kallas för
-''sporadiskt E'' när det uppträder och det kan vara några timmar eller kortare
-stunder.
+''sporadiskt E'' när det uppträder och det kan vara några timmar eller över
+dagen.
 
 \subsection{Troposfärutbredning}
 \index{tropo}
@@ -373,7 +432,8 @@ Under vissa väderförhållanden kan man få ett fenomen som kallas för inversi
 Normalt avtar temperaturen i atmosfären med ungefär 1$^\circ$ per 100 meter
 men under dessa speciella förhållanden finner man plötsligt ett varmare
 luftskikt längre upp. När detta inträffar kan radiosignalerna studsa på detta
-om de kommer in med rätt vinkel.
+om de kommer in med rätt vinkel eller ibland reflekteras tillbaka mot marken
+på ett sätt så att markvågen kan nå mycket längre än normalt.
 
 Detta kallas i dagligt tal för ''tropo'' och är i vissa sammanhang som för
 radiolänk i tropiska länder ett stort problem men för radioamatörer är det
@@ -451,34 +511,6 @@ märkligt. Det gör att smalbandig kommunikation har ett bättre läge pga lägr
 bruseffekt i mottagaren.
 
 
-\section{Return loss och VSWR}
-
-Return loss och VSWR anger samma sak. VSWR är vanligare inom amatörradio medan
-man i profesionella sammanhang föredrar att prata om return loss. RL är
-storleken på den reflekterade signalen i förhållande till den framåtgående
-signalen. Return loss mäts alltså i dB enligt formeln $10\log(P_F/P_R)$ där
-$P_F$ är den framåtgående effekten (forward) och $P_R$ är den reflekterade
-signalen i retur.
-
-\begin{longtable}{rrr|rrr|rrr}
-	\caption{VSWR och return loss}\\
-		\textbf{RL} & \textbf{VSWR} & \textbf{\%} & \textbf{RL} & \textbf{VSWR} & \textbf{\%} & \textbf{RL} & \textbf{VSWR} & \textbf{\%} \\ \hline
-	\endfirsthead
-	\textbf{RL} & \textbf{VSWR} & \textbf{\%} & \textbf{RL} & \textbf{VSWR} & \textbf{\%} & \textbf{RL} & \textbf{VSWR} & \textbf{\%} \\ \hline 	\endhead
-	          1 &         17,39 &       79,43 &           8 &          2,32 &       15,85 &          20 &          1,22 &        1,00 \\
-	          2 &          8,72 &       63,10 &          10 &          1,92 &       10,00 &          22 &          1,17 &        0,63 \\
-	          3 &          5,85 &       50,12 &          12 &          1,67 &        6,31 &          24 &          1,13 &        0,40 \\
-	          4 &          4,42 &       39,81 &          14 &          1,50 &        3,98 &          25 &          1,12 &        0,32 \\
-	          5 &          3,57 &       31,62 &          15 &          1,43 &        3,16 &          26 &          1,11 &        0,25 \\
-	          6 &          3,01 &       25,12 &          16 &          1,38 &        2,51 &          28 &          1,08 &        0,16 \\
-	          7 &          2,61 &       19,95 &          18 &          1,29 &        1,58 &          30 &          1,07 &        0,10
-\end{longtable}
-
-Acceptabelt RL är ungefär från 12\,dB, riktigt bra från 20 dB och de bästa
-komponenterna ligger runt 30\,dB. Många antenntuners som går med automatik
-startar avstämningen först när VSWR är 1:2 eller sämre som motsvarar ca
-10\,dB\,RL.
-
 \section{CTCSS subtoner}
 
 Inom amatörradio används ofta pilottoner (subtoner) som
@@ -489,15 +521,15 @@ sub-kanaler. De som används är följande toner och frekvenser:
 \begin{table}[H]
 \centering
 \begin{tabular}{rr|rr|rr|rr|rr}
-\textbf{Nr} & \textbf{Frek} & \textbf{Nr} & \textbf{Frek} &\textbf{Nr} & \textbf{Frek} &\textbf{Nr} & \textbf{Frek} &\textbf{Nr} & \textbf{Frek} \textbf{Nr} \\ \hline
-	 1 &  67,0 &  2 &  69,3 &  3 &  74,4 &  4 &  77,0 &  5 &  79,7 \\ \hline
-	 6 &  82,5 &  7 &  85,4 &  8 &  88,5 &  9 &  91,5 & 10 &  94,8 \\ \hline
-	11 &  97,4 & 12 & 100,0 & 13 & 103,5 & 14 & 107,2 & 15 & 110,9 \\ \hline
-	16 & 114,8 & 17 & 118,8 & 18 & 123,0 & 19 & 127,3 & 20 & 131,8 \\ \hline
-	21 & 136,5 & 22 & 141,3 & 23 & 146,2 & 24 & 151,4 & 25 & 156,7 \\ \hline
-	26 & 162,2 & 27 & 167,9 & 28 & 173,8 & 29 & 179,9 & 30 & 186,2 \\ \hline
-	31 & 192,8 & 32 & 203,5 & 33 & 210,7 & 34 & 218,1 & 35 & 225,7 \\ \hline
-	36 & 233,6 & 37 & 241,8 & 38 & 250,3 &    &       &    &
+\textbf{Nr} & \textbf{Frekv.} & \textbf{Nr} & \textbf{Frekv.} & \textbf{Nr} & \textbf{Frekv.} & \textbf{Nr} & \textbf{Frekv.} & \textbf{Nr} & \textbf{Frekv.} \\ \hline
+	 1  & 67,0            & 2           & 69,3            & 3           & 74,4            & 4           & 77,0            & 5           & 79,7            \\ \hline
+	 6  & 82,5            & 7           & 85,4            & 8           & 88,5            & 9           & 91,5            & 10          & 94,8            \\ \hline
+	11  & 97,4            & 12          & 100,0           & 13          & 103,5           & 14          & 107,2           & 15          & 110,9           \\ \hline
+	16  & 114,8           & 17          & 118,8           & 18          & 123,0           & 19          & 127,3           & 20          & 131,8           \\ \hline
+	21  & 136,5           & 22          & 141,3           & 23          & 146,2           & 24          & 151,4           & 25          & 156,7           \\ \hline
+	26  & 162,2           & 27          & 167,9           & 28          & 173,8           & 29          & 179,9           & 30          & 186,2           \\ \hline
+	31  & 192,8           & 32          & 203,5           & 33          & 210,7           & 34          & 218,1           & 35          & 225,7           \\ \hline
+	36  & 233,6           & 37          & 241,8           & 38          & 250,3           &             &                 &             & 
 \end{tabular}
 \caption{CTCSS-toner, nummer och frekvens}
 \end{table}
@@ -585,18 +617,42 @@ denna som använder sig av Open Streetmaps,
 \url{https://f5len.org/tools/locator} men det finns naturligtvis många andra
 alternativ, inte minst som appar till telefoner och surfplattor.
 
+\clearpage
+
 \section{Missanpassning}
+
+Return loss och VSWR anger samma sak. VSWR är vanligare inom amatörradio medan
+man i profesionella sammanhang föredrar att prata om return loss. RL är
+storleken på den reflekterade signalen i förhållande till den framåtgående
+signalen. Return loss mäts alltså i dB enligt formeln $10\log(P_F/P_R)$ där
+$P_F$ är den framåtgående effekten (forward) och $P_R$ är den reflekterade
+signalen i retur.
+
+Acceptabelt RL är ungefär från 14\,dB eller VSWR 1:1,5, riktigt bra från 20 dB
+(VSWR 1:1,2) och de bästa komponenterna ligger runt 30\,dB (VSWR
+1:1,07). Många antenntuners som går med automatik startar avstämningen först
+när VSWR är 1:2 eller sämre som motsvarar ca 10\,dB\,RL.
+
+
+\subsection{Vad händer vid missanpassning?}
 
 För maximal överföring av radioenergi från en sändare till en antenn eller
 från antennen till en mottagare krävs att man har en bra anpassning mellan de
-olika delarna. Dessa brukar vara tre saker som behöver ''matchas'' med varandra
-så att man har en snarlik impedans hos alla tre.
+olika delarna. Dessa brukar vara tre saker som behöver ''matchas'' med
+varandra så att man har en snarlik impedans hos alla tre.
 
 Dessa är radioapparaten, transmissionsledningen och antennen. I de flesta fall
 är radioapparaten en sändtagare som kan växla mellan sändning och mottagning.
 Transmissionsledningen är vanligtvis någon form av koaxialkabel som har en så
 kallad ''karaktäristisk impedans'' som i dessa sammanhang vanligtvis är
 50\,$\Omega$.
+
+Om dessa inte matchar med varandra får man energiförluster pga signalerna
+reflekteras tillbaka till sändaren eller antennen vid mottagning. Det ger
+sämre effektivitet och är det riktigt illa så kan slutsteg på radion ta stryk
+vid sändning. Retureffekten kommer nämligen tillbaka och värmer upp
+slutstegstransistorn samt kan orsaka impedansvridning som gör att
+slutstegstransistorn hamnar i ett mycket ogynnsamt läge.
 
 \subsection{Stående våg}
 
@@ -638,13 +694,15 @@ Där RL är return loss i dB och VSWR är ståendevågförhållandet, exempelvis
 
 \begin{table}[H]
 \centering
-\begin{tabular}{rr|rr|rr}
-	\textbf{RL} & \textbf{VSWR} & \textbf{RL} & \textbf{VSWR} & \textbf{RL} & \textbf{VSWR} \\ \hline
-	         40 &        1:1,02 &          18 &        1:1,29 &           8 &        1:2,32 \\
-	         35 &        1:1,04 &          16 &        1:1,38 &           6 &        1:3,01 \\
-	         30 &        1:1,07 &          14 &        1:1,50 &           4 &        1:4,42 \\
-	         25 &        1:1,12 &          12 &        1:1,67 &           2 &        1:8,72 \\
-	         20 &        1:1,22 &          10 &        1:1,92 &           1 &        1:17,4
+\begin{tabular}{rrr|rrr|rrr}
+	\textbf{RL} & \textbf{VSWR} & \textbf{\%} & \textbf{RL} & \textbf{VSWR} & \textbf{\%} & \textbf{RL} & \textbf{VSWR} & \textbf{\%} \\ \hline
+	          1 &         17,39 &       79,43 &           8 &          2,32 &       15,85 &          20 &          1,22 &        1,00 \\
+	          2 &          8,72 &       63,10 &          10 &          1,92 &       10,00 &          22 &          1,17 &        0,63 \\
+	          3 &          5,85 &       50,12 &          12 &          1,67 &        6,31 &          24 &          1,13 &        0,40 \\
+	          4 &          4,42 &       39,81 &          14 &          1,50 &        3,98 &          25 &          1,12 &        0,32 \\
+	          5 &          3,57 &       31,62 &          15 &          1,43 &        3,16 &          26 &          1,11 &        0,25 \\
+	          6 &          3,01 &       25,12 &          16 &          1,38 &        2,51 &          28 &          1,08 &        0,16 \\
+	          7 &          2,61 &       19,95 &          18 &          1,29 &        1,58 &          30 &          1,07 &        0,10
 \end{tabular}
 \caption{Stående våg och return loss}
 \label{tab:vswr-rl}

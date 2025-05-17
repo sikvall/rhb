@@ -77,12 +77,12 @@ a4paper, twoside]{book}                % De viktigaste inställningarna för dok
 \tableofcontents
 
 \setlength{\parskip}{1.2 ex}
-\setlength{\parindent}{0 pt}
+\setlength{\parindent}{0 pt}XF
 
 \input{tex/forord}                % Förord att uppdatera för respektive upplaga
 
 %% De inledande rubrikerna ska vara satta annorlunda
-\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesection{\arabic{chapter}.\arabic{section}}
 
 \input{tex/kap-reglemente}        % Lagar, regler mm
 \input{tex/kap-trafik}            % Hur radiotrafik genomförs
