@@ -9,5 +9,3 @@ all:
 clean:
 	rm -f *.log *.aux *.out *.toc pdf/*.pdf
 	rm -f *.tdo *.tar *.gz *.bz2 *.idx *.ilg *.ind *.lof *.lot
-
-
