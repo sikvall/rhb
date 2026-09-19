@@ -973,8 +973,8 @@ G &       &       &       &        & 16 546 & 18 843 & 22 177 & 25 118 \\
 \section{Flyg VHF}
 
 Flygets VHF använder amplitudmodulation AM och har lite olika
-bandbredd beroende på vilkent tillämpning man har och vilket syfte
-kanalen har. Det förekommer alltså både 25~kHz, 12,5~kHz samt 8,3~kHz
+bandbredd beroende på vilken tillämpning man har och vilket syfte
+kanalen har. Det förekommer alltså både 25~kHz, 12,5~kHz samt 8,33~kHz
 som kanske är lite udda men det är när man delat en 25~kHz kanal i 3.
 
 Användningen av AM är egentligen av två skäl, dels av historiska skäl
@@ -987,13 +987,13 @@ radiooperatör kan därmed lättare förstå vad som sägs vilket ökar
 säkerheten.
 
 \begin{longtable}{rlll}
-  \caption{Flygfrekvenser VHF sorterade på frekvens}\\
+  \caption{Flygfrekvenser VHF sorterade på ort}\\
   \textbf{Frekvens} & \textbf{ort} & \textbf{Län} & \textbf{Benämning} \\ \hline
   \endhead
   121.500 & Hela Sverige & ---             & Nödfrekvens (Guard)             \\
   123.100 & Hela Sverige & ---             & Search \& Rescue (SAR)          \\
   123.450 & Hela Sverige & ---             & Air-to-Air (pilotchat)          \\ \hline
-  123.650 & Alingsås     & Västra Götaland & Alingsås Radio                  \\ 
+  123.650 & Alingsås     & Västra Götaland & Alingsås Radio                  \\
   116.400 & Alma         & Stockholm       & ALM VOR                         \\
   109.350 & Arlanda      & Stockholm       & ILS 01R                         \\
   109.550 & Arlanda      & Stockholm       & ILS 08                          \\
@@ -1104,7 +1104,7 @@ säkerheten.
   122.255 & Örnsköldsvik & Västernorrland  & Örnsköldsvik AFIS               \\
   114.650 & Östersund    & Jämtland        & OSS VOR/DME                     \\
   135.655 & Östersund    & Jämtland        & Östersund TWR                   \\
-  132.955 & Östergötland & Östergötland    & Östgöta APP                     \\  
+  132.955 & Östergötland & Östergötland    & Östgöta APP                     \\
   \end{longtable}
 
 
@@ -1118,34 +1118,74 @@ HN = natt, HJ = dagtid, H24 alltid. Primära frekvenser markerade med *.
 
 \begin{table}[H]
 \centering
-\begin{tabular}{llrrr}
-	\textbf{Område} & \textbf{Kod} & \textbf{HN} & \textbf{H24} & \textbf{HJ} \\ \hline
-	Nordatlanten    & NAT          &        2872 &         5598 &      *10051 \\
-	                &              &        2889 &         5616 &       11279 \\
-	                &              &        2962 &         5649 &       11309 \\
-	                &              &        2971 &        *6604 &       11336 \\
-	                &              &        3016 &         6622 &      *13270 \\
-	                &              &        3476 &         6628 &       13291 \\
-	                &              &       *3485 &         8825 &       13306 \\
-	                &              &        4675 &         8831 &       17946 \\
-	                &              &             &         8864 &             \\
-	                &              &             &         8879 &             \\
-	                &              &             &         8891 &             \\
-	                &              &             &         8906 &             \\ \hline
-	Europa          & EUR          &       *3413 &        *5505 &       10084 \\
-	                &              &        3479 &         5661 &      *13264 \\
-	                &              &             &         6598 &       13288 \\
-	                &              &             &        *8957 &       17961 \\ \hline
-	                &              &             &              &
+\caption{VOLMET på HF (ingår inte i NAT-/EUR-familjerna)}
+\label{tab:hf-volmet}
+\small
+\begin{tabular}{@{}llll@{}}
+\hline
+\textbf{Station} & \textbf{HN} & \textbf{H24} & \textbf{HJ} \\
+\hline
+Shannon VOLMET
+  & 3413 & 5505, 8957 & 13264 \\
+New York / Gander VOLMET
+  & 3485 & 6604, 10051 & 13270 \\
+\hline
 \end{tabular}
-\caption{Flygets frekvenser på HF}
 \end{table}
+
+
+\begin{table}[H]
+\centering
+\caption{Flygets HF-frekvenser, NAT-familjer och EUR-MWARA}
+\begin{tabular}{@{}lllp{55mm}@{}}
+\hline
+\textbf{Område} & \textbf{Familj} & \textbf{Frekvenser (kHz)} & \textbf{Anmärkning} \\
+\hline
+NAT & A
+  & 3016, 5598, 8906, 13306, 17946
+  & Södra rutterna ca 43N--47N.
+    Gander, New York, Santa Maria, Shanwick \\
+NAT & B
+  & 2899, 5616, 8864, 13291, 17946
+  & Centrala rutter 47N--64N.
+    Gander, Iceland, Shanwick \\
+NAT & C
+  & 2872, 5649, 8879, 11336, 13306, 17946
+  & Centrala rutter 47N--64N.
+    Gander, Iceland, Shanwick \\
+NAT & D
+  & 2971, 4675, 8891, 11279, 13291, 17946
+  & Norra rutter över 62°N som tex
+    Bodø, Gander, Iceland, Shanwick \\
+NAT & E
+  & 2962, 6628, 8825, 11309, 13354, 17946
+  & Taktisk tilldelning NY/Santa Maria.
+    13354 delas med RDARA 5 och 7 \\
+NAT & F
+  & 3476, 6622, 8831, 13291, 17946
+  & Taktisk, Gander/Shanwick \\
+\hline
+EUR & A
+  & 3479, 5661, 6598, 10084, 13288, 17961
+  & MWARA Europa.  \\
+\hline
+\end{tabular}
+\end{table}
+
+Delade NAT-frekvenser: 13306~(A+C), 13291~(B+D+F), 17946~(alla familjer A--F).
+Familj~H (RDARA, Santa Maria FIR) är 3491 och 6667~kHz och hör inte till MWARA-familjerna ovan.
+
+Typisk bandanvändning (ITU App.~27 / NAT Doc~003):
+3 och 6,6~MHz natt (HN), 5,6~MHz oftast H24, 9 och 11,3~MHz dag (HJ),
+13~MHz och högre dag eller efter behov (HO).
+Exakt passning styrs av Shanwick/Gander efter utbredning, inte av fasta stjärnmarkeringar.
+
 
 \subsection{Stockholm Radio HF flygfrekvenser}
 
 \begin{longtable}{rcll}
-  \textbf{Frekv. [kHz]} & 
-  \textbf{Mode}         & 
+  \textbf{Frekv. [kHz]} &
+  \textbf{Mode}         &
   \textbf{Tider} &
   \textbf{Beskrivning} \\ \hline
   \endhead
