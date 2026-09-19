@@ -973,6 +973,143 @@ G &       &       &       &        & 16 546 & 18 843 & 22 177 & 25 118 \\
 \section{Flyg VHF}
 \todo{FlygVHF}
 
+Flygets VHF använder amplitudmodulation AM och har lite olika
+bandbredd beroende på vilkent tillämpning man har och vilket syfte
+kanalen har. Det förekommer alltså både 25~kHz, 12,5~kHz samt 8,3~kHz
+som kanske är lite udda men det är när man delat en 25~kHz kanal i 3.
+
+Användningen av AM är egentligen av två skäl, dels av historiska skäl
+eftersom flygradion är en av de äldsta tillämpningarna av
+kommunikationsradio på detta frekvensband men också för att om två
+sänder samtidigt på FM får en mottagare stor svårighet att särskilja
+de båda signalerna och det går inte alls om de är lika starka. AM
+däremot så hör man som regel båda rösterna överlagrade och en skicklig
+radiooperatör kan därmed lättare förstå vad som sägs vilket ökar
+säkerheten.
+
+\begin{longtable}{rlll}
+  \caption{Flygfrekvenser VHF sorterade på frekvens}\\
+  \textbf{Frekvens} & \textbf{ort} & \textbf{Län} & \textbf{Benämning} \\ \hline
+  \endhead
+  121.500 & Hela Sverige & ---             & Nödfrekvens (Guard)             \\
+  123.100 & Hela Sverige & ---             & Search \& Rescue (SAR)          \\
+  123.450 & Hela Sverige & ---             & Air-to-Air (pilotchat)          \\ \hline
+  123.650 & Alingsås     & Västra Götaland & Alingsås Radio                  \\ 
+  116.400 & Alma         & Stockholm       & ALM VOR                         \\
+  109.350 & Arlanda      & Stockholm       & ILS 01R                         \\
+  109.550 & Arlanda      & Stockholm       & ILS 08                          \\
+  109.900 & Arlanda      & Stockholm       & ILS 01L                         \\
+  110.100 & Arlanda      & Stockholm       & ILS 26                          \\
+  110.700 & Arlanda      & Stockholm       & ILS 19R                         \\
+  111.350 & Arlanda      & Stockholm       & ILS 19L                         \\
+  116.000 & Arlanda      & Stockholm       & ARL VOR/DME                     \\
+  118.505 & Arlanda      & Stockholm       & Arlanda TWR (01L/19R, CTR West) \\
+  119.000 & Arlanda      & Stockholm       & Arlanda Arrival ATIS            \\
+  121.625 & Arlanda      & Stockholm       & Arlanda Departure ATIS          \\
+  121.700 & Arlanda      & Stockholm       & Arlanda GND                     \\
+  121.825 & Arlanda      & Stockholm       & Arlanda Clearance Delivery      \\
+  121.925 & Arlanda      & Stockholm       & Arlanda GND                     \\
+  121.975 & Arlanda      & Stockholm       & Arlanda GND                     \\
+  125.130 & Arlanda      & Stockholm       & Arlanda TWR (01R/19L)           \\
+  128.730 & Arlanda      & Stockholm       & Arlanda TWR (08/26, CTR East)   \\
+  122.730 & Arvidsjaur   & Norrbotten      & Arvidsjaur TWR/AFIS             \\
+  112.700 & Backa        & Västra Götaland & BAK VOR/DME                     \\
+  123.550 & Backamo      & Västra Götaland & Backamo Traffic                 \\
+  123.550 & Borgholm     & Kalmar          & Borglanda Radio                 \\
+  117.600 & Borlänge     & Dalarna         & BOR VOR/DME                     \\
+  127.305 & Borlänge     & Dalarna         & Borlänge TWR                    \\
+  123.525 & Borås        & Västra Götaland & Borås Radio (CTAF)              \\
+  118.105 & Bromma       & Stockholm       & Bromma TWR                      \\
+  116.800 & Dunker       & Södermanland    & DKR VOR                         \\
+  123.425 & Eksjö        & Jönköping       & Eksjö FK Radio                  \\
+  126.855 & Eskilstuna   & Södermanland    & Eskilstuna INFO/AFIS            \\
+  123.150 & Eslöv        & Skåne           & Eslöv Radio                     \\
+  122.100 & Gällivare    & Norrbotten      & Gällivare AFIS                  \\
+  124.680 & Göteborg     & Västra Götaland & Göteborg APP/CTL                \\
+  122.230 & Hagfors      & Värmland        & Hagfors INFO                    \\
+  130.105 & Halmstad     & Halland         & Halmstad TWR                    \\
+  117.500 & Harry        & Stockholm       & HAR VOR                         \\
+  122.980 & Hemavan      & Västerbotten    & Hemavan TWR/INFO                \\
+  123.600 & Hässleholm   & Skåne           & Hässleholm Radio                \\
+  123.550 & Höganäs      & Skåne           & Höganäs Traffic                 \\
+  115.800 & Jönköping    & Jönköping       & JON VOR/DME                     \\
+  118.255 & Jönköping    & Jönköping       & Jönköping TWR                   \\
+  111.600 & Kalmar       & Kalmar          & KAL VOR/DME                     \\
+  130.805 & Kalmar       & Kalmar          & Kalmar TWR                      \\
+  117.800 & Karlstad     & Värmland        & KSD VOR/DME                     \\
+  115.200 & Kiruna       & Norrbotten      & KRA VOR/DME                     \\
+  130.150 & Kiruna       & Norrbotten      & Kiruna TWR                      \\
+  122.155 & Kramfors     & Västernorrland  & Kramfors TWR/AFIS               \\
+  129.355 & Kristianstad & Skåne           & Kristianstad TWR                \\
+  123.350 & Landskrona   & Skåne           & Landskrona Radio                \\
+  110.300 & Landvetter   & Västra Götaland & ILS LOC 03 (SGG)                \\
+  114.600 & Landvetter   & Västra Götaland & LAV VOR/DME                     \\
+  118.375 & Landvetter   & Västra Götaland & Landvetter ATIS                 \\
+  118.605 & Landvetter   & Västra Götaland & Landvetter TWR                  \\
+  121.600 & Landvetter   & Västra Götaland & Landvetter Apron                \\
+  121.675 & Landvetter   & Västra Götaland & Clearance Delivery              \\
+  121.900 & Landvetter   & Västra Götaland & Landvetter GND                  \\
+  124.450 & Lidköping    & Västra Götaland & Lidköping AFIS                  \\
+  118.805 & Linköping    & Östergötland    & Saab TWR                        \\
+  113.400 & Ljungbyhed   & Skåne           & LJU VOR/DME                     \\
+  130.705 & Ljungbyhed   & Skåne           & Ljungbyhed TWR                  \\
+  115.100 & Luleå        & Norrbotten      & SLU VOR/DME                     \\
+  128.205 & Luleå        & Norrbotten      & Kallax TWR                      \\
+  121.850 & Malmen       & Östergötland    & Malmen GND                      \\
+  129.800 & Malmen       & Östergötland    & Malmen TWR                      \\
+  113.000 & Malmö        & Skåne           & SUP VOR/DME                     \\
+  118.805 & Malmö        & Skåne           & Sturup TWR                      \\
+  129.275 & Malmö        & Skåne           & Sturup ATIS                     \\
+  135.900 & Malmö        & Skåne           & Malmö CON/APP                   \\
+  129.855 & Mora         & Dalarna         & Mora AFIS                       \\
+  123.350 & Oskarshamn   & Kalmar          & Oskarshamn Radio                \\
+  118.380 & Pajala       & Norrbotten      & Pajala INFO                     \\
+  119.200 & Ronneby      & Blekinge        & Ronneby TWR                     \\
+  121.700 & Ronneby      & Blekinge        & Ronneby GND                     \\
+  128.450 & Ronneby      & Blekinge        & Ronneby CON/TCA                 \\
+  126.280 & Skavsta      & Södermanland    & Skavsta ATIS                    \\
+  127.705 & Skavsta      & Södermanland    & Skavsta TWR                     \\
+  113.400 & Skellefteå   & Västerbotten    & SKA VOR/DME                     \\
+  122.055 & Skellefteå   & Västerbotten    & Skellefteå TWR                  \\
+  123.750 & Stockholm    & Stockholm       & Stockholm Control / APP         \\
+  116.300 & Storuman     & Västerbotten    & SUM VOR/DME                     \\
+  123.550 & Strömstad    & Västra Götaland & Strömstad Traffic               \\
+  113.100 & Sundsvall    & Västernorrland  & SUN VOR/DME                     \\
+  127.400 & Sundsvall    & Västernorrland  & Sundsvall ATIS                  \\
+  129.555 & Sundsvall    & Västernorrland  & Sundsvall TWR                   \\
+  123.200 & Sunne        & Värmland        & Sunne Traffic                   \\
+  122.200 & Sveg         & Jämtland        & Sveg AFIS/INFO                  \\
+  119.055 & Säve         & Västra Götaland & Säve TWR                        \\
+  123.650 & Sövde        & Skåne           & Sövde Radio                     \\
+  117.100 & Tebby        & Stockholm       & TEB VOR/DME                     \\
+  118.205 & Tierp        & Uppsala         & Sweden Control (sektor)         \\
+  123.400 & Tierp        & Uppsala         & Tierp Radio                     \\
+  122.055 & Torsby       & Värmland        & Torsby INFO                     \\
+  122.725 & Trollhättan  & Västra Götaland & Trollhättan TWR                 \\
+  114.300 & Trosa        & Södermanland    & TRS VOR/DME                     \\
+  123.550 & Uddevalla    & Västra Götaland & Uddevalla Traffic               \\
+  114.100 & Umeå         & Västerbotten    & UME VOR/DME                     \\
+  119.805 & Umeå         & Västerbotten    & Umeå TWR                        \\
+  119.200 & Uppsala      & Uppsala         & Uppsala TWR                     \\
+  130.400 & Uppsala      & Uppsala         & Uppsala APP                     \\
+  134.200 & Uppsala      & Uppsala         & Stockholm TCA                   \\
+  122.555 & Vilhelmina   & Västerbotten    & Vilhelmina INFO                 \\
+  115.100 & Visby        & Gotland         & VSB VOR/DME                     \\
+  120.305 & Visby        & Gotland         & Visby TWR                       \\
+  112.800 & Västerås     & Västmanland     & ARS VOR/DME                     \\
+  130.605 & Västerås     & Västmanland     & Västerås TWR                    \\
+  118.155 & Växjö        & Kronoberg       & Växjö/Kronoberg TWR             \\
+  127.105 & Ängelholm    & Skåne           & Ängelholm TWR                   \\
+  120.280 & Örebro       & Örebro          & Örebro TWR                      \\
+  115.000 & Örnsköldsvik & Västernorrland  & OSK VOR/DME                     \\
+  122.255 & Örnsköldsvik & Västernorrland  & Örnsköldsvik AFIS               \\
+  114.650 & Östersund    & Jämtland        & OSS VOR/DME                     \\
+  135.655 & Östersund    & Jämtland        & Östersund TWR                   \\
+  132.955 & Östergötland & Östergötland    & Östgöta APP                     \\  
+  \end{longtable}
+
+
+
 \section{Flyg HF}
 \todo{Flyg HF}
 HN = natt, HJ = dagtid, H24 alltid. Primära frekvenser markerade med *.
