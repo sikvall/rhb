@@ -15,6 +15,8 @@ känna till.
 
 \section{Decibel}
 \index{decibel}
+\index{Bel}
+\index{decibel!omräkningsfaktor}
 
 Decibel är ett grundläggande begrepp inom radiovärlden och är i grunden en
 logaritmisk skala som bygger på tiologaritmen. Från början använde man
@@ -41,8 +43,6 @@ matar in 10\,W i en förstärkare och får ut 20\,W är förstärkningen 3\,dB. 
 samma sätt är -3 dB en förlust av 50 \% så om vi har en kabel med förlusten 3
 dB för en viss frekvens så tappar vi halva effekten i kabeln.
 
-\index{decibel!omräkningsfaktor}
-
 \begin{table}[h]
 \centering
 \begin{tabular}{rr|rr|rr|rr}
@@ -59,6 +59,8 @@ dB för en viss frekvens så tappar vi halva effekten i kabeln.
 \index{dBm} \index{dBW}
 \index{decibel!dBW}
 \index{decibel!dBm}
+\index{effekt!dBW}
+\index{effekt!dBm}
 
 Effekter anges i watt eller i decibel relaterat till en milliwatt, 1\,mW och skrivt som dBm dvs ''decibel
 milliwatt'' eller relaterat till 1\,W (dBW) ''decibel watt''. Tabell över effekt och
@@ -83,6 +85,14 @@ decibelwatt nedan:
 \index{decibel!dBd}
 \index{decibel!dBd}
 \index{decibel!dBi}
+\index{antennvinst}
+\index{dBi}
+\index{dBd}
+\index{isotrop antenn}
+\index{Yagi-Uda}
+\index{riktantenner}
+\index{EME}
+\index{månstuds}
 
 Riktantenner sägs ha en så kallad antennvinst och den berättar något om
 antennens riktverkan. En riktantenn har en (eller några få) riktningar som den
@@ -122,6 +132,12 @@ Skillnaden i de båda måtten kan räknas om enligt följande:
 \end{align}
 
 \subsection{Antennvinst och effekter i ERP och EIRP}
+\index{ERP}
+\index{EIRP}
+\index{effekt!ERP}
+\index{effekt!EIRP}
+\index{antennvinst!ERP}
+\index{antennvinst!EIRP}
 
 När man anger uteffekt på en radiosändare är det också vanligt att man
 relaterar det till den strålningen som skulle kommit från dipol, även om en
@@ -155,6 +171,7 @@ den).
 \index{signalstyrka}
 \index{signalvärde}
 \index{S-meter}
+\index{AGC}
 
 Signalstyrkan i amatörradio uttrycks oftast som S-värden. Dessa fås i regel
 genom nivån på AGC\footnote{AGC betyder automatic gain control, en funktion
@@ -182,6 +199,10 @@ som det borde vara vilket är bra att vara uppmärksam på.
 \subsection{Bandbredd olika modulationer}
 \index{modulation!bandbredd}
 \index{bandbredd}
+\index{NFM}
+\index{WFM}
+\index{bandbredd!NFM}
+\index{bandbredd!WFM}
 
 Olika modulationer upptar olika bandbredd. Detta är mycket viktigt att förstå
 när man ställer in sin radiostation. Detta gäller särskilt att beakta i
@@ -245,6 +266,11 @@ Sker detta mjukt är bandbredden låg, har man skarp in- eller urkoppling av
 bärvågen nyttjar man mer bandbredd.
 
 \subsubsection{Beräkna bandbredden för CW}
+\index{bandbredd!CW}
+\index{CW!stigtid}
+\index{A1A}
+\index{telegrafi}
+\index{morse}
 
 Bandbredden kan beräknas om vi känner brantheten på flankerna. Låt därför $t_r$ vara
 stigtiden från 10--90\,\% av signalens maxeffekt så kan man approximera bandbredden som
@@ -267,6 +293,8 @@ Givet en signal med stigtid 5\,ms får vi alltså en modulationsbandrbredd runt 
 \index{amplitudmodulation}
 \index{modulation!AM}
 \index{AM}
+\index{sidband}
+\index{AM!sidband}
 
 Amplitudmodulering finns i flera olika varianter. Vanlig AM består av en
 bärvåg vars styrka varieras i takt med signalen som skall sändas. Denna
@@ -290,6 +318,9 @@ Där $f_m$ är högsta modulationsfrekvensen.
 \index{SSB} \index{USB} \index{LSB} \index{ÖSB} \index{USB}
 \index{ESB} \index{amplitudmodulation!enkelt sidband}
 \index{modulation!SSB/ESB}
+\index{bandbredd!SSB}
+\index{BFO}
+\index{sidband!enkelt}
 
 Enkelt sidband används av radioamatörer för att minska på bandbredden samt
 lägga radioenergin där den behövs mest. Eftersom båda sidbanden innehåller
@@ -323,6 +354,12 @@ Där $f_m$ är högsta modulationsfrekvensen.
 \index{frekvensmodulation}
 \index{FM}
 \index{modulation!FM}
+\index{bandbredd!FM}
+\index{deviation}
+\index{sving}
+\index{Carson}
+\index{fasmodulation}
+\index{FM!NFM}
 
 Frekvensmodulering består av att man tar en bärvåg och modulerar den med talet
 genom att skifta dess frekvens. Om skiftet i frekvens är mycket litet kallas
@@ -372,6 +409,9 @@ Rundradio (Sveriges Radio P3) & 75 kHz        & 15 kHz         & 180 kHz       &
 \section{Termiska brusgolvet}
 \index{brusgolv}
 \index{termiskt brus}
+\index{brusfaktor}
+\index{Boltzmanns konstant}
+\index{känslighet}
 
 När man lyssnar i radion på en frekvens där ingen nyttosignal finns hörs ett
 brus. Detta brus består av olika komponenter men en av de viktigaste är det
@@ -441,6 +481,8 @@ bruseffekt i mottagaren.
 \index{CTCSS}
 \index{CTCSS!frekvenser}
 \index{frekvenser!CTCSS}
+\index{subton}
+\index{pilotton}
 
 Inom amatörradio används ofta pilottoner (subtoner) som
 CTCSS\footnote{Continuous Tone-Coded Squelch System} för repeatrar och
@@ -526,6 +568,8 @@ liksom fyra bokstäver A--F.
 \section{Lokator enligt Maidenheadsystemet}
 \index{lokator}
 \index{maidenhead}
+\index{lokator!subruta}
+\index{lokator!storruta}
 \label{sec:lokator}
 
 Lokator (Maidenhead locator) är ett praktiskt sätt att tala om sin ungefärliga
@@ -586,6 +630,7 @@ alternativ, inte minst som appar till telefoner och surfplattor.
 \index{stående våg}
 \index{VSWR}
 \index{return loss}
+\index{antenntuner}
 
 Return loss och VSWR anger samma sak. VSWR är vanligare inom amatörradio medan
 man i professionella sammanhang föredrar att prata om return loss. RL är
@@ -601,6 +646,9 @@ när VSWR är 1:2 eller sämre som motsvarar ca 10\,dB\,RL.
 
 
 \subsection{Vad händer vid missanpassning?}
+\index{impedans}
+\index{koaxialkabel}
+\index{anpassning}
 
 För maximal överföring av radioenergi från en sändare till en antenn eller
 från antennen till en mottagare krävs att man har en bra anpassning mellan de
@@ -650,7 +698,7 @@ säga att den är dålig om den är sämre än 10\,dB\,RL. I VSWR är det ungef�
 \index{RL och VSWR}
 
 \begin{equation}
-	\text{RL} = 20 \cdot \log_{10} \frac{\text{VSWR}-1}{\text{VSWR}+1}
+	\text{RL} = -20 \cdot \log_{10} \frac{\text{VSWR}-1}{\text{VSWR}+1}
 \end{equation}
 
 \begin{equation}
@@ -683,90 +731,304 @@ Där RL är return loss i dB och VSWR är ståendevågförhållandet, exempelvis
 
 Några av de vanligaste radioberäkningarna man kan komma att behöva göra.
 
+Avsnittet räknar först ut hur långt siktlinjen räcker och om den är fri,
+sedan hur många decibel sträckan kostar, och till sist vad som finns kvar
+i mottagaren.
+
 \subsection{Beräkning av radiohorisonten}
 \index{radiohorisont!VHF}
+\index{radiohorisont}
+\index{optisk sikt}
 
-Radiohorisonten är den sträcka som markvågen kan nå utan särskilda hjälpmedel
-och i frånvaro av andra effekter som särskilda kondisioner (tropo eller
-duktning) och liknande. Avståndet kan beräknas med hjälp av en enkel formel.
-Radiohorisonten gäller egentligen bara när inget annat är i vägen men kan ge
-en ledning till den längsta utbredning man kan förvänta sig med markvåg givet
-en viss höjd.
+Radiohorisonten är den sträcka den direkta vågen kan nå när bara
+jordkrökningen begränsar, med den normala refraktionen i atmosfären.
+Tropo och duktning kan ge längre räckvidd. Formeln gäller siktlinjen.
+Markvåg i betydelsen ytvåg hör hemma på längre våglängd.
 
-För skepp på havet stämmer radiohorisonten ganska väl så man hittar denna
-formel ofta i utbildningsmaterial för marin VHF men då med distansen i
-nautiska mil i stället för km. För att få detta byter man konstanten 3,57 till
-2,2 i stället.
+Med antennhöjder i meter och avstånd i kilometer blir radiohorisonten
+mellan två stationer
 
 \begin{equation}
-	r = 3,57 \left(\sqrt{h_1}+\sqrt{h_2}\right)
+	r = 4,12 \left(\sqrt{h_1}+\sqrt{h_2}\right)
 \end{equation}
 
-Där $r$ är avståndet till radiohorisonten givet i kilometer, $h_1$ är den ena
-stationens antennhöjd över marken givet i meter och $h_2$ är den andra
-stationens antennhöjd över marken också givet i meter.
+Konstanten 4,12 motsvarar en jordradie som är 4/3 av den verkliga, vilket
+är den vanliga korrektionen för radiovågor. För nautiska mil, som i
+utbildningsmaterial för marin VHF, byt 4,12 mot 2,2. Det är samma formel,
+eftersom $4,12 / 1,852 \approx 2,2$.
 
-Om motstationen befinner sig i markhöjd och det inte finns terräng som
-blockerar kan man räkna ut hur lång din radiohorisont är på VHF-bandet baserat
-enbart på din egen höjd med denna formel:
+Om den andra antennen står vid markytan sätter man $h_2 = 0$ och får
 
 \begin{equation}
 	r = \sqrt{17 \cdot h}
 \end{equation}
 
-För {\it optisk} sikt kan man säga följande:
+eftersom $\sqrt{17} = 4,12$. Här är $h$ den egna antennhöjden i meter och
+$r$ avståndet i kilometer.
+
+Optisk sikt, utan den extra refraktionen, använder 3,57 i stället för
+4,12. För en ensam höjd blir det
 
 \begin{equation}
 	r = \sqrt{13 \cdot h}
 \end{equation}
 
-I båda ovanstående är radien $r$ i kilometer och höjden $h$ i meter.
+
+\subsection{Första Fresnelzonen}
+\index{Fresnelzon}
+
+Radiohorisonten säger bara att jordytan inte skär den räta linjen mellan
+antennerna. En ås, ett tak eller själva marken inne i första Fresnelzonen
+kostar ändå flera decibel. Radien på zonen, mätt vinkelrätt mot
+siktlinjen, är
+
+\begin{equation}
+	r = 17,3 \sqrt{\frac{d_1 d_2}{f\,D}}
+\end{equation}
+
+där $r$ är i meter, $d_1$ och $d_2$ är avstånden i kilometer från de båda
+ändarna till punkten man undersöker, $D = d_1 + d_2$ är hela sträckan i
+kilometer och $f$ är frekvensen i GHz. Mitt på sträckan är zonen som
+vidast.
+
+Tumregeln är att hindret ska ligga minst $0,6r$ under siktlinjen. Är
+zonen fri kan frirumsformeln användas. Är den det inte är den formeln för
+optimistisk, och tvåstråleutbredningen eller $k$-tabellen längre ned är
+bättre överslag.
 
 \subsection{Sträckdämpning}
 \index{sträckdämpning}
 \index{path loss}
+\index{sträckdämpning!frirymd}
 
-Sträckdämpningen (eng. ''path loss'') beror på flera olika faktorer, inte minst
-terrängen och det som finns mellan sändaren och mottagaren. I den fria rymden
-följer den en enkel geometrisk utbredning men närmare marken behöver man stoppa
-in en del kompensationsfaktorer.
-
-\begin{equation}
-	PL_0 = 20 \cdot \log(f) + 20 \cdot \log(d) - 27,55
-\end{equation}
-
-Där $PL_{0}$ är sträckdämpningen i decibel(dB) (Eng: Path Loss) mellan två
-sändare givet avståndet $d$ i meter och frekvensen $f$ i MHz. Om man anger $d$
-i kilometer i stället adderar man 60 till konstanten och får då 32,45.
-
-För sträckdämpning vid mark får man mäta eller skatta en utbredningsdämpning
-som en konstant $k$ som man använder för att modifiera formeln med och får då
-följande variant:
+Sträckdämpningen (eng. ''path loss'') beror på terrängen och på det som
+finns mellan sändaren och mottagaren. I den fria rymden följer den en
+enkel geometrisk utbredning. Närmare marken behövs en kompensation.
 
 \begin{equation}
-	PL_m = 20 \cdot \log(f) + (20+k) \cdot \log(d) - 27,55
+	PL_0 = 20 \cdot \log_{10}(f) + 20 \cdot \log_{10}(d) - 27,55
 \end{equation}
 
-Där $PL_m$ är sträckdämpningen vid marken. Faktorn $k$ kan uppskattas enligt
-följande tabell:
-\index{Okumura--Hata}
+$PL_0$ är sträckdämpningen i dB mellan en sändarantenn och en
+mottagarantenn, $d$ är avståndet i meter och $f$ är frekvensen i MHz.
+Anger man $d$ i kilometer adderar man 60 till konstanten och får 32,45:
+
+\begin{equation}
+	PL_0 = 20 \cdot \log_{10}(f) + 20 \cdot \log_{10}(d) + 32,45
+\end{equation}
+
+Nära marken kan man skatta en extra dämpning med en faktor $k$:
+
+\begin{equation}
+	PL_m = 20 \cdot \log_{10}(f) + (20+k) \cdot \log_{10}(d) - 27,55
+\end{equation}
+
+$d$ är fortfarande i meter och $f$ i MHz. Utbredningsexponenten blir
+$n = 2 + k/10$. Fri rymd är $k = 0$, alltså $n = 2$. Det här är ett
+överslag, inte Okumura--Hata-modellen.
 
 \begin{table}[H]
-	\begin{centering}
-		\begin{tabular}{r|l}
-			\textbf{k} & \textbf{Beskrivning} \\ \hline
-			0 & Över öppen terräng med högre frekvenser och fri sikt\\
-			5 & Lättare terräng, mindre kullar, gräs och få träd \\
-			10 & Tuffare terräng med mer höjdvariation, klippblock, tätare skog \\
-			15 & Urban miljö, större hus, höghus \\
-			20 & Extremt urband miljö (tänk Manhattan)\\
-		\end{tabular}
-	\end{centering}
+	\centering
+	\begin{tabular}{r|l}
+		\textbf{k} & \textbf{Beskrivning} \\ \hline
+		0 & Fri sikt, samma som frirymd. Ofta för optimistiskt nära mark \\
+		5 & Lätt terräng, mindre kullar, gräs och få träd \\
+		10 & Kuperad terräng, klippblock, tätare skog \\
+		15 & Tätort med större hus \\
+		20 & Extremt tät stadsmiljö \\
+	\end{tabular}
+	\caption{Överslag på korrigeringsfaktorn $k$ för sträckdämpning nära mark}
 	\label{tab:frirum-faktor}
-	\caption{Tabell över korrigeringsfaktor för frirumsutbredning vid marken}
 \end{table}
 
-I vanlig svensk terräng är det nog vanligast man hamnar i storleksordningen
-5--10.
+I vanlig svensk terräng hamnar man oftast kring 5--10. Över plan mark,
+bortom brytpunkten i nästa avsnitt, växer dämpningen som avståndet
+upphöjt till fyra. Då räcker inte $k = 0$.
 
+\subsection{Tvåstråleutbredning}
+\index{sträckdämpning!tvåstråle}
+\index{tvåstråleutbredning}
+
+Över plan mark når både den direkta vågen och en reflex i marken fram till
+mottagaren. Bortom en brytpunkt tar reflexionen över och dämpningen följer
+$40\log_{10}(d)$ i stället för $20\log_{10}(d)$. Brytpunkten är
+
+\begin{equation}
+	d_b = \frac{4\, h_s h_m}{\lambda}
+\end{equation}
+
+och sträckdämpningen mellan isotropa antenner bortom den är
+
+\begin{equation}
+	PL = 40\log_{10}(d) - 20\log_{10}(h_s) - 20\log_{10}(h_m)
+\end{equation}
+
+Höjder, avstånd och våglängd ska vara i meter. $h_s$ och $h_m$ är
+antennhöjderna över den reflekterande ytan. Antennvinsterna ingår inte i
+$PL$. De läggs på i länkbudgeten. Formeln gäller en bit bortom $d_b$, när
+båda antennerna sitter flera våglängder upp och marken kan spegla signalen.
+Verklig mark och vegetation dämpar ofta mer.
+
+
+\subsection{Länkbudget}
+\index{länkbudget}
+\index{kabeldämpning}
+\index{missanpassning!förlust}
+
+Mottagen effekt får man genom att lägga ihop de decibel som redan räknats
+fram:
+
+\begin{equation}
+	P_{\text{mott}} = P_{\text{sänd}} + G_{\text{sänd}} + G_{\text{mott}}
+	- L_{\text{kabel,s}} - L_{\text{kabel,m}} - \text{PL}
+\end{equation}
+
+$P$ är i dBm, antennvinsterna i dBi och förlusterna samt $PL$ i dB.
+Marginalen är $P_{\mathrm{mott}}$ minus den minsta effekt mottagaren
+behöver. För smalbandig FM med 25\,kHz bandbredd, 3\,dB brusfaktor och
+12\,dB signal till brus ligger den gränsen runt $-115$\,dBm, som i
+brusavsnittet. Använder man dBd och e.r.p.\ ska dipolens 2,15\,dBi inte
+läggas till en gång till.
+
+Kabeldämpningen tas ur tillverkarens uppgift i dB per 100\,m:
+
+\begin{equation}
+	L_{\mathrm{kabel}} = \alpha \cdot \frac{\ell}{100}
+\end{equation}
+
+där $\ell$ är längden i meter. Resistiv dämpning skalas grovt med
+$\sqrt{f_2/f_1}$ när man byter frekvens. Dielektrikumet gör att den
+verkliga ökningen ofta är något brantare.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{lrr}
+		\textbf{Kabel} & \textbf{145 MHz} & \textbf{435 MHz} \\ \hline
+		RG-58 & 19 & 33 \\
+		RG-213 & 8 & 15 \\
+		Ecoflex 10 & ca 5 & ca 9 \\
+	\end{tabular}
+	\caption{Ungefärlig kabeldämpning i dB per 100\,m vid 20\,\textdegree C.
+		Värdena varierar mellan fabrikat.}
+	\label{tab:kabeldämpning}
+\end{table}
+
+Missanpassningen i return loss-tabellen är andelen effekt som reflekteras.
+Den del som saknas i den framåtgående vågen, och som ska in i
+länkbudgeten, är mindre:
+
+\begin{equation}
+	L_{\mathrm{miss}} = -10\log_{10}\!\left(1 - 10^{-\mathrm{RL}/10}\right)
+\end{equation}
+
+RL tas positiv, som i tabellen. 14\,dB return loss (VSWR 1,5) ger
+0,2\,dB förlust. 6\,dB (VSWR omkring 3) ger 1,3\,dB. Vid måttlig
+missanpassning är det kabelns egen dämpning och påfrestningen på slutsteget
+som betyder något, inte de här tiondelarna.
+
+
+\subsection{Räkneexempel}
+\index{länkbudget!exempel}
+
+En förbindelse på 145\,MHz med antennerna 10\,m och 2\,m över plan mark,
+och 10\,km mellan dem.
+
+Radiohorisonten är
+$4,12\,(\sqrt{10}+\sqrt{2}) \approx 4,12 \cdot 4,58 \approx 19$\,km.
+Sträckan ligger inom horisonten.
+
+Första Fresnelzonen är vidast på mitten. Med $f = 0,145$\,GHz och
+$d_1 = d_2 = 5$\,km blir radien cirka 72\,m, och 60\,\% av den är 43\,m.
+Siktlinjen mellan 10\,m och 2\,m ligger bara omkring 6\,m över plan mark
+där. Zonen är inte fri, så frirymdsdämpningen gäller inte.
+
+Frirymd skulle ändå ha gett
+
+\begin{equation}
+	PL_0 = 32,45 + 20\log_{10}(10) + 20\log_{10}(145) \approx 96~\mathrm{dB}
+\end{equation}
+
+Tvåstråleutbredningen stämmer bättre. Våglängden är
+$300/145 \approx 2,07$\,m och brytpunkten ligger några tiotal meter bort:
+
+\begin{equation}
+	d_b = \frac{4 \cdot 10 \cdot 2}{2,07} \approx 39~\mathrm{m}
+\end{equation}
+
+10\,km ligger långt bortom den:
+
+\begin{equation}
+	PL = 40\log_{10}(10\,000) - 20\log_{10}(10) - 20\log_{10}(2) = 134~\mathrm{dB}
+\end{equation}
+
+5\,W är 37\,dBm. Med 6\,dBi i båda ändar och 2\,dB sammanlagd kabeldämpning
+blir mottagen effekt
+
+\begin{equation}
+	P_{\mathrm{mott}} = 37 + 12 - 2 - 134 = -87~\mathrm{dBm}
+\end{equation}
+
+Mot FM-känsligheten $-115$\,dBm är marginalen cirka 28\,dB. Begränsningen
+är horisonten och Fresnelzonen, inte sändareffekten. Räkna ytterligare
+10--20\,dB för skog, kuperad terräng och en antenn som rör sig.
+Horisontell mot vertikal polarisation kan kosta uppåt 20\,dB.
+
+\subsection{Avstånd och bäring från lokator}
+\index{lokator!avstånd}
+\index{lokator!bäring}
+
+Sexställig lokator, som i avsnitt~\ref{sec:lokator}, räcker för avstånd
+och bäring på VHF. Bokstäverna räknas från A som 0 och siffrorna är de
+som står i lokatorn. Mittpunkten i rutan $a_1 a_2 n_1 n_2 b_1 b_2$ är
+
+\begin{align}
+	\lambda &= -180 + 20\,a_1 + 2\,n_1 + \frac{2}{24}\left(b_1 + \frac{1}{2}\right) \\
+	\varphi &= -90 + 10\,a_2 + n_2 + \frac{1}{24}\left(b_2 + \frac{1}{2}\right)
+\end{align}
+
+$\lambda$ är longitud och $\varphi$ latitud, båda i grader. $a_1$ och
+$b_1$ är bokstäverna för longitud, $a_2$ och $b_2$ de för latitud.
+
+Inom Sverige räcker plangeometrin. $\Delta\varphi$ och $\Delta\lambda$ är
+skillnaderna i grader:
+
+\begin{align}
+	\Delta N &= \Delta\varphi \cdot 111 \\
+	\Delta E &= \Delta\lambda \cdot 111 \cdot \cos\varphi \\
+	d &= \sqrt{\Delta N^2 + \Delta E^2}
+\end{align}
+
+$d$ blir i kilometer. Bäringen medurs från norr är
+$\operatorname{atan^2}(\Delta E, \Delta N)$.
+
+En sexställig ruta är 4,6\,km i nord--syd. I öst--väst är den cirka
+5,3\,km i Skåne, 4,6\,km vid 60\textdegree\,N och 3,6\,km i Kiruna.
+
+För tropo och sporadiskt E, där sträckan blir tiotals mil, är storcirkeln
+bättre. Vinklarna i formeln ska vara i radianer och $R = 6371$\,km:
+
+\begin{align}
+	a &= \sin^2\frac{\Delta\varphi}{2}
+		+ \cos\varphi_1\cos\varphi_2\sin^2\frac{\Delta\lambda}{2} \\
+	d &= 2R\arcsin\sqrt{a}
+\end{align}
+
+\subsection{Antennlängd}
+\index{våglängd}
+\index{antenn!längd}
+\index{dipol!längd}
+\index{antenn!kvartsvåg}
+
+Våglängden i meter, när frekvensen är i MHz, är
+
+\begin{equation}
+	\lambda = \frac{300}{f}
+\end{equation}
+
+En halvvåg i fri rymd är $150/f$ meter. En tråddipol i praktiken blir
+kortare på grund av ändeffekten, cirka $142/f$ till $143/f$. En
+kvartsvågsvertikal är cirka $71/f$. Rör och grova element på VHF har
+mindre ändeffekt än tunn tråd och blir därför något längre än
+tråddipolen. Mer om antennerna finns i kapitlet om vågutbredning och
+antenner.
 
