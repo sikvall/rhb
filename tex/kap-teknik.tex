@@ -27,17 +27,17 @@ Definitionen på decibel är enligt följande:
   \text{dB} = 10 \cdot \log_{10} \left( \frac{P_{ut}}{P_{in}} \right)
 \end{equation}
 
-där dB är antalet decibel, $P_{up}$ är effekten som kommer ut ur något och
+där dB är antalet decibel, $P_{ut}$ är effekten som kommer ut ur något och
 $P_{in}$ är effekten som går in. Detta något kan vara en förstärkare, en
 dämpare, en kabel eller nästan vad som helst som radiosignalen går igenom,
 till och med fria rymden eller i luften.
 
 Decibel är alltså ett mått på skillnaden i effekt före och efter ett visst
 steg i en {\it signalkedja}. Är den positiv finns det mer signal efter steget
-än före. Är det negativ finns det mindra signal än du hade innan.
+än före. Är det negativ finns det mindre signal än du hade innan.
 
 Som minnesregel kan man minnas att 3 dB betyder att effekten dubblats. Om vi
-matar in 10 W i en förstärkare och får ut 20 W är förstärkningen 3 dB. På
+matar in 10\,W i en förstärkare och får ut 20\,W är förstärkningen 3\,dB. På
 samma sätt är -3 dB en förlust av 50 \% så om vi har en kabel med förlusten 3
 dB för en viss frekvens så tappar vi halva effekten i kabeln.
 
@@ -60,8 +60,8 @@ dB för en viss frekvens så tappar vi halva effekten i kabeln.
 \index{decibel!dBW}
 \index{decibel!dBm}
 
-Effekter anges i W eller i decibel relaterat till 1 mW (dBm) dvs ''decibel
-milliwatt'' eller relaterat 1W (dBW) ''decibel watt''. Tabell över effekt och
+Effekter anges i watt eller i decibel relaterat till en milliwatt, 1\,mW och skrivt som dBm dvs ''decibel
+milliwatt'' eller relaterat till 1\,W (dBW) ''decibel watt''. Tabell över effekt och
 decibelwatt nedan:
 
 \begin{table}[H]
@@ -89,9 +89,9 @@ antennens riktverkan. En riktantenn har en (eller några få) riktningar som den
 fungerar mycket bra i, övriga riktningar är den sämre än en rundstrålande
 antenn.
 
-Ingen antenn kan skapa energi som inte matats in eller tagits mot, den kan
+Ingen antenn kan skapa energi som inte matats in eller tagits emot, den kan
 däremot fokusera energin i vissa riktningar (eller från vissa riktningar)
-genom att offta känsligheten i andra riktningar. Det är detta man menar med
+genom att ofta känsligheten i andra riktningar. Det är detta man menar med
 antennvinst. Det innebär också att en stor antennvinst också innebär en smal
 öppningsvinkel och antennen blir mycket riktningskänslig.
 
@@ -194,10 +194,10 @@ förstås den bandbredd vari minst 98\% av signalens effekt befinner sig.
 	\textbf{Modulation} & \textbf{Bandbredd} & \textbf{Kommentarer}                  \\ \hline
 	CW                  &          $<$500 Hz & Smalbandigt                           \\
 	AM                  &              6 kHz & Amplitudmodulering med fullt sidband  \\
-	SSB*                &              <3 kHz & Amplitudmodulering med enkelt sidband \\
+	SSB*                &             <3 kHz & Amplitudmodulering med enkelt sidband \\
 	NFM                 &           7-12 kHz & Smalbandig FM                         \\
 	FM                  &             16 kHz & Normal FM                             \\
-	WFM                 &          16-75 kHz & Bredbandig FM (t.ex. rundradio)
+	WFM                 &          16-75 kHz & Bredbandig FM (rundradio)
 \end{tabular}
 \caption{Normal bandbredd vid olika modulationsslag}
 \end{table}
@@ -218,8 +218,7 @@ upptar signalen inte mer än 2,7\,kHz.
 
 Det är vanligt att man märker stationer som kör överdriven bandbredd. Antingen
 som en följd av att man vill öka sin modulationsvinst, okunskap eller man har
-skruvat i sin radio. Syftet kan var att få bättre genomslag vid långväga
-förbindelser.
+skruvat i sin radio.
 
 \subsection{Telegrafi, CW}
 \index{telegrafi!bandbredd}
@@ -229,9 +228,9 @@ förbindelser.
 \index{telegrafi}
 \index{CW}
 
-CW står för continuous waves och innebär en rent omodulerad bärvåg. I
+CW står för {\it continuous wave} och innebär en omodulerad bärvåg. I
 mottagaren används en oscillator för att återskapa hörbar signal. Detta
-används för telegrafi och modulationsslaget är oftast A1A. Ibland sänds
+används för telegrafi och modulationsslaget är då A1A. Ibland sänds
 telegrafi som modulerad AM-bärvåg också som då moduleras med t.ex. 700\,Hz
 ton. Det är dock mindre vanligt.
 
@@ -239,10 +238,28 @@ Bandbredden för CW är i teorin mycket smal. I praktiken blir den lite beroende
 på frekvens från några Hz till något hundratal Hz beroende på frekvensband och
 sändarens beskaffenhet i form av jitter och frekvensstabilitet.
 
-Bandbredden hos CW består av fasbruset vilket normalt är så undertryckt att det
-egentligen inte betyder så mycker samt stig- respektive falltiden när man
-nycklar eller släpper nyckeln. Sker detta mjukt är bandbredden låg, har man
-skarp in- eller urkoppling av bärvågen nyttjar man mer bandbredd.
+Bandbredden hos CW består delvis av fasbruset vilket normalt är så undertryckt att det
+egentligen inte betyder så mycket, men det sätter en undre gräns på bandbredden,
+samt stig- och falltiden när man nycklar eller släpper nyckeln.
+Sker detta mjukt är bandbredden låg, har man skarp in- eller urkoppling av
+bärvågen nyttjar man mer bandbredd.
+
+\subsubsection{Beräkna bandbredden för CW}
+
+Bandbredden kan beräknas om vi känner brantheten på flankerna. Låt därför $t_r$ vara
+stigtiden från 10--90\,\% av signalens maxeffekt så kan man approximera bandbredden som
+
+\begin{equation}
+	BW \approx 1/t_r
+\end{equation}
+
+Som stämmer väl med den typiska formningen som man ger CW. Om formningen är atypisk däremot är det enklare att försöka skatta den så kallade 3\,dB-bandbredden, dvs vid den bandbredd signalen sjunkit till halva effekten:
+
+\begin{equation}
+	BW \approx 0,7/t_r
+\end{equation}
+
+Givet en signal med stigtid 5\,ms får vi alltså en modulationsbandrbredd runt 140--200\,Hz. Detta är också själva nyckeln till varför morsetelegrafering är så framgångsrikt vid störningar, den låga bandbredden fokuserar all radioenergi till ett litet spektrum och mottagarens filter kan därför vara smala och stänga ute andra störningar på omkringliggande frekvenser.
 
 \subsection{Amplitudmodulering, AM}
 \index{AM!bandbredd}
@@ -260,7 +277,7 @@ amatörradiobanden.
 
 Bandbredden hos AM-modulerad signal kan beräknas genom att man tar två gånger
 högsta modulationsfrekvensen. Detta ger t.ex. vid en modulationsfrekvens som
-går från 300-3000\,Hz en bandbredd som varierar med talet från upp till
+går från 300--3000\,Hz en bandbredd som varierar med talet från upp till
 6\,kHz.
 
 \begin{equation}
@@ -280,8 +297,8 @@ samma information kan man filtrera bort dessa samt bärvågen innan man matar
 sändarens förstärkarsteg med resultatet. I mottagaren behöver man dock
 återskapa en referenssignal, en så kallad beat-oscillator gör detta. När man
 ställer in frekvensen så försöker man därmed matcha den ursprungliga
-frekvensen. Ligger man för långt från låter det kalle anka, kommer man för
-nära sidbandet låter det dovt och basigt.
+frekvensen. Ligger man för långt från låter det "Kalle Anka", kommer man för
+nära sidbandet låter det dovt och basigt och "spräckt".
 
 Enkelt sidband förkortas ESB eller SSB (single side-band) och man kan välja
 vilket sidband man vill använda sig av. På amatörradiofrekvenser under 10 MHz
@@ -347,7 +364,7 @@ och skapade en fungerande version för telefonledningar.
     \bf Systemtyp             & \bf Deviation & \bf Modulation & \bf Bandbredd & \bf Kanaldelning \\ \hline
 Vanlig (äldre) komradio       & 5 kHz         & 3 kHz          & 16 kHz        & 25 kHz           \\
 Smalbandig (nyare) komradio   & 2.5 kHz       & 3 kHz          & 11 kHz        & 12.5 kHz         \\
-Rundradio (sveriges radio P1) & 75 kHz        & 16 kHz         & 182 kHz       & 200 kHz          \\
+Rundradio (Sveriges Radio P3) & 75 kHz        & 15 kHz         & 180 kHz       & 100 kHz          \\
   \end{tabular}
   \caption{Några vanliga FM-modulationers egenskaper}
 \end{table}
@@ -405,12 +422,12 @@ ostörd som bör ligga runt $-130 + 3 + 12 = -115$\,dBm.
 \centering
 \begin{tabular}{rr|rr|rr}
 	\textbf{RBW} & \textbf{N$_0$} & \textbf{RBW} & \textbf{N$_0$} & \textbf{RBW} & \textbf{N$_0$} \\ \hline
-	         0.5 &           -141 &         6.25 &           -136 &          100 &           -124 \\
+	         0.5 &           -147 &         6.25 &           -136 &          100 &           -124 \\
 	         1.0 &           -144 &        12.50 &           -133 &          200 &           -121 \\
 	         3.0 &           -139 &        25.00 &           -130 &         5000 &           -107 \\
 	         5.0 &           -137 &        50.00 &           -127 &        10\,000 &           -104
 \end{tabular}
-\caption{Termiska brusgolvet vid några vanliga bandbredder}
+\caption{Termiska brusgolvet vid några vanliga bandbredder i kHz}
 \end{table}
 
 Tabellen ovan visar hur brusgolvet ser ut för olika mottagarbandbretter. RBW är
@@ -434,7 +451,7 @@ sub-kanaler. De som används är följande toner och frekvenser:
 \centering
 \begin{tabular}{rr|rr|rr|rr|rr}
 \textbf{Nr} & \textbf{Frekv.} & \textbf{Nr} & \textbf{Frekv.} & \textbf{Nr} & \textbf{Frekv.} & \textbf{Nr} & \textbf{Frekv.} & \textbf{Nr} & \textbf{Frekv.} \\ \hline
-	 1  & 67,0            & 2           & 69,3            & 3           & 74,4            & 4           & 77,0            & 5           & 79,7            \\ \hline
+	 1  & 67,0            & 2           & 71,9            & 3           & 74,4            & 4           & 77,0            & 5           & 79,7            \\ \hline
 	 6  & 82,5            & 7           & 85,4            & 8           & 88,5            & 9           & 91,5            & 10          & 94,8            \\ \hline
 	11  & 97,4            & 12          & 100,0           & 13          & 103,5           & 14          & 107,2           & 15          & 110,9           \\ \hline
 	16  & 114,8           & 17          & 118,8           & 18          & 123,0           & 19          & 127,3           & 20          & 131,8           \\ \hline
@@ -456,21 +473,22 @@ också möjligheten för sändaramatörer att öppna just den repeater man önsk
 man har flera på samma frekvens omkring sig.
 
 Generellt för dessa är att sista siffran i CTCSS-frekvensen är samma som
-distriktsiffran.
+distriktsiffran utom i distrikt 6 eftersom det inte finns toner som slutar
+på denna siffra så i stället används 8 där.
 
 \begin{table}[H]
 \centering
 \begin{tabular}{lcccc}
 	\textbf{Område}    & \textbf{Primär} & \textbf{Sek. 1} & \textbf{Sek. 2} & \textbf{Sek. 3} \\ \hline
-	Distrikt 0         & 77,0            & 123.0           & 67.0            & 100.0           \\
-	Distrikt 1         & 218.1           & 233.6           &                 &                 \\
-	Distrikt 2         & 107.2           & 146.2           & 162.2           & 186.2           \\
-	Distrikt 3         & 127.3           & 141.3           & 250.3           &                 \\
-	D4 Värml. / Örebro & 74.4            & 151.4           &                 &                 \\
-	D4 Dalarna         & 85.4            & 151.4           &                 &                 \\
-	Distrikt 5         & 82.5            & 91.5            & 103.5           & 203.5           \\
-	Distrikt 6         & 114.8           & 118,8           & 94.8            & 131.8           \\
-	Distrikt 7         & 79.7            & 156.7           & 210.7           &
+	Distrikt 0         &      77,0       &      123,0      &      67,0       &      100,0      \\
+	Distrikt 1         &      218,1      &      233,6      &                 &                 \\
+	Distrikt 2         &      107,2      &      146,2      &      162,2      &      186,2      \\
+	Distrikt 3         &      127,3      &      141,3      &      250,3      &                 \\
+	D4 Värml. / Örebro &      74,4       &      151,4      &                 &                 \\
+	D4 Dalarna         &      85,4       &      151,4      &                 &                 \\
+	Distrikt 5         &      82,5       &      91,5       &      103,5      &      203,5      \\
+	Distrikt 6         &      114,8      &      118,8      &      94,8       &      131,8      \\
+	Distrikt 7         &      79,7       &      156,7      &      210,7      &
 \end{tabular}
 \caption{Distrikt och CTCSS-toner}
 \end{table}
@@ -512,23 +530,23 @@ liksom fyra bokstäver A--F.
 
 Lokator (Maidenhead locator) är ett praktiskt sätt att tala om sin ungefärliga
 position genom att ange endast sex stycken tecken. En lokator kan t.ex. se ut
-som JO89VK vilket täcker in nordvästa Järfälla. Det finns många verktyg för
+som JO89VK vilket täcker in nordvästra Järfälla. Det finns många verktyg för
 att räkna på lokator där ute, det är bra att känna sin egen. Det finns appar
 för detta till telefonerna som både kan räkna på bäring, distans mellan två
 rutor och dessutom via telefonens GPS bestämma vilken lokator du för
 närvarande befinner dig i.
 
-Första paret dela in jorden i 18x18 fält, dvs 20 grader per fält longitud och
+Första paret dela in jorden i 18x18 fält, dvs. 20 grader per fält longitud och
 10 grader per fält latitud. Varje sådant fält delas sedan in i 10x10 rutor som
 numreras 0-9 på vardera axeln. Dessa i sin tur delas sedan in i 24x24 smårutor
-som då får storleksordningen 2.5 minuter latitud och 5 minuter longitud vardera.
+som då får storleksordningen 2,5 minuter latitud och 5 minuter longitud vardera.
 
 
-Maidenhed Locator System används bland annat av radioamatörer för att peka ut
+Maidenhead Locator System används bland annat av radioamatörer för att peka ut
 positioner, räkna ut avstånd mellan två olika positioner och liknande. Man
-känner igen dem på formatet som är ''BBSSbbSS'' altså, två stora bokstäver,
-två siffror, två små bokstäver och ytterligare två siffror. Det finns tillägg
-till systemet som lägger på ytterligare bokstäver och siffror.
+känner igen dem på formatet som är ''BBSSbb'' alltså, två stora bokstäver,
+två siffror, två små bokstäver och ibland med tillägg på ytterligare siffror
+och bokstäver om vart annat enligt samma system ner till mycket precisa nivåer.
 
 Systemet används i många loggprogram för amatörradio, tävlingar och är ett
 bekvämt sätt att internationellt kunna ange sin position med lagom noggrannhet
@@ -557,7 +575,7 @@ lokator är t.ex. JP80TM.
 \end{figure}
 
 Det finns många webresurser för att söka en lokator, en sådan är till exempel
-denna som använder sig av Open Streetmaps,
+denna som använder sig av Open StreetMap,
 \url{https://f5len.org/tools/locator} men det finns naturligtvis många andra
 alternativ, inte minst som appar till telefoner och surfplattor.
 
@@ -570,7 +588,7 @@ alternativ, inte minst som appar till telefoner och surfplattor.
 \index{return loss}
 
 Return loss och VSWR anger samma sak. VSWR är vanligare inom amatörradio medan
-man i profesionella sammanhang föredrar att prata om return loss. RL är
+man i professionella sammanhang föredrar att prata om return loss. RL är
 storleken på den reflekterade signalen i förhållande till den framåtgående
 signalen. Return loss mäts alltså i dB enligt formeln $10\log(P_F/P_R)$ där
 $P_F$ är den framåtgående effekten (forward) och $P_R$ är den reflekterade
@@ -609,7 +627,8 @@ ett felaktigt stående vågförhållande. På engelska kallas detta för Voltage
 Standing Wave Ratio (spänningens ståendevågförhållande) och betecknas VSWR.
 Det finns två vanligen förekommande sätt att mäta den och det ena är att man
 mäter förhållandet mellan den framåtgående effekten och den reflekterade och
-man betecknar dessa som ett bråktal, vanligen som 1:1,2.
+man beräknar från detta. Den faktiska definitionen är däremot förhållandet mellan
+den högsta och lägsta spänningen på ledningen.
 
 \subsection{Return loss}
 
@@ -695,7 +714,7 @@ enbart på din egen höjd med denna formel:
 	r = \sqrt{17 \cdot h}
 \end{equation}
 
-För optisk sikt kan man säga följande:
+För {\it optisk} sikt kan man säga följande:
 
 \begin{equation}
 	r = \sqrt{13 \cdot h}
