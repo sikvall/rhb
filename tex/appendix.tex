@@ -163,6 +163,217 @@ För de som inte har amatörradiocertifikat är egentligen följande frekvensban
 \end{table}
 
 
+\chapter{Användbara webbappar}
+\index{webappar}
+\index{appar}
+\index{programvara}
+
+Jag har också skrivit några olika webbappar som kan vara bra att ha för den som kör radio och det vore roligt om fler kunde ha nytta av dem. I detta appendix ska jag beskriva var och en av dem hur de fungerar osv.
+
+\section{Rymdväder och radioutbredning för kortvåg}
+
+Här finns två användbara webbappar som ger ledtrådar som behövs för att förstå hur utbredningen ser ut just nu och även som kan hjälpa till med att beräkna skymningsutbredning.
+
+
+\subsection{Rymdväderappen}
+
+\url{https://hf.avitec.se/}
+
+Rymdväderappen visar aktuellt rymdväder och en kortvågsprognos för norra
+Mellansverige, omkring 60,5\textdegree N och 17,6\textdegree\,Ö (lokator
+JP80tm). All bandbedömning över faktisk utbredning utgår från standard amatörradioutrustning med 100~W effekt och en enkel dipolantenn på ca 10--15 meters höjd och frekvensbanden från gränsvågen på 160\,m till lägre VHF på 6\,m.
+
+Webappen hämtar nya värden var 15:e minut men det finns även en knapp i sidhuvudet som hämtar data direkt. Siffrorna är en blandning av mätningar och en av beräkningar som görs i sidan. Särskilt MUF och LUF är en modell för den här orten, inte en jonosond, och de ersätter inte att lyssna av bandet. Varje ruta kan flyttas med hjälp av handtaget i hörnet och därmed arrangeras i den ordning användaren önskar.
+
+I sidhuvudet står om solen är över horisonten och solhöjden i grader.
+Positiv solhöjd betyder dag, då dämpar D-skiktet de låga banden, medan
+F2-skiktet är tätare så att 20--10\,m kan öppna. På natten tunnas
+D-skiktet ut och 160, 80 och 40\,m blir ofta de bästa banden, medan 15 och
+10\,m oftast stänger. Kring solhöjd 0\textdegree, vid soluppgång och
+solnedgång, kan både låga och mellanhöga band bära.
+
+Överst sitter tolv mätare. Den blå visaren är värdet just nu. En grå visare
+är ett jämförelsetal, till exempel ett medel eller lägsta och högsta under
+några dygn. Grönt är lugnt eller gynnsamt, gult är en varning och rött är
+besvärligt. För SFI, solfläckstal och MUF betyder en dragning mot cyan
+oftast ännu bättre utbredning.
+
+K-index är Kirunas geomagnetiska aktivitet de senaste tre timmarna, skala
+0--9. Siffran efter snedstrecket är NOAA:s planetära Kp, som kan ligga ett
+steg från Kiruna när norrskensovalen är nära. A-index är ett dygnsmått från
+samma Kirunadata. Den grå visaren där är medel över sju dygn. Högt A
+betyder störd utbredning mot norr. 20\,m mot söder kan fortfarande gå.
+
+MUF-mätaren är den högsta användbara frekvensen för ett F2-hopp på
+3\,000\,km. LUF är den lägsta frekvens där samma hopp tar sig genom
+D-skiktets dämpning och bruset. Användbart F2-DX ligger mellan LUF och MUF.
+Ett band som ligger högst 10\,\% utanför intervallet märks upp som svagt,
+längre utanför räknas det som stängt. Båda talen räknas i sidan ur
+solflöde, solfläckstal, solhöjd, månad, K-index samt röntgen- och
+protondata. De grå visarna visar lägsta och högsta under tre dygn.
+
+SFI är solens radiobrus på 10,7\,cm, och solfläckstalet kommer från NOAA.
+Det säger hur väl F2 kan joniseras över solcykeln, dagens SFI står före
+snedstrecket och 90-dygnsmedlet efter. Solfacklan (flare) är GOES röntgenklass från A till X. En M- eller X-fackla kan kraftigt dämpa kortvåg på jordens dagsida, mest under 10\,MHz, tills facklan ebbat ut. CME-mätaren är en riskanalys i procent för att en koronamassutkastning ska påverka radioutbredningen på jorden, räknad ur NOAA:s tredygnsprognos. Verkan kommer ofta runt ett till tre dygn efter själva utkastet och märks som kraftigt ökad protonaktivitet.
+
+Solvinden anges som protonhastighet och protondensitet från DSCOVR eller
+ACE. En hastighet över ungefär 600\,km/s, särskilt tillsammans med hög
+densitet, är ett tecken på att K-index kan stiga innan K-värdet hinner
+ändras. Dämpningen på 5\,MHz är NOAA:s D-RAP för rutorna kring orten: hur
+många decibel rymdvågen förlorar i D-skiktet på vägen till F2.
+
+Norrskensmätaren är effekten i gigawatt över norra halvklotet. Det är ett
+annat tal än sannolikheten på norrskenskartan.
+
+Under mätarna ligger röntgenkurvan för det senaste dygnet och NOAA:s
+skalor. G är geomagnetisk storm, kopplad till Kp. S är protonstorm. Från
+S1 kan polkalottsabsorption (PCA) dämpa 160--40\,m mot norr och nordväst,
+även nattetid, i timmar eller något dygn. R är radioblackout från röntgen
+och sitter på dagsidan. Rutan ''Nuvarande status'' sammanfattar i går, i
+dag och i morgon med ord. Längst ned i stormrutan ligger den engelska
+WWV-bulletinen.
+
+Rutan ''MUF från Norra mellansverige'' visar tre frekvenser. LUF är samma
+lägsta DX-frekvens som på mätaren. F2-NVIS ligger nära F2-skiktets kritiska
+frekvens och är taket för ett brant hopp med regional räckvidd, oftast 160,
+80, 60 och ibland 40\,m. F2-MUF är taket för DX på 3\,000\,km. För ett
+DX-QSO väljer man ett band över LUF och under F2-MUF. För ett regionalt QSO
+håller man sig under F2-NVIS.
+
+Bruskortet har två skattningar. HamQSL ger den stora siffran, en allmän
+brusrapport för HF. Staplarna är en lokal modell för ostörd landsbygd
+i Mellansverige och norrut, ur K-index, tid på dygnet och årstid. Ingen av
+dem är S-metern mot en viss station.
+
+Bandrutorna täcker 160--6\,m med varsin kolumn för dag och natt. Orden är
+Stängd, Svag, Okej, Bra och Utmärkt. Kolumnen för den halva av dygnet som
+gäller är märkt ''nu''. Längst ned står den optimala frekvensen, 85\,\% av
+taket: F2 för 3\,000\,km och NVIS för 400\,km. Den frekvensen bär oftast
+bättre än själva MUF. Under märkningen står vägtyp, NVIS, F2 eller
+sporadiskt E, och ett S-värde för bruset på just det bandet.
+
+Utbredningskurvan ritar samma skattning över 1,8--50\,MHz. Gul är F-skip på
+3\,000\,km och grön är NVIS på 400\,km. Röd är Juliusruhs uppmätta tak för
+3\,000\,km och blå är Tromsøs. LUF, brus och K-index på de två sistnämnda
+är fortfarande sidans egen skattning. En ljudning används när den är yngre
+än sex timmar och den automatiska avläsningen är tillräckligt säker. IRF:s
+jonogram från Kiruna, Lycksele och Uppsala publiceras inte som en färdig
+foF2-siffra som sidan kan läsa, därför används GIRO-stationerna Tromsø
+(TR169) och Juliusruh (JR055). Ligger röd eller blå klart under den gula är
+det uppmätta taket lägre än modellen.
+
+Magnetometern från IRF Kiruna visar komponenterna X, Y och Z tre dygn
+bakåt. Lugnt fält är nästan raka linjer. Ett hack i X och Y är en substorm
+som K-index kanske visar först när trestimmarfönstret är fullt. Kiruna
+ligger norr om prognosorten, så utslaget där är en tidig varning för vägar
+mot norr.
+
+Norrskenskartan är NOAA:s OVATION-sannolikhet på himlen. Grönt nere vid
+60\textdegree\,N betyder att vägen mot norr är dämpad även när MUF-mätaren
+är grön. Rutan ''Bandval just nu'' föreslår ett band för DX på 3\,000\,km
+och ett för NVIS på 400\,km. Protonkurvan från GOES, protoner från 10\,MeV,
+hör ihop med S-skalan. Stiger den över ungefär 10\,pfu börjar polär
+absorption. Elektronflödet från 2\,MeV laddar satelliter och dämpar inte
+kortvåg på samma sätt. Kp-diagrammet över 14 dygn visar om en stormperiod
+hänger kvar. Där är Kp planetärt, och strecket ligger vid Kp~5, alltså G1.
+
+Så används sidan innan man ropar CQ. Se först vilken kolumn som är märkt
+''nu'', och välj ett band som är Bra där. Läs K och G-brickan: K 0--3 och
+G0 är lugnt läge, K~4 gör polära vägar osäkra, och från G2 får man räkna
+med absorption. Håll DX mellan LUF och F2-MUF, och regional trafik under
+F2-NVIS. Jämför den gula kurvan med den röda och den blå. Titta på
+norrskenskartan och magnetometern om vägen går mot norr, och på
+protonkurvan om det gäller 160--40\,m åt det hållet. En M- eller X-fackla
+på dagen är en blackout att vänta ut. Därefter lyssnar man. Sidan är en
+karta över läget, och bandet avgör.
+
+\subsection{Greylineappen}
+
+\url{https://termin.avitec.se/}
+
+%%%%%%%%%% VERIFIERA
+% Börjar: förslag efter handboken på https://termin.avitec.se/manual
+% (2026-11-07). Rubriken Jonsofärisk i appen är återgiven som jonosfärisk.
+
+Greylineappen visar var skymningszonen ligger
+från det egna QTHt, hur långt det är dit och vilka DXCC zonen korsar just
+nu.   Fenomenet tas upp under Skymningsutbredning (greyline) i kapitlet om vågutbredning. Appen talar om när man ska sitta vid radion och åt vilket håll. En tänd lampa är ett tillfälle att lyssna. Absorption, brus och antenn avgör om bandet bär. Appen räknar ingen MUF, inget K-index och ingen jonosond. Det ligger i
+Rymdväderappen.
+
+Gråzonen är remsan där F-skiktet, räknat på 300\,km, är solbelyst medan
+D-skiktet på 80\,km är mörkt. Där bär F, och D absorberar inte. Remsan
+ligger på nattsidan av den visuella terminatorn. Bredden är markavståndet
+mellan de två höjdernas terminatorer. Höjderna är typiska värden för
+medelbreddgrader, inte dagens uppmätta höjd för F2. På morgonen går man in
+i zonen när solen når F-skiktet och lämnar den när solen når D-skiktet,
+alltså före den visuella soluppgången. På kvällen slocknar D först och F en
+stund senare, efter solnedgången. Det QSO man är ute efter sitter i andra
+änden av samma terminator: gryning här hör ihop med skymning där borta. Det
+är lång väg längs gränslinjen.
+
+Lampan längst till vänster lyser gul bara när det egna QTH ligger i zonen.
+Medan den lyser håller man sig på 160, 80 och 40\,m. Solhöjden är då
+negativ och underraden säger ''Under horis.'' När lampan slocknar och
+D-skiktet är solbelyst dämpas de låga banden. 20\,m och högre är dagsband.
+På en smal skärm syns bara kugghjulet för inställningarna. Lokal tid följer
+QTH när tidszonen lämnas tom.
+
+Översta tabellen är klockan man kör efter: UTC, lokal tid, solhöjd, lokator
+och position. Under solhöjden står ''Över horis.'' eller ''Under horis.''
+Position är latitud och longitud. Sydlig bredd och västlig längd har
+minustecken. Står ett ortsnamn i inställningarna visas det under
+positionen. Lokal tid följer koordinaterna, med sommartid där den gäller,
+så länge tidszonen är tom. En offset på formen +02:00 eller $-$05:30
+används i stället, utan sommartid.
+
+Nästa tabell har alltid gryning på översta raden och skymning på den undre.
+Tiderna är start och slut i samma tid som kolumnen Lokal tid. Står det
+''pågår'' är man redan inne i passet. ETA är timmar och minuter kvar till
+starten, eller 0 minuter om passet pågår. Avståndet är kilometer längs den
+egna breddgraden, österut, dit där den terminatorn står just nu. Zonen
+vandrar västerut, så talet är den väg den har kvar. På 60\textdegree\,N är
+det ungefär 820\,km i timmen. 0\,km betyder att terminatorn står över en.
+Klockorna går varje sekund. Karta, tider, avstånd och DXCC-listan räknas
+om varje minut.
+
+Längst ned i kortet står jonisering av F-skiktet och D-skiktet vid QTH.
+Gult betyder att skiktet är solbelyst. Grått betyder mörkt. På dagen lyser
+båda, i gråzonen bara F, och på natten är båda släckta.
+
+Kartan är en Mercatorprojektion, klippt vid 80\textdegree\ nord och syd.
+Grönt är land i dagsljus och det mörkare fältet är natt. Gråvitt är is.
+Kopparbandet är den jonosfäriska gryningen och skymningen. Prickarna är
+DXCC som zonen korsar. Ett tryck på en prick ger prefix, namn och
+storcirkelavstånd, och vägen ritas från QTH. Ligger flera prickar på
+varandra kommer en lista, närmast först. Kort väg är den kortaste vägen.
+Lång väg är andra hållet runt jorden, bäringen plus 180\textdegree. På
+greyline är det ofta lång väg som följer terminatorn till motsatt ände.
+Man byter med knapparna under kartan och ser vilken linje som lägger sig
+längs kopparbandet. Det som ligger norr eller söder om 80\textdegree\ är
+avklippt.
+
+Listan har ett DXCC per rad så snart någon del av landet ligger i zonen.
+Kolumnerna är storcirkelavstånd i kilometer, kort bäring, lång bäring,
+prefix, namn och världsdel. Grundläget är ''DX först'', eftersom grannländer
+i zonen sällan är det QSO man jagar. ''Närmast'' vänder ordningen.
+Sökningen tar prefix, namn eller världsdel. Ett tryck på raden öppnar samma
+val som ett tryck på kartan: avstånd kort och lång, de två bäringarna, och
+om motstationen har gryning eller skymning, när den lämnar zonen, samt om
+stationerna ligger på samma sida eller i motsatt ände. Motsatt ände är det
+klassiska greyline-QSO:t. Samma sida är oftast en kortare väg. Lägg
+rotatorn på den bäring som följer kopparbandet innan anropet, och lyssna
+innan man ropar.
+
+Inställningarna tar en Maidenhead-lokator, ett ortsnamn eller latitud och
+longitud. De tre sätten fyller i varandra. Ortsökningen hämtar koordinater
+från svenska Wikipedia, därefter engelska Wikipedia, och om ingen sida har
+koordinater från OpenStreetMap. Flera träffar visas som en lista. Skriver
+man lokator eller grader själv töms ortsnamnet. ''Använd enhetens
+position'' skriver in där man står. ''Återställ standard'' sätter 60,5 och
+17,6, utan ortsnamn och utan tidszon. Det som sparas ligger kvar i
+webbläsaren. Fel QTH ger fel zon, fel avstånd och fel bäring. Klockan UTC
+är alltid UTC.
+
 %\chapter{Ordlista radiotermer}
 
 \printindex
