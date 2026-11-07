@@ -3,6 +3,8 @@ VERSION=12-RC1
 all:
 	pdflatex -jobname="rhb-${VERSION}" rhb
 	pdflatex -jobname="rhb-${VERSION}" rhb
+	makeindex rhb-${VERSION}
+	pdflatex -jobname="rhb-${VERSION}" rhb
 	pdflatex rhb-lathund
 	pdflatex rhb-lathund
 	mkdir -p pdf
