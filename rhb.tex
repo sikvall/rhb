@@ -101,6 +101,10 @@ a4paper, twoside]{book}                % De viktigaste inställningarna för dok
 \input{tex/kap-frekvenser}        % Frekvenslistor
 \input{tex/appendix}              % Övriga delar som inte riktigt passar i ovanstående
 
+% Skriv ut sakregistret och lägg till en rad i TOC så det finns med
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\indexname}
 \printindex
 
 \end{document}
