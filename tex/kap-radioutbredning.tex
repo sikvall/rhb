@@ -1,18 +1,11 @@
 \chapter{Vågutbredning, antenner och anpassning}
 
-I detta kapitlet tittar vi närmare på hur radiovågen tar sig fram från
-160\,m upp till 2\,m, och på vilka antenner som passar till det.
-Markvåg och rymdvåg via jonosfären, NVIS och gråzonsutbredning liksom
-tropo, meteorscatter och duktning, sporadiskt E, tropo och
-meteorscatter tas upp var för sig, och sedan samlat som en genomgång
-band för band.
-
-Rymdvädret styr mycket av det som händer på kortvåg. Vi går igenom
-solen, solcyklerna och de störningar som märks i radion, och vilka tal
-som räcker för att välja band. Därefter kommer vi in mer på antennerna
-som man kan bygga själv, även när radion ska med ut i terränglådan.
-
-Hur tråden matas och anpassas står sist.
+I detta kapitlet tittar vi närmare på vågutbredning med mycket fokus
+på kortvågens nyttjande av rymvågen, hur rymdvädret påverkar denna
+utbredning och på vilka antenner som vi kan nyttja vid olika
+tillfällen med fokus på antenner som vi kan bygga själva. Vi går också
+igenom andra utbredningsformer som sporadiskt E, troposfärutbredning
+och mycket annat.
 
 \vfill
 
@@ -275,7 +268,7 @@ NVIS, med brant vinkel från en lågt sittande antenn, täcker en stor del av de
 som annars hade varit död zon, särskilt då på de lägre banden som 160--30 meter.
 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}[x=1cm,y=1cm]
   \def\Re{17.6}
@@ -309,14 +302,10 @@ som annars hade varit död zon, särskilt då på de lägre banden som 160--30 m
   \node[etikett,text=rhbgenom,anchor=south] at (93.4:20.95) {över MUF};
   \node[etikett] at (86.5:16.35) {omkring 3\,000 km};
 \end{tikzpicture}
-\caption{Rymdvåg via F2. Vågen går igenom D och E, böjs i F2 och kommer
-ner långt från sändaren. Mellan markvågen och nedslaget ligger
-skipzonen. Över MUF böjs vågen för lite och fortsätter ut. Höjderna är
-överdrivna.}
+\caption{Rymdvåg via F2, vågen går igenom D och E, böjs i F2 och
+  kommer ner långt från sändaren}
 \label{fig:rymdvag-f2}
 \end{figure}
-
-
 
 
 \subsection{NVIS}
@@ -339,39 +328,47 @@ jonosfär oftast 300--600\,km, vilket från Mellansverige räcker till en stor d
 av landet och de närmaste grannländerna. Längre än så får man ta ett flackare
 hopp, och då är man tillbaka i vanlig rymdvåg.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}[x=1cm,y=1cm]
+  \useasboundingbox (-7.05,-1.15) rectangle (7.05,4.75);
   \fill[rhbjord] (-7.05,-1.05) rectangle (7.05,0);
   \fill[rhbd] (-7.05,0.58) rectangle (7.05,0.98);
   \fill[rhbe] (-7.05,1.28) rectangle (7.05,1.78);
   \fill[rhbf] (-7.05,2.85) rectangle (7.05,4.20);
   \draw[marklinje] (-7.05,0) -- (7.05,0);
-  \fill[rhbtack,opacity=0.33] (-4.35,0) rectangle (4.35,0.13);
-  \draw[vag] (-0.22,0.14)
-    .. controls (-0.40,1.45) and (-0.30,3.05) .. (-0.12,3.62)
-    .. controls (0.06,3.05) and (0.18,1.45) .. (0.08,0.14);
-  \draw[vagned] (0.05,0.14)
-    .. controls (1.65,1.15) and (2.25,3.15) .. (1.40,3.62)
-    .. controls (2.95,2.90) and (3.85,1.25) .. (4.25,0.14);
-  \draw[vagned] (-0.05,0.14)
-    .. controls (-1.65,1.15) and (-2.25,3.15) .. (-1.40,3.62)
-    .. controls (-2.95,2.90) and (-3.85,1.25) .. (-4.25,0.14);
-  \draw[genom] (0.48,0.14) -- (0.48,4.58);
+  \fill[rhbtack,opacity=0.35] (-4.35,0) rectangle (4.35,0.16);
+  % över foF2, mitt i paraplyet
+  \draw[genom] (0,0.18) -- (0,4.58);
+  \foreach \sx in {1,-1} {
+    \begin{scope}[xscale=\sx]
+      % spröt som vänder i F2
+      \draw[vagned] (0.05,0.18)
+        .. controls (0.10,1.5) and (0.18,2.9) .. (0.30,3.72)
+        .. controls (0.42,3.64) and (0.50,3.48) .. (0.58,3.36);
+      \draw[vagned] (0.05,0.18)
+        .. controls (0.32,1.2) and (0.72,2.65) .. (1.02,3.52)
+        .. controls (1.22,3.40) and (1.32,3.22) .. (1.40,3.10);
+      % yttersta sprötet landar och bildar kanten
+      \draw[vagned] (0.05,0.18)
+        .. controls (0.85,0.9) and (1.7,2.7) .. (2.15,3.55)
+        .. controls (2.7,3.35) and (3.5,1.6) .. (4.35,0.16);
+    \end{scope}
+  }
   \path (0,0) pic {dipol};
   \node[etikett,anchor=west] at (-6.85,0.78) {D};
   \node[etikett,anchor=west] at (-6.85,1.53) {E};
-  \node[etikett,anchor=west] at (-6.85,3.20) {F2};
-  \node[etikett,anchor=west] at (-5.15,3.90) {under foF2};
-  \node[etikett,text=rhbgenom,anchor=west] at (0.62,4.38) {över foF2};
-  \node[etikett,anchor=north] at (0,-0.06) {lågt sittande antenn};
-  \node[etikett,anchor=north east] at (4.35,-0.02) {300--600 km};
+  \node[etikett,anchor=west] at (-6.85,3.15) {F2};
+  \node[etikett,anchor=west] at (-6.55,3.75) {under foF2};
+  \node[etikett,text=rhbgenom,anchor=west] at (0.18,4.38) {över foF2};
+  \node[etikett,anchor=north] at (0,-0.02) {lågt sittande antenn};
+  \node[etikett,text=rhbtack!50!black,anchor=north] at (0,-0.48) {300--600\,km};
 \end{tikzpicture}
 \caption{NVIS. Antennen sitter lågt och det mesta går brant upp. Under
-foF2 kommer vågen tillbaka runt stationen, ofta inom 300--600\,km, och
-skipzonen försvinner. Över foF2 går den igenom.}
+foF2 kommer vågen tillbaka runt stationen inom 300--600\,km, skipzonen försvinner}
 \label{fig:nvis}
 \end{figure}
+
 
 Frekvensen måste ligga under den kritiska foF2. Är den för hög går vågen rakt
 igenom även om antennen pekar upp. Samtidigt måste den ligga högt nog för att ta
@@ -621,7 +618,7 @@ ofta någonstans mellan 800 och 2\,000\,km. Molnet är litet, så öppningen kan
 gälla ett land och vara stängd mot grannen. Vid en bra öppning kan en portabel
 station på 10\,m köra till exempel Nordafrika på full signalstyrka.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \begin{tikzpicture}[x=1cm,y=1cm]
   \def\Re{17.6}
@@ -1079,79 +1076,7 @@ gräset försvinner effekt, och frekvensen drar iväg. En höjd där ingen
 når dem räcker. Med ett spö eller ett träd i mitten är den en av de
 antenner som är enklast att ta med ut.
 
-\subsection{Stegmatad dipol, doublet}
-\index{doublet}
-\index{antenn!doublet}
-\index{stegmatning}
-\index{antenn!stegmatning}
-\index{stege!doublet}
-\index{stege}
-\index{doublet!längd}
-\index{antenntuner!doublet}
-\index{strömbalun!doublet}
-
-En doublet är en dipol som inte är klippt för ett enda band. Den matas
-på mitten med öppen stege, kring 450 eller 600\,$\Omega$, hela vägen
-in till en balanserad avstämningsenhet. Koax hör inte hemma på den
-sträckan. Har man bara en vanlig tuner sätter man en strömbalun 1:1
-alldeles intill den, och en kort koaxstump därifrån till radion.
-
-Det som gör stegen värd besväret är förlusten. Den är liten även när
-stående våg är hög. Samma missanpassning i en koax blir värme i
-kabeln, och på de högre banden kan en god del av effekten försvinna
-innan den når tråden. I stegen kommer den fram. Tunern vid radion får
-slutsteget att se 50\,$\Omega$. Missanpassningen får stanna i stegen,
-där den kostar lite. Håll stegen fri från metall. Lindas den längs en
-mast eller tejpas mot en ränna börjar den uppföra sig som en koax, och
-då är den låga förlusten borta.
-
-Därför ska tråden ligga mellan resonanserna på de band man vill köra.
-Inte på en halvvåg, inte på en helvåg, och inte på en multipel av dem.
-Vid halvvåg och vid udda multiplar, tre halvvågor och så vidare,
-ligger matningen i ett strömmaximum. Impedansen blir låg, ofta under
-hundra $\Omega$, mot en stege som är gjord för flera hundra. Vid
-helvåg och vid jämna multiplar ligger matningen i ett
-spänningsmaximum.  Impedansen går då upp i flera tusen $\Omega$. Båda
-lägena är svåra för tunern. Spänningen eller strömmen i stegen blir
-onödigt hög, och en del av det man vann på den snåla stegen försvinner
-i anpassningen.
-
-Längden i tabellen är hela tråden, från ände till ände, matad på
-mitten. Den är räknad med samma förkortning som tråddipolen i
-teknikkapitlet, omkring $142/f$ till $143/f$, och längderna ligger
-också fria om man räknar den fria halvvågen $150/f$. Halvvågen på
-lägsta bandet, den man annars klipper en vanlig dipol efter, är just
-den längd man lämnar här. Bandgränserna är de svenska, och WARC-banden
-är med. Kortare än omkring en tredjedels våg på lägsta bandet blir
-tråden klen. Då hjälper inte stegen, för mer av effekten fastnar i
-tunern.
-
-En halvmeters skillnad kan räcka för att hamna på en resonans,
-särskilt på 10\,m där bandet är brett. 27,5\,m ska hållas nära det
-talet.  28\,m landar på 60\,m. 32,5\,m tål ett par
-decimeter. Längderna för 160\,m tål ungefär en meter, och 13 samt
-18,5\,m tål några decimeter.
-
-\begin{table}[H]
-\centering
-\begin{tabular}{lll}
-	\textbf{Band} & \textbf{Längd} & \textbf{Läget}                                   \\ \hline
-	80--10\,m     & 27,5\,m        & Kort. Drygt en tredjedels våg på 80\,m.          \\
-	80--10\,m     & 32,5\,m        & Lagom. Klart under en halv våg på 80\,m.         \\
-	160--20\,m    & 48\,m          & Kort, när tråden inte får bli lång.              \\
-	160--20\,m    & 58\,m          & Lagom på 160\,m.                                 \\
-	160--20\,m    & 66\,m          & Längre, fortfarande under en halv våg på 160\,m. \\
-	40--6\,m      & 13\,m          & Kort. Omkring en tredjedels våg på 40\,m.        \\
-	40--6\,m      & 18,5\,m        & En bit under en halv våg på 40\,m.               \\
-\end{tabular}
-\caption{Lämpliga längder för stegmatad doublet}
-\end{table}
-
-Höjden gör samma sak som för en vanlig dipol. Lågt ger NVIS på de låga
-banden, högre ger flackare lob och DX. På de högre banden blir tråden
-flera våglängder och loben delar sig. Det är normalt för en doublet.
-
-\subsection{Off-center-matad dipol}
+\subsubsection{Off-center-matad dipol}
 \index{off-center}
 \index{antenn!off-center}
 \index{dipol!off-center}
@@ -1231,6 +1156,78 @@ en antenn som snabbt kan köras på flera band. Den är dock inte
 särskilt kompakt men den ger ofta mycket bra resultat och den är lätt
 att bygga.
 
+\subsubsection{Stegmatad dipol, doublet}
+\index{doublet}
+\index{antenn!doublet}
+\index{stegmatning}
+\index{antenn!stegmatning}
+\index{stege!doublet}
+\index{stege}
+\index{doublet!längd}
+\index{antenntuner!doublet}
+\index{strömbalun!doublet}
+
+En doublet är en dipol som inte är klippt för ett enda band. Den matas
+på mitten med öppen stege, kring 450 eller 600\,$\Omega$, hela vägen
+in till en balanserad avstämningsenhet. Koax hör inte hemma på den
+sträckan. Har man bara en vanlig tuner sätter man en strömbalun 1:1
+alldeles intill den, och en kort koaxstump därifrån till radion.
+
+Det som gör stegen värd besväret är förlusten. Den är liten även när
+stående våg är hög. Samma missanpassning i en koax blir värme i
+kabeln, och på de högre banden kan en god del av effekten försvinna
+innan den når tråden. I stegen kommer den fram. Tunern vid radion får
+slutsteget att se 50\,$\Omega$. Missanpassningen får stanna i stegen,
+där den kostar lite. Håll stegen fri från metall. Lindas den längs en
+mast eller tejpas mot en ränna börjar den uppföra sig som en koax, och
+då är den låga förlusten borta.
+
+Därför ska tråden ligga mellan resonanserna på de band man vill köra.
+Inte på en halvvåg, inte på en helvåg, och inte på en multipel av dem.
+Vid halvvåg och vid udda multiplar, tre halvvågor och så vidare,
+ligger matningen i ett strömmaximum. Impedansen blir låg, ofta under
+hundra $\Omega$, mot en stege som är gjord för flera hundra. Vid
+helvåg och vid jämna multiplar ligger matningen i ett
+spänningsmaximum.  Impedansen går då upp i flera tusen $\Omega$. Båda
+lägena är svåra för tunern. Spänningen eller strömmen i stegen blir
+onödigt hög, och en del av det man vann på den snåla stegen försvinner
+i anpassningen.
+
+Längden i tabellen är hela tråden, från ände till ände, matad på
+mitten. Den är räknad med samma förkortning som tråddipolen i
+teknikkapitlet, omkring $142/f$ till $143/f$, och längderna ligger
+också fria om man räknar den fria halvvågen $150/f$. Halvvågen på
+lägsta bandet, den man annars klipper en vanlig dipol efter, är just
+den längd man lämnar här. Bandgränserna är de svenska, och WARC-banden
+är med. Kortare än omkring en tredjedels våg på lägsta bandet blir
+tråden klen. Då hjälper inte stegen, för mer av effekten fastnar i
+tunern.
+
+En halvmeters skillnad kan räcka för att hamna på en resonans,
+särskilt på 10\,m där bandet är brett. 27,5\,m ska hållas nära det
+talet.  28\,m landar på 60\,m. 32,5\,m tål ett par
+decimeter. Längderna för 160\,m tål ungefär en meter, och 13 samt
+18,5\,m tål några decimeter.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+	\textbf{Band} & \textbf{Längd} & \textbf{Läget}                                   \\ \hline
+	80--10\,m     & 27,5\,m        & Kort. Drygt en tredjedels våg på 80\,m.          \\
+	80--10\,m     & 32,5\,m        & Lagom. Klart under en halv våg på 80\,m.         \\
+	160--20\,m    & 48\,m          & Kort, när tråden inte får bli lång.              \\
+	160--20\,m    & 58\,m          & Lagom på 160\,m.                                 \\
+	160--20\,m    & 66\,m          & Längre, fortfarande under en halv våg på 160\,m. \\
+	40--6\,m      & 13\,m          & Kort. Omkring en tredjedels våg på 40\,m.        \\
+	40--6\,m      & 18,5\,m        & En bit under en halv våg på 40\,m.               \\
+\end{tabular}
+\caption{Lämpliga längder för stegmatad doublet}
+\end{table}
+
+Höjden gör samma sak som för en vanlig dipol. Lågt ger NVIS på de låga
+banden, högre ger flackare lob och DX. På de högre banden blir tråden
+flera våglängder och loben delar sig. Det är normalt för en doublet.
+
 \subsection{Vertikalantenn och jordplan}
 \index{vertikalantenn}
 \index{antenn!vertikal}
@@ -1268,7 +1265,7 @@ man flera motvikter, exempelvis 3 stycken arrangerade som ett Y och
 får den då ganska rundstrålande. Motvikterna kan vara kortare än det
 vertikala men är de ungefär lika långa får man bästa effekten.
 
-\subsection{Longwire och ändmatad}
+\subsection{Longwire och ändmatad, EFHW och EFRW}
 \index{longwire}
 \index{EFRW}
 \index{antenn!longwire}
@@ -1281,10 +1278,27 @@ vertikala men är de ungefär lika långa får man bästa effekten.
 \index{49:1}
 \index{transformator!endmatad}
 
-En tråd som är flera våglängder lång strålar i lober längs tråden,
-inte tvärs den som dipolen. Den matas i ena änden via en
-avstämningsenhet och riktningen följer hur tråden ligger. En longwire
-mot sydväst gynnar sydväst, med flera lober snarare än en enda.
+Vi börjar med att reda ut några begrepp. Det finns i huvudsak två
+sorters ändmatade antenner med två olika filosofier och dessa är EFHW
+som är en resonant antenn med mycket hög matningsimpedans, kräver en
+UNUN med högt omsättningstal (49:1 är vanligt) och fungerar på band
+som är resonanta mot halvvågen samt helvågen för dess längd.
+
+Den andra sorten är det som ibland kallas ``random wire'' men den är
+inte så random, tvärt om är det rätt viktigt att klippa till den så
+den inte kommer i resonans. Den får lägre matningsimpedans, klarar sig
+med en UNUN på runt 9:1 i omsättningstal och kan med fördel köras med
+tuner och får relativt goda egenskaper. Den fungerar bra på alla
+frekvenser som den INTE är resonant på.
+
+En tråd som är flera våglängder lång strålar i lober längs tråden och
+inte tvärs den som den vanliga dipolen när man kör den på frekvenser
+som ligger över den lägsta frekvensen den är konstruerad för (där den
+är ungefär en halv våglängd eller kortare) och riktningen följer hur
+tråden ligger. En longwire mot sydväst gynnar sydväst, med flera lober
+snarare än en enda. Antalet lober blir mer och mer markerat ju högre i
+frekvens man använder antennen på och ju längren den är i förhållande
+till våglängden desto större blir riktverkan i trådens riktning.
 
 Vanligare i dag är den ändmatade halvvågen. Samma längd som en dipol,
 men matad i änden där fästet sitter. Impedansen där är hög, några
