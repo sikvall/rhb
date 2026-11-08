@@ -71,14 +71,141 @@ där också. På 20\,m är en halv våglängd omkring 10\,m, och en dipol på
 10--15\,m höjd är alltså NVIS på 80 och 60\,m och en hygglig DX-antenn
 på 20\,m. Samma tråd, två olika jobb.
 
-Längden står i teknikkapitlet, under antennlängd. En tråddipol blir i
-praktiken kortare än den fria halvvågen, cirka $142/f$ till $143/f$
-meter när frekvensen är i MHz. Man klipper den lite för lång och
-kortar den efter att man mätt stående våg. Ändarna ska inte gå att
-nudda för människor eller djur eftersom där blir spänningen hög när
-man sänder. Håll också tråden väl borta från elledningar, undvik
-absolut att låta den gå över en väg eller gata och tänk efter lite hur
-du placerar den.
+Den mer exakta längden står i teknikkapitlet, under antennlängd. En
+tråddipol blir i praktiken kortare än den fria halvvågen, cirka
+$142/f$ till $143/f$ meter när frekvensen är i MHz. Man klipper den
+lite för lång och kortar den efter att man mätt stående våg. Ändarna
+ska inte gå att nudda för människor eller djur eftersom där blir
+spänningen hög när man sänder. Håll också tråden väl borta från
+elledningar, undvik absolut att låta den gå över en väg eller gata och
+tänk efter lite hur du placerar den.
+
+    \begin{figure}[H]
+    \centering       
+    \begin{tikzpicture}[
+      x=1cm, y=1cm,     
+      antenn/.style={rhbrav, line width=1.35pt, line cap=round},
+      koax/.style={black!80, line width=1.1pt, line cap=round}, 
+      lina/.style={black!45, line width=0.6pt, dash pattern=on 2pt off 1.5pt},
+      isolator/.style={fill=white, draw=black!75, line width=0.65pt, rounded corners=1pt},
+      matt/.style={{Stealth[length=1.6mm]}-{Stealth[length=1.6mm]}, black!65, line width=0.55pt},
+      nod/.style={fill=black, circle, inner sep=1.2pt}
+    ]
+      
+      % ====================================================================
+      % VÄNSTER DEL: KONSTRUKTION FRAMIFRÅN (MED STRÖM/SPÄNNING & HÖJD)                                                                        
+      % ====================================================================                                                                   
+      \begin{scope}[shift={(-2.35, 0)}]
+        \node[etikett, font=\footnotesize\bfseries] at (0, 3.15) {Halvvågsdipol framifrån};
+  
+        % Mark och gräs/jord
+        \fill[rhbjord] (-4.45, -2.35) rectangle (4.45, -1.95);
+        \draw[marklinje] (-4.45, -1.95) -- (4.45, -1.95);
+  
+        % Två fästpunkter / stolpar i kanterna
+        \draw[black!70, line width=1.4pt, line cap=round] (-4.15, -1.95) -- (-4.15, 1.55);
+        \draw[black!70, line width=1.4pt, line cap=round] ( 4.15, -1.95) -- ( 4.15, 1.55);
+  
+        % Bärlinor mellan stolpar och ändisolatorer
+        \draw[lina] (-4.15, 1.25) -- (-3.35, 1.25);
+        \draw[lina] ( 3.35, 1.25) -- ( 4.15, 1.25);
+  
+        % Ändisolatorer
+        \filldraw[isolator] (-3.35, 1.15) rectangle (-3.05, 1.35);
+        \filldraw[isolator] ( 3.05, 1.15) rectangle ( 3.35, 1.35);
+        \node[etikett, anchor=south] at (-3.20, 1.40) {Ändisolator};
+  
+        % Antennbenen (2 x lambda/4)
+        \draw[antenn] (-3.05, 1.25) -- (-0.25, 1.25);
+        \draw[antenn] ( 0.25, 1.25) -- ( 3.05, 1.25);
+        \node[nod, fill=rhbrav] at (-0.25, 1.25) {};
+        \node[nod, fill=rhbrav] at ( 0.25, 1.25) {};
+  
+        % Mittisolator + 1:1 strömbalun
+        \filldraw[isolator] (-0.25, 1.12) rectangle (0.25, 1.38);
+        \filldraw[fill=rhbjord!85, draw=black!75, line width=0.6pt, rounded corners=1pt]
+          (-0.32, 0.52) rectangle (0.32, 0.98);
+        \draw[black!75, line width=0.65pt] (-0.20, 1.25) -- (-0.15, 0.98);
+        \draw[black!75, line width=0.65pt] ( 0.20, 1.25) -- ( 0.15, 0.98);
+        \node[etikett, anchor=west] at (0.38, 0.75) {1:1-balun};
+  
+        % Koaxialkabel 50 ohm ner till radion                                                                                                  
+        \draw[koax] (0, 0.52) -- (0, -1.95);
+        \node[etikett, anchor=west] at (0.12, -0.75) {Koax $50\,\Omega$};
+  
+        % Ström- och spänningsfördelning (ovanför tråden)
+        % Ström I (blå streckad båge, max i mitten, noll i ändarna)                                                                            
+        \draw[rhbrav!75, line width=0.75pt, dash pattern=on 2.5pt off 1.5pt]
+          (-3.05, 1.25) sin (0, 2.05) cos (3.05, 1.25);
+        \node[etikett, text=rhbrav, anchor=south] at (0, 2.05) {Strömmax ($I$)};
+                                                                                                                                               
+        % Spänning U (rödbrun streckad kurva, max i ändarna, noll i mitten)                                                                    
+        \draw[rhbes!80, line width=0.75pt, dash pattern=on 1.5pt off 1.5pt]
+          (-3.05, 2.00) cos (0, 1.25) sin (3.05, 0.50);
+        \node[etikett, text=rhbes, anchor=south] at (2.35, 1.40) {Hög spänning i ändarna ($U$)};
+  
+        % Måttlinjer för benlängder (lambda/4) och totallängd (L ≈ 142,5 / f)
+        \draw[matt] (-3.05, 0.15) -- (-0.05, 0.15)
+          node[midway, fill=white, etikett] {$\approx \lambda/4$};
+        \draw[matt] ( 0.05, 0.15) -- ( 3.05, 0.15)
+          node[midway, fill=white, etikett] {$\approx \lambda/4$};
+  
+        \draw[matt] (-3.05, 2.60) -- (3.05, 2.60)
+          node[midway, fill=white, etikett] {Total längd $L \approx \dfrac{142\text{--}143}{f\text{ [MHz]}}\text{ m}$ ($\lambda/2$)};          
+        \draw[black!40, line width=0.4pt] (-3.05, 1.40) -- (-3.05, 2.70);
+        \draw[black!40, line width=0.4pt] ( 3.05, 1.40) -- ( 3.05, 2.70);
+  
+        % Höjd över mark (h)
+        \draw[matt] (-3.75, -1.95) -- (-3.75, 1.25)
+          node[midway, fill=white, etikett] {Höjd $h$};
+      \end{scope}
+  
+
+      % ====================================================================
+      % HÖGER DEL: STRÅLNINGSMÖNSTER OVANIFRÅN (ÅTTAMÖNSTER)
+      % ====================================================================
+      \begin{scope}[shift={(4.45, 0.10)}]
+        \node[etikett, font=\footnotesize\bfseries] at (0, 3.05) {Strålning ovanifrån};
+  
+        % Kompasskors / hjälpcirkel
+        \draw[black!20, line width=0.5pt] (0,0) circle[radius=1.85];
+        \draw[black!30, line width=0.45pt, dash pattern=on 2pt off 2pt] (-2.10, 0) -- (2.10, 0);
+        \draw[black!30, line width=0.45pt, dash pattern=on 2pt off 2pt] (0, -2.10) -- (0, 2.10);
+  
+        % Åttamönster (två lober vinkelrätt mot tråden: Nord och Syd)
+        \filldraw[fill=rhbtack!22, draw=rhbtack!85!black, line width=1.05pt]
+          (0,0)
+          .. controls ( 0.95,  0.45) and ( 1.05,  1.85) .. (0,  1.85)
+          .. controls (-1.05,  1.85) and (-0.95,  0.45) .. (0,0)
+          .. controls ( 0.95, -0.45) and ( 1.05, -1.85) .. (0, -1.85)
+          .. controls (-1.05, -1.85) and (-0.95, -0.45) .. (0,0);
+  
+        % Dipoltråden i mitten (öst-väst)
+        \draw[antenn, line width=1.5pt] (-1.35, 0) -- (-0.10, 0);
+        \draw[antenn, line width=1.5pt] ( 0.10, 0) -- ( 1.35, 0);
+        \filldraw[isolator] (-0.10, -0.08) rectangle (0.10, 0.08);
+        \fill[rhbrav] (-1.35, 0) circle[radius=0.045];
+        \fill[rhbrav] ( 1.35, 0) circle[radius=0.045];
+  
+        % Etiketter för riktningar
+        \node[etikett, anchor=south] at (0,  2.12) {\textbf{Nord} (max)};
+        \node[etikett, anchor=north] at (0, -2.12) {\textbf{Syd} (max)}; 
+        \node[etikett, anchor=west]  at ( 1.45, -0.22) {Tyst};
+        \node[etikett, anchor=east]  at (-1.45, -0.22) {Tyst};
+        \node[etikett, text=rhbrav, anchor=south] at (-0.75, 0.06) {Tråd};
+      \end{scope} 
+  
+    \end{tikzpicture}
+    \caption{Halvvågsdipolen. Två lika långa ben om ungefär $\lambda/4$ matas i
+    mitten via en strömbalun 1:1. I mitten är strömmen hög och impedansen nära 
+    $50\,\Omega$, medan spänningen blir hög i ändarna vid sändning. Ovanifrån
+    strålar dipolen i ett åttamönster vinkelrätt mot tråden, och höjden $h$ över
+    marken avgör om loben går brant uppåt (NVIS, $h < \lambda/4$) eller flackt
+    (DX, $h \approx \lambda/2$).}
+    \label{fig:dipol}
+    \end{figure}
+
+
 
 \subsubsection{Inverterad V}
 \index{inverterad V}
@@ -100,6 +227,120 @@ kan välja riktning. Ändarna ska fortfarande upp från marken. Ligger de i
 gräset försvinner effekt, och frekvensen drar iväg. En höjd där ingen
 når dem räcker. Med ett spö eller ett träd i mitten är den en av de
 antenner som är enklast att ta med ut.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  x=1cm, y=1cm,
+  antenn/.style={rhbrav, line width=1.35pt, line cap=round},
+  koax/.style={black!80, line width=1.1pt, line cap=round},
+  lina/.style={black!45, line width=0.6pt, dash pattern=on 2pt off 1.5pt},
+  isolator/.style={fill=white, draw=black!75, line width=0.65pt, rounded corners=1pt},
+  matt/.style={{Stealth[length=1.6mm]}-{Stealth[length=1.6mm]}, black!65, line width=0.55pt},
+  nod/.style={fill=black, circle, inner sep=1.2pt}
+]
+
+  % ====================================================================
+  % VÄNSTER DEL: INVERTERAD V FRAMIFRÅN
+  % ====================================================================
+  \begin{scope}[shift={(-2.35, 0)}]
+    \node[etikett, font=\footnotesize\bfseries] at (0, 3.05) {Inverterad V framifrån};
+
+    % Mark och gräs/jord
+    \fill[rhbjord] (-4.45, -2.35) rectangle (4.45, -1.95);
+    \draw[marklinje] (-4.45, -1.95) -- (4.45, -1.95);
+
+    % Enkel mittmast / spö i mitten
+    \draw[black!65, line width=1.8pt, line cap=round] (0, -1.95) -- (0, 2.25);
+    \node[etikett, anchor=east, text=black!75] at (-0.12, -1.05) {Mast / spö};
+
+    % Låga fäststolpar / tältpinnar i sidorna
+    \draw[black!70, line width=1.2pt, line cap=round] (-3.95, -1.95) -- (-3.95, -0.55);
+    \draw[black!70, line width=1.2pt, line cap=round] ( 3.95, -1.95) -- ( 3.95, -0.55);
+
+    % Mittisolator + 1:1 strömbalun i toppen
+    \filldraw[isolator] (-0.25, 1.88) rectangle (0.25, 2.12);
+    \filldraw[fill=rhbjord!85, draw=black!75, line width=0.6pt, rounded corners=1pt]
+      (-0.30, 1.30) rectangle (0.30, 1.74);
+    \draw[black!75, line width=0.65pt] (-0.18, 1.96) -- (-0.14, 1.74);
+    \draw[black!75, line width=0.65pt] ( 0.18, 1.96) -- ( 0.14, 1.74);
+    \node[etikett, anchor=west] at (0.36, 1.52) {1:1-balun ($\approx 50\,\Omega$)};
+
+    % Antennbenen snett nedåt (ca 90–120 graders toppvinkel)
+    \draw[antenn] (-0.25, 1.98) -- (-3.05, -0.35);
+    \draw[antenn] ( 0.25, 1.98) -- ( 3.05, -0.35);
+    \node[nod, fill=rhbrav] at (-0.25, 1.98) {};
+    \node[nod, fill=rhbrav] at ( 0.25, 1.98) {};
+
+    % Ändisolatorer
+    \filldraw[isolator, rotate around={39.8:(-3.18,-0.46)}] (-3.33, -0.55) rectangle (-3.03, -0.37);
+    \filldraw[isolator, rotate around={-39.8:(3.18,-0.46)}] ( 3.03, -0.55) rectangle ( 3.33, -0.37);
+    \node[etikett, anchor=south east] at (-2.95, -0.30) {Ändisolator};
+
+    % Bärlinor från ändisolatorer till fästpunkter
+    \draw[lina] (-3.31, -0.57) -- (-3.95, -0.75);
+    \draw[lina] ( 3.31, -0.57) -- ( 3.95, -0.75);
+
+    % Koaxialkabel 50 ohm längs masten
+    \draw[koax] (0.08, 1.30) -- (0.08, -1.95);
+    \node[etikett, anchor=west] at (0.18, -0.25) {Koax $50\,\Omega$};
+
+    % Toppvinkel (90–120 grader)
+    \draw[black!60, line width=0.55pt] (-0.68, 1.62) arc[start angle=220, end angle=320, radius=0.88];
+    \node[etikett, fill=white, inner sep=1pt] at (0, 0.88) {$90^\circ\text{--}120^\circ$};
+
+    % Benlängder (lambda/4)
+    \node[etikett, text=rhbrav, rotate=40, anchor=south] at (-1.65, 0.88) {$\approx \lambda/4$};
+    \node[etikett, text=rhbrav, rotate=-40, anchor=south] at ( 1.65, 0.88) {$\approx \lambda/4$};
+
+    % Ändhöjd över mark (fri från gräs och beröring)
+    \draw[matt] (3.18, -1.95) -- (3.18, -0.55)
+      node[midway, fill=white, etikett, anchor=east, xshift=-2pt] {Fri höjd $>2\text{ m}$};
+  \end{scope}
+
+  % ====================================================================
+  % HÖGER DEL: MJUKARE STRÅLNINGSMÖNSTER OVANIFRÅN
+  % ====================================================================
+  \begin{scope}[shift={(4.45, 0.10)}]
+    \node[etikett, font=\footnotesize\bfseries] at (0, 2.95) {Strålning ovanifrån};
+
+    % Hjälpcirkel och axlar
+    \draw[black!20, line width=0.5pt] (0,0) circle[radius=1.85];
+    \draw[black!30, line width=0.45pt, dash pattern=on 2pt off 2pt] (-2.10, 0) -- (2.10, 0);
+    \draw[black!30, line width=0.45pt, dash pattern=on 2pt off 2pt] (0, -2.10) -- (0, 2.10);
+
+    % Rak dipol som referens (streckat åttamönster)
+    \draw[black!40, line width=0.6pt, dash pattern=on 2pt off 1.5pt]
+      (0,0)
+      .. controls ( 0.95,  0.45) and ( 1.05,  1.85) .. (0,  1.85)
+      .. controls (-1.05,  1.85) and (-0.95,  0.45) .. (0,0)
+      .. controls ( 0.95, -0.45) and ( 1.05, -1.85) .. (0, -1.85)
+      .. controls (-1.05, -1.85) and (-0.95, -0.45) .. (0,0);
+
+    % Inverterad V: mjukare åttamönster som även fyller ut i sidled
+    \filldraw[fill=rhbtack!22, draw=rhbtack!85!black, line width=1.05pt]
+      (0, 1.72)
+      .. controls ( 1.15,  1.72) and ( 1.05,  0.55) .. ( 0.68,  0.00)
+      .. controls ( 1.05, -0.55) and ( 1.15, -1.72) .. ( 0.00, -1.72)
+      .. controls (-1.15, -1.72) and (-1.05, -0.55) .. (-0.68,  0.00)
+      .. controls (-1.05,  0.55) and (-1.15,  1.72) .. ( 0.00,  1.72);
+
+    % Antennens projektion ovanifrån (kortare spann i sidled)
+    \draw[antenn, line width=1.5pt] (-1.05, 0) -- (-0.10, 0);
+    \draw[antenn, line width=1.5pt] ( 0.10, 0) -- ( 1.05, 0);
+    \filldraw[isolator] (-0.10, -0.08) rectangle (0.10, 0.08);
+
+    \node[etikett, anchor=south] at (0,  2.05) {Mjukare åtta};
+    \node[etikett, anchor=north] at (0, -2.05) {(mindre djupa nollställen)};
+  \end{scope}
+
+\end{tikzpicture}
+\caption{Inverterad V-dipol. En enda hög fästpunkt i mitten räcker och antennen
+tar mindre plats i sidled än en rak dipol. När benen vinklas nedåt ($90^\circ\text{--}120^\circ$)
+sjunker matningsimpedansen närmare $50\,\Omega$ och strålningsmönstret blir mer
+rundstrålande. Ändarna ska hållas fritt över marken.}
+\label{fig:inv-v}
+\end{figure}
 
 \subsubsection{Off-center-matad dipol}
 \index{off-center}
@@ -181,6 +422,122 @@ en antenn som snabbt kan köras på flera band. Den är dock inte
 särskilt kompakt men den ger ofta mycket bra resultat och den är lätt
 att bygga.
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  x=1cm, y=1cm,
+  antenn/.style={rhbrav, line width=1.35pt, line cap=round},
+  koax/.style={black!80, line width=1.1pt, line cap=round},
+  lina/.style={black!45, line width=0.6pt, dash pattern=on 2pt off 1.5pt},
+  isolator/.style={fill=white, draw=black!75, line width=0.65pt, rounded corners=1pt},
+  matt/.style={{Stealth[length=1.6mm]}-{Stealth[length=1.6mm]}, black!65, line width=0.55pt},
+  nod/.style={fill=black, circle, inner sep=1.2pt}
+]
+
+  % ====================================================================
+  % VÄNSTER DEL: OCF-DIPOLENS UPPBYGGNAD (1/3 OCH 2/3)
+  % ====================================================================
+  \begin{scope}[shift={(-2.25, 0)}]
+    \node[etikett, font=\footnotesize\bfseries] at (0, 3.10) {Off-center-matad dipol (OCF)};
+
+    % Mark och gräs/jord
+    \fill[rhbjord] (-4.55, -2.35) rectangle (4.55, -1.95);
+    \draw[marklinje] (-4.55, -1.95) -- (4.55, -1.95);
+
+    % Två fästpunkter / stolpar i kanterna
+    \draw[black!70, line width=1.4pt, line cap=round] (-4.25, -1.95) -- (-4.25, 1.65);
+    \draw[black!70, line width=1.4pt, line cap=round] ( 4.25, -1.95) -- ( 4.25, 1.65);
+
+    % Bärlinor och ändisolatorer
+    \draw[lina] (-4.25, 1.35) -- (-3.60, 1.35);
+    \draw[lina] ( 3.60, 1.35) -- ( 4.25, 1.35);
+    \filldraw[isolator] (-3.60, 1.25) rectangle (-3.30, 1.45);
+    \filldraw[isolator] ( 3.30, 1.25) rectangle ( 3.60, 1.45);
+
+    % Matningspunkt vid 1/3 av längden (x = -1.10, total tråd -3.30 till +3.30 = 6.60)
+    % Kort ben: -3.30 till -1.32 (längd ~2.20), Långt ben: -0.88 till +3.30 (längd ~4.40)
+    \draw[antenn] (-3.30, 1.35) -- (-1.32, 1.35);
+    \draw[antenn] (-0.88, 1.35) -- ( 3.30, 1.35);
+    \node[nod, fill=rhbrav] at (-1.32, 1.35) {};
+    \node[nod, fill=rhbrav] at (-0.88, 1.35) {};
+
+    % Isolator vid matningspunkten (x = -1.10)
+    \filldraw[isolator] (-1.32, 1.22) rectangle (-0.88, 1.48);
+    \node[etikett, anchor=south, text=black!75] at (-1.10, 1.52) {$\approx 200\,\Omega$};
+
+    % Guanella 4:1 strömbalun direkt i matningspunkten
+    \filldraw[fill=rhbjord!85, draw=black!75, line width=0.6pt, rounded corners=1pt]
+      (-1.45, 0.58) rectangle (-0.75, 1.05);
+    \draw[black!75, line width=0.65pt] (-1.28, 1.35) -- (-1.22, 1.05);
+    \draw[black!75, line width=0.65pt] (-0.92, 1.35) -- (-0.98, 1.05);
+    \node[etikett, anchor=west] at (-0.68, 0.82) {Guanella 4:1 ($200 \to 50\,\Omega$)};
+
+    % Koax 50 ohm nedåt + extra 1:1 strömbalun (mantelströmsdrossel)
+    \draw[koax] (-1.10, 0.58) -- (-1.10, -0.02);
+    \filldraw[fill=rhbe!45, draw=black!75, line width=0.6pt, rounded corners=1pt]
+      (-1.40, -0.45) rectangle (-0.80, -0.02);
+    \node[etikett, anchor=west] at (-0.68, -0.24) {Extra 1:1-balun (mot mantelström)};
+    \draw[koax] (-1.10, -0.45) -- (-1.10, -1.95);
+    \node[etikett, anchor=west] at (-0.98, -1.25) {Koax $50\,\Omega$};
+
+    % Måttlinjer för korta benet (L/3) och långa benet (2L/3)
+    \draw[matt] (-3.30, 2.02) -- (-1.15, 2.02)
+      node[midway, fill=white, etikett] {$l_{\text{kort}} = \dfrac{L}{3}$};
+    \draw[matt] (-1.05, 2.02) -- ( 3.30, 2.02)
+      node[midway, fill=white, etikett] {$l_{\text{lång}} = \dfrac{2L}{3}$};
+
+    % Totallängd L
+    \draw[matt] (-3.30, 2.62) -- ( 3.30, 2.62)
+      node[midway, fill=white, etikett] {Total längd $L \approx \dfrac{142\text{--}143}{f\text{ [MHz]}}\text{ m}$};
+    \draw[black!40, line width=0.4pt] (-3.30, 1.50) -- (-3.30, 2.72);
+    \draw[black!40, line width=0.4pt] (-1.10, 1.78) -- (-1.10, 2.12);
+    \draw[black!40, line width=0.4pt] ( 3.30, 1.50) -- ( 3.30, 2.72);
+  \end{scope}
+
+  % ====================================================================
+  % HÖGER DEL: IMPEDANS VID 1/3 PÅ GRUNDTON OCH ÖVERTONER
+  % ====================================================================
+  \begin{scope}[shift={(4.55, 0.05)}]
+    \node[etikett, font=\footnotesize\bfseries] at (0, 3.05) {Strömfördelning vid $1/3$};
+
+    % Vertikal linje för 1/3-matningspunkten
+    \draw[rhbes, line width=0.7pt, dash pattern=on 2.5pt off 1.5pt] (-0.60, -1.65) -- (-0.60, 2.35);
+    \node[etikett, text=rhbes, anchor=south] at (-0.60, 2.35) {Matning ($1/3$)};
+
+    % 1) Grundton (80 m / 40 m): halvvåg
+    \draw[black!55, line width=0.8pt] (-1.80, 1.45) -- (1.80, 1.45);
+    \draw[rhbrav, line width=0.95pt] (-1.80, 1.45) sin (0, 2.10) cos (1.80, 1.45);
+    \fill[rhbes] (-0.60, 2.01) circle[radius=0.055];
+    \node[etikett, anchor=north west] at (-1.80, 1.42) {$f_0$ ($\lambda/2$): $\approx 200\,\Omega$};
+
+    % 2) Andra deltonen (40 m / 20 m): helvåg (mitten har I=0, men 1/3 har god ström!)
+    \draw[black!55, line width=0.8pt] (-1.80, 0.10) -- (1.80, 0.10);
+    \draw[rhbrav, line width=0.95pt]
+      (-1.80, 0.10) sin (-0.90, 0.72) cos (0, 0.10) sin (0.90, -0.52) cos (1.80, 0.10);
+    \fill[rhbes] (-0.60, 0.64) circle[radius=0.055];
+    \node[etikett, anchor=north west] at (-1.80, -0.52) {$2f_0$ ($1\lambda$): $\approx 200\,\Omega$};
+
+    % 3) Fjärde deltonen (20 m / 10 m): 2 våglängder
+    \draw[black!55, line width=0.8pt] (-1.80, -1.35) -- (1.80, -1.35);
+    \draw[rhbrav, line width=0.95pt]
+      (-1.80, -1.35) sin (-1.35, -0.80) cos (-0.90, -1.35)
+      sin (-0.45, -1.90) cos ( 0.00, -1.35)
+      sin ( 0.45, -0.80) cos ( 0.90, -1.35)
+      sin ( 1.35, -1.90) cos ( 1.80, -1.35);
+    \fill[rhbes] (-0.60, -1.83) circle[radius=0.055];
+    \node[etikett, anchor=north west] at (-1.80, -1.92) {$4f_0$ ($2\lambda$): $\approx 200\,\Omega$};
+  \end{scope}
+
+\end{tikzpicture}
+\caption{Off-center-matad dipol (OCF). Matningspunkten sitter en tredjedel in
+från ena änden ($l_{\text{kort}} = L/3$, $l_{\text{lång}} = 2L/3$). Där ligger
+impedansen kring $200\,\Omega$ både på grundfrekvensen $f_0$ och på de jämna
+övertonerna ($2f_0$, $4f_0$). En Guanella 4:1-strömbalun i matningspunkten
+transformerar ner till $50\,\Omega$, och en extra 1:1-strömbalun strax under
+stoppar mantelströmmar på koaxialkabeln.}
+\label{fig:ocf}
+\end{figure}
+
 \subsubsection{Stegmatad dipol, doublet}
 \index{doublet}
 \index{antenn!doublet}
@@ -253,6 +610,139 @@ Höjden gör samma sak som för en vanlig dipol. Lågt ger NVIS på de låga
 banden, högre ger flackare lob och DX. På de högre banden blir tråden
 flera våglängder och loben delar sig. Det är normalt för en doublet.
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  x=1cm, y=1cm,
+  antenn/.style={rhbrav, line width=1.35pt, line cap=round},
+  stege/.style={rhbrav!90!black, line width=0.9pt, line cap=round},
+  koax/.style={black!80, line width=1.1pt, line cap=round},
+  lina/.style={black!45, line width=0.6pt, dash pattern=on 2pt off 1.5pt},
+  isolator/.style={fill=white, draw=black!75, line width=0.65pt, rounded corners=1pt},
+  matt/.style={{Stealth[length=1.6mm]}-{Stealth[length=1.6mm]}, black!65, line width=0.55pt},
+  nod/.style={fill=black, circle, inner sep=1.2pt}
+]
+
+  % ====================================================================
+  % VÄNSTER DEL: STEGMATAD DOUBLET FRAMIFRÅN
+  % ====================================================================
+  \begin{scope}[shift={(-2.30, 0)}]
+    \node[etikett, font=\footnotesize\bfseries] at (0, 3.10) {Stegmatad doublet med tuner};
+
+    % Mark och gräs/jord
+    \fill[rhbjord] (-4.50, -2.45) rectangle (4.50, -2.05);
+    \draw[marklinje] (-4.50, -2.05) -- (4.50, -2.05);
+
+    % Två fästpunkter / stolpar i kanterna
+    \draw[black!70, line width=1.4pt, line cap=round] (-4.20, -2.05) -- (-4.20, 1.75);
+    \draw[black!70, line width=1.4pt, line cap=round] ( 4.20, -2.05) -- ( 4.20, 1.75);
+
+    % Bärlinor och ändisolatorer
+    \draw[lina] (-4.20, 1.45) -- (-3.45, 1.45);
+    \draw[lina] ( 3.45, 1.45) -- ( 4.20, 1.45);
+    \filldraw[isolator] (-3.45, 1.35) rectangle (-3.15, 1.55);
+    \filldraw[isolator] ( 3.15, 1.35) rectangle ( 3.45, 1.55);
+
+    % Två lika långa antennben (icke-resonanta, L/2 vardera)
+    \draw[antenn] (-3.15, 1.45) -- (-0.22, 1.45);
+    \draw[antenn] ( 0.22, 1.45) -- ( 3.15, 1.45);
+    \node[nod, fill=rhbrav] at (-0.22, 1.45) {};
+    \node[nod, fill=rhbrav] at ( 0.22, 1.45) {};
+
+    % Mittisolator (ingen balun i toppen!)
+    \filldraw[isolator] (-0.22, 1.32) rectangle (0.22, 1.58);
+
+    % Öppen stege (450–600 ohm) rakt ner till tunern
+    \draw[stege] (-0.16, 1.45) -- (-0.16, -0.78);
+    \draw[stege] ( 0.16, 1.45) -- ( 0.16, -0.78);
+    \foreach \y in {1.15, 0.80, 0.45, 0.10, -0.25, -0.60} {
+      \draw[black!65, line width=0.65pt] (-0.18, \y) -- (0.18, \y);
+    }
+    \node[etikett, anchor=west] at (0.28, 0.55) {Öppen stege $450\text{--}600\,\Omega$};
+    \node[etikett, anchor=west, text=black!70] at (0.28, 0.18) {(låg förlust trots hög SWR,};
+    \node[etikett, anchor=west, text=black!70] at (0.28, -0.15) {hålls fri från metall)};
+
+    % 1:1 strömbalun direkt vid tunern + antenntuner + kort koax till radio
+    \filldraw[fill=rhbjord!85, draw=black!75, line width=0.6pt, rounded corners=1pt]
+      (-0.34, -1.25) rectangle (0.34, -0.78);
+    \node[etikett, anchor=east] at (-0.42, -1.01) {1:1-balun};
+
+    % Antenntuner (ATU)
+    \filldraw[fill=rhbfsvag!75, draw=black!75, line width=0.65pt, rounded corners=1.5pt]
+      (-0.75, -1.90) rectangle (0.75, -1.38);
+    \draw[koax] (0, -1.25) -- (0, -1.38);
+    \node[etikett, font=\scriptsize\bfseries] at (0, -1.64) {Antenntuner};
+
+    % Kort koax 50 ohm till sändtagare (TRX)
+    \draw[koax] (0.75, -1.64) -- (1.85, -1.64);
+    \node[etikett, anchor=south] at (1.30, -1.58) {Kort koax};
+    \node[etikett, anchor=north] at (1.30, -1.68) {$50\,\Omega$};
+
+    \filldraw[fill=white, draw=black!75, line width=0.65pt, rounded corners=1.5pt]
+      (1.85, -1.90) rectangle (3.10, -1.38);
+    \node[etikett, font=\scriptsize\bfseries] at (2.475, -1.64) {Radio};
+
+    % Måttlinjer för benen och totallängd (vald utanför halvvåg/helvåg)
+    \draw[matt] (-3.15, 2.02) -- (-0.05, 2.02)
+      node[midway, fill=white, etikett] {$L/2$};
+    \draw[matt] ( 0.05, 2.02) -- ( 3.15, 2.02)
+      node[midway, fill=white, etikett] {$L/2$};
+
+    \draw[matt] (-3.15, 2.60) -- ( 3.15, 2.60)
+      node[midway, fill=white, etikett] {Icke-resonant längd $L$ (t.ex.\ $27{,}5\text{ m}$ eller $32{,}5\text{ m}$)};
+    \draw[black!40, line width=0.4pt] (-3.15, 1.60) -- (-3.15, 2.70);
+    \draw[black!40, line width=0.4pt] ( 3.15, 1.60) -- ( 3.15, 2.70);
+  \end{scope}
+
+  % ====================================================================
+  % HÖGER DEL: STRÅLNINGSMÖNSTER PÅ LÅGA RESPEKTIVE HÖGA BAND
+  % ====================================================================
+  \begin{scope}[shift={(4.50, 0.05)}]
+    \node[etikett, font=\footnotesize\bfseries] at (0, 3.05) {Lober ovanifrån};
+
+    % Hjälpcirkel och axlar
+    \draw[black!20, line width=0.5pt] (0,0) circle[radius=1.80];
+    \draw[black!30, line width=0.45pt, dash pattern=on 2pt off 2pt] (-2.05, 0) -- (2.05, 0);
+    \draw[black!30, line width=0.45pt, dash pattern=on 2pt off 2pt] (0, -2.05) -- (0, 2.05);
+
+    % Låga band (streckad grön åtta: som vanlig dipol)
+    \draw[rhbtack!85!black, line width=0.85pt, dash pattern=on 3pt off 1.8pt]
+      (0,0)
+      .. controls ( 0.90,  0.42) and ( 1.00,  1.78) .. (0,  1.78)
+      .. controls (-1.00,  1.78) and (-0.90,  0.42) .. (0,0)
+      .. controls ( 0.90, -0.42) and ( 1.00, -1.78) .. (0, -1.78)
+      .. controls (-1.00, -1.78) and (-0.90, -0.42) .. (0,0);
+
+    % Högre band (L > lambda): loben delar sig i fyra huvudlober (klöverblad)
+    \filldraw[fill=rhbf!25, draw=rhbrav, line width=1.0pt]
+      (0,0)
+      .. controls ( 0.35,  1.05) and ( 1.15,  1.65) .. ( 1.32,  1.32)
+      .. controls ( 1.65,  1.15) and ( 1.05,  0.35) .. (0,0)
+      .. controls ( 1.05, -0.35) and ( 1.65, -1.15) .. ( 1.32, -1.32)
+      .. controls ( 1.15, -1.65) and ( 0.35, -1.05) .. (0,0)
+      .. controls (-0.35, -1.05) and (-1.15, -1.65) .. (-1.32, -1.32)
+      .. controls (-1.65, -1.15) and (-1.05, -0.35) .. (0,0)
+      .. controls (-1.05,  0.35) and (-1.65,  1.15) .. (-1.32,  1.32)
+      .. controls (-1.15,  1.65) and (-0.35,  1.05) .. (0,0);
+
+    % Dipoltråden i mitten
+    \draw[antenn, line width=1.5pt] (-1.35, 0) -- (-0.10, 0);
+    \draw[antenn, line width=1.5pt] ( 0.10, 0) -- ( 1.35, 0);
+    \filldraw[isolator] (-0.10, -0.08) rectangle (0.10, 0.08);
+
+    \node[etikett, text=rhbtack!85!black, anchor=south] at (0, 2.02) {Låga band: åtta};
+    \node[etikett, text=rhbrav, anchor=north] at (0, -2.02) {Höga band: delad lob};
+  \end{scope}
+
+\end{tikzpicture}
+\caption{Stegmatad doublet för flerbandsdrift. Trådlängden $L$ väljs så att den
+undviker exakta halv- och helvågsresonanser. Den öppna stegen ($450\text{--}600\,\Omega$)
+har mycket låga förluster även vid hög stående våg och går hela vägen ner till
+en balanserad antenntuner (eller en 1:1-strömbalun direkt vid tunern). På högre
+band där tråden är längre än en våglängd delar sig strålningsloben.}
+\label{fig:doublet}
+\end{figure}
+
 \subsection{Vertikalantenn och jordplan}
 \index{vertikalantenn}
 \index{antenn!vertikal}
@@ -289,6 +779,115 @@ läng i den riktning man vill ha bästa verkan av antennen, eller så har
 man flera motvikter, exempelvis 3 stycken arrangerade som ett Y och
 får den då ganska rundstrålande. Motvikterna kan vara kortare än det
 vertikala men är de ungefär lika långa får man bästa effekten.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  x=1cm, y=1cm,
+  antenn/.style={rhbrav, line width=1.4pt, line cap=round},
+  radial/.style={rhbtack!85!black, line width=1.15pt, line cap=round},
+  koax/.style={black!80, line width=1.1pt, line cap=round},
+  isolator/.style={fill=white, draw=black!75, line width=0.65pt, rounded corners=1pt},
+  matt/.style={{Stealth[length=1.6mm]}-{Stealth[length=1.6mm]}, black!65, line width=0.55pt},
+  nod/.style={fill=black, circle, inner sep=1.2pt}
+]
+
+  % ====================================================================
+  % VÄNSTER DEL: MARKMONTERAD / FISKESPÖ MED MARKRADIALER + LÅGA DX-LOBER
+  % ====================================================================
+  \begin{scope}[shift={(-3.35, 0)}]
+    \node[etikett, font=\footnotesize\bfseries] at (0, 3.15) {På marken (t.ex.\ fiskespö)};
+
+    % Mark och jord
+    \fill[rhbjord] (-3.25, -2.35) rectangle (3.25, -1.85);
+    \draw[marklinje] (-3.25, -1.85) -- (3.25, -1.85);
+
+    % Låga strålningslober (flack vinkel för DX åt alla håll)
+    \filldraw[fill=rhbtack!18, draw=rhbtack!80!black, line width=0.8pt, dash pattern=on 2.5pt off 1.5pt]
+      (0, -1.75)
+      .. controls ( 0.85, -1.65) and ( 2.85, -1.35) .. ( 3.05, -0.55)
+      .. controls ( 3.15,  0.15) and ( 1.45, -0.45) .. (0, -1.75);
+    \filldraw[fill=rhbtack!18, draw=rhbtack!80!black, line width=0.8pt, dash pattern=on 2.5pt off 1.5pt]
+      (0, -1.75)
+      .. controls (-0.85, -1.65) and (-2.85, -1.35) .. (-3.05, -0.55)
+      .. controls (-3.15,  0.15) and (-1.45, -0.45) .. (0, -1.75);
+    \node[etikett, text=rhbtack!80!black, anchor=south] at (2.15, -0.42) {Låg lob (DX)};
+
+    % Fiskespö / glasfibermast som bär tråden
+    \draw[black!35, line width=1.8pt, line cap=round] (-0.08, -1.85) -- (-0.08, 2.35);
+    \node[etikett, text=black!65, anchor=east] at (-0.18, 1.55) {Spö};
+
+    % Vertikal strålare (lambda/4 ≈ 71 / f)
+    \draw[antenn] (0.04, -1.65) -- (0.04, 2.25);
+    \node[nod, fill=rhbrav] at (0.04, -1.65) {};
+
+    % Basisolator / matningspunkt
+    \filldraw[isolator] (-0.18, -1.85) rectangle (0.22, -1.65);
+
+    % Radialer / motvikter utlagda på marken (Y-form / nät)
+    \draw[radial] (-0.18, -1.82) -- (-2.75, -1.82);
+    \draw[radial] ( 0.22, -1.82) -- ( 2.75, -1.82);
+    \draw[radial] (-0.05, -1.85) -- (-1.55, -2.25);
+    \draw[radial] ( 0.10, -1.85) -- ( 1.65, -2.25);
+    \node[etikett, text=rhbtack!85!black, anchor=north] at (0, -2.35)
+      {Radialer / motvikter på marken (t.ex.\ 3 st i Y eller radialnät)};
+
+    % Koax 50 ohm
+    \draw[koax] (0.22, -1.75) -- (1.45, -1.75);
+    \node[etikett, anchor=south] at (1.05, -1.72) {Koax $50\,\Omega$};
+
+    % Måttlinje för kvartsvågen
+    \draw[matt] (-0.85, -1.65) -- (-0.85, 2.25)
+      node[midway, fill=white, etikett] {$\approx \dfrac{\lambda}{4} \approx \dfrac{71}{f}\text{ m}$};
+    \draw[black!40, line width=0.4pt] (-0.95, 2.25) -- (0.00, 2.25);
+  \end{scope}
+
+  % ====================================================================
+  % HÖGER DEL: UPPHÖJD VERTIKAL MED SLUTTANDE AVSTÄMDA RADIALER (50 OHM)
+  % ====================================================================
+  \begin{scope}[shift={(3.55, 0)}]
+    \node[etikett, font=\footnotesize\bfseries] at (0, 3.15) {Upphöjd med jordplan};
+
+    % Mark och jord
+    \fill[rhbjord] (-3.05, -2.35) rectangle (3.05, -1.85);
+    \draw[marklinje] (-3.05, -1.85) -- (3.05, -1.85);
+
+    % Bärrör / mast upp i luften
+    \draw[black!65, line width=1.6pt, line cap=round] (0, -1.85) -- (0, -0.35);
+
+    % Basisolator i matningspunkten
+    \filldraw[isolator] (-0.20, -0.35) rectangle (0.20, -0.12);
+
+    % Vertikal strålare (lambda/4)
+    \draw[antenn] (0, -0.12) -- (0, 2.45);
+    \node[nod, fill=rhbrav] at (0, -0.12) {};
+    \node[etikett, text=rhbrav, anchor=west] at (0.12, 1.35) {Strålare $\approx \lambda/4$};
+
+    % 3–4 sluttande avstämda radialer (ger ca 50 ohm)
+    \draw[radial] (-0.20, -0.25) -- (-2.25, -1.25);
+    \draw[radial] ( 0.20, -0.25) -- ( 2.25, -1.25);
+    \draw[radial, line width=0.95pt] (-0.08, -0.30) -- (-0.95, -1.42);
+    \draw[radial, line width=0.95pt] ( 0.08, -0.30) -- ( 1.05, -1.38);
+
+    \node[etikett, text=rhbtack!85!black, rotate=26, anchor=south] at (-1.35, -0.75) {$\approx \lambda/4$};
+    \node[etikett, text=rhbtack!85!black, rotate=-26, anchor=south] at ( 1.35, -0.75) {$\approx \lambda/4$};
+
+    % Koax 50 ohm längs masten
+    \draw[koax] (0.08, -0.35) -- (0.08, -1.85);
+    \node[etikett, anchor=west] at (0.18, -1.55) {Koax $50\,\Omega$};
+
+    \node[etikett, anchor=north] at (0, -2.35)
+      {3--4 sluttande $\lambda/4$-radialer $\Rightarrow Z \approx 50\,\Omega$};
+  \end{scope}
+
+\end{tikzpicture}
+\caption{Kvartsvågs vertikalantenn ($\approx 71/f\text{ m}$). Antennen är
+rundstrålande i horisontalplanet med låg strålningsvinkel för DX och kräver ett
+jordplan att arbeta mot. Till vänster: markmonterad vertikal (t.ex.\ tråd längs
+ett fiskespö) med radialer/motvikter på marken. Till höger: upphöjd vertikal där
+3--4 sluttande kvartsvågsradialer ger en matningsimpedans nära $50\,\Omega$.}
+\label{fig:vertikal}
+\end{figure}
 
 \subsection{Longwire och ändmatad, EFHW och EFRW}
 \index{longwire}
@@ -371,6 +970,129 @@ högst antennvinst den som är 1.25 våglängder lång.
 Detta är en utmärkt portabelantenn eftersom den består av en unun, en
 motvikt och en rulle tråd man kan kasta ut där man vill köra.
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  x=1cm, y=1cm,
+  antenn/.style={rhbrav, line width=1.35pt, line cap=round},
+  motvikt/.style={rhbtack!85!black, line width=1.1pt, line cap=round},
+  koax/.style={black!80, line width=1.1pt, line cap=round},
+  lina/.style={black!45, line width=0.6pt, dash pattern=on 2pt off 1.5pt},
+  isolator/.style={fill=white, draw=black!75, line width=0.65pt, rounded corners=1pt},
+  matt/.style={{Stealth[length=1.6mm]}-{Stealth[length=1.6mm]}, black!65, line width=0.55pt},
+  nod/.style={fill=black, circle, inner sep=1.2pt}
+]
+
+  % ====================================================================
+  % VÄNSTER DEL: EFHW (RESONANT HALVVÅG MED 49:1 UNUN)
+  % ====================================================================
+  \begin{scope}[shift={(-3.45, 0)}]
+    \node[etikett, font=\footnotesize\bfseries] at (0, 3.10) {EFHW (resonant, 49:1)};
+
+    % Mark och jord
+    \fill[rhbjord] (-3.15, -2.40) rectangle (3.15, -2.00);
+    \draw[marklinje] (-3.15, -2.00) -- (3.15, -2.00);
+
+    % Låg stolpe vid matningsänden + hög stolpe/träd i bortre änden
+    \draw[black!70, line width=1.3pt, line cap=round] (-2.45, -2.00) -- (-2.45, 0.45);
+    \draw[black!70, line width=1.4pt, line cap=round] ( 2.85, -2.00) -- ( 2.85, 2.05);
+
+    % 49:1 Unun vid matningspunkten
+    \filldraw[fill=rhbjord!85, draw=black!75, line width=0.65pt, rounded corners=1.5pt]
+      (-2.35, -0.15) rectangle (-1.45, 0.45);
+    \node[etikett, font=\scriptsize\bfseries] at (-1.90, 0.22) {Unun};
+    \node[etikett, font=\scriptsize] at (-1.90, -0.01) {49:1 ($1{:}7$)};
+
+    % Resonant halvvågstråd snett uppåt (hög impedans i änden, ~2500 ohm)
+    \draw[antenn] (-1.45, 0.25) -- (2.15, 1.75);
+    \node[nod, fill=rhbrav] at (-1.45, 0.25) {};
+    \filldraw[isolator, rotate around={22.6:(2.28,1.80)}] (2.13, 1.71) rectangle (2.43, 1.89);
+    \draw[lina] (2.41, 1.86) -- (2.85, 1.95);
+
+    % Spännings- och strömkurva (spänningsmax i ändarna -> 2500 ohm)
+    \draw[rhbrav!75, line width=0.75pt, dash pattern=on 2.5pt off 1.5pt]
+      (-1.45, 0.25) .. controls (-0.15, 1.65) and (0.85, 2.15) .. (2.15, 1.75);
+    \node[etikett, text=rhbrav, rotate=22.6, anchor=south] at (0.20, 1.38)
+      {$L = \lambda/2$ (eller $n\cdot\lambda/2$)};
+    \node[etikett, text=rhbes, anchor=west] at (-1.35, 0.02) {$Z \approx 2\,500\,\Omega$};
+
+    % Kort motvikt (ca 0,05 lambda) ELLER koaxskärm fram till 1:1-balun
+    \draw[motvikt] (-2.15, -0.15) -- (-2.95, -0.85);
+    \node[etikett, text=rhbtack!85!black, anchor=east] at (-2.25, -0.68) {Motvikt};
+
+    % Koax 50 ohm + 1:1 mantelströmsbalun en bit ner + Radio (ingen tuner)
+    \draw[koax] (-1.75, -0.15) -- (-1.75, -0.95);
+    \filldraw[fill=rhbe!45, draw=black!75, line width=0.6pt, rounded corners=1pt]
+      (-2.05, -1.32) rectangle (-1.45, -0.95);
+    \node[etikett, anchor=west] at (-1.38, -1.14) {1:1-balun};
+    \draw[koax] (-1.75, -1.32) -- (-1.75, -1.72) -- (0.35, -1.72);
+    \node[etikett, anchor=south] at (-0.70, -1.68) {Koax $50\,\Omega$};
+
+    \filldraw[fill=white, draw=black!75, line width=0.65pt, rounded corners=1.5pt]
+      (0.35, -1.95) rectangle (1.65, -1.45);
+    \node[etikett, font=\scriptsize\bfseries] at (1.00, -1.70) {Radio};
+  \end{scope}
+
+  % ====================================================================
+  % HÖGER DEL: EFRW ("RANDOM WIRE", ICKE-RESONANT MED 9:1 UNUN + TUNER)
+  % ====================================================================
+  \begin{scope}[shift={(3.45, 0)}]
+    \node[etikett, font=\footnotesize\bfseries] at (0, 3.10) {EFRW (icke-resonant, 9:1)};
+
+    % Mark och jord
+    \fill[rhbjord] (-3.15, -2.40) rectangle (3.15, -2.00);
+    \draw[marklinje] (-3.15, -2.00) -- (3.15, -2.00);
+
+    % Låg stolpe vid matningsänden + hög stolpe/träd i bortre änden
+    \draw[black!70, line width=1.3pt, line cap=round] (-2.45, -2.00) -- (-2.45, 0.45);
+    \draw[black!70, line width=1.4pt, line cap=round] ( 2.85, -2.00) -- ( 2.85, 2.05);
+
+    % 9:1 Unun vid matningspunkten
+    \filldraw[fill=rhbjord!85, draw=black!75, line width=0.65pt, rounded corners=1.5pt]
+      (-2.35, -0.15) rectangle (-1.45, 0.45);
+    \node[etikett, font=\scriptsize\bfseries] at (-1.90, 0.22) {Unun};
+    \node[etikett, font=\scriptsize] at (-1.90, -0.01) {9:1 ($1{:}3$)};
+
+    % Icke-resonant tråd snett uppåt (måttlig impedans, några hundra ohm)
+    \draw[antenn] (-1.45, 0.25) -- (2.15, 1.75);
+    \node[nod, fill=rhbrav] at (-1.45, 0.25) {};
+    \filldraw[isolator, rotate around={22.6:(2.28,1.80)}] (2.13, 1.71) rectangle (2.43, 1.89);
+    \draw[lina] (2.41, 1.86) -- (2.85, 1.95);
+
+    \node[etikett, text=rhbrav, rotate=22.6, anchor=south] at (0.35, 1.05)
+      {Icke-resonant längd ($L \neq n\cdot\lambda/2$)};
+    \node[etikett, text=rhbes, anchor=west] at (-1.35, 0.02) {$Z \approx 300\text{--}600\,\Omega$};
+
+    % Motvikt utlagd vid matningspunkten
+    \draw[motvikt] (-2.10, -0.15) -- (-2.95, -1.85);
+    \node[etikett, text=rhbtack!85!black, anchor=east] at (-2.45, -1.05) {Motvikt};
+
+    % Koax 50 ohm + Antenntuner + Radio
+    \draw[koax] (-1.75, -0.15) -- (-1.75, -1.72) -- (-0.45, -1.72);
+    \node[etikett, anchor=south] at (-1.10, -1.68) {Koax $50\,\Omega$};
+
+    \filldraw[fill=rhbfsvag!75, draw=black!75, line width=0.65pt, rounded corners=1.5pt]
+      (-0.45, -1.95) rectangle (0.65, -1.45);
+    \node[etikett, font=\scriptsize\bfseries] at (0.10, -1.70) {Tuner};
+
+    \draw[koax] (0.65, -1.70) -- (1.15, -1.70);
+
+    \filldraw[fill=white, draw=black!75, line width=0.65pt, rounded corners=1.5pt]
+      (1.15, -1.95) rectangle (2.35, -1.45);
+    \node[etikett, font=\scriptsize\bfseries] at (1.75, -1.70) {Radio};
+  \end{scope}
+
+\end{tikzpicture}
+\caption{Två filosofier för ändmatade trådantenner. Till vänster: \textbf{EFHW}
+(ändmatad halvvåg) är avstämd till $\lambda/2$ och dess övertoner. Ändimpedansen
+är mycket hög ($\approx 2\,500\,\Omega$) och transformeras ner med en 49:1-unun
+($1{:}7$ i varvtal) så att den kan köras utan tuner på sina resonansband. Till
+höger: \textbf{EFRW} (\textit{random wire}) klipps medvetet till en icke-resonant
+längd där ändimpedansen är några hundra ohm, vilket klarar sig med en enklare
+och förlustsnålare 9:1-unun ($1{:}3$) tillsammans med motvikt och antenntuner.}
+\label{fig:efhw-efrw}
+\end{figure}
+
 \subsection{Yagi-Uda}
 \index{Yagi-Uda}
 \index{antenn!Yagi-Uda}
@@ -396,6 +1118,111 @@ På kortvåg blir en yagi dock väldigt stor. Tre element på 20\,m har
 element kring tio meter och en bom på flera meter. På 15 och 10\,m
 krymper det. På 6\,m och uppåt är yagin det vanliga sättet att få
 riktverkan, och där får den plats på en vanlig mast.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  x=1cm, y=1cm,
+  bom/.style={black!60, line width=2.2pt, line cap=round},
+  element/.style={rhbrav, line width=1.6pt, line cap=round},
+  parasit/.style={black!80, line width=1.45pt, line cap=round},
+  koax/.style={black!80, line width=1.1pt, line cap=round},
+  isolator/.style={fill=white, draw=black!75, line width=0.65pt, rounded corners=1pt},
+  matt/.style={{Stealth[length=1.6mm]}-{Stealth[length=1.6mm]}, black!65, line width=0.55pt},
+  pil/.style={-{Stealth[length=2.2mm]}, rhbes, line width=1.2pt}
+]
+
+  % ====================================================================
+  % VÄNSTER DEL: 3-ELEMENTS YAGI-UDA OVANIFRÅN (KONSTRUKTION)
+  % ====================================================================
+  \begin{scope}[shift={(-2.65, 0)}]
+    \node[etikett, font=\footnotesize\bfseries] at (0.15, 2.95) {3-elements Yagi-Uda ovanifrån};
+
+    % Bom (horisontellt bärrör) och mastfäste
+    \draw[bom] (-2.85, 0) -- (2.95, 0);
+    \filldraw[fill=black!25, draw=black!75, line width=0.7pt] (0, 0) circle[radius=0.18];
+    \node[etikett, anchor=north east, text=black!70] at (-0.12, -0.18) {Bom / mast};
+
+    % 1) Reflektor (bakom, längst: ca 0,50 lambda) vid x = -2.20
+    \draw[parasit] (-2.20, -2.15) -- (-2.20, 2.15);
+    \node[etikett, font=\scriptsize\bfseries, anchor=south] at (-2.20, 2.20) {Reflektor};
+    \node[etikett, anchor=north] at (-2.20, -2.20) {Längre ($\approx 0{,}50\lambda$)};
+
+    % 2) Drivet element / matad dipol (i mitten: ca 0,47 lambda) vid x = -0.35
+    \draw[element] (-0.35, -1.90) -- (-0.35, -0.14);
+    \draw[element] (-0.35,  0.14) -- (-0.35,  1.90);
+    \filldraw[isolator] (-0.45, -0.14) rectangle (-0.25, 0.14);
+    \node[etikett, text=rhbrav, font=\scriptsize\bfseries, anchor=south] at (-0.35, 2.20) {Drivet element};
+    \node[etikett, text=rhbrav, anchor=north] at (-0.35, -2.20) {Matad dipol ($\approx 0{,}47\lambda$)};
+
+    % Balun + Koax 50 ohm från det drivna elementet
+    \filldraw[fill=rhbjord!85, draw=black!75, line width=0.55pt, rounded corners=1pt]
+      (-0.92, -0.45) rectangle (-0.48, -0.12);
+    \draw[koax] (-0.70, -0.45) .. controls (-0.70, -1.15) and (-0.20, -1.25) .. (0.00, -1.65);
+    \node[etikett, anchor=west] at (0.05, -1.55) {Koax $50\,\Omega$};
+
+    % 3) Direktor 1 (framför, kortare: ca 0,44 lambda) vid x = +1.35
+    \draw[parasit] (1.35, -1.68) -- (1.35, 1.68);
+    \node[etikett, font=\scriptsize\bfseries, anchor=south] at (1.35, 2.20) {Direktor 1};
+
+    % 4) Direktor 2 (längst fram, kortast: ca 0,42 lambda) vid x = +2.65
+    \draw[parasit] (2.65, -1.55) -- (2.65, 1.55);
+    \node[etikett, font=\scriptsize\bfseries, anchor=south] at (2.65, 2.20) {Direktor 2};
+    \node[etikett, anchor=north] at (2.00, -2.20) {Kortare ($\approx 0{,}42\text{--}0{,}45\lambda$)};
+
+    % Pil för strålningsriktning (framåt)
+    \draw[pil] (2.95, 0) -- (3.85, 0);
+    \node[etikett, text=rhbes, font=\scriptsize\bfseries, anchor=south] at (3.40, 0.08) {Framåt};
+  \end{scope}
+
+  % ====================================================================
+  % HÖGER DEL: RIKTVERKAN OCH STRÅLNINGSLOB (JÄMFÖRT MED DIPOL)
+  % ====================================================================
+  \begin{scope}[shift={(4.25, 0)}]
+    \node[etikett, font=\footnotesize\bfseries] at (0.35, 2.95) {Strålningsmönster};
+
+    % Hjälpcirkel och axlar
+    \draw[black!20, line width=0.5pt] (0,0) circle[radius=1.75];
+    \draw[black!30, line width=0.45pt, dash pattern=on 2pt off 2pt] (-1.65, 0) -- (2.65, 0);
+    \draw[black!30, line width=0.45pt, dash pattern=on 2pt off 2pt] (0, -2.00) -- (0, 2.00);
+
+    % Vanlig halvvågsdipol som referens (0 dBd = 2,15 dBi, streckad åtta)
+    \draw[black!40, line width=0.65pt, dash pattern=on 2pt off 1.5pt]
+      (0,0)
+      .. controls ( 0.40,  0.85) and ( 1.45,  0.90) .. ( 1.45, 0)
+      .. controls ( 1.45, -0.90) and ( 0.40, -0.85) .. (0,0)
+      .. controls (-0.40,  0.85) and (-1.45,  0.90) .. (-1.45, 0)
+      .. controls (-1.45, -0.90) and (-0.40, -0.85) .. (0,0);
+    \node[etikett, text=black!60, anchor=east] at (-0.85, 1.15) {Dipol ($0\text{ dBd}$)};
+
+    % Yagi-Uda: stark huvudlob framåt + små sido- och baklober
+    \filldraw[fill=rhbtack!25, draw=rhbtack!85!black, line width=1.1pt]
+      (0,0)
+      .. controls ( 0.55,  0.95) and ( 2.55,  1.10) .. ( 2.55,  0.00)
+      .. controls ( 2.55, -1.10) and ( 0.55, -0.95) .. ( 0.00,  0.00);
+
+    % Liten baklob (fram/bak-förhållande F/B) och sidolober
+    \filldraw[fill=rhbtack!18, draw=rhbtack!85!black, line width=0.85pt]
+      (0,0)
+      .. controls (-0.25,  0.22) and (-0.65,  0.25) .. (-0.65,  0.00)
+      .. controls (-0.65, -0.25) and (-0.25, -0.22) .. ( 0.00,  0.00);
+    \filldraw[fill=rhbtack!18, draw=rhbtack!85!black, line width=0.75pt]
+      (0,0)
+      .. controls ( 0.15,  0.45) and (-0.15,  0.45) .. ( 0.00,  0.00)
+      .. controls ( 0.15, -0.45) and (-0.15, -0.45) .. ( 0.00,  0.00);
+
+    \node[etikett, text=rhbtack!85!black, font=\scriptsize\bfseries, anchor=south] at (1.55, 0.82)
+      {Huvudlob (hög vinst)};
+    \node[etikett, text=black!70, anchor=north] at (-0.65, -0.32) {Dämpad baklob};
+  \end{scope}
+
+\end{tikzpicture}
+\caption{Principen för en Yagi-Uda-antenn. Endast ett element (dipolen) matas
+med koaxialkabel. Bakom dipolen sitter en något längre reflektor som speglar
+energin framåt, och framför sitter en eller flera något kortare direktorer som
+samlar strålningen i en smal huvudlob med hög antennvinst (mätt i dBd eller dBi).}
+\label{fig:yagi}
+\end{figure}
 
 \subsection{Polarisation}
 \index{polarisation}
@@ -597,6 +1424,157 @@ tuner sitter samma 1:1 alldeles intill tunern. En 4:1 är fel verktyg
 där. Stegens impedans är inte 200\,$\Omega$, och tunern ska se det
 stegen faktiskt lämnar.
 
+ \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+      x=1cm, y=1cm,
+      ledareA/.style={rhbrav, line width=1.15pt, line cap=round, line join=round},
+      ledareB/.style={rhbes, line width=1.15pt, line cap=round, line join=round},
+      ledareAbak/.style={rhbrav!45, line width=0.9pt, line cap=round, dash pattern=on 2pt off 1.5pt},
+      ledareBbak/.style={rhbes!45, line width=0.9pt, line cap=round, dash pattern=on 2pt off 1.5pt},
+      koppling/.style={black!80, line width=0.8pt, line cap=round, line join=round},
+      nod/.style={fill=black, circle, inner sep=1.3pt}
+    ]
+  
+      % ====================================================================
+      % VÄNSTER DEL: PRINCIPSCHEMA (RAKT IGENOM UTAN KORSNING)
+      % ====================================================================
+      \node[etikett, font=\footnotesize\bfseries] at (-3.6, 2.75) {Principschema};
+  
+      % Ferritkärna (horisontella dubbelstreck mellan lindning A och B)                                                                        
+      \draw[black!65, line width=1.1pt] (-3.95, 0.32) -- (-2.35, 0.32);                                                                        
+      \draw[black!65, line width=1.1pt] (-3.95, 0.16) -- (-2.35, 0.16);
+                                                                                                                                               
+      % Övre lindning A (blå, A1 -> A2)
+      \draw[ledareA] (-3.95, 0.65)
+        arc (180:0:0.20 and 0.24)
+        arc (180:0:0.20 and 0.24)
+        arc (180:0:0.20 and 0.24)
+        arc (180:0:0.20 and 0.24);
+      \fill[rhbrav] (-3.85, 0.96) circle[radius=0.055]; % Fasprick A1
+      \node[etikett, text=rhbrav, anchor=south east] at (-3.92, 0.70) {$A_1$};
+      \node[etikett, text=rhbrav, anchor=south west] at (-2.38, 0.70) {$A_2$};
+  
+      % Undre lindning B (rödbrun, B1 -> B2)                                                                                                   
+      \draw[ledareB] (-3.95, -0.17)
+        arc (180:360:0.20 and 0.24)
+        arc (180:360:0.20 and 0.24)
+        arc (180:360:0.20 and 0.24)
+        arc (180:360:0.20 and 0.24);
+      \fill[rhbes] (-3.85, -0.48) circle[radius=0.055]; % Fasprick B1
+      \node[etikett, text=rhbes, anchor=north east] at (-3.92, -0.22) {$B_1$};
+      \node[etikett, text=rhbes, anchor=north west] at (-2.38, -0.22) {$B_2$};
+  
+      % Pilar för differentiell ström (lika stor, motsatt riktning)                                                                            
+      \draw[-{Stealth[length=1.6mm]}, rhbrav, line width=0.65pt] (-3.55, 1.15) -- (-2.75, 1.15)
+        node[midway, above, etikett, text=rhbrav] {$I$};
+      \draw[{Stealth[length=1.6mm]}-, rhbes, line width=0.65pt] (-3.55, -0.67) -- (-2.75, -0.67)
+        node[midway, below, etikett, text=rhbes] {$I$};
+  
+      % Koaxialkabel 50 ohm (vänster)
+      \fill[rhbjord!70, draw=black!70, line width=0.6pt] (-6.15, 0.35) rectangle (-5.05, 0.95);
+      \draw[black!70, line width=0.6pt] (-5.05, 0.65) ellipse[x radius=0.08, y radius=0.30];
+      \node[etikett, anchor=south] at (-5.60, 1.02) {Koax $50\,\Omega$};
+  
+      % Mittledare rakt till A1                                                                                                                
+      \draw[koppling] (-5.05, 0.65) -- (-3.95, 0.65);
+      \node[etikett, anchor=south] at (-4.50, 0.68) {Mittledare};
+                                                                                                                                               
+      % Skärm rakt till B1                                                                                                                     
+      \draw[koppling] (-5.25, 0.35) -- (-5.25, -0.17) -- (-3.95, -0.17);                                                                       
+      \node[nod] at (-5.25, 0.35) {};
+      \node[etikett, anchor=north] at (-4.60, -0.22) {Skärm};
+  
+      % A2 rakt till Antennben 1
+      \draw[koppling] (-2.35, 0.65) -- (-1.15, 0.65);
+      \draw[black, fill=white, line width=0.7pt] (-1.15, 0.65) circle[radius=0.07];
+      \node[etikett, anchor=west] at (-1.00, 0.65) {Antennben 1};
+  
+      % B2 rakt till Antennben 2
+      \draw[koppling] (-2.35, -0.17) -- (-1.15, -0.17);
+      \draw[black, fill=white, line width=0.7pt] (-1.15, -0.17) circle[radius=0.07];
+      \node[etikett, anchor=west] at (-1.00, -0.17) {Antennben 2};
+  
+      % Impedansmarkering 50 ohm på antennsidan
+      \draw[{Stealth[length=1.6mm]}-{Stealth[length=1.6mm]}, black!60, line width=0.5pt]
+        (-1.55, -0.05) -- (-1.55, 0.53)
+        node[midway, left=2pt, etikett] {$\approx 50\,\Omega$};
+  
+
+      % ====================================================================
+      % HÖGER DEL: PRAKTISK BIFILÄR LINDNING PÅ TOROIDKÄRNA
+      % ====================================================================
+      \begin{scope}[shift={(3.2, 0.20)}]
+        \node[etikett, font=\footnotesize\bfseries] at (0, 2.55) {Bifilär lindning på toroidkärna};
+  
+        \def\Rout{1.65}
+        \def\Rin{0.90}
+  
+        % Baksida av lindningsvarven (streckade under kärnan)
+        \foreach \ang/\nextang in {246/216, 216/186, 186/156, 156/126, 126/96} {
+          \draw[ledareAbak] ({\ang-3}:\Rin) -- ({\nextang+3}:\Rout);
+          \draw[ledareBbak] ({\ang+3}:\Rin) -- ({\nextang+9}:\Rout);
+        }
+  
+        % Toroidkärna (ring)
+        \fill[rhbjord!75, even odd rule, draw=black!65, line width=0.8pt]
+          (0,0) circle[radius=\Rout]
+          (0,0) circle[radius=\Rin];
+  
+        % Framsida av lindningsvarven (två trådar A och B parallellt genom hålet)
+        \foreach \ang in {246, 216, 186, 156, 126, 96} {
+          % Tråd A (blå)
+          \draw[ledareA] ({\ang+3}:\Rout) -- ({\ang-3}:\Rin);
+          % Tråd B (rödbrun, direkt bredvid A)
+          \draw[ledareB] ({\ang+9}:\Rout) -- ({\ang+3}:\Rin);
+        }                                                                                                                                      
+  
+        % Startändar nere (från ytterkant: A1 och B1)
+        \coordinate (StartA) at (249:\Rout);
+        \coordinate (StartB) at (255:\Rout);
+  
+        % Slutändar uppe (från innerkant: A2 och B2)
+        \coordinate (SlutA) at (93:\Rin);
+        \coordinate (SlutB) at (99:\Rin);
+  
+        % --- UPPTILL: ANTENNSIDA (A2 och B2 går rakt till var sitt ben) ---
+        \draw[ledareA] (SlutA) .. controls (-0.05, 1.45) and (-0.45, 1.85) .. (-1.25, 1.95);
+        \draw[black, fill=white, line width=0.7pt] (-1.25, 1.95) circle[radius=0.07];
+        \node[etikett, anchor=east] at (-1.35, 1.95) {Antennben 1};
+        \node[etikett, text=rhbrav, anchor=west] at (-0.02, 1.28) {$A_2$};
+  
+        \draw[ledareB] (SlutB) .. controls (-0.20, 1.45) and ( 0.35, 1.85) .. ( 1.25, 1.95);
+        \draw[black, fill=white, line width=0.7pt] (1.25, 1.95) circle[radius=0.07];
+        \node[etikett, anchor=west] at (1.35, 1.95) {Antennben 2};
+        \node[etikett, text=rhbes, anchor=east] at (-0.22, 1.28) {$B_2$};
+  
+        % --- NEDTILL: KOAXSIDA (A1 till mittledare, B1 till skärm) ---
+        \coordinate (KoaxMitt)  at (-0.55, -2.05);
+        \coordinate (KoaxSkarm) at (-0.10, -2.05);
+  
+        \draw[ledareA] (StartA) -- (-0.55, -2.05);
+        \draw[ledareB] (StartB) .. controls (-0.35, -1.75) and (-0.10, -1.85) .. (KoaxSkarm);
+  
+        \node[etikett, text=rhbrav, anchor=east] at (-0.65, -1.72) {$A_1$};
+        \node[etikett, text=rhbes, anchor=west]  at (-0.22, -1.72) {$B_1$};
+  
+        % Koaxsymbol nedtill
+        \fill[rhbjord!70, draw=black!70, line width=0.6pt] (-0.80, -2.65) rectangle (0.15, -2.05);
+        \node[nod] at (KoaxSkarm) {};
+        \node[etikett, anchor=east] at (-0.88, -2.35) {Mittledare ($A_1$)};
+        \node[etikett, anchor=west] at ( 0.23, -2.35) {Skärm ($B_1$)};
+        \node[etikett, anchor=north] at (-0.32, -2.70) {Koax $50\,\Omega$};
+      \end{scope}
+  
+    \end{tikzpicture}
+    \caption{Guanella 1:1 strömbalun. Två ledare ($A$ och $B$) lindas bifilärt
+    runt kärnan och går rakt igenom från koaxen till var sitt antennben utan att
+    korsas. Differentiell ström ($I$) går fritt genom ledningen, medan
+    mantelström (common mode) bromsas av ferritkärnan.}
+    \label{fig:guanella-11}
+    \end{figure}
+
+
 \subsubsection{Ruthroff, 1:1}
 \label{sec:ruthroff-11}
 \index{Ruthroff!1:1}
@@ -615,6 +1593,180 @@ strömmen, så en osymmetrisk antenn eller en koax som inte hänger fritt
 driver mantelström igenom ändå. En del av effekten kan värma kärnan i
 stället för att gå ut i tråden. Den här ersätter inte strömbalunen i
 föregående avsnitt.
+
+ \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+      x=1cm, y=1cm,
+      ledareA/.style={rhbrav, line width=1.10pt, line cap=round, line join=round},
+      ledareB/.style={rhbes, line width=1.10pt, line cap=round, line join=round},
+      ledareC/.style={rhbtack, line width=1.10pt, line cap=round, line join=round},
+      ledareAbak/.style={rhbrav!45, line width=0.85pt, line cap=round, dash pattern=on 2pt off 1.5pt},
+      ledareBbak/.style={rhbes!45, line width=0.85pt, line cap=round, dash pattern=on 2pt off 1.5pt},
+      ledareCbak/.style={rhbtack!45, line width=0.85pt, line cap=round, dash pattern=on 2pt off 1.5pt},
+      koppling/.style={black!80, line width=0.8pt, line cap=round, line join=round},
+      nod/.style={fill=black, circle, inner sep=1.3pt}
+    ]
+  
+      % ====================================================================
+      % VÄNSTER DEL: PRINCIPSCHEMA (TRE SERIEKOPPLADE LINDNINGAR)
+      % ====================================================================
+      \node[etikett, font=\footnotesize\bfseries] at (-3.6, 3.20) {Principschema};
+  
+      % Ferritkärna (två vertikala linjer längs alla tre lindningarna)
+      \draw[black!65, line width=1.1pt] (-3.15, -2.15) -- (-3.15, 2.45);
+      \draw[black!65, line width=1.1pt] (-2.98, -2.15) -- (-2.98, 2.45);
+  
+      % Övre lindning A (blå, A1 -> A2)
+      \draw[ledareA] (-3.35, 2.40)
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16);
+      \fill[rhbrav] (-3.50, 2.27) circle[radius=0.05]; % Fasprick A1
+      \node[etikett, text=rhbrav, anchor=east] at (-3.60, 2.27) {$A_1$};
+      \node[etikett, text=rhbrav, anchor=east] at (-3.45, 1.25) {$A_2$};
+  
+      % Mellersta lindning B (rödbrun, B1 -> B2)
+      \draw[ledareB] (-3.35, 0.86)
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16);
+      \fill[rhbes] (-3.50, 0.73) circle[radius=0.05]; % Fasprick B1
+      \node[etikett, text=rhbes, anchor=east] at (-3.60, 0.73) {$B_1$};
+      \node[etikett, text=rhbes, anchor=east] at (-3.45, -0.30) {$B_2$};
+  
+      % Undre lindning C (grön, C1 -> C2)
+      \draw[ledareC] (-3.35, -0.68)
+        arc (90:-90:0.22 and 0.16) 
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16);
+      \fill[rhbtack] (-3.50, -0.81) circle[radius=0.05]; % Fasprick C1                                                                         
+      \node[etikett, text=rhbtack, anchor=east] at (-3.60, -0.81) {$C_1$};
+      \node[etikett, text=rhbtack, anchor=east] at (-3.45, -1.85) {$C_2$};
+  
+      % Seriekoppling A2-B1 (övre uttag) och B2-C1 (undre uttag)
+      \draw[koppling] (-3.35, 1.12) -- (-3.35, 0.86);
+      \node[nod] (Uttag1) at (-3.35, 0.99) {};
+  
+      \draw[koppling] (-3.35, -0.42) -- (-3.35, -0.68);
+      \node[nod] (Uttag2) at (-3.35, -0.55) {};
+  
+      % Koaxialkabel 50 ohm (vänster)                                                                                                          
+      \fill[rhbjord!70, draw=black!70, line width=0.6pt] (-6.05, 0.35) rectangle (-4.95, 0.95);
+      \draw[black!70, line width=0.6pt] (-4.95, 0.65) ellipse[x radius=0.08, y radius=0.30];
+      \node[etikett, anchor=south] at (-5.50, 1.02) {Koax $50\,\Omega$};
+  
+      % Mittledare till toppen (A1)
+      \draw[koppling] (-4.95, 0.65) -- (-4.35, 0.65) -- (-4.35, 2.40) -- (-3.35, 2.40);
+      \node[etikett, anchor=south] at (-4.35, 2.44) {Mittledare};
+  
+      % Skärm till undre uttaget (B2 + C1)
+      \draw[koppling] (-5.15, 0.35) -- (-5.15, -0.55) -- (Uttag2);
+      \node[nod] at (-5.15, 0.35) {};
+      \node[etikett, anchor=north] at (-4.40, -0.60) {Skärm ($0\,\text{V}$)};
+  
+      % Antennben 1 från övre uttaget (A2 + B1)
+      \draw[koppling] (Uttag1) -- (-1.40, 0.99);
+      \draw[black, fill=white, line width=0.7pt] (-1.40, 0.99) circle[radius=0.07];
+      \node[etikett, anchor=west] at (-1.25, 0.99) {Antennben 1};
+  
+      % Antennben 2 från botten (C2)
+      \draw[koppling] (-3.35, -1.96) -- (-1.40, -1.96);
+      \draw[black, fill=white, line width=0.7pt] (-1.40, -1.96) circle[radius=0.07];
+      \node[etikett, anchor=west] at (-1.25, -1.96) {Antennben 2};
+  
+      % Impedansmarkering 50 ohm på antennsidan
+      \draw[{Stealth[length=1.6mm]}-{Stealth[length=1.6mm]}, black!60, line width=0.5pt]
+        (-1.80, -1.80) -- (-1.80, 0.84)
+        node[midway, fill=white, etikett] {$\approx 50\,\Omega$};
+  
+
+      % ====================================================================
+      % HÖGER DEL: PRAKTISK TRIFILÄR LINDNING PÅ TOROIDKÄRNA                                                                                   
+      % ====================================================================                                                                   
+      \begin{scope}[shift={(3.25, 0.65)}]
+        \node[etikett, font=\footnotesize\bfseries] at (0, 2.55) {Trifilär lindning på toroidkärna};
+  
+        \def\Rout{1.85}
+        \def\Rin{1.02}
+  
+        % Baksida av lindningsvarven (streckade under kärnan, 3 trådar per varv)
+        \foreach \ang/\nextang in {195/157, 157/119, 119/81, 81/43, 43/5} {                                                                    
+          \draw[ledareAbak] ({\ang-2}:\Rin)  -- ({\nextang+4}:\Rout);
+          \draw[ledareBbak] ({\ang-7}:\Rin)  -- ({\nextang-1}:\Rout);
+          \draw[ledareCbak] ({\ang-12}:\Rin) -- ({\nextang-6}:\Rout);
+        }
+  
+        % Toroidkärna (ring)
+        \fill[rhbjord!75, even odd rule, draw=black!65, line width=0.8pt]
+          (0,0) circle[radius=\Rout]
+          (0,0) circle[radius=\Rin];
+  
+        % Framsida av lindningsvarven (tre trådar A, B och C parallellt)
+        \foreach \ang in {195, 157, 119, 81, 43, 5} {
+          \draw[ledareA] ({\ang+4}:\Rout) -- ({\ang-2}:\Rin);
+          \draw[ledareB] ({\ang-1}:\Rout) -- ({\ang-7}:\Rin);
+          \draw[ledareC] ({\ang-6}:\Rout) -- ({\ang-12}:\Rin);
+        }
+  
+        % Startändar nere till vänster (från ytterkant: A1, B1, C1)
+        \coordinate (StartA) at (199:\Rout);
+        \coordinate (StartB) at (194:\Rout);
+        \coordinate (StartC) at (189:\Rout);
+  
+        % Slutändar nere till höger (från innerkant: A2, B2, C2)
+        \coordinate (SlutA) at ( 3:\Rin);
+        \coordinate (SlutB) at (-2:\Rin);
+        \coordinate (SlutC) at (-7:\Rin);
+  
+        % 1) A1 -> Koax mittledare (längst ner till vänster)
+        \draw[ledareA] (StartA) -- (-2.35, -0.60) -- (-2.35, -2.25) -- (-0.55, -2.25) -- (-0.55, -2.60);
+        \node[etikett, text=rhbrav, anchor=east] at (-2.42, -0.80) {$A_1$};
+  
+        % 2) A2 + B1 -> Antennben 1 (övre uttaget)
+        \coordinate (NodeAB) at (-0.65, -1.35);
+        \draw[ledareB] (StartB) .. controls (-1.55, -0.95) and (-1.05, -1.35) .. (NodeAB);
+        \draw[ledareA] (SlutA)  .. controls ( 0.75, -0.45) and ( 0.05, -1.35) .. (NodeAB);
+        \node[nod] at (NodeAB) {};
+        \draw[koppling] (NodeAB) -- (-3.10, -1.35);
+        \draw[black, fill=white, line width=0.7pt] (-3.10, -1.35) circle[radius=0.07];
+        \node[etikett, anchor=east] at (-3.20, -1.35) {Antennben 1};
+        \node[etikett, text=rhbrav, anchor=south] at (-0.65, -1.30) {$A_2{+}B_1$};
+  
+        % 3) B2 + C1 -> Koax skärm (undre uttaget)
+        \coordinate (NodeBC) at (0.10, -1.80);
+        \draw[ledareC] (StartC) .. controls (-1.35, -1.45) and (-0.55, -1.80) .. (NodeBC);
+        \draw[ledareB] (SlutB)  .. controls ( 0.90, -0.85) and ( 0.55, -1.80) .. (NodeBC);
+        \node[nod] at (NodeBC) {};
+        \draw[koppling] (NodeBC) -- (0.10, -2.60);
+        \node[etikett, text=rhbes, anchor=west] at (0.20, -1.78) {$B_2{+}C_1$};
+  
+        % 4) C2 -> Antennben 2 (nere till höger)
+        \draw[ledareC] (SlutC) .. controls (1.45, -0.45) and (2.05, -0.95) .. (2.35, -1.35) -- (3.00, -1.35);
+        \draw[black, fill=white, line width=0.7pt] (3.00, -1.35) circle[radius=0.07]; 
+        \node[etikett, anchor=west] at (3.10, -1.35) {Antennben 2};
+        \node[etikett, text=rhbtack, anchor=south west] at (1.70, -0.80) {$C_2$};
+  
+        % Koaxsymbol nedtill
+        \fill[rhbjord!70, draw=black!70, line width=0.6pt] (-0.80, -3.20) rectangle (0.35, -2.60); 
+        \node[nod] at (0.10, -2.60) {};
+        \node[etikett, anchor=east] at (-0.88, -2.90) {Mittledare ($A_1$)};
+        \node[etikett, anchor=west] at ( 0.43, -2.90) {Skärm ($B_2{+}C_1$)};
+        \node[etikett, anchor=north] at (-0.22, -3.25) {Koax $50\,\Omega$};
+      \end{scope}
+  
+    \end{tikzpicture}
+    \caption{Ruthroff 1:1 spänningsbalun. Tre lika trådar ($A$, $B$ och $C$) 
+    lindas trifilärt åt samma håll och seriekopplas ($A_2$ med $B_1$, samt $B_2$
+    med $C_1$). Koaxens mittledare läggs på $A_1$ och skärmen på uttaget 
+    $B_2{+}C_1$. Antennbenen tas från det övre uttaget ($A_2{+}B_1$) och från 
+    botten ($C_2$).}
+    \label{fig:ruthroff-11}
+    \end{figure} 
+
 
 \subsubsection{Ruthroff, 4:1}
 \label{sec:ruthroff-41}
@@ -637,6 +1789,158 @@ håller spänningarna släpper igenom mantelström. Loben drar snett. Ska en
 Ruthroff 4:1 ändå används hör en strömbalun 1:1 hemma på koaxen strax
 under den.
 
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+      x=1cm, y=1cm,
+      ledareA/.style={rhbrav, line width=1.15pt, line cap=round, line join=round},
+      ledareB/.style={rhbes, line width=1.15pt, line cap=round, line join=round},
+      ledareAbak/.style={rhbrav!45, line width=0.9pt, line cap=round, dash pattern=on 2pt off 1.5pt},
+      ledareBbak/.style={rhbes!45, line width=0.9pt, line cap=round, dash pattern=on 2pt off 1.5pt},
+      koppling/.style={black!80, line width=0.8pt, line cap=round, line join=round},
+      nod/.style={fill=black, circle, inner sep=1.3pt}
+    ]
+  
+      % ====================================================================
+      % VÄNSTER DEL: PRINCIPSCHEMA
+      % ====================================================================
+      \node[etikett, font=\footnotesize\bfseries] at (-3.6, 3.05) {Principschema};
+  
+      % Ferritkärna (två vertikala linjer)
+      \draw[black!65, line width=1.1pt] (-3.15, -1.55) -- (-3.15, 2.15);
+      \draw[black!65, line width=1.1pt] (-2.98, -1.55) -- (-2.98, 2.15);
+  
+      % Övre lindning A (blå, A1 -> A2)
+      \draw[ledareA] (-3.35, 2.10)
+        arc (90:-90:0.24 and 0.21)
+        arc (90:-90:0.24 and 0.21)
+        arc (90:-90:0.24 and 0.21)
+        arc (90:-90:0.24 and 0.21);
+      \fill[rhbrav] (-3.50, 1.95) circle[radius=0.055]; % Fasprick A1
+      \node[etikett, text=rhbrav, anchor=east] at (-3.62, 1.95) {$A_1$};
+      \node[etikett, text=rhbrav, anchor=east] at (-3.45, 0.55) {$A_2$};
+  
+      % Undre lindning B (rödbrun, B1 -> B2)
+      \draw[ledareB] (-3.35, 0.18)
+        arc (90:-90:0.24 and 0.21)
+        arc (90:-90:0.24 and 0.21)
+        arc (90:-90:0.24 and 0.21)
+        arc (90:-90:0.24 and 0.21);
+      \fill[rhbes] (-3.50, 0.03) circle[radius=0.055]; % Fasprick B1
+      \node[etikett, text=rhbes, anchor=east] at (-3.62, 0.00) {$B_1$}; 
+      \node[etikett, text=rhbes, anchor=east] at (-3.45, -1.35) {$B_2$}; 
+  
+      % Mittuttag mellan A2 och B1                                                                                                             
+      \draw[koppling] (-3.35, 0.42) -- (-3.35, 0.18);
+      \node[nod] at (-3.35, 0.30) {};
+                                                                                                                                               
+      % Koaxialkabel 50 ohm (vänster)                                                                                                          
+      \fill[rhbjord!70, draw=black!70, line width=0.6pt] (-5.95, 0.70) rectangle (-4.85, 1.30);
+      \draw[black!70, line width=0.6pt] (-4.85, 1.00) ellipse[x radius=0.08, y radius=0.30];
+      \node[etikett, anchor=south] at (-5.40, 1.38) {Koax $50\,\Omega$};
+  
+      % Mittledare till A1 + Antennben 1
+      \draw[koppling] (-4.85, 1.00) -- (-4.30, 1.00) -- (-4.30, 2.10) -- (-1.45, 2.10);
+      \node[nod] at (-3.35, 2.10) {};
+      \draw[black, fill=white, line width=0.7pt] (-1.45, 2.10) circle[radius=0.07];
+      \node[etikett, anchor=west] at (-1.30, 2.10) {Antennben 1};
+  
+      % Skärm till mittuttaget (A2 + B1)
+      \draw[koppling] (-5.05, 0.70) -- (-5.05, 0.30) -- (-3.35, 0.30);
+      \node[nod] at (-5.05, 0.70) {};
+      \node[etikett, anchor=north east] at (-4.05, 0.22) {Skärm};
+                                                                                                                                               
+      % B2 till Antennben 2                                                                                                                    
+      \draw[koppling] (-3.35, -1.50) -- (-1.45, -1.50);
+      \draw[black, fill=white, line width=0.7pt] (-1.45, -1.50) circle[radius=0.07];
+      \node[etikett, anchor=west] at (-1.30, -1.50) {Antennben 2};
+  
+      % Impedansmarkering 200 ohm på antennsidan                                                                                               
+      \draw[{Stealth[length=1.6mm]}-{Stealth[length=1.6mm]}, black!60, line width=0.5pt]
+        (-1.85, -1.35) -- (-1.85, 1.95)
+        node[midway, fill=white, etikett] {$\approx 200\,\Omega$};
+  
+
+      % ====================================================================
+      % HÖGER DEL: PRAKTISK LINDNING PÅ TOROIDKÄRNA (BIFILÄRT)
+      % ====================================================================
+      \begin{scope}[shift={(3.2, 0.55)}]
+        \node[etikett, font=\footnotesize\bfseries] at (0, 2.50) {Bifilär lindning på toroidkärna};
+  
+        \def\Rout{1.85}
+        \def\Rin{1.02}
+  
+        % Baksida av lindningsvarven (streckade under kärnan)
+        \foreach \ang/\nextang in {195/162, 162/129, 129/96, 96/63, 63/30, 30/-3} {
+          \draw[ledareAbak] ({\ang-3}:\Rin) -- ({\nextang+3}:\Rout);
+          \draw[ledareBbak] ({\ang-9}:\Rin) -- ({\nextang-3}:\Rout);
+        }
+  
+        % Toroidkärna (ring)
+        \fill[rhbjord!75, even odd rule, draw=black!65, line width=0.8pt]
+          (0,0) circle[radius=\Rout]
+          (0,0) circle[radius=\Rin];
+  
+        % Framsida av lindningsvarven (två trådar A och B parallellt genom hålet)
+        \foreach \ang in {195, 162, 129, 96, 63, 30, -3} {
+          % Tråd A (blå)
+          \draw[ledareA] ({\ang+3}:\Rout) -- ({\ang-3}:\Rin);
+          % Tråd B (rödbrun, direkt bredvid A)
+          \draw[ledareB] ({\ang-3}:\Rout) -- ({\ang-9}:\Rin);
+        }
+  
+        % Uttag i startänden (nere till vänster: A1 och B1 från ytterkant)
+        \coordinate (StartA) at (198:\Rout);
+        \coordinate (StartB) at (192:\Rout);
+  
+        % Uttag i slutänden (nere till höger: A2 och B2 från innerkant)
+        \coordinate (SlutA) at (-6:\Rin);
+        \coordinate (SlutB) at (-12:\Rin);
+  
+        % Ledare A1 -> Koax mittledare + Antennben 1 (vänster ut)
+        \draw[ledareA] (StartA) -- (-2.35, -0.60) -- (-2.35, -2.05);
+        \node[nod] at (-2.35, -1.45) {};
+        \draw[koppling] (-2.35, -1.45) -- (-3.25, -1.45);
+        \draw[black, fill=white, line width=0.7pt] (-3.25, -1.45) circle[radius=0.07];
+        \node[etikett, anchor=east] at (-3.35, -1.45) {Antennben 1}; 
+        \node[etikett, text=rhbrav, anchor=east] at (-2.42, -0.82) {$A_1$};
+  
+        % Ihopkoppling av A2 och B1 i mitten (mittuttag -> Koax skärm)
+        \coordinate (MittUttag) at (0, -1.65);
+        \draw[ledareB] (StartB) .. controls (-1.45, -1.25) and (-0.55, -1.65) .. (MittUttag); 
+        \draw[ledareA] (SlutA)  .. controls ( 0.85, -0.85) and ( 0.45, -1.65) .. (MittUttag);
+        \node[nod] at (MittUttag) {};
+        \node[etikett, text=rhbes, anchor=north] at (-1.15, -1.32) {$B_1$};
+        \node[etikett, text=rhbrav, anchor=north] at ( 0.72, -1.12) {$A_2$};
+  
+        % Ledare B2 -> Antennben 2 (höger ut)
+        \draw[ledareB] (SlutB) .. controls (1.35, -0.55) and (2.05, -0.95) .. (2.35, -1.45) -- (3.05, -1.45);
+        \draw[black, fill=white, line width=0.7pt] (3.05, -1.45) circle[radius=0.07];
+        \node[etikett, anchor=west] at (3.15, -1.45) {Antennben 2};
+        \node[etikett, text=rhbes, anchor=south west] at (1.65, -0.85) {$B_2$}; 
+  
+        % Anslutning från koaxialkabel nedtill 
+        \draw[koppling] (-2.35, -2.05) -- (-0.55, -2.05) -- (-0.55, -2.45); 
+        \draw[koppling] (MittUttag) -- (0, -2.45);
+  
+        % Koaxsymbol nedtill
+        \fill[rhbjord!70, draw=black!70, line width=0.6pt] (-0.80, -3.05) rectangle (0.25, -2.45);
+        \node[nod] at (0, -2.45) {};
+        \node[etikett, anchor=east] at (-0.65, -2.25) {Mittledare}; 
+        \node[etikett, anchor=west] at ( 0.12, -2.25) {Skärm ($A_2{+}B_1$)};
+        \node[etikett, anchor=north] at (-0.28, -3.10) {Koax $50\,\Omega$};
+      \end{scope} 
+  
+    \end{tikzpicture}
+    \caption{Ruthroff 4:1 spänningsbalun. Två lika trådar ($A$ och $B$) lindas
+    bifilärt åt samma håll runt kärnan. Slutet på den första lindningen ($A_2$) 
+    kopplas ihop med början på den andra ($B_1$) till koaxens skärm. Koaxens
+    mittledare och det ena antennbenet läggs på $A_1$, och det andra antennbenet
+    på $B_2$.}
+    \label{fig:ruthroff-41}
+    \end{figure}
+
+
 \subsubsection{Ruthroff, 6:1}
 \label{sec:ruthroff-61}
 \index{Ruthroff!6:1}
@@ -656,6 +1960,164 @@ inte mitt emellan antennbenen, så spänningarna mot jord blir inte lika
 stora, och mantelströmmen är kvar. En strömbalun 1:1 får ta den om
 kopplingen ändå används. Ofta räcker en Guanella 4:1 även mot 300\,$\Omega$,
 eftersom 300 mot 200 bara är en stående våg på omkring 1,5.
+
+ \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+      x=1cm, y=1cm,
+      ledareA/.style={rhbrav, line width=1.15pt, line cap=round, line join=round},
+      ledareB/.style={rhbes, line width=1.15pt, line cap=round, line join=round},
+      ledareAbak/.style={rhbrav!45, line width=0.9pt, line cap=round, dash pattern=on 2pt off 1.5pt},
+      ledareBbak/.style={rhbes!45, line width=0.9pt, line cap=round, dash pattern=on 2pt off 1.5pt},
+      koppling/.style={black!80, line width=0.8pt, line cap=round, line join=round},
+      nod/.style={fill=black, circle, inner sep=1.3pt}
+    ]
+  
+      % ====================================================================
+      % VÄNSTER DEL: PRINCIPSCHEMA (OSYMMETRISKT UTTAG 1 : 2,45)
+      % ====================================================================                                                                   
+      \node[etikett, font=\footnotesize\bfseries] at (-3.6, 3.15) {Principschema};
+  
+      % Ferritkärna (två vertikala linjer)                                                                                                     
+      \draw[black!65, line width=1.1pt] (-3.15, -1.95) -- (-3.15, 2.30);                                                                       
+      \draw[black!65, line width=1.1pt] (-2.98, -1.95) -- (-2.98, 2.30);
+  
+      % Övre lindningsdel A (N1 varv, blå, A1 -> uttag)
+      \draw[ledareA] (-3.35, 2.25)
+        arc (90:-90:0.24 and 0.19)
+        arc (90:-90:0.24 and 0.19)
+        arc (90:-90:0.24 and 0.19);
+      \fill[rhbrav] (-3.50, 2.12) circle[radius=0.055]; % Fasprick A1
+      \node[etikett, text=rhbrav, anchor=east] at (-3.62, 2.10) {$A_1$};
+      \node[etikett, text=rhbrav, anchor=east] at (-3.62, 1.45) {$N_1$};
+  
+      % Undre lindningsdel B (N2 ≈ 1,45*N1 varv, rödbrun, uttag -> B2)
+      \draw[ledareB] (-3.35, 0.85)
+        arc (90:-90:0.24 and 0.22)
+        arc (90:-90:0.24 and 0.22)
+        arc (90:-90:0.24 and 0.22)
+        arc (90:-90:0.24 and 0.22)
+        arc (90:-90:0.24 and 0.22);
+      \fill[rhbes] (-3.50, 0.70) circle[radius=0.055]; % Fasprick B1                                                                           
+      \node[etikett, text=rhbes, anchor=east] at (-3.62, -0.25) {$N_2 \approx 1{,}45\,N_1$};                                                   
+      \node[etikett, text=rhbes, anchor=east] at (-3.45, -1.70) {$B_2$};
+  
+      % Uttag mellan del A och del B (ej i mitten!)
+      \draw[koppling] (-3.35, 1.11) -- (-3.35, 0.85);
+      \node[nod] (Uttag) at (-3.35, 0.98) {};
+  
+      % Koaxialkabel 50 ohm (vänster)
+      \fill[rhbjord!70, draw=black!70, line width=0.6pt] (-6.00, 1.25) rectangle (-4.90, 1.85);
+      \draw[black!70, line width=0.6pt] (-4.90, 1.55) ellipse[x radius=0.08, y radius=0.30];
+      \node[etikett, anchor=south] at (-5.45, 1.92) {Koax $50\,\Omega$};
+  
+      % Mittledare till A1 + Antennben 1
+      \draw[koppling] (-4.90, 1.55) -- (-4.30, 1.55) -- (-4.30, 2.25) -- (-1.40, 2.25);
+      \node[nod] at (-3.35, 2.25) {};
+      \draw[black, fill=white, line width=0.7pt] (-1.40, 2.25) circle[radius=0.07];
+      \node[etikett, anchor=west] at (-1.25, 2.25) {Antennben 1};
+  
+      % Skärm till uttaget (efter N1 varv)
+      \draw[koppling] (-5.10, 1.25) -- (-5.10, 0.98) -- (Uttag);
+      \node[nod] at (-5.10, 1.25) {};
+      \node[etikett, anchor=north east] at (-4.00, 0.90) {Skärm (uttag)};
+  
+      % B2 till Antennben 2
+      \draw[koppling] (-3.35, -1.85) -- (-1.40, -1.85);
+      \draw[black, fill=white, line width=0.7pt] (-1.40, -1.85) circle[radius=0.07];                                                           
+      \node[etikett, anchor=west] at (-1.25, -1.85) {Antennben 2};
+  
+      % Impedansmarkering 300 ohm på antennsidan
+      \draw[{Stealth[length=1.6mm]}-{Stealth[length=1.6mm]}, black!60, line width=0.5pt]
+        (-1.80, -1.70) -- (-1.80, 2.10)
+        node[midway, fill=white, etikett] {$\approx 300\,\Omega$};
+  
+
+      % ====================================================================
+      % HÖGER DEL: LINDNING PÅ TOROIDKÄRNA MED UTTAG (T.EX. 5 + 7 = 12 VARV)
+      % ====================================================================                                                                   
+      \begin{scope}[shift={(3.25, 0.55)}]
+        \node[etikett, font=\footnotesize\bfseries] at (0, 2.60) {Lindning med uttag ($5 + 7 = 12$ varv)};
+  
+        \def\Rout{1.85}
+        \def\Rin{1.02}
+  
+        % Baksida av del A (5 varv, blå, streckade under kärnan)
+        \foreach \ang/\nextang in {210/190, 190/170, 170/150, 150/130, 130/110} {
+          \draw[ledareAbak] (\ang:\Rin) -- (\nextang:\Rout);
+        }
+  
+        % Baksida av del B (7 varv, rödbrun, fortsätter åt samma håll runt kärnan)
+        \foreach \ang/\nextang in {90/70, 70/50, 50/30, 30/10, 10/-10, -10/-30} {
+          \draw[ledareBbak] (\ang:\Rin) -- (\nextang:\Rout);
+        }
+  
+        % Toroidkärna (ring)
+        \fill[rhbjord!75, even odd rule, draw=black!65, line width=0.8pt]
+          (0,0) circle[radius=\Rout]
+          (0,0) circle[radius=\Rin];
+  
+        % Framsida av del A (5 varv på vänstra sidan, blå)
+        \foreach \ang in {210, 190, 170, 150, 130} {
+          \draw[ledareA] (\ang:\Rout) -- (\ang:\Rin);
+        }
+  
+        % Framsida av del B (7 varv över toppen och högra sidan, rödbrun)
+        \foreach \ang in {90, 70, 50, 30, 10, -10, -30} {
+          \draw[ledareB] (\ang:\Rout) -- (\ang:\Rin);
+        }
+  
+        % Start på del A (nere till vänster: A1)                                                                                               
+        \coordinate (StartA) at (210:\Rout);
+        % Slut på del A / Start på del B (uttaget uppe vid kl. 11)
+        \coordinate (SlutA)  at (110:\Rout);
+        \coordinate (StartB) at (90:\Rout);
+        \coordinate (TapTop) at (100:2.25);
+  
+        % Slut på del B (nere till höger: B2)
+        \coordinate (SlutB)  at (-30:\Rin);
+  
+        % 1) A1 -> Antennben 1 + Koax mittledare
+        \draw[ledareA] (StartA) -- (-2.25, -0.92) -- (-2.25, -2.05);
+        \node[nod] at (-2.25, -1.45) {};
+        \draw[koppling] (-2.25, -1.45) -- (-3.10, -1.45);
+        \draw[black, fill=white, line width=0.7pt] (-3.10, -1.45) circle[radius=0.07];
+        \node[etikett, anchor=east] at (-3.20, -1.45) {Antennben 1};
+        \node[etikett, text=rhbrav, anchor=east] at (-1.45, -0.25) {$N_1 = 5$ varv};
+        \node[etikett, text=rhbrav, anchor=east] at (-2.32, -1.05) {$A_1$};
+  
+        % 2) Uttaget efter 5 varv (A2 + B1) -> Koax skärm
+        \draw[ledareA] (SlutA) -- (TapTop);
+        \draw[ledareB] (TapTop) -- (StartB);
+        \node[nod] at (TapTop) {};
+        \node[etikett, anchor=south] at (TapTop) {Uttag ($A_2{+}B_1$)};
+        % Ledning från uttaget ned genom mitten till koaxens skärm
+        \draw[koppling] (TapTop) .. controls (-0.15, 1.35) and (0.0, 0.25) .. (0.0, -2.45);
+  
+        % 3) B2 (efter 5 + 7 = 12 varv) -> Antennben 2
+        \draw[ledareB] (SlutB) .. controls (1.35, -0.65) and (1.95, -1.05) .. (2.25, -1.45) -- (2.95, -1.45);
+        \draw[black, fill=white, line width=0.7pt] (2.95, -1.45) circle[radius=0.07];
+        \node[etikett, anchor=west] at (3.05, -1.45) {Antennben 2};
+        \node[etikett, text=rhbes, anchor=west] at (0.35, 0.25) {$N_2 = 7$ varv};
+        \node[etikett, text=rhbes, anchor=south west] at (1.55, -0.95) {$B_2$};
+  
+        % 4) Koaxialkabel nedtill
+        \draw[koppling] (-2.25, -2.05) -- (-0.55, -2.05) -- (-0.55, -2.45);
+        \fill[rhbjord!70, draw=black!70, line width=0.6pt] (-0.80, -3.05) rectangle (0.25, -2.45);
+        \node[nod] at (0.0, -2.45) {};
+        \node[etikett, anchor=east] at (-0.88, -2.75) {Mittledare ($A_1$)};
+        \node[etikett, anchor=west] at ( 0.33, -2.75) {Skärm (uttag)};
+        \node[etikett, anchor=north] at (-0.28, -3.10) {Koax $50\,\Omega$};
+      \end{scope}
+  
+    \end{tikzpicture}
+    \caption{Ruthroff 6:1 balun. Hela lindningen har omkring $\sqrt{6} \approx 2{,}45$
+    gånger så många varv som delen $N_1$ mellan mittledare och skärm (här visat med
+    $N_1 = 5$ varv före uttaget och $N_2 = 7$ varv efter, totalt $12$ varv där
+    $(12/5)^2 = 5{,}76 \approx 6$).}
+    \label{fig:ruthroff-61} 
+    \end{figure} 
+
 
 \subsubsection{Guanella, 4:1}
 \label{sec:guanella-41}
@@ -677,6 +2139,232 @@ skälet att välja en strömbalun försvinner. På den off-center-matade
 dipolen är det här den 4:1 som ska upp i matningspunkten. En extra
 strömbalun 1:1 på koaxen strax under gör nytta när benen är så olika att
 en ensam 4:1 inte håller skärmen tyst.
+
+  \begin{figure}[H]                                                                                                                          
+    \centering                                                                                                                                 
+    \begin{tikzpicture}[                                                                                                                       
+      x=1cm, y=1cm,                                                                                                                            
+      ledareA/.style={rhbrav, line width=1.15pt, line cap=round, line join=round},                                                             
+      ledareB/.style={rhbes, line width=1.15pt, line cap=round, line join=round},                                                              
+      ledareAbak/.style={rhbrav!45, line width=0.9pt, line cap=round, dash pattern=on 2pt off 1.5pt},                                          
+      ledareBbak/.style={rhbes!45, line width=0.9pt, line cap=round, dash pattern=on 2pt off 1.5pt},                                           
+      koppling/.style={black!80, line width=0.8pt, line cap=round, line join=round},                                                           
+      nod/.style={fill=black, circle, inner sep=1.3pt}                                                                                         
+    ]                                                                                                                                          
+                                                                                                                                               
+      % ====================================================================                                                                   
+      % VÄNSTER DEL: PRINCIPSCHEMA (PARALLELLT IN, SERIE UT)                                                                                   
+      % ====================================================================                                                                   
+      \node[etikett, font=\footnotesize\bfseries] at (-3.7, 3.05) {Principschema};                                                             
+                                                                                                                                               
+      % --- Övre 1:1-enhet (Kärna 1) ---                                                                                                       
+      % Ferritkärna 1 (horisontell dubbelstreck mellan A och B)                                                                                
+      \draw[black!65, line width=1.0pt] (-3.95, 1.38) -- (-2.35, 1.38);                                                                        
+      \draw[black!65, line width=1.0pt] (-3.95, 1.24) -- (-2.35, 1.24);                                                                        
+      \node[etikett, anchor=south] at (-3.15, 2.02) {Kärna 1};                                                                                 
+                                                                                                                                               
+      % Lindning A (övre på kärna 1, blå)                                                                                                      
+      \draw[ledareA] (-3.95, 1.65)                                                                                                             
+        arc (180:0:0.20 and 0.22)                                                                                                              
+        arc (180:0:0.20 and 0.22)                                                                                                              
+        arc (180:0:0.20 and 0.22)                                                                                                              
+        arc (180:0:0.20 and 0.22);                                                                                                             
+      \fill[rhbrav] (-3.85, 1.93) circle[radius=0.05];                                                                                         
+      \node[etikett, text=rhbrav, anchor=south east] at (-3.92, 1.68) {$A_1$};                                                                 
+      \node[etikett, text=rhbrav, anchor=south west] at (-2.38, 1.68) {$A_2$};                                                                 
+                                                                                                                                               
+      % Lindning B (undre på kärna 1, rödbrun)                                                                                                 
+      \draw[ledareB] (-3.95, 0.97)                                                                                                             
+        arc (180:360:0.20 and 0.22)                                                                                                            
+        arc (180:360:0.20 and 0.22)                                                                                                            
+        arc (180:360:0.20 and 0.22)                                                                                                            
+        arc (180:360:0.20 and 0.22);                                                                                                           
+      \fill[rhbes] (-3.85, 0.69) circle[radius=0.05];                                                                                          
+      \node[etikett, text=rhbes, anchor=north east] at (-3.92, 0.94) {$B_1$};                                                                  
+      \node[etikett, text=rhbes, anchor=north west] at (-2.38, 0.94) {$B_2$};                                                                  
+                                                                                                                                               
+      % --- Undre 1:1-enhet (Kärna 2) ---                                                                                                      
+      % Ferritkärna 2 (separat kärna!)                                                                                                         
+      \draw[black!65, line width=1.0pt] (-3.95, -0.72) -- (-2.35, -0.72);                                                                      
+      \draw[black!65, line width=1.0pt] (-3.95, -0.86) -- (-2.35, -0.86);                                                                      
+      \node[etikett, anchor=north] at (-3.15, -1.52) {Kärna 2};                                                                                
+                                                                                                                                               
+      % Lindning C (övre på kärna 2, blå)                                                                                                      
+      \draw[ledareA] (-3.95, -0.45)                                                                                                            
+        arc (180:0:0.20 and 0.22)                                                                                                              
+        arc (180:0:0.20 and 0.22)                                                                                                              
+        arc (180:0:0.20 and 0.22)                                                                                                              
+        arc (180:0:0.20 and 0.22);                                                                                                             
+      \fill[rhbrav] (-3.85, -0.17) circle[radius=0.05];                                                                                        
+      \node[etikett, text=rhbrav, anchor=south east] at (-3.92, -0.42) {$C_1$};                                                                
+      \node[etikett, text=rhbrav, anchor=south west] at (-2.38, -0.42) {$C_2$};                                                                
+                                                                                                                                               
+      % Lindning D (undre på kärna 2, rödbrun)                                                                                                 
+      \draw[ledareB] (-3.95, -1.13)                                                                                                            
+        arc (180:360:0.20 and 0.22)                                                                                                            
+        arc (180:360:0.20 and 0.22)                                                                                                            
+        arc (180:360:0.20 and 0.22)                                                                                                            
+        arc (180:360:0.20 and 0.22);                                                                                                           
+      \fill[rhbes] (-3.85, -1.41) circle[radius=0.05];                                                                                         
+      \node[etikett, text=rhbes, anchor=north east] at (-3.92, -1.16) {$D_1$};                                                                 
+      \node[etikett, text=rhbes, anchor=north west] at (-2.38, -1.16) {$D_2$};                                                                 
+                                                                                                                                               
+      % --- Koaxialkabel 50 ohm (parallellkoppling på ingången) ---                                                                            
+      \fill[rhbjord!70, draw=black!70, line width=0.6pt] (-6.35, -0.05) rectangle (-5.35, 0.55);                                               
+      \draw[black!70, line width=0.6pt] (-5.35, 0.25) ellipse[x radius=0.08, y radius=0.30];                                                   
+      \node[etikett, anchor=south] at (-5.85, 0.62) {Koax $50\,\Omega$};                                                                       
+                                                                                                                                               
+      % Mittledare till A1 och C1 (parallellt)                                                                                                 
+      \draw[koppling] (-5.35, 0.25) -- (-4.75, 0.25);                                                                                          
+      \draw[koppling] (-4.75, 1.65) -- (-4.75, -0.45);                                                                                         
+      \draw[koppling] (-4.75, 1.65) -- (-3.95, 1.65);                                                                                          
+      \draw[koppling] (-4.75, -0.45) -- (-3.95, -0.45);                                                                                        
+      \node[nod] at (-4.75, 0.25) {};                                                                                                          
+                                                                                                                                               
+      % Skärm till B1 och D1 (parallellt)                                                                                                      
+      \draw[koppling] (-5.55, -0.05) -- (-5.55, -0.60) -- (-4.40, -0.60);                                                                      
+      \draw[koppling] (-4.40, 0.97) -- (-4.40, -1.13);                                                                                         
+      \draw[koppling] (-4.40, 0.97) -- (-3.95, 0.97);                                                                                          
+      \draw[koppling] (-4.40, -1.13) -- (-3.95, -1.13);                                                                                        
+      \node[nod] at (-5.55, -0.05) {};                                                                                                         
+      \node[nod] at (-4.40, -0.60) {};                                                                                                         
+      \node[etikett, anchor=north] at (-5.05, -0.65) {Skärm};                                                                                  
+                                                                                                                                               
+      % --- Antennsida 200 ohm (seriekoppling på utgången) ---                                                                                 
+      % A2 -> Antennben 1                                                                                                                      
+      \draw[koppling] (-2.35, 1.65) -- (-1.15, 1.65);                                                                                          
+      \draw[black, fill=white, line width=0.7pt] (-1.15, 1.65) circle[radius=0.07];                                                            
+      \node[etikett, anchor=west] at (-1.00, 1.65) {Antennben 1};                                                                              
+                                                                                                                                               
+      % B2 seriekopplas med C2                                                                                                                 
+      \draw[koppling] (-2.35, 0.97) -- (-2.00, 0.97) -- (-2.00, -0.45) -- (-2.35, -0.45);                                                      
+      \node[nod] at (-2.00, 0.26) {};                                                                                                          
+                                                                                                                                               
+      % D2 -> Antennben 2                                                                                                                      
+      \draw[koppling] (-2.35, -1.13) -- (-1.15, -1.13);                                                                                        
+      \draw[black, fill=white, line width=0.7pt] (-1.15, -1.13) circle[radius=0.07];                                                           
+      \node[etikett, anchor=west] at (-1.00, -1.13) {Antennben 2};                                                                             
+                                                                                                                                               
+      % Impedansmarkering 200 ohm                                                                                                              
+      \draw[{Stealth[length=1.6mm]}-{Stealth[length=1.6mm]}, black!60, line width=0.5pt]                                                       
+        (-1.45, -0.98) -- (-1.45, 1.50)                                                                                                        
+        node[midway, fill=white, etikett] {$\approx 200\,\Omega$};                                                                             
+                                                                                                                                               
+                                                                                                                                               
+      % ====================================================================                                                                   
+      % HÖGER DEL: PRAKTISK LINDNING PÅ TVÅ SEPARATA TOROIDKÄRNOR                                                                              
+      % ====================================================================                                                                   
+      \begin{scope}[shift={(3.55, 0.25)}]                                                                                                      
+        \node[etikett, font=\footnotesize\bfseries] at (0, 2.80) {Bifilär lindning på två kärnor};                                             
+                                                                                                                                               
+        \def\Rout{1.32}                                                                                                                        
+        \def\Rin{0.72}                                                                                                                         
+        \def\cxL{-1.55}                                                                                                                        
+        \def\cxR{ 1.55}                                                                                                                        
+                                                                                                                                               
+        % --- KÄRNA 1 (VÄNSTER) ---                                                                                                            
+        \begin{scope}[shift={(\cxL, 0.20)}]                                                                                                    
+          % Baksida av varven (streckade)                                                                                                      
+          \foreach \ang/\nextang in {245/212, 212/179, 179/146, 146/113} {                                                                     
+            \draw[ledareAbak] ({\ang-3}:\Rin) -- ({\nextang+3}:\Rout);                                                                         
+            \draw[ledareBbak] ({\ang+3}:\Rin) -- ({\nextang+9}:\Rout);                                                                         
+          }                                                                                                                                    
+          % Toroidkärna 1                                                                                                                      
+          \fill[rhbjord!75, even odd rule, draw=black!65, line width=0.8pt]                                                                    
+            (0,0) circle[radius=\Rout]                                                                                                         
+            (0,0) circle[radius=\Rin];                                                                                                         
+          \node[etikett] at (0.15, 0) {Kärna 1};                                                                                               
+          % Framsida av varven                                                                                                                 
+          \foreach \ang in {245, 212, 179, 146, 113} {                                                                                         
+            \draw[ledareA] ({\ang+3}:\Rout) -- ({\ang-3}:\Rin);                                                                                
+            \draw[ledareB] ({\ang+9}:\Rout) -- ({\ang+3}:\Rin);                                                                                
+          }                                                                                                                                    
+          \coordinate (A1) at (248:\Rout);                                                                                                     
+          \coordinate (B1) at (254:\Rout);                                                                                                     
+          \coordinate (A2) at (110:\Rin);                                                                                                      
+          \coordinate (B2) at (116:\Rin);                                                                                                      
+        \end{scope}                                                                                                                            
+                                                                                                                                               
+        % --- KÄRNA 2 (HÖGER) ---                                                                                                              
+        \begin{scope}[shift={(\cxR, 0.20)}]                                                                                                    
+          % Baksida av varven (streckade, spegelvänt mot mitten)                                                                               
+          \foreach \ang/\nextang in {-65/-32, -32/1, 1/34, 34/67} {                                                                            
+            \draw[ledareAbak] ({\ang-3}:\Rin) -- ({\nextang+3}:\Rout);                                                                         
+            \draw[ledareBbak] ({\ang+3}:\Rin) -- ({\nextang+9}:\Rout);                                                                         
+          }                                                                                                                                    
+          % Toroidkärna 2                                                                                                                      
+          \fill[rhbjord!75, even odd rule, draw=black!65, line width=0.8pt]                                                                    
+            (0,0) circle[radius=\Rout]                                                                                                         
+            (0,0) circle[radius=\Rin];                                                                                                         
+          \node[etikett] at (-0.15, 0) {Kärna 2};                                                                                              
+          % Framsida av varven                                                                                                                 
+          \foreach \ang in {-65, -32, 1, 34, 67} {                                                                                             
+            \draw[ledareA] ({\ang+3}:\Rout) -- ({\ang-3}:\Rin);                                                                                
+            \draw[ledareB] ({\ang+9}:\Rout) -- ({\ang+3}:\Rin);                                                                                
+          }                                                                                                                                    
+          \coordinate (C1) at (-68:\Rout);                                                                                                     
+          \coordinate (D1) at (-62:\Rout);                                                                                                     
+          \coordinate (C2) at (64:\Rin);                                                                                                       
+          \coordinate (D2) at (70:\Rin);                                                                                                       
+        \end{scope}                                                                                                                            
+                                                                                                                                               
+        % --- SERIEKOPPLING UPPTILL (ANTENNSIDA 200 OHM) ---                                                                                   
+        % A2 -> Antennben 1 (uppe till vänster)                                                                                                
+        \draw[ledareA] (A2) -- ++(-0.25, 0.95) -- (-2.55, 1.83);                                                                               
+        \draw[black, fill=white, line width=0.7pt] (-2.55, 1.83) circle[radius=0.07];                                                          
+        \node[etikett, anchor=south] at (-2.55, 1.93) {Antennben 1};                                                                           
+        \node[etikett, text=rhbrav, anchor=east] at (-1.92, 1.45) {$A_2$};                                                                     
+                                                                                                                                               
+        % B2 ihop med C2 i mitten upptill (seriekoppling)                                                                                      
+        \coordinate (SerieTopp) at (0, 1.83);                                                                                                  
+        \draw[ledareB] (B2) .. controls (-1.45, 1.55) and (-0.65, 1.83) .. (SerieTopp);                                                        
+        \draw[ledareA] (C2) .. controls ( 1.45, 1.55) and ( 0.65, 1.83) .. (SerieTopp);                                                        
+        \node[nod] at (SerieTopp) {};                                                                                                          
+        \node[etikett, anchor=south] at (0, 1.92) {Serie ($B_2{+}C_2$)};                                                                       
+                                                                                                                                               
+        % D2 -> Antennben 2 (uppe till höger)                                                                                                  
+        \draw[ledareB] (D2) -- ++(0.25, 0.95) -- (2.55, 1.83);                                                                                 
+        \draw[black, fill=white, line width=0.7pt] (2.55, 1.83) circle[radius=0.07];                                                           
+        \node[etikett, anchor=south] at (2.55, 1.93) {Antennben 2};                                                                            
+        \node[etikett, text=rhbes, anchor=west] at (1.92, 1.45) {$D_2$};                                                                       
+                                                                                                                                               
+        % --- PARALLELLKOPPLING NEDTILL (KOAXSIDA 50 OHM) ---                                                                                  
+        \coordinate (MittPunkt) at (-0.35, -1.55);                                                                                             
+        \coordinate (SkarmPunkt) at ( 0.35, -1.90);
+  
+        % A1 och C1 (blå) till Koax mittledare
+        \draw[ledareA] (A1) .. controls (-1.85, -1.45) and (-0.95, -1.55) .. (MittPunkt);
+        \draw[ledareA] (C1) .. controls ( 1.25, -1.45) and ( 0.25, -1.55) .. (MittPunkt);
+        \node[nod] at (MittPunkt) {};
+        \node[etikett, text=rhbrav, anchor=east] at (-1.98, -1.25) {$A_1$};
+        \node[etikett, text=rhbrav, anchor=west] at ( 1.98, -1.25) {$C_1$};
+  
+        % B1 och D1 (rödbrun) till Koax skärm
+        \draw[ledareB] (B1) .. controls (-1.55, -1.80) and (-0.45, -1.90) .. (SkarmPunkt);
+        \draw[ledareB] (D1) .. controls ( 1.65, -1.80) and ( 0.85, -1.90) .. (SkarmPunkt);
+        \node[nod] at (SkarmPunkt) {};
+        \node[etikett, text=rhbes, anchor=north east] at (-1.35, -1.42) {$B_1$};
+        \node[etikett, text=rhbes, anchor=north west] at ( 1.35, -1.42) {$D_1$};
+  
+        % Koaxialkabel nedtill
+        \draw[koppling] (MittPunkt) -- (-0.35, -2.35);
+        \draw[koppling] (SkarmPunkt) -- ( 0.35, -2.35);
+        \fill[rhbjord!70, draw=black!70, line width=0.6pt] (-0.60, -2.90) rectangle (0.60, -2.35);
+        \node[nod] at (0.35, -2.35) {};
+        \node[etikett, anchor=east] at (-0.45, -2.12) {Mittledare ($A_1{+}C_1$)};
+        \node[etikett, anchor=west] at ( 0.45, -2.12) {Skärm ($B_1{+}D_1$)};
+        \node[etikett, anchor=north] at (0, -2.95) {Koax $50\,\Omega$};
+      \end{scope}
+  
+    \end{tikzpicture}
+    \caption{Guanella 4:1 strömbalun på två separata kärnor. Varje kärna bär en
+    bifilär lindning kring $100\,\Omega$. På koaxsidan nedtill kopplas båda
+    lindningarna parallellt ($A_1$ med $C_1$ till mittledaren, $B_1$ med $D_1$
+    till skärmen) vilket ger $50\,\Omega$. På antennsidan upptill kopplas de i
+    serie ($B_2$ ihop med $C_2$) vilket ger $200\,\Omega$ mellan $A_2$ och $D_2$.}
+    \label{fig:guanella-41}
+    \end{figure}
+
 
 \subsection{Unun}
 \label{sec:unun}
@@ -706,6 +2394,182 @@ resonant, den som klarar sig med omkring 9:1 och ofta en tuner. En
 halvvågs ändmatning ligger på några tusen ohm och är ett annat fall.
 Utan motvikt blir radion själv den andra halvan av antennen.
 
+   \begin{figure}[H]
+    \centering       
+    \begin{tikzpicture}[
+      x=1cm, y=1cm,     
+      ledareA/.style={rhbrav, line width=1.10pt, line cap=round, line join=round},
+      ledareB/.style={rhbes, line width=1.10pt, line cap=round, line join=round}, 
+      ledareC/.style={rhbtack, line width=1.10pt, line cap=round, line join=round},
+      ledareAbak/.style={rhbrav!45, line width=0.85pt, line cap=round, dash pattern=on 2pt off 1.5pt},
+      ledareBbak/.style={rhbes!45, line width=0.85pt, line cap=round, dash pattern=on 2pt off 1.5pt}, 
+      ledareCbak/.style={rhbtack!45, line width=0.85pt, line cap=round, dash pattern=on 2pt off 1.5pt},
+      koppling/.style={black!80, line width=0.8pt, line cap=round, line join=round},
+      nod/.style={fill=black, circle, inner sep=1.3pt}
+    ]
+      
+      % ====================================================================
+      % VÄNSTER DEL: PRINCIPSCHEMA (TRE SERIEKOPPLADE LINDNINGAR, 1:3 SPÄNNING)
+      % ====================================================================                                                                   
+      \node[etikett, font=\footnotesize\bfseries] at (-3.6, 3.20) {Principschema};
+  
+      % Ferritkärna (två vertikala linjer längs alla tre lindningarna)
+      \draw[black!65, line width=1.1pt] (-3.15, -2.15) -- (-3.15, 2.45);
+      \draw[black!65, line width=1.1pt] (-2.98, -2.15) -- (-2.98, 2.45);
+  
+      % Övre lindning A (blå, A1 -> A2)
+      \draw[ledareA] (-3.35, 2.40)
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16);
+      \fill[rhbrav] (-3.50, 2.27) circle[radius=0.05]; % Fasprick A1
+      \node[etikett, text=rhbrav, anchor=east] at (-3.60, 2.27) {$A_1$};
+      \node[etikett, text=rhbrav, anchor=east] at (-3.45, 1.25) {$A_2$};
+  
+      % Mellersta lindning B (rödbrun, B1 -> B2)
+      \draw[ledareB] (-3.35, 0.86)
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16);
+      \fill[rhbes] (-3.50, 0.73) circle[radius=0.05]; % Fasprick B1                                                                            
+      \node[etikett, text=rhbes, anchor=east] at (-3.60, 0.73) {$B_1$};
+      \node[etikett, text=rhbes, anchor=east] at (-3.45, -0.30) {$B_2$};
+  
+      % Undre lindning C (grön, C1 -> C2)                                                                                                      
+      \draw[ledareC] (-3.35, -0.68)
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16)
+        arc (90:-90:0.22 and 0.16);
+      \fill[rhbtack] (-3.50, -0.81) circle[radius=0.05]; % Fasprick C1
+      \node[etikett, text=rhbtack, anchor=east] at (-3.60, -0.81) {$C_1$};
+      \node[etikett, text=rhbtack, anchor=east] at (-3.45, -1.85) {$C_2$};
+  
+      % Seriekoppling A2-B1 (2/3 upp) och B2-C1 (uttag 1/3 upp)
+      \draw[koppling] (-3.35, 1.12) -- (-3.35, 0.86);
+      \node[nod] (Uttag23) at (-3.35, 0.99) {};
+      \node[etikett, anchor=west] at (-2.90, 0.99) {$A_2{+}B_1$};
+  
+      \draw[koppling] (-3.35, -0.42) -- (-3.35, -0.68);
+      \node[nod] (Uttag13) at (-3.35, -0.55) {};
+  
+      % Koaxialkabel 50 ohm (nere till vänster, över lindning C)                                                                               
+      \fill[rhbjord!70, draw=black!70, line width=0.6pt] (-6.05, -1.55) rectangle (-4.95, -0.95);
+      \draw[black!70, line width=0.6pt] (-4.95, -1.25) ellipse[x radius=0.08, y radius=0.30];
+      \node[etikett, anchor=south] at (-5.50, -0.88) {Koax $50\,\Omega$};
+  
+      % Mittledare till uttaget efter 1/3 från botten (B2 + C1)
+      \draw[koppling] (-4.95, -1.25) -- (-4.35, -1.25) -- (-4.35, -0.55) -- (Uttag13);
+      \node[etikett, anchor=south] at (-4.25, -0.52) {Mittledare ($1/3$)};                                                                     
+                                                                                                                                               
+      % Skärm + Motvikt i botten (C2)                                                                                                          
+      \draw[koppling] (-5.15, -1.55) -- (-5.15, -1.96) -- (-1.40, -1.96);
+      \node[nod] at (-5.15, -1.55) {};
+      \node[nod] at (-3.35, -1.96) {};                                                                                                         
+      \draw[black, fill=white, line width=0.7pt] (-1.40, -1.96) circle[radius=0.07];
+      \node[etikett, anchor=north] at (-4.40, -2.00) {Skärm};
+      \node[etikett, anchor=west] at (-1.25, -1.96) {Motvikt / jord};
+  
+      % Antenntråd i toppen (A1)                                                                                                               
+      \draw[koppling] (-3.35, 2.40) -- (-1.40, 2.40);
+      \draw[black, fill=white, line width=0.7pt] (-1.40, 2.40) circle[radius=0.07];
+      \node[etikett, anchor=west] at (-1.25, 2.40) {Antenntråd};
+  
+      % Impedansmarkering 450 ohm mellan antenntråd och motvikt                                                                                
+      \draw[{Stealth[length=1.6mm]}-{Stealth[length=1.6mm]}, black!60, line width=0.5pt]
+        (-1.80, -1.80) -- (-1.80, 2.24)
+        node[midway, fill=white, etikett] {$\approx 450\,\Omega$};
+  
+
+      % ====================================================================
+      % HÖGER DEL: PRAKTISK TRIFILÄR LINDNING PÅ TOROIDKÄRNA
+      % ====================================================================
+      \begin{scope}[shift={(3.25, 0.65)}]
+        \node[etikett, font=\footnotesize\bfseries] at (0, 2.55) {Trifilär lindning på toroidkärna};
+  
+        \def\Rout{1.85}
+        \def\Rin{1.02}
+  
+        % Baksida av lindningsvarven (streckade under kärnan, 3 trådar per varv)
+        \foreach \ang/\nextang in {195/157, 157/119, 119/81, 81/43, 43/5} {
+          \draw[ledareAbak] ({\ang-2}:\Rin)  -- ({\nextang+4}:\Rout);
+          \draw[ledareBbak] ({\ang-7}:\Rin)  -- ({\nextang-1}:\Rout);
+          \draw[ledareCbak] ({\ang-12}:\Rin) -- ({\nextang-6}:\Rout);
+        }
+  
+        % Toroidkärna (ring)
+        \fill[rhbjord!75, even odd rule, draw=black!65, line width=0.8pt]
+          (0,0) circle[radius=\Rout]
+          (0,0) circle[radius=\Rin];
+  
+        % Framsida av lindningsvarven (tre trådar A, B och C parallellt)
+        \foreach \ang in {195, 157, 119, 81, 43, 5} {
+          \draw[ledareA] ({\ang+4}:\Rout) -- ({\ang-2}:\Rin);
+          \draw[ledareB] ({\ang-1}:\Rout) -- ({\ang-7}:\Rin);
+          \draw[ledareC] ({\ang-6}:\Rout) -- ({\ang-12}:\Rin);
+        }
+  
+        % Startändar nere till vänster (från ytterkant: A1, B1, C1)
+        \coordinate (StartA) at (199:\Rout);
+        \coordinate (StartB) at (194:\Rout);
+        \coordinate (StartC) at (189:\Rout);
+  
+        % Slutändar nere till höger (från innerkant: A2, B2, C2)
+        \coordinate (SlutA) at ( 3:\Rin);
+        \coordinate (SlutB) at (-2:\Rin);
+        \coordinate (SlutC) at (-7:\Rin);
+                                                                                                                                               
+        % 1) A1 -> Antenntråd (uppe/vänster ut)                                                                                                
+        \draw[ledareA] (StartA) -- (-2.35, -0.60) -- (-2.35, -1.35) -- (-3.05, -1.35);
+        \draw[black, fill=white, line width=0.7pt] (-3.05, -1.35) circle[radius=0.07];
+        \node[etikett, anchor=east] at (-3.15, -1.35) {Antenntråd};
+        \node[etikett, text=rhbrav, anchor=east] at (-2.42, -0.80) {$A_1$};
+  
+        % 2) A2 + B1 -> Ihopkopplade i serie (inget yttre uttag)
+        \coordinate (NodeAB) at (-0.45, -1.30);
+        \draw[ledareB] (StartB) .. controls (-1.50, -0.95) and (-0.95, -1.30) .. (NodeAB);
+        \draw[ledareA] (SlutA)  .. controls ( 0.75, -0.45) and ( 0.15, -1.30) .. (NodeAB);
+        \node[nod] at (NodeAB) {};
+        \node[etikett, anchor=south] at (-0.45, -1.25) {Serie ($A_2{+}B_1$)};
+  
+        % 3) B2 + C1 -> Koax mittledare (uttag efter 1/3)
+        \coordinate (NodeBC) at (-0.55, -1.85);
+        \draw[ledareC] (StartC) .. controls (-1.45, -1.45) and (-0.95, -1.85) .. (NodeBC);
+        \draw[ledareB] (SlutB)  .. controls ( 0.85, -0.85) and ( 0.10, -1.85) .. (NodeBC);
+        \node[nod] at (NodeBC) {};
+        \draw[koppling] (NodeBC) -- (-0.55, -2.55);
+        \node[etikett, text=rhbes, anchor=east] at (-0.65, -2.10) {$B_2{+}C_1$};
+  
+        % 4) C2 -> Koax skärm + Motvikt (i botten)
+        \coordinate (NodeC2) at (0.15, -2.15);
+        \draw[ledareC] (SlutC) .. controls (1.35, -0.55) and (1.15, -2.15) .. (NodeC2);
+        \node[nod] at (NodeC2) {};
+        \draw[koppling] (NodeC2) -- (0.15, -2.55);
+        \draw[koppling] (NodeC2) -- (2.75, -2.15);
+        \draw[black, fill=white, line width=0.7pt] (2.75, -2.15) circle[radius=0.07];
+        \node[etikett, anchor=west] at (2.85, -2.15) {Motvikt};
+        \node[etikett, text=rhbtack, anchor=south west] at (1.15, -1.45) {$C_2$};
+  
+        % Koaxsymbol nedtill
+        \fill[rhbjord!70, draw=black!70, line width=0.6pt] (-0.80, -3.15) rectangle (0.40, -2.55);
+        \node[nod] at (0.15, -2.55) {};
+        \node[etikett, anchor=east] at (-0.88, -2.85) {Mittledare ($B_2{+}C_1$)};
+        \node[etikett, anchor=west] at ( 0.48, -2.85) {Skärm ($C_2$)};
+        \node[etikett, anchor=north] at (-0.20, -3.20) {Koax $50\,\Omega$};
+      \end{scope}
+  
+    \end{tikzpicture}
+    \caption{Unun 9:1 för icke-resonant ändmatad tråd (EFRW). Tre lika trådar
+    ($A$, $B$ och $C$) lindas trifilärt åt samma håll och seriekopplas ($A_2$ med
+    $B_1$, samt $B_2$ med $C_1$). Skärm och motvikt läggs i botten på $C_2$,
+    koaxens mittledare på uttaget efter en tredjedel ($B_2{+}C_1$) och
+    antenntråden i toppen på $A_1$.}
+    \label{fig:unun-91}
+    \end{figure}
+
+
 \subsubsection{Unun, 49:1}
 \label{sec:unun-491}
 \index{unun!49:1}
@@ -728,3 +2592,178 @@ inte leder common mode-strömmen hela vägen in i rummet. På 15 och
 50\,$\Omega$-sidan, eftersom uttaget annars lämnar de banden högt i
 stående våg.
 
+    \begin{figure}[H]
+    \centering       
+    \begin{tikzpicture}[
+      x=1cm, y=1cm,     
+      ledareA/.style={rhbrav, line width=1.15pt, line cap=round, line join=round},
+      ledareB/.style={rhbes, line width=1.15pt, line cap=round, line join=round}, 
+      ledareAbak/.style={rhbrav!45, line width=0.85pt, line cap=round, dash pattern=on 2pt off 1.5pt},
+      ledareBbak/.style={rhbes!45, line width=0.85pt, line cap=round, dash pattern=on 2pt off 1.5pt}, 
+      koppling/.style={black!80, line width=0.8pt, line cap=round, line join=round},
+      nod/.style={fill=black, circle, inner sep=1.3pt}
+    ]
+      
+      % ====================================================================
+      % VÄNSTER DEL: PRINCIPSCHEMA (2 + 12 = 14 VARV, OMSÄTTNING 1:49)      
+      % ====================================================================
+      \node[etikett, font=\footnotesize\bfseries] at (-3.6, 3.20) {Principschema};
+    
+      % Ferritkärna (två vertikala linjer)
+      \draw[black!65, line width=1.1pt] (-3.15, -2.05) -- (-3.15, 2.45);
+      \draw[black!65, line width=1.1pt] (-2.98, -2.05) -- (-2.98, 2.45);
+    
+      % Övre lindningsdel (12 varv, rödbrun, från uttaget vid 2 varv upp till varv 14)
+      \draw[ledareB] (-3.35, 2.40)
+        arc (90:-90:0.23 and 0.25)
+        arc (90:-90:0.23 and 0.25)
+        arc (90:-90:0.23 and 0.25)
+        arc (90:-90:0.23 and 0.25)
+        arc (90:-90:0.23 and 0.25)
+        arc (90:-90:0.23 and 0.25); 
+      \node[etikett, text=rhbes, anchor=east] at (-3.55, 0.90) {$12$ varv};
+      \node[etikett, text=rhbes, anchor=east] at (-3.45, 2.25) {varv 14};                                                                      
+                                                                                                                                               
+      % Undre lindningsdel (2 varv, blå, från botten/jord upp till uttaget vid 2 varv)                                                         
+      \draw[ledareA] (-3.35, -0.86)
+        arc (90:-90:0.23 and 0.27)
+        arc (90:-90:0.23 and 0.27);
+      \node[etikett, text=rhbrav, anchor=east] at (-3.55, -1.40) {$2$ varv};
+                                                                                                                                               
+      % Uttag vid 2 varv                                                                                                                       
+      \draw[koppling] (-3.35, -0.60) -- (-3.35, -0.86);
+      \node[nod] (Uttag2) at (-3.35, -0.73) {};
+  
+      % Koaxialkabel 50 ohm (nere till vänster)
+      \fill[rhbjord!70, draw=black!70, line width=0.6pt] (-6.30, -1.65) rectangle (-5.25, -1.05);
+      \draw[black!70, line width=0.6pt] (-5.25, -1.35) ellipse[x radius=0.08, y radius=0.30];
+      \node[etikett, anchor=south] at (-5.78, -0.98) {Koax $50\,\Omega$};
+  
+      % Mittledare till uttaget vid 2 varv
+      \draw[koppling] (-5.25, -1.35) -- (-4.75, -1.35) -- (-4.75, -0.73) -- (Uttag2);
+      \node[etikett, anchor=south] at (-4.15, -0.70) {Uttag (varv 2)};
+  
+      % Skärm + Motvikt i botten (varv 0)
+      \draw[koppling] (-5.45, -1.65) -- (-5.45, -1.94) -- (-1.40, -1.94);
+      \node[nod] at (-5.45, -1.65) {};
+      \node[nod] at (-3.35, -1.94) {};
+      \draw[black, fill=white, line width=0.7pt] (-1.40, -1.94) circle[radius=0.07];
+      \node[etikett, anchor=north] at (-4.85, -1.98) {Skärm};
+      \node[etikett, anchor=west] at (-1.25, -1.94) {Motvikt / jord};
+  
+      % Kompensationskondensator 100 pF över 50-ohmssidan
+      \draw[koppling] (-4.35, -0.73) -- (-4.35, -1.24);
+      \draw[koppling] (-4.35, -1.42) -- (-4.35, -1.94);
+      \draw[black!85, line width=1.0pt] (-4.55, -1.24) -- (-4.15, -1.24);
+      \draw[black!85, line width=1.0pt] (-4.55, -1.42) -- (-4.15, -1.42);
+      \node[nod] at (-4.35, -0.73) {};
+      \node[nod] at (-4.35, -1.94) {};
+      \node[etikett, anchor=east] at (-4.58, -1.58) {$100\,\text{pF}$};
+  
+      % Antenntråd (EFHW) i toppen (varv 14)
+      \draw[koppling] (-3.35, 2.40) -- (-1.40, 2.40);
+      \draw[black, fill=white, line width=0.7pt] (-1.40, 2.40) circle[radius=0.07];
+      \node[etikett, anchor=west] at (-1.25, 2.40) {Antenntråd ($\lambda/2$)};
+  
+      % Impedansmarkering 2450 ohm mellan antenntråd och motvikt
+      \draw[{Stealth[length=1.6mm]}-{Stealth[length=1.6mm]}, black!60, line width=0.5pt]
+        (-1.80, -1.78) -- (-1.80, 2.24)
+        node[midway, fill=white, etikett] {$\approx 2\,450\,\Omega$};
+  
+
+      % ====================================================================
+      % HÖGER DEL: PRAKTISK LINDNING PÅ TOROIDKÄRNA (2 BIFILÄRA + 12 ENKLA)
+      % ====================================================================                                                                   
+      \begin{scope}[shift={(3.25, 0.55)}]
+        \node[etikett, font=\footnotesize\bfseries] at (0, 2.65) {Lindning på toroidkärna ($2 + 12 = 14$ varv)};
+  
+        \def\Rout{1.85}
+        \def\Rin{1.02}
+  
+        % Baksida av de första 2 bifilära varven (nere till vänster)                                                                           
+        \foreach \ang/\nextang in {224/204, 204/184} {
+          \draw[ledareAbak] ({\ang-2}:\Rin) -- ({\nextang+2}:\Rout);
+          \draw[ledareBbak] ({\ang+3}:\Rin) -- ({\nextang+7}:\Rout);
+        }
+  
+        % Baksida av de återstående 12 enkelvarven runt kärnan                                                                                 
+        \foreach \ang/\nextang in {184/164, 164/144, 144/124, 124/104, 104/84, 84/64, 64/44, 44/24, 24/4, 4/-16, -16/-36} {
+          \draw[ledareBbak] (\ang:\Rin) -- (\nextang:\Rout);
+        }
+  
+        % Toroidkärna (ring)                                                                                                                   
+        \fill[rhbjord!75, even odd rule, draw=black!65, line width=0.8pt]
+          (0,0) circle[radius=\Rout]
+          (0,0) circle[radius=\Rin];
+  
+        % Framsida av de första 2 bifilära varven (blå + rödbrun tätt ihop)
+        \foreach \ang in {224, 204} {
+          \draw[ledareA] ({\ang+2}:\Rout) -- ({\ang-2}:\Rin);
+          \draw[ledareB] ({\ang+7}:\Rout) -- ({\ang+3}:\Rin);
+        }
+  
+        % Framsida av de 12 återstående varven (enkel rödbrun tråd varv 3..14)
+        \foreach \ang in {184, 164, 144, 124, 104, 84, 64, 44, 24, 4, -16, -36} {
+          \draw[ledareB] (\ang:\Rout) -- (\ang:\Rin);
+        }
+  
+        % Start i botten (varv 0: både blå och rödbrun börjar i jord/skärm)                                                                    
+        \coordinate (StartA) at (226:\Rout);
+        \coordinate (StartB) at (231:\Rout);
+  
+        % Uttag efter 2 varv (blå tråd slutar vid varv 2 och kopplas till mittledaren)
+        \coordinate (TapA)   at (184:\Rout);
+  
+        % Slut efter 14 varv (nere till höger -> Antenntråd)
+        \coordinate (SlutB)  at (-36:\Rin);
+  
+        % 1) Uttag efter 2 varv -> Koax mittledare
+        \draw[ledareA] (TapA) -- (-2.35, -0.13) -- (-2.35, -2.05) -- (-0.55, -2.05) -- (-0.55, -2.50);
+        \node[nod] at (TapA) {};
+        \node[etikett, text=rhbrav, anchor=east] at (-2.42, -0.35) {Uttag (2 varv)};
+  
+        % 2) Start i botten (varv 0) -> Koax skärm + Motvikt
+        \coordinate (JordPunkt) at (0.10, -2.05);
+        \draw[ledareA] (StartA) .. controls (-1.35, -1.75) and (-0.45, -2.05) .. (JordPunkt);
+        \draw[ledareB] (StartB) .. controls (-1.15, -1.65) and (-0.35, -2.05) .. (JordPunkt);
+        \node[nod] at (JordPunkt) {};
+        \draw[koppling] (JordPunkt) -- (0.10, -2.50);
+        \draw[koppling] (JordPunkt) -- (1.85, -2.05);
+        \draw[black, fill=white, line width=0.7pt] (1.85, -2.05) circle[radius=0.07];
+        \node[etikett, anchor=west] at (1.95, -2.05) {Motvikt};
+  
+        % 3) Kondensator 100 pF mellan mittledare och skärm
+        \draw[koppling] (-1.45, -2.05) -- (-1.45, -2.35);
+        \draw[black!85, line width=0.95pt] (-1.62, -2.35) -- (-1.28, -2.35);
+        \draw[black!85, line width=0.95pt] (-1.62, -2.48) -- (-1.28, -2.48);
+        \draw[koppling] (-1.45, -2.48) -- (-1.45, -2.72) -- (0.10, -2.72);
+        \node[nod] at (-1.45, -2.05) {};
+        \node[nod] at (0.10, -2.72) {};
+        \node[etikett, anchor=east] at (-1.68, -2.42) {$100\,\text{pF}$};
+  
+        % 4) Slut efter 14 varv -> Antenntråd (EFHW)
+        \draw[ledareB] (SlutB) .. controls (1.35, -0.75) and (1.95, -1.05) .. (2.25, -1.30) -- (2.85, -1.30);
+        \draw[black, fill=white, line width=0.7pt] (2.85, -1.30) circle[radius=0.07];
+        \node[etikett, anchor=west] at (2.95, -1.30) {Antenntråd};
+        \node[etikett, text=rhbes, anchor=south west] at (1.55, -0.92) {varv 14};
+        \node[etikett, text=rhbes] at (0, 0) {$2 + 12$ varv};
+  
+        % Koaxsymbol nedtill
+        \fill[rhbjord!70, draw=black!70, line width=0.6pt] (-0.80, -3.15) rectangle (0.35, -2.50);
+        \node[nod] at (0.10, -2.50) {};
+        \node[etikett, anchor=east] at (-0.88, -2.85) {Mittledare (varv 2)};
+        \node[etikett, anchor=west] at ( 0.43, -2.85) {Skärm (varv 0)};
+        \node[etikett, anchor=north] at (-0.22, -3.20) {Koax $50\,\Omega$};
+      \end{scope}
+  
+    \end{tikzpicture}
+    \caption{Unun 49:1 för ändmatad halvvåg (EFHW). De två första varven lindas 
+    bifilärt från jord/skärm upp till uttaget för koaxens mittledare vid varv~2, 
+    varefter antenntrådens lindning fortsätter ytterligare 12~varv (totalt 
+    14~varv, spänningsomsättning $1:7$ och impedansomsättning $1:49$). En 
+    kondensator på $100\,\text{pF}$ över ingången kompenserar reaktansen på de
+    högre banden.} 
+    \label{fig:unun-491} 
+    \end{figure}
+
+    
