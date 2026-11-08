@@ -37,6 +37,7 @@ och det är ofta den som bär längst på dessa frekvenser. Rymdvåg är det
 som gör kortvågsutbredning så otroligt intressant och roligt.
 
 \subsection{Markvåg}
+\label{sec:markvag}
 \index{markvåg}
 \index{vågutbredning!markvåg}
 \index{markvåg!vatten}
@@ -66,6 +67,7 @@ det också färre hinder i vägen. Svenska radioamatörer gillar därför
 exempelvis Öland av denna anledning.
 
 \subsection{Rymdvåg}
+\label{sec:rymdvag}
 \index{rymdvåg}
 \index{vågutbredning!rymdvåg}
 %%%%%%%%%% GRANSKA DETTA
@@ -172,10 +174,12 @@ sittande antenn för att signalen sedan kommer ner igen som ett
 ''paraply'' med en radie på runt 300--400\,km ibland upp mot
 600\,km. Detta gör vi kan nästan alltid om vi väljer ett NVIS-band för
 en given tidpunkt kommunicera med hela norden på kortvåg med ytterst
-enkla medel. Bra band för NVIS är 160, 80, 60 och 40. Nattetid
+enkla medel. Bra band för NVIS är 160, 80, 60 och 40. Vilka av dem som är öppna
+för instegscertifikat står i avsnitt~\ref{sec:instegsband}. Nattetid
 premieras de lägre frekvenserna, dagtid kan NVIS ibland gå ännu högre.
 
 \subsubsection{Skipzon}
+\label{sec:skipzon}
 \index{vågutbredning!skipzon}
 \index{skipzon}
 \index{död zon}
@@ -244,6 +248,7 @@ eller vänta. En annan väg in i samma station kan vara helt
 utmärkt igen, ibland ändrar det bara karaktären på fädningen.
 
 \subsubsection{NVIS}
+\label{sec:nvis}
 \index{vågutbredning!NVIS}
 \index{NVIS}
 \index{Near Vertical Incidence Skywave}
@@ -285,6 +290,7 @@ under den kritiska foF2. Är den för hög går vågen rakt igenom även om
 antennen pekar upp.
 
 \subsubsection{Sporadiskt E}
+\label{sec:es}
 \index{vågutbredning!Es}
 \index{sporadiskt E}
 \index{Es}
@@ -408,6 +414,7 @@ mörk himmel. Ett högre värde är alltså bättre för oss för det ger mer
 jonisering!
 
 \subsection{Skymningsutbredning (greyline)}
+\label{sec:greyline}
 \index{skymningsutbredning}
 \index{vågutbredning!skymning}
 \index{greyline}
@@ -451,6 +458,7 @@ som du kan använda, ser mer om detta i appendix \ref{termin}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Rymdväder}
+\label{sec:rymdvader}
 \index{Rymdväder}
 \index{rymdväder}
 \index{satellitkommunikation}
@@ -669,8 +677,9 @@ uppåt som det brukar börja märkas på allvar.
 Man behöver inte kunna alla diagram. Några tal räcker för att välja
 band. Det finns många rymdvädersidor där ute, även så jag har en som
 man kan använda för att bedöma hur det ser ut med
-radioförbindelserna. Besök gärna \url{https://hf.avitec.se} så ser du
-hur det ser ut just nu. Den hämtar data och visualiserar det från
+radioförbindelserna. Besök gärna \url{https://hf.avitec.se}
+(appendix~\ref{rymdväderapp}) så ser du hur det ser ut just nu. Den
+hämtar data och visualiserar det från
 Insitutet för Rymdfysik (IRF) som har magnetometrar i Kiruna och
 Teckomatorp, den hämtar också data från Tromsø och ifrån tyskland
 liksom NOAA i USA och även australien för en så komplett bild som
@@ -706,6 +715,7 @@ har hänt.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Antenner}
+\label{sec:antenner}
 \index{antenner}
 \index{antenn}
 
@@ -713,6 +723,9 @@ Här ska vi diskutera några av de vanligaste förekommande antennerna
 och särskilt från perspektivet att få till antenner som man kan bygga
 själv på egen hand till sina radioapparater. Vi kommer främst titta på
 antenner för kortvåg, VHF och lite UHF (låga delen, typiskt 70 cm).
+En antenn man bygger själv är tillåten även med instegscertifikat.
+Det som inte är tillåtet då är en hemmabyggd eller modifierad sändare,
+se avsnitt~\ref{sec:insteg-restriktioner}.
 
 \subsection{Dipolen}
 \index{dipol}
@@ -1019,7 +1032,7 @@ stället och då blir UNUN enklare att linda (3 ggr så många varv på
 antennsidan som på radiosidan) och vi kan fortfarande ofta få till det
 nog så bra utan tuner.
 
-Men nu blir impedansen i änden i stället några hundra \Omega i stället
+Men nu blir impedansen i änden i stället några hundra~$\Omega$ i stället
 för flera tusen som tidigare, förlusterna sjunker. Det finns en myt om
 att antenner som inte är i resonans inte är effektiva men det är
 trams, det handlar i princip bara om antennens längd i förhållande
@@ -1076,6 +1089,7 @@ efter det man vill köra. Elementen horisontellt för SSB, stående för
 repeater.
 
 \subsection{VHF och 70 cm}
+\label{sec:vhf-antenn}
 \index{antenn!VHF}
 \index{antenn!70 cm}
 \index{antenn!6 m}
@@ -1106,9 +1120,12 @@ vinner. Det är samma kabeldämpning som räknas i teknikkapitlet.
 
 På 2\,m, där många kör med instegsbehörighet, räknas gränsen som
 ERP. En yagi har vinst över dipolen, så sändareffekten får sänkas.
-Hur det räknas står i reglementet.
+Hur det räknas står i avsnitt~\ref{sec:insteg-restriktioner}. Vilka
+band som är öppna för instegscertifikat står i
+avsnitt~\ref{sec:instegsband}.
 
 \subsection{Portabelt}
+\label{sec:portabelt}
 \index{portabel}
 \index{antenn!portabel}
 \index{portabel!endmatad}
@@ -1141,7 +1158,8 @@ Räckvidden blir kortare.
 En rak dipol vill ha två höga fästen. Kortvågsyagi, doublet med stege
 och off-center-dipol med balunen hängande i spannet är tyngre att få
 upp på en kvart. De går att ta med. De är sällan det snabbaste sättet
-att komma i luften.
+att komma i luften. I krislådan är det samma avvägning, se
+avsnitt~\ref{sec:krislada} i bilaga~\ref{sec:prepping}.
 
 \subsection{Matning och anpassning}
 \index{balun}

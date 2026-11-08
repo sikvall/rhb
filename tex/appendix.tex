@@ -4,6 +4,7 @@
 \appendix
 
 \chapter{Prepping och radio}
+\label{sec:prepping}
 \index{prepping}
 \index{krislåda}
 \index{SHTF}
@@ -20,6 +21,7 @@ redan god koll på olika frekvensband och även
 \vfill \minitoc \clearpage
 
 \section{Radio till krislådan}
+\label{sec:krislada}
 \index{krislåda}
 
 I krislådan kan man tänka sig en massa olika radioapparater, de flesta tänker
@@ -33,7 +35,10 @@ exempelvis jaktkanalerna på 155 MHz (se \ref{155-MHz})  samt KDR-kanalerna på
 444 MHz (se \ref{444-MHz}) är en riktigt bra början.
 
 Om du är radioamatör är ju förstås 2-metersbandet och 70 cm banden givna att
-ha eftersom om du kan nå en repeater som har kraft är de ruggigt bra. Vissa
+ha eftersom om du kan nå en repeater som har kraft är de ruggigt bra, se
+avsnitt~\ref{sec:vhf-antenn}. Vilka av banden som gäller för
+instegscertifikat står i avsnitt~\ref{sec:instegsband} och effektgränsen i
+avsnitt~\ref{sec:insteg-restriktioner}. Vissa
 radioapparater kan förstås också programmeras att använda sig av
 jaktfrekvenserna på 155 MHz eller KDR-kanalerna på 444 MHz.
 
@@ -43,14 +48,17 @@ För lite längre avstånd är en basradio med antenn på taket för 27 MHz
 och/eller 69 MHz förmodligen ett riktigt gott val om man inte är radioamatör
 och har tillgång till fler kortvågsband då man nog kan tänka sig att
 80-metersbandet och 40-metersbanden kan vara väldigt användbara för att nå
-större delen av skandinavien beroende på tidpunkt och när på året det är.
+större delen av skandinavien beroende på tidpunkt och när på året det är,
+se avsnitt~\ref{sec:nvis}. Instegsbanden står i
+avsnitt~\ref{sec:instegsband}.
 
 \subsection{Fordonsmonterad radio}
 
 Något av det mest smidiga som finns är fordonsmonterad radio som kan ställas
 upp där den behövs med antenn på taket eller externt riggade antenner efter
 behov. Genom att stå på lämplig höjd finns det möjlighet att nå riktigt lång
-med enkla medel.
+med enkla medel. Antenner som går att få upp snabbt står i
+avsnitt~\ref{sec:portabelt}.
 
 \section{Lyssna och sänd enligt schema}
 \index{sched}
@@ -108,7 +116,8 @@ trots att det inte går att ringa.
 
 Här har radioamatörerna en fördel i att de kan välja frekvensband som är
 rimliga för att nå ett grannland dag- eller nattetid och söka samband med
-andra radioamatörer som då kan förmedla meddlenanden.
+andra radioamatörer som då kan förmedla meddlenanden, se
+avsnitt~\ref{sec:nvis} och~\ref{sec:rymdvag}.
 
 Vi kan hjälpa och bistå kommun och andra med teknisk kompetens och kunskap men
 även utrustning och möjligheter att kommunicera i en kris.
@@ -124,9 +133,10 @@ laddas (exempelvis med startkablar från bilens generator) kommer man mycket
 långt med!
 
 \section{Frekvensband i en nödsituation eller kris}
+\label{sec:krisband}
 \index{prepping!frekvensband}
 
-För de som inte har amatörradiocertifikat är egentligen följande frekvensband de mest lämpliga att försöka använda:
+För de som inte har amatörradiocertifikat är egentligen följande frekvensband de mest lämpliga att försöka använda. Villkoren står i avsnitt~\ref{sec:undantag}.
 
 \begin{table}[H]
 \resizebox{\textwidth}{!}{%
@@ -141,6 +151,12 @@ För de som inte har amatörradiocertifikat är egentligen följande frekvensban
 \end{tabular}}
 \caption{Lämpliga frekvensband landmobil radio.}
 \end{table}
+
+För den som har certifikat ser banden annorlunda ut. NVIS, skipzon,
+rymdvåg och markvåg förklaras i avsnitt~\ref{sec:nvis},
+\ref{sec:skipzon}, \ref{sec:rymdvag} och~\ref{sec:markvag}.
+Instegscertifikatet har inte alla banden i tabellen nedan, se
+avsnitt~\ref{sec:instegsband}.
 
 
 \begin{table}[H]
@@ -176,7 +192,8 @@ fungerar osv.
 
 Här finns två användbara webbappar som ger ledtrådar som behövs för
 att förstå hur utbredningen ser ut just nu och även som kan hjälpa
-till med att beräkna skymningsutbredning.
+till med att beräkna skymningsutbredning. Fenomenen står i
+kapitel~\ref{vågutbredning}.
 
 \section{Vågutbredning och rymdväder}
 
@@ -214,7 +231,10 @@ vanlig amatörradiostation, 100~W och en enkel dipol på omkring 10--15
 meters höjd, från gränsvågen på 160\,m upp till 6\,m. Nya värden hämtas
 var 15:e minut, och vill man inte vänta finns det en knapp i sidhuvudet.
 Rutorna kan dras om med handtaget i hörnet så att man får dem i den
-ordning man själv vill ha.
+ordning man själv vill ha. Vad mätarna betyder, och hur man väljer
+band ur dem, står i avsnitt~\ref{sec:rymdvader}. NVIS och sporadiskt
+E, som några av rutorna bygger på, står i avsnitt~\ref{sec:nvis}
+och~\ref{sec:es}.
 
 Siffrorna är en blandning av mätningar och sådant som räknas fram i
 sidan. MUF och LUF är en modell för just den här orten, ingen jonosond,
@@ -353,8 +373,9 @@ Sidan är en karta över läget, och bandet avgör.
 Greylineappen, som på sidan heter termin, visar var skymningszonen ligger
 från det egna QTH:t, hur långt det är dit och vilka DXCC zonen korsar just
 nu. Själva fenomenet tar vi upp under Skymningsutbredning (greyline) i
-kapitlet om vågutbredning. Det appen är bra på är att tala om när man ska
-sitta vid radion och åt vilket håll man ska rikta. En tänd lampa är ett
+kapitlet om vågutbredning, avsnitt~\ref{sec:greyline}. Det appen är
+bra på är att tala om när man ska sitta vid radion och åt vilket håll
+man ska rikta. En tänd lampa är ett
 tillfälle att lyssna. Om bandet sedan bär beror på absorption, brus och
 antenn. MUF, K-index och jonosond finns inte här, det ligger i
 Rymdväderappen.
