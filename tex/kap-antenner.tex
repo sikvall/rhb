@@ -1,0 +1,734 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Antenner}
+\label{sec:antenner}
+\index{antenner}
+\index{antenn}
+
+Här ska vi diskutera några av de vanligaste förekommande antennerna
+och särskilt från perspektivet att få till antenner som man kan bygga
+själv på egen hand till sina radioapparater. Vi kommer främst titta på
+antenner för kortvåg, VHF och lite UHF (låga delen, typiskt 70 cm).
+En antenn man bygger själv är tillåten även med instegscertifikat.
+Det som inte är tillåtet då är en hemmabyggd eller modifierad sändare,
+se avsnitt~\ref{sec:insteg-restriktioner}.
+
+\vfill
+
+\minitoc
+
+\clearpage
+
+\section{Antenntyper}
+
+Här beskriver vi några av de vanliga atenntyperna. Fokus är på
+enkelhet och sådana man kan bygga själv även om också med komplexa
+antenner som Yagi-Uda omnämns.
+
+\subsection{Dipolen}
+\index{dipol}
+\index{antenn!dipol}
+\index{halvvågsdipol}
+\index{antenn!höjd}
+\index{NVIS!antenn}
+\index{dipol!höjd}
+\index{antenn!längd}
+\index{halvvåg}
+
+Dipolen är den antenn de flesta börjar med, och den som de andra
+jämförs med. En halvvågstråd, matad på mitten. Den strålar mest rakt
+ut från tråden, i ett åttamönster om man ser den ovanifrån. Längs
+tråden är den tyst. En dipol för 40\,m som hänger öst--väst hörs
+alltså bäst i riktningarna nord och syd. Men den strålar också rakt
+uppåt och rakt nedåt.
+
+Höjden bestämmer vart energin tar vägen. Hänger dipolen lågt, en bit
+under en kvarts våglängd, går det mesta rakt upp, och det är
+NVIS-läget, rätt när man vill nå runt om i landet och de närmaste
+grannländerna. Kring en halv våglängd över marken lägger sig loben
+flackare och räcker till DX. Blir den klart högre kan loben dela sig,
+så att en del går flackt och en del brant.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrrl}
+	\bf Band & \bf Kvartsvåg & \bf Halvvåg & \bf En lågt hängande tråd          \\ \hline
+	160\,m   &         40\,m &       80\,m & nästan alltid NVIS                 \\
+	80\,m    &         20\,m &       40\,m & NVIS hos de flesta                 \\
+	60\,m    &         15\,m &       30\,m & NVIS, och det är ofta det man vill \\
+	40\,m    &         10\,m &       20\,m & NVIS lågt, DX om den kommer upp    \\
+	20\,m    &          5\,m &       10\,m & hygglig DX redan på 10--15\,m
+\end{tabular}
+\caption{Ungefärlig höjd över mark för NVIS och för ett flackare hopp.
+Under kvartsvågen dominerar den branta loben.}
+\label{tab:dipolhojd}
+\end{table}
+
+På 80\,m är en halv våglängd omkring 40\,m upp, så de flesta kör det
+bandet lågt och får NVIS vare sig de tänkt på det eller inte. På 60\,m
+är en kvarts våglängd omkring 15\,m, så samma tråd är en NVIS-antenn
+där också. På 20\,m är en halv våglängd omkring 10\,m, och en dipol på
+10--15\,m höjd är alltså NVIS på 80 och 60\,m och en hygglig DX-antenn
+på 20\,m. Samma tråd, två olika jobb.
+
+Längden står i teknikkapitlet, under antennlängd. En tråddipol blir i
+praktiken kortare än den fria halvvågen, cirka $142/f$ till $143/f$
+meter när frekvensen är i MHz. Man klipper den lite för lång och
+kortar den efter att man mätt stående våg. Ändarna ska inte gå att
+nudda för människor eller djur eftersom där blir spänningen hög när
+man sänder. Håll också tråden väl borta från elledningar, undvik
+absolut att låta den gå över en väg eller gata och tänk efter lite hur
+du placerar den.
+
+\subsubsection{Inverterad V}
+\index{inverterad V}
+\index{antenn!inverterad V}
+\index{dipol!inverterad V}
+\index{inverterad V!impedans}
+
+Detta är egentligen samma dipol som ovan men placerad annorlunda.
+
+Saknar man två fästpunkter räcker en. Mittpunkten hissas i en mast, ett
+träd eller en nock, och benen går snett ner. Det är samma halvvåg, bara
+vikt. Den tar mindre plats i sidled, och den tål att benen inte ligger
+exakt i linje.
+
+Impedansen sjunker när benen vinklas ner, och hamnar ofta närmare de
+50\,$\Omega$ som koaxen vill se än vad den raka dipolen gör. Åttamönstret
+finns kvar men är mjukare, så en inverterad V är snällare om man inte
+kan välja riktning. Ändarna ska fortfarande upp från marken. Ligger de i
+gräset försvinner effekt, och frekvensen drar iväg. En höjd där ingen
+når dem räcker. Med ett spö eller ett träd i mitten är den en av de
+antenner som är enklast att ta med ut.
+
+\subsubsection{Off-center-matad dipol}
+\index{off-center}
+\index{antenn!off-center}
+\index{dipol!off-center}
+\index{OCF}
+\index{Guanella}
+\index{strömbalun!Guanella}
+\index{spänningsbalun}
+\index{mantelström}
+\index{common mode}
+\index{Ruthroff}
+\index{balun!4:1}
+\index{balun!Guanella}
+\index{OCF!benlängd}
+\index{4:1}
+
+Den off-center-matade dipolen är vägen när man vill ha flera band på
+koax. På engelska heter den \textit{off-center fed dipole}, OCF. Det
+är samma halvvågstråd som den vanliga dipolen, men matningen sitter en
+tredjedel in från ena änden. Korta benet är en tredjedel av tråden,
+långa benet två tredjedelar.
+
+Hela längden $L$ är tråddipolens, $142/f$ till $143/f$ meter när
+frekvensen är i MHz, samma tal som i teknikkapitlet. Benen blir
+
+\begin{align}
+	l_{\text{kort}} &= \frac{L}{3} \\
+	l_{\text{lång}} &= \frac{2L}{3}
+\end{align}
+
+På 3,6\,MHz, mitt på 80\,m, är tråden knappt 40\,m om man räknar
+$143/f$. Korta benet blir då drygt 13\,m och långa benet drygt 26\,m.
+Man klipper lite långt och kortar efter att stående våg är mätt,
+precis som på en vanlig dipol. Klipper man den för 40\,m blir det en
+mindre antenn för 40, 20 och 10\,m.
+
+En mittmatad dipol har låg impedans på grundtonen och på de udda
+övertonerna. På jämna övertoner ligger mitten i ett spänningsmaximum,
+och impedansen är flera tusen ohm. Vid en tredjedels längd ligger
+impedansen kring 200\,$\Omega$ både på grundtonen och på de jämna
+övertonerna. En omsättning 4:1 tar ner det mot 50\,$\Omega$. Koaxen
+kan då gå hela vägen till radion med måttlig stående våg. En OCF för
+80\,m går därför bra på 80, 40, 20 och 10\,m. 15\,m och WARC-banden är
+ojämnare och vill ofta ha en tuner. 4:1 ska sitta uppe i
+matningspunkten. Sitter den nere vid radion är det koaxen som bär de
+200\,$\Omega$, och då är förlusten tillbaka.
+
+Effektiviteten kommer av att hela tråden strålar. Inga spolar och inga
+traps som stjäl effekt och gör bandet smalt. På de band den är gjord
+för är den i samma klass som en vanlig dipol. En enda tråd räcker till
+flera av dem, och koaxen värmer inte bort det man just vunnit.
+
+Det som avgör om det blir så i praktiken är balunen. Antennen är
+osymmetrisk. Benen är olika långa, så strömmarna vill inte vara lika.
+En spänningsbalun, oftast en Ruthroff 4:1, tvingar fram lika
+spänningar och har sämre undertryckning av common mode. Matarledningen
+blir då en del av det som strålar och loben drar snett, bruset ökar
+och man får radiofrekvens i rummet. En del av effekten värmer kärnan i
+stället för att gå ut i tråden.
+
+En strömbalun av Guanella-typ håller emot det. Den är byggd av två
+transmissionsledningar, kopplade så att de ger 4:1, och de släpper i
+praktiken bara igenom ström som går åt motsatt håll i de två
+ledarna. Common modeström, ström åt samma håll i både skärmen och
+mittenledaren, möter där ferritens drossel som ett växelströmsmotstånd
+och undertryckningen är klart bättre än i en spänningsbalun. Därför är
+det helst en Guanella man sätter i matningspunkten. OCF är så pass
+sned att en ensam 4:1 inte alltid räcker. En extra strömbalun 1:1 på
+koaxen strax under den hjälper också för att minska common
+modeproblematiken.
+
+Höjden följer den vanliga dipolen. Lågt blir det NVIS, högre blir
+loben flackare. Åttamönstret är lite snett eftersom benen är olika
+långa, och på de högre banden delar loben sig.
+
+Förutom obalansen i antennen är den fantastisk när man enkelt behöver
+en antenn som snabbt kan köras på flera band. Den är dock inte
+särskilt kompakt men den ger ofta mycket bra resultat och den är lätt
+att bygga.
+
+\subsubsection{Stegmatad dipol, doublet}
+\index{doublet}
+\index{antenn!doublet}
+\index{stegmatning}
+\index{antenn!stegmatning}
+\index{stege!doublet}
+\index{stege}
+\index{doublet!längd}
+\index{antenntuner!doublet}
+\index{strömbalun!doublet}
+
+En doublet är en dipol som inte är klippt för ett enda band. Den matas
+på mitten med öppen stege, kring 450 eller 600\,$\Omega$, hela vägen
+in till en balanserad avstämningsenhet. Koax hör inte hemma på den
+sträckan. Har man bara en vanlig tuner sätter man en strömbalun 1:1
+alldeles intill den, och en kort koaxstump därifrån till radion.
+
+Det som gör stegen värd besväret är förlusten. Den är liten även när
+stående våg är hög. Samma missanpassning i en koax blir värme i
+kabeln, och på de högre banden kan en god del av effekten försvinna
+innan den når tråden. I stegen kommer den fram. Tunern vid radion får
+slutsteget att se 50\,$\Omega$. Missanpassningen får stanna i stegen,
+där den kostar lite. Håll stegen fri från metall. Lindas den längs en
+mast eller tejpas mot en ränna börjar den uppföra sig som en koax, och
+då är den låga förlusten borta.
+
+Därför ska tråden ligga mellan resonanserna på de band man vill köra.
+Inte på en halvvåg, inte på en helvåg, och inte på en multipel av dem.
+Vid halvvåg och vid udda multiplar, tre halvvågor och så vidare,
+ligger matningen i ett strömmaximum. Impedansen blir låg, ofta under
+hundra $\Omega$, mot en stege som är gjord för flera hundra. Vid
+helvåg och vid jämna multiplar ligger matningen i ett
+spänningsmaximum.  Impedansen går då upp i flera tusen $\Omega$. Båda
+lägena är svåra för tunern. Spänningen eller strömmen i stegen blir
+onödigt hög, och en del av det man vann på den snåla stegen försvinner
+i anpassningen.
+
+Längden i tabellen är hela tråden, från ände till ände, matad på
+mitten. Den är räknad med samma förkortning som tråddipolen i
+teknikkapitlet, omkring $142/f$ till $143/f$, och längderna ligger
+också fria om man räknar den fria halvvågen $150/f$. Halvvågen på
+lägsta bandet, den man annars klipper en vanlig dipol efter, är just
+den längd man lämnar här. Bandgränserna är de svenska, och WARC-banden
+är med. Kortare än omkring en tredjedels våg på lägsta bandet blir
+tråden klen. Då hjälper inte stegen, för mer av effekten fastnar i
+tunern.
+
+En halvmeters skillnad kan räcka för att hamna på en resonans,
+särskilt på 10\,m där bandet är brett. 27,5\,m ska hållas nära det
+talet.  28\,m landar på 60\,m. 32,5\,m tål ett par
+decimeter. Längderna för 160\,m tål ungefär en meter, och 13 samt
+18,5\,m tål några decimeter.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+	\textbf{Band} & \textbf{Längd} & \textbf{Läget}                                   \\ \hline
+	80--10\,m     & 27,5\,m        & Kort. Drygt en tredjedels våg på 80\,m.          \\
+	80--10\,m     & 32,5\,m        & Lagom. Klart under en halv våg på 80\,m.         \\
+	160--20\,m    & 48\,m          & Kort, när tråden inte får bli lång.              \\
+	160--20\,m    & 58\,m          & Lagom på 160\,m.                                 \\
+	160--20\,m    & 66\,m          & Längre, fortfarande under en halv våg på 160\,m. \\
+	40--6\,m      & 13\,m          & Kort. Omkring en tredjedels våg på 40\,m.        \\
+	40--6\,m      & 18,5\,m        & En bit under en halv våg på 40\,m.               \\
+\end{tabular}
+\caption{Lämpliga längder för stegmatad doublet}
+\end{table}
+
+Höjden gör samma sak som för en vanlig dipol. Lågt ger NVIS på de låga
+banden, högre ger flackare lob och DX. På de högre banden blir tråden
+flera våglängder och loben delar sig. Det är normalt för en doublet.
+
+\subsection{Vertikalantenn och jordplan}
+\index{vertikalantenn}
+\index{antenn!vertikal}
+\index{jordplan}
+\index{antenn!jordplan}
+\index{radial}
+\index{kvartsvåg}
+\index{vertikalantenn!radial}
+\index{vertikalantenn!portabel}
+
+En kvartsvåg som står upp strålar runt om, och lågt över horisonten
+när den har något att arbeta mot. Det låga skottet är det man vill ha
+för DX på de högre kortvågsbanden. Längden är cirka $71/f$ meter,
+samma tumregel som i teknikkapitlet.
+
+Den behöver ett jordplan. Står den på marken är radialerna det som
+avgör hur mycket av effekten som blir radio i stället för värme i
+backen. På marken behöver de inte vara avstämda. De bildar ett nät,
+och fler är bättre. En bit upp i luften ska de vara ungefär en
+kvartsvåg, tre eller fyra stycken, gärna sluttande nedåt. Då hamnar
+matningen ofta nära 50\,$\Omega$.
+
+Vertikalen är som regel brusigare på mottagning än en horisontell
+dipol. Mycket av bruset runt husen är vertikalt polariserat. Över
+salt vatten, som i avsnittet om markvåg, är den däremot
+svårslagen. Där finns jordplanet redan. På ett öppet fält, med tre
+eller fyra radialer och ett spö, är den ett bra val för portabelt när
+en dipol inte får plats.
+
+En enklare sådan kan konstrueras av ett fiskespö. Den matade tråden
+ska vara ungefär 1/4 av våglängden (beräkna som ena benet på en
+halvvåg). På marken lägger man sedan ut en motvikt med ungefär samma
+läng i den riktning man vill ha bästa verkan av antennen, eller så har
+man flera motvikter, exempelvis 3 stycken arrangerade som ett Y och
+får den då ganska rundstrålande. Motvikterna kan vara kortare än det
+vertikala men är de ungefär lika långa får man bästa effekten.
+
+\subsection{Longwire och ändmatad, EFHW och EFRW}
+\index{longwire}
+\index{EFRW}
+\index{antenn!longwire}
+\index{endmatad}
+\index{antenn!endmatad}
+\index{EFHW}
+\index{endmatad!halvvåg}
+\index{motvikt}
+\index{överton}
+\index{49:1}
+\index{transformator!endmatad}
+
+Vi börjar med att reda ut några begrepp. Det finns i huvudsak två
+sorters ändmatade antenner med två olika filosofier och dessa är EFHW
+som är en resonant antenn med mycket hög matningsimpedans, kräver en
+unun med högt omsättningstal (49:1 är vanligt) och fungerar på band
+som är resonanta mot halvvågen samt helvågen för dess längd.
+
+Den andra sorten är det som ibland kallas ``random wire'' men den är
+inte så random, tvärt om är det rätt viktigt att klippa till den så
+den inte kommer i resonans. Den får lägre matningsimpedans, klarar sig
+med en unun på runt 9:1 i omsättningstal och kan med fördel köras med
+tuner och får relativt goda egenskaper. Den fungerar bra på alla
+frekvenser som den INTE är resonant på.
+
+En tråd som är flera våglängder lång strålar i lober längs tråden och
+inte tvärs den som den vanliga dipolen när man kör den på frekvenser
+som ligger över den lägsta frekvensen den är konstruerad för (där den
+är ungefär en halv våglängd eller kortare) och riktningen följer hur
+tråden ligger. En longwire mot sydväst gynnar sydväst, med flera lober
+snarare än en enda. Antalet lober blir mer och mer markerat ju högre i
+frekvens man använder antennen på och ju längren den är i förhållande
+till våglängden desto större blir riktverkan i trådens riktning.
+
+Vanligare i dag är den ändmatade halvvågen. Samma längd som en dipol,
+men matad i änden där fästet sitter. Impedansen där är hög, några
+tusen $\Omega$, så den går inte rakt in i radion utan behöver en unun,
+en transformator ofta 49:1 som tar ner impedansen den mot
+50\,$\Omega$. Det behövs också en motvikt. Ibland räcker koaxens skärm
+om en strömbalun sitter en bit ner på kabeln, annars en kort tråd vid
+matningspunkten.
+
+Till skillnad från en mittmatad dipol tar den även de jämna
+övertonerna. En halvvåg på 40\,m går alltså också på 20, 15 och 10\,m.
+Den är för kort för 80 och 160\,m. 30, 17 och 12\,m ligger inte i den
+kedjan. Där får man ta en annan tråd, eller en tuner. En tråd som inte
+ens är en halvvåg på bandet kräver tuner och en motvikt. Annars blir
+radion själv en del av antennen, och det märks som radiofrekvens i
+rummet. För portabelt är den endmatade halvvågen ofta det enklaste.
+Tråden väger lite, fästet sitter i ena änden och radion står där man
+matar.
+
+Fördelen med den ändmatade halvvågen är att den fungerar på alla
+resonanta band och rätt utförd behövs heller inten antennanpassare
+annat än en unun. Nackdelen är att en unun med omsättningstalet 49:1
+också har en del förluster eftersom den är svår att linda med lite
+grövre tråd så den blir bra. Omsättningen är ju alltså 7 gånger så
+många varv till den ändmatade tråden som till den drivande delen från
+radion.
+
+Här finns dock en variant som är väldigt trevlig och det är en så
+kallad {\it end fed random wire} eller EFRW som inte alls är så random
+som det låter. Jag ska försöka förklara -- om vi väljer en trådlängd
+som är icke-resonant på de band vi vill använda den på och samtidigt i
+närheten av säg 40\,\% av längden av en halv våglängd så sjunker
+matningsimpedanden ordentligt i änden. Nu räcker det ofta med 1:9 i
+stället och då blir unun enklare att linda (3 ggr så många varv på
+antennsidan som på radiosidan) och vi kan fortfarande ofta få till det
+nog så bra utan tuner.
+
+Men nu blir impedansen i änden i stället några hundra~$\Omega$ i stället
+för flera tusen som tidigare, förlusterna sjunker. Det finns en myt om
+att antenner som inte är i resonans inte är effektiva men det är
+trams, det handlar i princip bara om antennens längd i förhållande
+till den våglängs man vill köra. Matematiskt är den bästa dipolen med
+högst antennvinst den som är 1.25 våglängder lång.
+
+Detta är en utmärkt portabelantenn eftersom den består av en unun, en
+motvikt och en rulle tråd man kan kasta ut där man vill köra.
+
+\subsection{Yagi-Uda}
+\index{Yagi-Uda}
+\index{antenn!Yagi-Uda}
+\index{riktantenn}
+\index{reflektor}
+\index{direktor}
+\index{antennvinst}
+\index{dBd}
+\index{dBi}
+\index{riktantenner}
+\index{antennvinst!Yagi}
+
+En yagi-uda är en dipol med gott sällskap. Bakom den drivna dipolen
+sitter en reflektor, något längre. Framför sitter en eller flera
+direktorer, något kortare. Reflektorn trycker energin
+framåt. Direktorerna samlar den.  Fler element ger mer antennvinst och
+smalare lob. Hur vinsten räknas, i dBd och dBi, står i
+teknikkapitlet. Dipolen är där 0\,dBd och 2,15\,dBi. Yagin har oftast
+mycket högre antennvinster. Framför allt på VHF och UHF kan det bli 10
+dBi eller mer. På ännu högre frekvenser kan det bli mer än så.
+
+På kortvåg blir en yagi dock väldigt stor. Tre element på 20\,m har
+element kring tio meter och en bom på flera meter. På 15 och 10\,m
+krymper det. På 6\,m och uppåt är yagin det vanliga sättet att få
+riktverkan, och där får den plats på en vanlig mast.
+
+\subsection{Polarisation}
+\index{polarisation}
+\index{antenn!polarisation}
+\index{horisontell polarisation}
+\index{vertikal polarisation}
+\index{polarisation!rymdvåg}
+\index{polarisation!fri sikt}
+\index{repeater!polarisation}
+
+En horisontell tråd ger horisontell polarisation. Ett stående spröt
+ger vertikal. På rymdvåg genom jonosfären blandas polarisationen, så
+en dipol och en vertikal kan ändå höra varandra. På markvåg och på fri
+sikt stannar den. Där ska båda köra samma, annars försvinner en stor
+del av signalen, uppåt 20\,dB i värsta fall.
+
+FM, repeatertrafik och det mesta mobila är vertikalt. SSB och CW på
+6\,m, 2\,m och 70\,cm är som regel horisontellt. En yagi monteras
+efter det man vill köra. Elementen horisontellt för SSB, stående för
+repeater.
+
+\subsection{VHF och 70 cm}
+\label{sec:vhf-antenn}
+\index{antenn!VHF}
+\index{antenn!70 cm}
+\index{antenn!6 m}
+\index{gummiantenn}
+\index{handapparat!antenn}
+\index{repeater}
+\index{ERP}
+\index{2 m!antenn}
+\index{70 cm}
+\index{kvartsvåg!VHF}
+\index{kabeldämpning}
+
+På 6\,m är en halvvåg omkring tre meter, på 2\,m omkring en meter och
+på 70\,cm en tredjedel av det. En liten yagi är därför det vanliga
+sättet att få räckvidd, och en vertikal på taket räcker långt mot
+repeatrar. Höjd slår effekt. Samma radio hör en repeater med antennen
+över taknocken och är tyst när den sitter i fönstret.
+
+Riktningen spelar roll så fort det är tropo, sporadiskt E eller
+norrsken. Fri sikt är snällare. Där räcker det att komma över hindren.
+
+Gummiantennen på handapparaten är en kompromiss. Den är kortad och
+förlustrik, och radions chassi får vara jordplan. Håller man handen
+över den blir den ännu sämre. En kvartsvåg på bilen, eller en yagi på
+masten, är något annat. På 70\,cm straffar kabeln också. Lång tunn
+koax mellan radio och antenn kan äta mer effekt än antennen
+vinner. Det är samma kabeldämpning som räknas i teknikkapitlet.
+
+På 2\,m, där många kör med instegsbehörighet, räknas gränsen som
+ERP. En yagi har vinst över dipolen, så sändareffekten får sänkas.
+Hur det räknas står i avsnitt~\ref{sec:insteg-restriktioner}. Vilka
+band som är öppna för instegscertifikat står i
+avsnitt~\ref{sec:instegsband}.
+
+\subsection{Portabelt}
+\label{sec:portabelt}
+\index{portabel}
+\index{antenn!portabel}
+\index{portabel!endmatad}
+\index{portabel!inverterad V}
+\index{portabel!vertikal}
+\index{portabel!VHF}
+\index{portabel!yagi}
+\index{portabel!kvartsvåg}
+
+Ute räknas vikt, ett fäste och hur fort tråden är i luften. Tre
+antenner klarar det bättre än de andra.
+
+Den endmatade halvvågen är den man oftast tar med. En rulle tråd, en
+transformator 49:1 och ett rep i ett träd eller ett spö. Matningen
+sitter där radion står. En halvvåg på 40\,m täcker också 20, 15 och
+10\,m.
+
+Inverterad V är nästan lika bra när man har ett spö att sätta i mitten.
+Ingen transformator utöver en strömbalun 1:1, bara koax. Ändarna får
+hänga lägre, så länge ingen når dem.
+
+Vertikalen med tre eller fyra upphöjda radialer är valet på öppen
+mark, vid en strand eller där träden saknas. Ett spö, och jordplanet
+hänger med. Över salt vatten är den svår att slå.
+
+På VHF och 70\,cm är det en liten yagi, eller en kvartsvåg på samma
+spö. Gummiantennen på handapparaten är vad man har i fickan.
+Räckvidden blir kortare.
+
+En rak dipol vill ha två höga fästen. Kortvågsyagi, doublet med stege
+och off-center-dipol med balunen hängande i spannet är tyngre att få
+upp på en kvart. De går att ta med. De är sällan det snabbaste sättet
+att komma i luften. I krislådan är det samma avvägning, se
+avsnitt~\ref{sec:krislada} i bilaga~\ref{sec:prepping}.
+
+\subsection{Matning och anpassning}
+\index{balun}
+\index{strömbalun}
+\index{antenn!matning}
+\index{koaxialkabel!antenn}
+\index{antenntuner}
+\index{stege}
+\index{stående våg}
+\index{VSWR}
+\index{return loss}
+\index{impedans}
+\index{koaxialkabel}
+\index{anpassning}
+\index{missanpassning}
+\index{balun!1:1}
+\index{strömbalun!1:1}
+
+Radion och den vanliga koaxen är gjorda för 50\,$\Omega$. Dipolen
+ligger i närheten, och vertikalen med rätt radialer också. Då kan man
+köra utan tuner. En strömbalun 1:1 vid dipolens matningspunkt är ändå
+värd att ha. Den håller strömmen på skärmen nere, så att kabeln inte
+strålar och loben blir något annat än man räknat med.
+
+En antenntuner vid radion lugnar slutsteget. Effekten som studsar fram
+och tillbaka i koaxen är kvar som förlust. På kortvåg, med kort och
+grov kabel, är den förlusten ofta måttlig. På VHF växer den fort. Ska
+en och samma dipol köras på flera band är den stegmatade doubletten
+rätt väg.  Den är beskriven ovan. Tunern ska sitta där stegen kommer
+in.
+
+Hur stående våg och return loss hänger ihop, och vad som är en bra
+respektive dålig anpassning, står i teknikkapitlet under
+missanpassning.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Impedanstransformatorer}
+\label{sec:baluner}
+\index{balun}
+\index{unun}
+\index{impedansanpassning}
+\index{spänningsbalun}
+\index{strömbalun}
+
+En BALUN {\it Balanced-Unbalanced} sitter mellan en symmetrisk antenn
+och den osymmetriska koaxen. En unun {\it Unbalanced-Unbalanced}
+sitter mellan två osymmetriska sidor med gemensam jord, och den finns
+till för att ändra impedansen. När omsättningen inte är 1:1 står
+antennens impedans före kolon och de 50\,$\Omega$ som koaxen vill se
+efter, samma sätt att skriva som redan används för 4:1, 9:1 och 49:1 i
+antennavsnitten.
+
+Det som avgör om matarledningen börjar stråla och bete sig är graden
+av common mode-ström som går i den, inte siffran i omsättningen. En
+spänningsbalun av Ruthroff-typ tvingar fram spänningar mot jord. En
+strömbalun av Guanella-typ släpper i praktiken bara igenom ström som
+går åt motsatt håll i de två ledarna, den är ett filter för common
+mode-ström, på engelska \textit{common mode}, där strömmen då möter
+ferriten som ett växelströmsmotstånd. Dipolen, den inverterade
+V-dipolen och den stegmatade doubletten vill ha strömbalunen. Den
+off-center-matade dipolen vill ha en Guanella 4:1, och den ändmatade
+tråden en unun.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lcll}
+	\textbf{Anpassare} & \textbf{Omsättning} & \textbf{Tar}                        & \textbf{Hör hemma vid} \\ \hline
+	Guanella           & 1:1                 & 50\,$\Omega$ mot 50\,$\Omega$       & 
+		Off-center matad dipol                                                                          \\
+	Ruthroff           & 1:1                 & 50\,$\Omega$ mot 50\,$\Omega$       & 
+		Klassisk dipol                                                                                  \\
+	Ruthroff           & 4:1                 & 200\,$\Omega$ mot 50\,$\Omega$      & 
+		Doublet                                                                                         \\
+	Ruthroff           & 6:1                 & 300\,$\Omega$ mot 50\,$\Omega$      & 
+		Vikt dipol eller 300\,$\Omega$-ledning. Låg OCFD.                                               \\
+	Guanella           & 4:1                 & 200\,$\Omega$ mot 50\,$\Omega$      & 
+		OCFD, linda på två kärnor, inte en                                                              \\
+	UNUN               & 9:1                 & 450\,$\Omega$ mot 50\,$\Omega$      & 
+		Ändmatad icke resonant tråd, EFRW                                                               \\
+	UNUN               & 49:1                & ca 2\,500 $\Omega$ mot 50\,$\Omega$ & 
+		Ändmatad resonant tråd,  EFHW                                                                   \\
+\end{tabular}
+\caption{Översikt över praktiska impedanstransformatorer}
+\label{tab:balunval}
+\end{table}
+
+\subsection{Balun}
+\label{sec:balun}
+
+\subsubsection{Strömbalun 1:1, Guanella}
+\label{sec:guanella-11}
+\index{strömbalun!1:1}
+\index{balun!1:1}
+\index{Guanella!1:1}
+\index{mantelström}
+
+Strömbalunen 1:1 ändrar inte impedansen. Två ledare, en bifilar lindning
+eller en bit koax, ligger på en ferritkärna och går rakt igenom utan att
+korsas. Ström som går ut i den ena ledaren och tillbaka i den andra ser
+bara transmissionsledningen. Ström som vill gå åt samma håll i båda, ut
+på skärmen och tillbaka någon annanstans, får magnetisera kärnan och
+dämpas.
+
+Den hör hemma i matningspunkten på en mittmatad dipol och på en
+inverterad V, även när impedansen redan ligger nära 50\,$\Omega$. När
+stegen från en doublet ska över till en kort koaxstump vid en vanlig
+tuner sitter samma 1:1 alldeles intill tunern. En 4:1 är fel verktyg
+där. Stegens impedans är inte 200\,$\Omega$, och tunern ska se det
+stegen faktiskt lämnar.
+
+\subsubsection{Ruthroff, 1:1}
+\label{sec:ruthroff-11}
+\index{Ruthroff!1:1}
+\index{spänningsbalun!1:1}
+\index{balun!1:1}
+
+Ruthroff 1:1 är också 50\,$\Omega$ till 50\,$\Omega$, men den är en
+spänningsbalun. Tre lika lindningar på samma kärna kopplas i serie.
+Mittledaren går till toppen, skärmen till uttaget mellan den andra och
+den tredje lindningen, och antennens två ben tas från det övre uttaget
+och från botten. Benen hamnar då på var sin sida om jord med samma
+spänning till beloppet, och impedansen följer med oförändrad.
+
+Undertryckningen är det som saknas. Det är spänningen som hålls, inte
+strömmen, så en osymmetrisk antenn eller en koax som inte hänger fritt
+driver mantelström igenom ändå. En del av effekten kan värma kärnan i
+stället för att gå ut i tråden. Den här ersätter inte strömbalunen i
+föregående avsnitt.
+
+\subsubsection{Ruthroff, 4:1}
+\label{sec:ruthroff-41}
+\index{Ruthroff!4:1}
+\index{spänningsbalun!4:1}
+\index{balun!4:1}
+
+Två lika lindningar på samma kärna räcker för 4:1. Mittledaren och det
+ena antennbenet möts i toppen, skärmen ligger på mittenuttaget och det
+andra benet i botten. Spänningen mellan benen blir den dubbla mot den
+koaxen lägger på, och impedansen blir den fyrdubbla, så omkring
+200\,$\Omega$ kommer ner mot 50\,$\Omega$.
+
+Det är den spänningsbalun som förr satt i nästan varje off-center-matad
+dipol. Antennen är sned, med olika långa ben, och en balun som bara
+håller spänningarna släpper igenom mantelström. Loben drar snett. Ska en
+Ruthroff 4:1 ändå används hör en strömbalun 1:1 hemma på koaxen strax
+under den.
+
+\subsubsection{Ruthroff, 6:1}
+\label{sec:ruthroff-61}
+\index{Ruthroff!6:1}
+\index{spänningsbalun!6:1}
+\index{balun!6:1}
+
+6:1 är en Ruthroff den också, men koaxen ligger inte över halva lindningen. Hela
+lindningen är omkring 2,45 gånger den del som sitter mellan mittledare
+och skärm. Roten ur sex är det talet, och impedansen följer kvadraten,
+så omkring 300\,$\Omega$ tas mot 50\,$\Omega$. En vikt dipol ligger i
+den trakten, och en bandkabel på 300\,$\Omega$ också.
+
+Den off-center-matade dipolen hör inte hit. Den ligger kring 200\,$\Omega$
+och vill ha 4:1. Doubletten ska inte ha en 6:1 heller, för där är det
+stegen och en strömbalun 1:1 vid tunern som gäller. Jordreferensen sitter
+inte mitt emellan antennbenen, så spänningarna mot jord blir inte lika
+stora, och mantelströmmen är kvar. En strömbalun 1:1 får ta den om
+kopplingen ändå används. Ofta räcker en Guanella 4:1 även mot 300\,$\Omega$,
+eftersom 300 mot 200 bara är en stående våg på omkring 1,5.
+
+\subsubsection{Guanella, 4:1}
+\label{sec:guanella-41}
+\index{Guanella!4:1}
+\index{strömbalun!4:1}
+\index{balun!4:1}
+\index{balun!Guanella}
+
+Guanella 4:1 är två strömbaluner 1:1, var och en på sin kärna, med
+ledningar kring 100\,$\Omega$. På koaxsidan ligger de parallellt, och
+100\,$\Omega$ parallellt med 100\,$\Omega$ är 50\,$\Omega$. På
+antennsidan ligger de i serie, och 100\,$\Omega$ i serie med 100\,$\Omega$
+är 200\,$\Omega$. Strömmen i varje ledning tvingas gå åt motsatt håll,
+så mantelströmmen möter samma drosselverkan som i 1:1.
+
+De två kärnorna är inte en smaksak. Delar lindningarna en och samma
+kärna låser det gemensamma flödet balansen, och undertryckningen som var
+skälet att välja en strömbalun försvinner. På den off-center-matade
+dipolen är det här den 4:1 som ska upp i matningspunkten. En extra
+strömbalun 1:1 på koaxen strax under gör nytta när benen är så olika att
+en ensam 4:1 inte håller skärmen tyst.
+
+\subsection{Unun}
+\label{sec:unun}
+\index{unun}
+\index{transformator}
+
+Unun är engelska för \textit{unbalanced to unbalanced}. Båda sidorna har
+jord gemensam, så det finns ingen symmetrisk port att hålla, och
+omsättningen är hela vitsen. Mantelströmmen stoppas inte här. Den får en
+strömbalun 1:1 längre ner på koaxen ta, på samma sätt som redan är sagt
+för den ändmatade halvvågen.
+
+\subsubsection{Unun, 9:1}
+\label{sec:unun-91}
+\index{unun!9:1}
+\index{9:1}
+\index{transformator!9:1}
+
+Tre lika lindningar kopplas i serie på samma kärna, trifilärt så att de
+kopplar tätt. Skärmen och motvikten sitter i botten, mittledaren på
+uttaget efter en tredjedel och antenntråden i toppen. Spänningen blir
+tre gånger den koaxen lämnar, och impedansen nio gånger, alltså
+50\,$\Omega$ mot omkring 450\,$\Omega$.
+
+Det är anpassaren till den ändmatade tråd som med avsikt inte är
+resonant, den som klarar sig med omkring 9:1 och ofta en tuner. En
+halvvågs ändmatning ligger på några tusen ohm och är ett annat fall.
+Utan motvikt blir radion själv den andra halvan av antennen.
+
+\subsubsection{Unun, 49:1}
+\label{sec:unun-491}
+\index{unun!49:1}
+\index{49:1}
+\index{transformator!49:1}
+\index{endmatad!49:1}
+
+Här är det en enda lindning med ett uttag, inte tre lika delar.
+Antenntråden ser sju gånger så många varv som den del radion ligger
+över. Sju i kvadrat är 49, så några tusen ohm, omkring 2\,500\,$\Omega$,
+kommer ner mot 50\,$\Omega$. I praktiken ligger uttaget ofta vid två
+varv när hela lindningen är fjorton, vilket är samma sju gånger.
+
+Det är transformatorn till den ändmatade halvvågen. Förlusten kommer
+av att den höga sidan är många varv, och tråden kan inte vara grov om
+den ska få plats och ändå koppla. En motvikt hör till, eller koaxens
+skärm om en strömbalun 1:1 sitter en bit ner på kabeln, så att skärmen
+inte leder common mode-strömmen hela vägen in i rummet. På 15 och
+10\,m lägger många en kondensator på omkring 100\,pF över
+50\,$\Omega$-sidan, eftersom uttaget annars lämnar de banden högt i
+stående våg.
+
