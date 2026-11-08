@@ -44,6 +44,69 @@ a4paper, twoside]{book}                % De viktigaste inställningarna för dok
 \usepackage{subfig}                    % För att kunna sätta bilder side-by-side tex
 \usepackage{caption}
 %\captionsetup{justification=raggedright,singlelinecheck=false}
+\usepackage{tikz}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,decorations.markings}
+
+\definecolor{rhbjord}{RGB}{214,206,184}
+\definecolor{rhbmark}{RGB}{78,96,58}
+\definecolor{rhbd}{RGB}{214,170,96}
+\definecolor{rhbe}{RGB}{168,204,220}
+\definecolor{rhbf}{RGB}{112,158,196}
+\definecolor{rhbfsvag}{RGB}{198,216,226}
+\definecolor{rhbes}{RGB}{168,62,46}
+\definecolor{rhbrav}{RGB}{16,48,92}
+\definecolor{rhbgenom}{RGB}{146,58,32}
+\definecolor{rhbskip}{RGB}{158,78,36}
+\definecolor{rhbtack}{RGB}{78,118,58}
+
+\tikzset{
+  marklinje/.style={rhbmark,line width=0.85pt,line cap=round},
+  vag/.style={
+    rhbrav,line width=0.95pt,line cap=round,line join=round,
+    decoration={markings,
+      mark=at position 0.30 with {\arrow{Stealth[length=2.0mm,width=1.5mm,round]}},
+      mark=at position 0.74 with {\arrow{Stealth[length=2.0mm,width=1.5mm,round]}}},
+    postaction={decorate}
+  },
+  vagned/.style={
+    rhbrav,line width=0.9pt,line cap=round,line join=round,
+    decoration={markings,
+      mark=at position 0.73 with {\arrow{Stealth[length=1.85mm,width=1.4mm,round]}}},
+    postaction={decorate}
+  },
+  genom/.style={
+    rhbgenom,line width=0.75pt,line cap=round,
+    dash pattern=on 2.5pt off 1.7pt,
+    decoration={markings,
+      mark=at position 0.78 with {\arrow{Stealth[length=1.85mm,width=1.4mm,round]}}},
+    postaction={decorate}
+  },
+  etikett/.style={font=\footnotesize,inner sep=1.2pt,text=black},
+  mast/.pic={
+    \draw[line width=0.6pt,line cap=round] (0,0) -- (0,0.46);
+    \draw[line width=0.5pt,line cap=round] (-0.18,0.32) -- (0.18,0.32);
+    \fill (0,0) circle[radius=0.038];
+  },
+  dipol/.pic={
+    \draw[line width=0.75pt,line cap=round] (-0.72,0.11) -- (0.72,0.11);
+    \draw[line width=0.45pt] (0,0) -- (0,0.11);
+    \fill (-0.72,0.11) circle[radius=0.03];
+    \fill (0.72,0.11) circle[radius=0.03];
+  }
+}
+
+% Skikt som cirkelbågar kring origo. #1 är markradien, #2 är F2-färgen.
+\newcommand{\JonFyll}[2]{%
+  \fill[rhbjord] (58:#1) arc (58:122:#1) -- (122:13.2) -- (58:13.2) -- cycle;
+  \fill[rhbd] (58:18.28) arc (58:122:18.28) -- (122:18.52) arc (122:58:18.52) -- cycle;
+  \fill[rhbe] (58:18.62) arc (58:122:18.62) -- (122:19.02) arc (122:58:19.02) -- cycle;
+  \fill[#2] (58:19.35) arc (58:122:19.35) -- (122:20.35) arc (122:58:20.35) -- cycle;
+  \draw[marklinje] (58:#1) arc (58:122:#1);
+}
+
+
 \usepackage{makeidx}                   % Indexering
 \makeindex
 

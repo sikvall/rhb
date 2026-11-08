@@ -1,15 +1,16 @@
 \chapter{Vågutbredning, antenner och anpassning}
 
-I detta kapitlet tittar vi närmare på hur radiovågen tar sig fram, och
-på vilka antenner som passar till det. Markvåg, rymdvåg via
-jonosfären, NVIS, sporadiskt E, tropo, meteorscatter och greyline tas
-upp var för sig, med vad de duger till när man vill nå olika avstånd.
+I detta kapitlet tittar vi närmare på hur radiovågen tar sig fram från
+160\,m upp till 2\,m, och på vilka antenner som passar till det.
+Markvåg och rymdvåg via jonosfären, NVIS och gråzonsutbredning liksom
+tropo, meteorscatter och duktning, sporadiskt E, tropo och
+meteorscatter tas upp var för sig, och sedan samlat som en genomgång
+band för band.
 
 Rymdvädret styr mycket av det som händer på kortvåg. Vi går igenom
 solen, solcyklerna och de störningar som märks i radion, och vilka tal
 som räcker för att välja band. Därefter kommer vi in mer på antennerna
-som man kan bygga själv, även när radion ska med ut i
-terränglådan.
+som man kan bygga själv, även när radion ska med ut i terränglådan.
 
 Hur tråden matas och anpassas står sist.
 
@@ -26,108 +27,174 @@ Hur tråden matas och anpassas står sist.
 \section{Vågutbredning}
 \index{vågutbredning}
 
-Vågutbredning är något som är väldigt viktigt för radiokommunikation
-och beroende på vilken frekvens som används kan vågutbredningen se
-mycket olika ut för olika radiosändningar.
+Vågutbredning är grunderna för all radiokommunikation och det gäller
+att förstå hur den inverkar på de frekvenser som används givet en viss
+tidpunkt samt över vilket avstånd man vill kommunicera. Beroende på
+vilken frekvens som används liksom andra förhållanden kan samma
+sändare nå en granne i socknen eller en station på andra sidan
+jorden.
 
-På VHF och uppåt är det som regel fri sikt och den marknära vågen som
-gäller, men samma band kan också gå via tropo, sporadiskt E och
-norrsken. På kortvåg och lägre tillkommer rymdvågen via jonosfären,
-och det är ofta den som bär längst på dessa frekvenser. Rymdvåg är det
-som gör kortvågsutbredning så otroligt intressant och roligt.
+Från 160\,m upp till 2\,m är det framför allt fyra vägar som betyder
+något i praktiken.  Markvågen följer marken och bär det lokala på 160
+och 80\,m. Rymdvågen böjs i jonosfären och är det som ger kortvågen
+möjlighet till global kommunikation liksom även regional, antingen som
+NVIS runt stationen eller som ett flackt hopp.
+
+På 6 och 2\,m är vardagen mer fokuserad på frirumsutbredning ungefär i
+fri sikt och de långa öppningarna kommer som sporadiskt Es, tropo,
+meteorscatter eller norrsken.
+
+Vilket band som gör vilket jobb samlas i avsnitt~\ref{sec:bandval}.
 
 \subsection{Markvåg}
 \label{sec:markvag}
 \index{markvåg}
 \index{vågutbredning!markvåg}
+\index{gränsvåg}
+\index{markvåg!gränsvåg}
+\index{ytvåg}
 \index{markvåg!vatten}
 \index{direktvåg}
-\index{ytvåg}
 \index{markvåg!ledningsförmåga}
 \index{markvåg!saltvatten}
 \index{markvåg!sötvatten}
 \index{mellanvåg}
 \index{långvåg}
+\index{160 m!gränsvåg}
+\index{80 m!gränsvåg}
 \index{VHF!fri sikt}
 \index{fri sikt}
 
-Markvågen är väl den typ av vågutbredning som vi i regel först tänker
-på. På mellanvåg och långvåg följer den jordytan och även långt bortom
-radiohorisonten. På VHF och UHF är det vi i dagligt tal kallar markvåg
-mest fri sikt\footnote{Linte of Sight, LOS på engelska.}, alltså
-direktvågen, plus lite böjning runt terrängen. Höjd hjälper. En antenn
-på taket ser längre än en handapparat vid marken, och för
-handapparaten blir som regel utbredningen kort eftersom man står mitt
-i hindren och räknas ofta i någon eller några kilometer i bästa fall.
+Markvåg är det samlingsnamn man ofta använder för den våg som inte tar
+vägen om jonosfären som i stället då kallas rymdvåg. På långvåg,
+mellanvåg och de lägsta kortvågsbanden är den intressanta delen
+gränsvågen, eller ytvågen, som följer jordytan och därför når förbi
+den optiska horisonten.
 
-Över vatten går det längre än till lands, särskilt över salt
-hav. Saltvatten leder ström bra, så vågen följer ytan längre innan den
-klingar av. Sötvatten är sämre och torr mark är sämst. Till sjöss är
-det också färre hinder i vägen. Svenska radioamatörer gillar därför
+På VHF och UHF är det man i dagligt tal kallar markvåg i stället fri
+sikt, på engelska \textit{line of sight, LOS} alltså direktvågen plus
+lite böjning runt terrängen. Den vardagagliga utbredningen för VHF på
+6 och 2\,m står i avsnitt~\ref{sec:vhf}.
+
+Markvågen är den förbindelse man har mitt på dagen inom några mil, när
+rymdvågen antingen dämpas i D-skiktet eller hoppar över en och man
+befinner sig i den så kallade skipzonen. Räckvidden bestäms av hur
+väl marken leder ström, av frekvensen och av bruset.
+
+Lägre frekvens följer ytan längre, så 160\,m når längre än 80\,m över
+samma underlag, och 40\,m har i praktiken en relativt markvåg bortom
+LOS som sällan är den man räknar med. Saltvatten leder bra, sötvatten
+sämre, våt mark ganska skapligt och torr mark dåligt. I tätort gör
+störningarna det ännu svårare för markvågsförbindelser. Till sjöss är
+det färre hinder i vägen, och svenska radioamatörer gillar därför
 exempelvis Öland av denna anledning.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lll}
+\bf Underlag & \bf 160\,m & \bf 80\,m \\ \hline
+Saltvatten & längst, ofta flera mil & kortare, ändå klart längre än på land \\
+Sötvatten & märkbart kortare än saltvatten & kort \\
+Våt mark & några mil & någon mil \\
+Torr mark & kort & kort \\
+Tätort & kortast, bruset tar ofta över & ännu kortare än på 160\,m \\
+\end{tabular}
+\caption{Markvåg på 160 och 80\,m. Avstånden är relativa, för en
+vanlig station, och inte en räckviddsgaranti.}
+\label{tab:gransvag}
+\end{table}
+
+Markvågen går längs marken och finns där även när jonosfären inte
+samarbetar, medan NVIS kommer uppifrån och täcker den ring som
+markvågen inte orkar ut till. På 160 och 80\,m har man ofta båda
+samtidigt, och de kan blandas i mottagaren så att signalen fadar. Det
+tas upp under avsnittet om fädning.
+
+På VHF och uppåt hjälper det mycket med en hög placering av
+radioutrustningen eller snarare dess antenn. En antenn på taket ser
+betydligt längre än en handapparat vid marken, även om det är samma
+handapparat som kopplas till antennen på taket och för handapparaten
+på marken blir räckvidden som regel kort eftersom man står mitt i
+hindren, ofta någon eller några kilometer i bästa fall. Hur långt bort
+radiohorisonten ligger när man har höjderna räknas ut i
+teknikkapitlet, avsnitt~\ref{sec:radiohorisont}.
 
 \subsection{Rymdvåg}
 \label{sec:rymdvag}
 \index{rymdvåg}
 \index{vågutbredning!rymdvåg}
-%%%%%%%%%% GRANSKA DETTA
 \index{MUF!rymdvåg}
 \index{refraktion}
 \index{vinteranomali}
 \index{kritisk frekvens!fo}
 \index{MUF}
 \index{Maximum Usable Frequency}
+\index{LUF}
 \index{plasma}
 \index{solcykel}
 \index{solfläckar}
 
+\subsubsection{Rymdvåg och jonosfären}
+
 Rymdvåg är något som framför allt uppträder på kortvåg, och nattetid
-även så på mellanvåg. När strålningen från solen träffar de övre
-lagren i atmosfären slås elektroner loss vilket bildar en plasma av
-fria negativt laddade elektroner och positivt laddade joner. Det är de
-lättare elektronerna radiosignalen känner av, protoner finns även
-högre upp och anländer oftast med den interplanetära solvinden och är
-inte det som bär kortvågen, men om skiktet blir starkt och tränger
-nedåt kan det börja dämpa utbredningen i stället. Även om luften är
-mycket tunn där uppe räcker elektronerna för att vågen ska böjas.
+även på mellanvåg. När strålningen från solen träffar de övre lagren i
+atmosfären slås elektroner loss, vilket bildar en plasma av fria
+negativt laddade elektroner och positivt laddade joner. Det är de
+lättare elektronerna som böjer av radiosignalen genom refraktion.
 
-Man säger att skiktet speglar radiosignalen men egentligen böjs den
-vilket vi kallar för refraktion. Resultatet blir något liknande,
-signalen ''studsar'' på de olika skikten i jonosfären och det gör att
-vi kan komma betydligt längre än bara markvåg. Ibland kan signalen
-studsa flera gånger mellan markytan (eller havsytan kanske snarare)
-och jonosfären och vi kan få global utbredning. Vinkeln som vi sänder
-ut signalen med spelar stor roll hur denna refraktion sker och det
-bestämmer var vi kommer ner med signalen igen.
+Protoner finns även högre upp och anländer oftast med den
+interplanetära solvinden, och de är inte bärande av kortvågssignaler,
+om skiktet blir starkt och tränger nedåt kan det snarare i stället
+börja dämpa utbredningen. Även om luften är mycket tunn där uppe
+räcker elektronerna för att vågen ska brytas i skiktet som är
+elektriskt ledande.
 
-Mellan den plats vi sänder från, där det också finns en markvåg, och
-den plats signalen ``landar'' på finns det en zon där signalen blir
-mycket svag eller inte hörs alls. Detta kallas för {\it skipzon} och
-är det område som signalen ''hoppar över'' innan den landar igen. På
-högre frekvensbanden som 10\,m blir skipzonen väldigt uttalad och på
-de lägre banden är den mindre så. På band som också har
-NVIS-utbredning\footnote{NVIS förklaras mer lite senare} så innebär
-det att skipzonen är kanske mindre markant men den finns där också och
-särskilt om man sänder signalen med en låg vinkel.
+Man säger att skiktet speglar radiosignalen, men egentligen böjs den,
+eller snarare bryts den, vilket vi kallar för refraktion. Resultatet
+blir något som liknar att signalen studsar på de olika skikten i
+jonosfären och man kommer betydligt längre än med bara markvåg.
 
-Om signalen ligger under en viss frekvens så kommer den tillbaka till
-marken men om den ligger över den så går den i stället igenom
-jonosfären och försvinner då ut i rymden. Den högsta frekvensen som
-fortfarande kommer tillbaka på en given sträcka kallas MUF,
-\textit{Maximum Usable Frequency}, den högsta användbara
-frekvensen. Rakt upp är taket lägre. Det kallas kritisk frekvens,
-fo. För ett långt hopp ligger MUF högre än fo, ofta ett par gånger
-högre.
+Ibland studsar signalen flera gånger mellan marken, eller ännu hellre
+havsytan, och jonosfären, och då kan utbredningen bli global. Vinkeln
+man sänder ut radiosignalen med avgör mycket hur refraktionen sker och
+var signalen kommer ner igen. En flack vinkel, kanske kring
+10\textdegree\ över horisonten, ger ett långt hopp för DX
+(interkontinental trafik), medan en mer brant vinkel ger en mycket
+kortare rymdvåg som kallas NVIS och tas upp i avsnitt~\ref{sec:nvis}.
 
-MUF påverkas av hur högt solen står, av årstiden och av solaktiviteten
-som mäts på hur mycket solfläcksaktivitet som förekommer just nu. På
-våra breddgrader är F2-skiktet dagtid ofta tätare på vintern än på
-sommaren. Det kallas vinteranomalin. Sommaren vinner ändå på att dagen
-är längre vilket innebär att skiktet hinner tätna på ännu mer, samt på
-att sporadiskt E tillkommer på de höga banden. Solen har sina
-solfläcksmaximum i cykler på omkring 11 år. Vid maximum kan
-joniseringen vara enormt mycket kraftigare än vid minimum, och då
-öppnar 15, 12 och 10\,m på ett sätt som de inte gör när solen är tyst.
+\subsubsection{MUF och LUF}
+
+Om signalen ligger under en viss frekvens kommer den tillbaka till
+marken, och om den ligger över går den igenom jonosfären och
+försvinner ut i rymden. Den högsta frekvensen som fortfarande kommer
+tillbaka på en given sträcka kallas MUF, \textit{Maximum Usable
+  Frequency}, den högsta användbara frekvensen.
+
+Rakt upp är taket lägre, och det kallas kritisk frekvens, fo. För ett
+långt hopp ligger MUF högre än fo, ofta ett par gånger högre, och MUF
+anges ofta för den vinkel som ger ett hopp på 3\,000\,km. Den lägsta
+frekvensen som tar sig genom D-skiktets dämpning och bruset kallas
+LUF. Användbar rymdvåg ligger mellan LUF och MUF: ett band över MUF
+går ut i rymden, och ett band under LUF äts upp på vägen. För NVIS är
+det fo som är taket, inte MUF för 3\,000\,km.
+
+Just i dag, den 8 november 2026 kl 14:00 har vi en MUF på 18,1\,MHz samt en LUF
+på 4,7\,MHz och NVIS foF2 ligger på 6,4 MHz. Översatt till amatörradiotermer
+innebär det att DX är tillgängligt för 17 meter och nedåt medan
+D-skiktsdämpningen tar över under 60-metersbandet. För NVIS-utbredning är 160,
+80 och 60 bra band.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{pic/muf-luf-nvis.png}
+	\caption{Exempel på beräknad MUF, LUF och fo för NVIS via F2-skiktet}
+\end{figure}
+
+och har tillgång till fler kortvågsband då man nog kan tänka sig att
+80-metersbandet och 40-metersbanden kan vara väldigt användbara för att nå
+större delen av skandinavien beroende på tidpunkt och när på året det är,
+se avsnitt~\ref{sec:nvis}. Instegsbanden står i
+avsnitt~\ref{sec:instegsband}.
 
 \subsubsection{Jonosfärens skikt}
 \index{jonosfär}
@@ -138,45 +205,49 @@ joniseringen vara enormt mycket kraftigare än vid minimum, och då
 \index{E-skikt}
 \index{F2-skikt}
 \index{F-skikt}
-tasindex{F1-skikt}
+\index{F1-skikt}
 \index{kritisk frekvens}
 \index{foF2}
 \index{D-skikt!dämpning}
 \index{absorption}
 \index{jonosfär!skikt}
 
-Jonosfären är inte ett enda lock. Vi delar den i skikt efter höjd, och
-de beter sig olika.
+Jonosfären är inte ett enda lock, den delas upp i olika skikt efter höjd, och
+de beter sig olika. D-skiktet reflekterar inte kortvåg utan dämpar den,
+mest på 160, 80 och 40\,m och märkbart mindre på 60\,m, eftersom
+dämpningen avtar när frekvensen stiger. Det finns egentligen bara på
+dagen, kring 60--90\,km, så när solen går ner försvinner D nästan och
+de låga banden vaknar. En solfackla på dagen kan göra D så tätt att
+kortvågen tystnar en stund.
 
-D-skiktet ligger kring 60--90\,km och finns egentligen bara på
-dagen. Det reflekterar inte kortvåg. Det dämpar den, mest på 160, 80
-och 40\,m. När solen går ner försvinner D nästan, och då vaknar de
-låga banden. En solfackla på dagen kan göra D så tätt att kortvågen
-tystnar en stund.
+E-skiktet ligger kring 90--150\,km och bär på dagen mellanvåg och den lägre
+kortvågen, eller gränsvågen på 160  meter på kortare hopp. Det vanliga E-skiktet
+är lugnt och förutsägbart. Sporadiskt E, som tas upp i avsnitt~\ref{sec:es}, är
+något annat: täta moln i samma höjd som kan bära frekvenser ända upp till de
+lägre delarna av VHF, exempelvis 6\,m- och 2\,m-banden.
 
-E-skiktet ligger kring 90--150\,km. På dagen bär det mellanvåg och den
-lägre kortvågen på kortare hopp. Det vanliga E-skiktet är lugnt och
-förutsägbart. Sporadiskt E, som tas upp längre fram, är något
-annat. Det är täta moln i samma höjd som kan bära frekvenser ända upp
-til de lägre delarna på VHF exempelvis 6\,m och 2\,m banden.
+F-skiktet ligger högre, ofta 250--400\,km, och det är det som bär de högre
+kortvågsbanden via rymdvåg och tillåter ofta interkontinental, ibland global
+trafik. På dagen kan det dela sig i två skikt på lite olika höjd, dessa
+betecknas F1 och F2. F2 är det sega skiktet, som finns kvar på natten, fast
+glesare och lägre i frekvens. Den kritiska frekvensen för F2, foF2, är den
+högsta frekvens som kommer tillbaka om man sänder rakt upp, och MUF för en lång
+sträcka räknas sedan upp från det talet.
 
-F-skiktet ligger högre, ofta 250--400\,km, och det är det som bär den
-långa kortvågen. På dagen kan det dela sig i F1 och F2. F2 är det sega
-skiktet. Det finns kvar på natten, fast glesare och lägre i
-frekvens. Den kritiska frekvensen för F2, foF2, är den högsta frekvens
-som kommer tillbaka om man sänder rakt upp. MUF för en lång sträcka
-räknas sedan upp från det talet.
-
-MUF beräknas och mäts ofta på den vinkel som ger ett skip på 3000\,km
-avstånd. foF2 är intressant för att köra så kallad NVIS där man
-nyttjar att skicka signalen i en mycket flack vinkel uppåt med en lågt
-sittande antenn för att signalen sedan kommer ner igen som ett
-''paraply'' med en radie på runt 300--400\,km ibland upp mot
-600\,km. Detta gör vi kan nästan alltid om vi väljer ett NVIS-band för
-en given tidpunkt kommunicera med hela norden på kortvåg med ytterst
-enkla medel. Bra band för NVIS är 160, 80, 60 och 40. Vilka av dem som är öppna
-för instegscertifikat står i avsnitt~\ref{sec:instegsband}. Nattetid
-premieras de lägre frekvenserna, dagtid kan NVIS ibland gå ännu högre.
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{llll}
+\bf Skikt & \bf Höjd & \bf När & \bf Vad det gör med 160--2\,m \\ \hline
+D & 60--90\,km & dagen & dämpar, mest 160, 80 och 40\,m \\
+E & 90--150\,km & dagen & kortare hopp på MV och lägre KV \\
+Es & samma höjd & främst maj--aug & 10, 6 och ibland 2\,m, 800--2\,000\,km \\
+F1/F2 & 250--400\,km & F2 även natt & kortvåg, någon gång 6\,m \\
+\end{tabular}
+\normalsize
+\caption{Jonosfärens skikt sett från banden 160\,m till 2\,m.}
+\label{tab:skikt}
+\end{table}
 
 \subsubsection{Skipzon}
 \label{sec:skipzon}
@@ -187,67 +258,68 @@ premieras de lägre frekvenserna, dagtid kan NVIS ibland gå ännu högre.
 \index{utstrålningsvinkel}
 \index{skipzon!vinkel}
 
-Markvågen når en viss sträcka, beroende på frekvens, antennhöjd och
-hur mycket som står i vägen. Rymdvågen kommer inte ner överallt. Den
-lämnar antennen i en vinkel, böjs i jonosfären och landar längre
-bort. Ju flackare vinkel, desto längre hopp. En antenn som strålar
-lågt, kanske kring 10\textdegree\ över horisonten, ger alltså en lång
-skipzon. Uteffekten ändrar inte var hoppet landar, den avgör om
-signalen hörs när den väl kommer ner, orkar över bruset. 
+Markvågen når en viss sträcka, beroende på frekvens, antennhöjd och hur mycket
+som står i vägen. Rymdvågen lämnar antennen i en vinkel, böjs i jonosfären och
+landar därefter längre bort, i bland mycket längre bort, så mellan sändaren och
+nedslaget finns en zon där signalen är betydligt svagare eller inte hörs alls.
+Denna zon kallas för död zon eller skipzonen, vilket är det området där
+markvågen slutat täcka innan rymdvågen kommit tillbaka till jorden igen.
 
-Skipzonen är den zon mellan sändaren och där rymdvågen återvänder
-efter att ha reflekterats. Denna är ofta mycket längre bort än
-markvågen så det finns en död zon mellan där markvågen inte orkar
-täcka längre och innan rymdvågen faller in och det är denna zon som
-kallas för skipzonen (radiovågen ''hoppar över denna zon''). På låga
-band får man även räkna till NVIS som täcker upp en stor del av det
-som annars skulle varit en död zon eller skipzonen.
+Ju flackare vinkel man sänder med, desto längre hopp kan man få oc¨h desto
+längre blir också skipzonen, medan uteffekten inte flyttar nedslaget utan bara
+avgör om signalen orkar över bruset när den väl kommer ner. På de högre banden
+som exempelvis 10\,m blir skipzonen mycket uttalad, och på de lägre banden är
+den kortare för samma vinkel.
 
-\subsubsection{Flera hopp}
-\index{flera hopp}
-\index{vågutbredning!flera hopp}
-\index{multihopp}
-\index{rymdvåg!flera hopp}
+NVIS, med brant vinkel från en lågt sittande antenn, täcker en stor del av det
+som annars hade varit död zon, särskilt då på de lägre banden som 160--30 meter.
 
-Ett hopp räcker inte till andra sidan jorden. Vågen kan studsa flera
-gånger mellan marken och F-skiktet. Varje nedslag kostar, i marken och
-även i D-skiktet som dämpar signaler där det är dag längs vägen. En
-sträcka som ligger i mörker hela vägen går därför lättare än en som
-korsar dagen, samtidigt kan en sådan sträcka ha en lägre MUF och
-därmed vara sämre för de högre frekvensbanden så det gäller välja band
-efter vad man försöker nå. Två eller tre hopp är vanligt på 20\,m mot
-DX. Fler går, men signalen blir svagare och mer ostadig för varje
-gång.
 
-\subsubsection{Fädning}
-\index{fädning}
-\index{QSB}
-\index{vågutbredning!fädning}
-\index{fädning!selektiv}
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \def\Re{17.6}
+  \def\Halv{7.05}
+  \begin{scope}
+    \clip (-\Halv,15.35) rectangle (\Halv,21.15);
+    \JonFyll{\Re}{rhbf}
+    \draw[rhbrav,line width=1.45pt] (104:\Re) arc (104:99.4:\Re);
+    \draw[rhbrav,line width=1.05pt,opacity=0.45] (99.4:\Re) arc (99.4:97.2:\Re);
+    \draw[rhbrav,line width=0.6pt,opacity=0.18] (97.2:\Re) arc (97.2:95.8:\Re);
+    \draw[rhbskip,line width=1.65pt] (95.2:\Re) arc (95.2:78.2:\Re);
+    \draw[vag] (104:{\Re+0.46})
+      .. controls ($(104:{\Re+0.46})+(32:1.55)$) and ($(99.5:19.42)+(18:0.35)$) .. (97.6:19.48)
+      .. controls ($(94.2:19.85)+(178:0.85)$) and ($(90:20.00)+(186:0.95)$) .. (90:20.00)
+      .. controls ($(90:20.00)+(6:0.95)$) and ($(84.6:19.72)+(4:0.7)$) .. (82.4:19.42)
+      .. controls ($(79.2:18.55)+(145:0.55)$) and ($(76:{\Re+0.15})+(156:1.25)$) .. (76:\Re);
+    \draw[genom] (104:{\Re+0.46})
+      .. controls ($(104:{\Re+0.46})+(54:1.9)$) and ($(98.2:19.85)+(205:0.45)$) .. (95.4:20.22)
+      .. controls ($(93.2:20.55)+(12:0.35)$) .. (91.2:20.95);
+  \end{scope}
+  \path (104:\Re) pic[rotate=14] {mast};
+  \path (76:\Re) pic[rotate=-14] {mast};
+  \node[etikett] at (72.2:18.40) {D};
+  \node[etikett] at (72.2:18.82) {E};
+  \node[etikett] at (72.6:19.85) {F2};
+  \node[etikett,anchor=north] at (104:{\Re-0.42}) {sändare};
+  \node[etikett,anchor=north] at (76:{\Re-0.38}) {nedslag};
+  \node[etikett,text=rhbrav] at (100.6:18.02) {markvåg};
+  \node[etikett,text=rhbskip] at (87:17.05) {skipzon};
+  \node[etikett] at (86.4:20.18) {refraktion};
+  \node[etikett,text=rhbgenom,anchor=south] at (93.4:20.95) {över MUF};
+  \node[etikett] at (86.5:16.35) {omkring 3\,000 km};
+\end{tikzpicture}
+\caption{Rymdvåg via F2. Vågen går igenom D och E, böjs i F2 och kommer
+ner långt från sändaren. Mellan markvågen och nedslaget ligger
+skipzonen. Över MUF böjs vågen för lite och fortsätter ut. Höjderna är
+överdrivna.}
+\label{fig:rymdvag-f2}
+\end{figure}
 
-Signalen som kommer fram har sällan tagit en enda väg utan har delat
-sig i flera reflektioner i jonosfären eller en kombination av NVIS och
-markvåg. Två vågor som landar i samma mottagare kan därför ligga i fas
-ena stunden och släcka varandra nästa. Denna fasvridning sker med
-olika hastighet beroende på hur stor skillnad det är mellan
-refraktionerna av signalen och hur många signalvägar som
-blandats. Efter en stund börjar de motverka varandra och styrkan
-sjunker då märkbart, ibland så mycket som 20\,dB och kommer
-sedan tillbaka igen.
 
-Det kallas fädning, eller QSB i Q-koden. På SSB hörs det som att
-rösten flyter, blir svårläst och sedan bättre igen. På AM kan bärvågen
-och sidbanden fäda olika, och då blir ljudet tunt även när S-metern
-visar hyfsat, FM är inte heller immun mot den och får ett konstigt
-vasst brus när det sker.
 
-Korta fädningar, några sekunder, är typiska på kortvåg. Långa svackor
-hör ihop med att jonosfären själv ändrar sig. Byt frekvens en bit,
-eller vänta. En annan väg in i samma station kan vara helt
-öppen. Ibland räcker det att gå upp eller ned 10\,kHz för att höras
-utmärkt igen, ibland ändrar det bara karaktären på fädningen.
 
-\subsubsection{NVIS}
+\subsection{NVIS}
 \label{sec:nvis}
 \index{vågutbredning!NVIS}
 \index{NVIS}
@@ -255,41 +327,278 @@ utmärkt igen, ibland ändrar det bara karaktären på fädningen.
 \index{NVIS!pejling}
 \index{pejling}
 \index{NVIS!frekvens}
+\index{NVIS!60 m}
 
-Det finns en variant av detta där man i princip eliminerar skipzonen
-och det är om man nyttjar NVIS som sändningsmetod. Man placerar då
-antennen ganska nära marken och på så vis riktar man större delen av
-energin rakt uppåt. När denna träffar jonosfären blir vinklarna skarpa
-och signalen kommer tillbaka över ett stort område runt
-stationen. Skipzonen krymper, och på rätt frekvens kan den i praktiken
-försvinna. Militären har använt det länge på kortvåg. Markvågen är
-kort och signalen kommer uppifrån, så den är svårare att pejla på
-vanligt vis än en lågt gående våg.
+NVIS är engelska för \textit{Near Vertical Incidence Skywave}, alltså att man
+sänder nästan vertikalt uppåt i stället för i en flack vinkel. Antennen placeras
+ganska nära marken, så att en större del av energin går rakt upp. När vågen
+träffar jonosfären blir vinklarna skarpa och signalen kommer tillbaka över ett
+stort område runt stationen, som ett paraply. Skipzonen krymper, och på rätt
+frekvens kan den i praktiken försvinna. Räckvidden blir beroende på frekvens och
+jonosfär oftast 300--600\,km, vilket från Mellansverige räcker till en stor del
+av landet och de närmaste grannländerna. Längre än så får man ta ett flackare
+hopp, och då är man tillbaka i vanlig rymdvåg.
 
-NVIS är engelska och betyder \textit{Near Vertical Incidence Skywave},
-alltså att man sänder nästan vertikalt uppåt. Utbredningen kommer som
-regel ner i en cirkel runt sändaren som beroende på frekvens,
-jonosfäriska förhållanden med mera brukar kunna bli mellan 300--600
-km.
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \fill[rhbjord] (-7.05,-1.05) rectangle (7.05,0);
+  \fill[rhbd] (-7.05,0.58) rectangle (7.05,0.98);
+  \fill[rhbe] (-7.05,1.28) rectangle (7.05,1.78);
+  \fill[rhbf] (-7.05,2.85) rectangle (7.05,4.20);
+  \draw[marklinje] (-7.05,0) -- (7.05,0);
+  \fill[rhbtack,opacity=0.33] (-4.35,0) rectangle (4.35,0.13);
+  \draw[vag] (-0.22,0.14)
+    .. controls (-0.40,1.45) and (-0.30,3.05) .. (-0.12,3.62)
+    .. controls (0.06,3.05) and (0.18,1.45) .. (0.08,0.14);
+  \draw[vagned] (0.05,0.14)
+    .. controls (1.65,1.15) and (2.25,3.15) .. (1.40,3.62)
+    .. controls (2.95,2.90) and (3.85,1.25) .. (4.25,0.14);
+  \draw[vagned] (-0.05,0.14)
+    .. controls (-1.65,1.15) and (-2.25,3.15) .. (-1.40,3.62)
+    .. controls (-2.95,2.90) and (-3.85,1.25) .. (-4.25,0.14);
+  \draw[genom] (0.48,0.14) -- (0.48,4.58);
+  \path (0,0) pic {dipol};
+  \node[etikett,anchor=west] at (-6.85,0.78) {D};
+  \node[etikett,anchor=west] at (-6.85,1.53) {E};
+  \node[etikett,anchor=west] at (-6.85,3.20) {F2};
+  \node[etikett,anchor=west] at (-5.15,3.90) {under foF2};
+  \node[etikett,text=rhbgenom,anchor=west] at (0.62,4.38) {över foF2};
+  \node[etikett,anchor=north] at (0,-0.06) {lågt sittande antenn};
+  \node[etikett,anchor=north east] at (4.35,-0.02) {300--600 km};
+\end{tikzpicture}
+\caption{NVIS. Antennen sitter lågt och det mesta går brant upp. Under
+foF2 kommer vågen tillbaka runt stationen, ofta inom 300--600\,km, och
+skipzonen försvinner. Över foF2 går den igenom.}
+\label{fig:nvis}
+\end{figure}
 
-Bland annat därför är detta mycket vanligt för militära ändamål. En
-fiende utanför markvågens täckningsområde som också kan begränsas
-kraftigt med lågt sittande antenner kommer om den försöker pejla
-signalen se den som att den kommer uppifrån och inte från den riktning
-sändaren befinner sig i. I dag finns dock mycket avancerade pejlsystem
-som genom att jämföra NVIS tidsmässigt på flera ställen ändå kan pejla
-sändaren med hyfsad noggrannhet. Vi ser ibland i filmer hur man på
-fordon har långa antennar som böjts ned. Detta sker förstås i flera
-syften, inte minst för de inte ska vara i vägen så mycket men det är
-också ett utmärkt sätt att få till NVIS-utbredning på!
+Frekvensen måste ligga under den kritiska foF2. Är den för hög går vågen rakt
+igenom även om antennen pekar upp. Samtidigt måste den ligga högt nog för att ta
+sig genom D-skiktet på dagen, och det är där 60\,m kommer in. De band som kan
+bära NVIS är 160, 80, 60 och 40\,m. Vilka av dem som är öppna för
+instegscertifikat står i avsnitt~\ref{sec:instegsband}. 160, 80 och 60\,m ingår
+inte där.
 
-Det betyder att man från Mellansverige kan nå en stor del av Sverige
-och de närmaste grannländerna. Längre än så får man ta ett flackare
-hopp, och då är man tillbaka i vanlig rymdvåg. Frekvensen måste ligga
-under den kritiska foF2. Är den för hög går vågen rakt igenom även om
-antennen pekar upp.
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\textwidth}{lYY}
+	\bf foF2          & \bf NVIS som kommer tillbaka           & \bf På dagen                                     \\ \hline
+	under 4\,MHz      & 160\,m, och 80\,m om foF2 når över 3,5 & D äter ofta upp båda                             \\
+	4--5,5\,MHz       & 160 och 80\,m                          & 60\,m ligger över taket                          \\
+	5,5--7\,MHz       & 160, 80 och 60\,m                      & 60\,m är ofta det som både bär och släpps igenom \\
+	över cirka 8\,MHz & även 40\,m                             & hög solaktivitet, 40\,m kan gå brant
+\end{tabularx}
+\normalsize
+\caption{NVIS-taket är foF2, inte MUF för 3\,000\,km. D-skiktet är
+golvet på dagen och dämpar 160\,m mest, sedan 80\,m, mindre på 60\,m
+och minst på 40\,m.}
+\label{tab:nvis-fof2}
+\end{table}
 
-\subsubsection{Sporadiskt E}
+Nattetid premieras de lägre frekvenserna, eftersom foF2 sjunker och D-skiktets
+dämpande förmåga upphör när solen inte längre belyser det. Detta sker någon
+timme efter solnedgång. Dagtid kan NVIS gå högre, och mitt på dagen är 60\,m
+ofta det enda av de fyra som varken äts upp eller hoppar över Norden.
+
+Militären har använt NVIS länge just för att täcka ett större område eller ett
+med enkla antenner. Markvågen är kort, och signalen kommer uppifrån, så den är
+svårare att pejla på vanligt vis än en längre gående markvåg. I dag finns
+pejlsystem som genom att jämföra ankomsttiden på flera ställen ändå kan bestämma
+läget med hyfsad noggrannhet för NVIS. De nedböjda fordonsantenner man ser
+ibland på militära fordon är dels utförda så för att inte vara i vägen men ger
+samtidigt en brant lob som passar NVIS.
+
+\subsubsection{60 meter}
+\label{sec:60m}
+\index{60 m}
+\index{60 m!NVIS}
+\index{NVIS!60 m}
+
+60\,m, 5351,5--5366,5\,kHz, är det band som fyller hålet mellan 80 och 40\,m.
+När foF2 ligger kring 5--7\,MHz, vilket är ett vanligt dagtidsläge hos oss,
+kommer 60\,m tillbaka som NVIS medan 40\,m redan ligger över den kritiska
+frekvensen och skippar. Samtidigt dämpas 60\,m mindre av D-skiktet än 80 och
+160\,m, så det är ofta det band som både har taket över sig och golvet under
+sig. Nattetid sjunker foF2 och 80 och 160\,m tar över det regionala, men 60\,m
+fortsätter att bära inom Norden så länge det ligger under foF2, och det är
+tystare än 160\,m i de flesta tätorter.
+
+Högsta tillåtna effekt är 15\,W EIRP. NVIS är en kort väg jämfört med DX, så den
+effekten räcker ofta inom Norden när frekvensen ligger rätt. Vad 15\,W EIRP blir
+i radion, ungefär 9\,W i en dipol med kort matarledning, står i teknikkapitlet,
+avsnitt~\ref{sec:eirp}. För SSB rekommenderar bandplanen USB. 60\,m ingår inte i
+instegscertifikatet.
+
+\subsection{Skymningsutbredning (greyline)}
+\label{sec:greyline}
+\index{skymningsutbredning}
+\index{vågutbredning!skymning}
+\index{greyline}
+\index{vågutbredning!greyline}
+\index{terminator}
+\index{greyline!160 m}
+\index{greyline!80 m}
+\index{greyline!60 m}
+\index{greyline!40 m}
+\index{greyline!terminator}
+\index{greyline!gryning}
+\index{greyline!skymning}
+\index{D-skikt!greyline}
+\index{F-skikt!greyline}
+\index{termin}
+\index{webbapp!termin}
+
+Runt soluppgång och solnedgång kan de låga banden gå långt, eftersom D-skiktet,
+kring 80\,km, redan eller fortfarande ligger i mörker och därför inte dämpar,
+medan F-skiktet, kring 300\,km, fortfarande är belyst och kan bära signalen.
+Zonen ligger på nattsidan av den visuella gränsen mellan dag och natt,
+terminatorn. På morgonen kommer man in i den före den soluppgång man ser, och på
+kvällen ligger man kvar en stund efter solnedgången. Höjderna 80 och 300\,km är
+typiska värden, inte dagens uppmätta höjd på F2.
+
+Därför kan 160--40\,m gå långt just då, längs zonen snarare än tvärs över dagen,
+och det QSO man är ute efter sitter i andra änden av samma terminator, så
+gryning här hör ihop med skymning där borta. 60\,m följer med, fast mindre
+dramatiskt än 80 och 160\,m, och är ofta det användbara bandet om D-skiktet
+redan börjat tätna på morgonen. En tänd lampa i greyline-appen betyder att
+tillfället är inne, inte att bandet är öppet, för absorption, brus och antenn
+avgör resten. Appen beskrivs i bilagan om webbappar, avsnitt~\ref{termin}, och
+ligger på \url{https://termin.avitec.se}.
+
+\subsection{Flera hopp}
+\index{flera hopp}
+\index{vågutbredning!flera hopp}
+\index{multihopp}
+\index{rymdvåg!flera hopp}
+
+Ett hopp räcker inte till andra sidan jorden. Vågen kan studsa flera
+gånger mellan marken och F-skiktet, och varje nedslag kostar, både i
+marken och i det D-skikt där det är dag längs vägen. En sträcka som
+ligger i mörker hela vägen går därför lättare än en som korsar dagen,
+men samma mörka sträcka kan ha lägre MUF och därmed vara sämre för de
+högre banden, så bandet får väljas efter vad man försöker nå. Två
+eller tre hopp är vanligt på 20\,m mot DX. Fler hopp går, men signalen
+blir svagare och mer ostadig för varje gång.
+
+\subsection{Fädning}
+\index{fädning}
+\index{QSB}
+\index{vågutbredning!fädning}
+\index{fädning!selektiv}
+
+Signalen som kommer fram har sällan tagit en enda väg, utan har delat sig i
+flera fraktioner i jonosfären eller i en blandning av exempelvis NVIS och
+markvåg. Två vågor som landar i samma mottagare kan därför ligga i fas ena
+stunden och släcka varandra nästa, och hur fort det växlar beror på hur olika
+vägarna är och på hur många som blandas. Styrkan kan sjunka så mycket som 20\,dB
+och sedan komma tillbaka. Det kallas fädning, eller QSB i Q-koden.
+
+På SSB hörs det som att styrkan ökar och minskar periodiskt och blir svårläst
+och sedan bättre igen. På AM kan bärvågen och sidbanden fäda olika, så ljudet
+blir tunt och vasst eller mullright och svårläst även när S-metern visar annars
+bra signalstyrka. Inte heller FM är immunt utan får ett vasst brus när det sker.
+
+Korta fädningar på några tiotals sekunder är typiska på kortvåg, medan långa
+svackor (tiotals minuter) hör ihop med att jonosfären själv ändrar sig. Då
+hjälper det ofta att byta frekvens en bit, ibland räcker 10\,kHz för att en
+annan väg in i samma station ska vara öppen, och ibland ändrar det bara
+karaktären på fädningen.
+
+\subsection{Band för band}
+\label{sec:bandval}
+\index{bandval}
+\index{160 m}
+\index{80 m}
+\index{60 m}
+\index{40 m}
+\index{30 m}
+\index{20 m}
+\index{17 m}
+\index{15 m}
+\index{12 m}
+\index{10 m}
+\index{6 m}
+\index{2 m}
+
+Tabellen är en översikt för en station i Sverige, inte en prognos. Siffrorna som
+flyttar gränserna, SFI, foF2, MUF, LUF och K, står i
+avsnitt~\ref{sec:rymdvader}. Instegscertifikatet har 40, 20, 15, 10, 6 och 2\,m,
+inte 160, 80, 60, 30, 17 eller 12\,m.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{lYYYY}
+	\bf Band & \bf Dag                                              & \bf Natt                                & \bf Vanlig väg                 & \bf Stänger när                              \\ \hline
+	160\,m   & lokal markvåg, NVIS om D tillåter                    & NVIS, greyline och DX längs terminatorn & markvåg och NVIS               & D-skikt, brus, högt K mot norr               \\
+	80\,m    & NVIS korta stunder, annars dämpad                    & NVIS, greyline och en del DX            & markvåg och NVIS               & D på dagen, högt A eller K                   \\
+	60\,m    & NVIS över Norden när foF2 ligger över cirka 5,5\,MHz & regional NVIS så länge foF2 räcker      & NVIS                           & foF2 för låg, eller en kraftig fackla        \\
+	40\,m    & NVIS vid hög foF2, annars ett hopp i EU              & EU och greyline-DX                      & NVIS eller F2                  & över MUF nattetid vid solminimum             \\
+	30\,m    & EU till DX, ofta det lugna dagsbandet                & kortare, kan stänga                     & F2, ett eller två hopp         & över MUF på natten                           \\
+	20\,m    & DX på dagen när SFI räcker                           & ofta stängt eller bara korta hopp       & F2                             & lågt SFI, eller natt                         \\
+	17\,m    & som 20\,m, fast smalare och tystare                  & stänger tidigare än 20\,m               & F2                             & lågt SFI                                     \\
+	15\,m    & DX vid högt SFI, Es på sommaren                      & som regel stängt                        & F2 och Es                      & solminimum utan Es                           \\
+	12\,m    & följer 10\,m, smalare                                & stängt                                  & F2 och Es                      & solminimum utan Es                           \\
+	10\,m    & DX vid solmaximum, Es maj--aug                       & stängt                                  & F2 och Es                      & låg SFI och ingen Es                         \\
+	6\,m     & fri sikt, Es på sommaren, någon gång F2              & lokal fri sikt                          & fri sikt, Es, meteor, norrsken & ingen öppning utöver horisonten              \\
+	2\,m     & fri sikt och repeater till radiohorisonten           & samma, tropo ibland                     & fri sikt                       & horisonten, om inte Es, tropo eller norrsken
+\end{tabularx}
+\normalsize
+\caption{160\,m till 2\,m. 60\,m är eget band, inte en fotnot till 80\,m.}
+\label{tab:band-160-2}
+\end{table}
+
+30\,m är på dagen ofta bandet mellan NVIS och riktig DX. Det brusar mindre än
+40\,m, det är sällan fullt av tävlingar, och ett hopp räcker till en stor del av
+Europa medan två hopp räcker längre när F2 bär. 17\,m beter sig som ett smalare
+20\,m och öppnar och stänger med samma ungefär samma parametrar, fast lite
+tidigare på eftermiddagen. 12\,m följer 10\,m, både när F2 orkar upp vid
+solmaximum och när sporadiskt E ligger där på sommaren. Inget av de tre är ett
+NVIS-band.
+
+\subsection{VHF på 6 och 2 meter}
+\label{sec:vhf}
+\index{VHF}
+\index{6 m}
+\index{2 m}
+\index{2 m!fri sikt}
+\index{kniveggsdiffraktion}
+\index{repeater!räckvidd}
+
+På 6 och 2\,m är den vanliga förbindelsen fri sikt, inte rymdvåg. En handapparat
+vid marken når som regel någon eller några kilometer, eftersom man står mitt i
+hus, skog och terräng. En mobilantenn på taket räcker ut mot radiohorisonten,
+och en antenn på egna taket eller på en höjd räcker längre, ofta via en repeater
+som står just på en sådan höjd. En ås i vägen släcker inte alltid signalen.
+Vågen kan böja över kanten, så kallad kniveggsdiffraktion, och den kan också
+dämpas om hindret sticker upp i första Fresnelzonen. Hur horisonten räknas ur
+antennhöjden, och hur stor den zonen är, står i teknikkapitlet,
+avsnitt~\ref{sec:radiohorisont}.
+
+Utöver vardagen finns fyra öppningar som tar 6 och 2\,m långt bortom horisonten.
+De beskrivs var för sig i de följande avsnitten och under norrsken i rymdvädret.
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabularx}{\textwidth}{lYY}
+	\bf Väg       & \bf 6\,m                                      & \bf 2\,m                                                    \\ \hline
+	Vardag        & fri sikt, något längre än 2\,m vid samma höjd & handapparat några km, tak och repeater till radiohorisonten \\
+	Sporadiskt E  & vanligt maj--aug, ofta 800--2\,000\,km        & ibland, samma säsong, kortare öppningar                     \\
+	Tropo         & sommar och höst, särskilt över Östersjön      & samma lägen, räckvidden kan bli många gånger horisonten     \\
+	Meteorscatter & puffar på någon sekund upp till en dryg minut & kortare puffar, CW och snabba digitala moder                \\
+	Norrsken      & raspig signal, antennen mot norr              & ofta uppåt tusen km, CW går bättre än SSB
+\end{tabularx}
+\normalsize
+\caption{6 och 2\,m. Vardagen är fri sikt. De andra raderna är
+öppningar, inte något man har varje pass.}
+\label{tab:vhf-6-2}
+\end{table}
+
+\subsection{Sporadiskt E}
 \label{sec:es}
 \index{vågutbredning!Es}
 \index{sporadiskt E}
@@ -302,20 +611,49 @@ antennen pekar upp.
 \index{Es!säsong}
 \index{jonosfär!Es}
 
-Ibland bildas täta moln av jonisation i E-skiktets höjd. Det vanliga
-E-skiktet finns redan på dagen. De här molnen är något extra, och när
-de ligger rätt kan 10\,m och 6\,m öppna långt, ibland också
-2\,m. 70\,cm är ovanligt. Sådant kallas sporadiskt E, eller Es.
+Ibland bildas täta moln av jonisering i E-skiktets höjd, utöver det vanliga
+E-skikt som redan finns på dagen. När molnen ligger rätt kan 10\,m och 6\,m
+öppna långt, ibland också 2\,m, medan 70\,cm är ovanligt. Det kallas sporadiskt
+E, och betecknas Es. Hos oss är säsongen främst maj till augusti, med toppen
+kring midsommar, och öppningen kan hålla i sig några minuter, några timmar eller
+hela dagen utan att solfläckstalet behöver vara högt. Ett enkelt hopp landar
+ofta någonstans mellan 800 och 2\,000\,km. Molnet är litet, så öppningen kan
+gälla ett land och vara stängd mot grannen. Vid en bra öppning kan en portabel
+station på 10\,m köra till exempel Nordafrika på full signalstyrka.
 
-Hos oss är säsongen främst maj till augusti, med toppen kring
-midsommar. Det kan hålla i sig några minuter, några timmar eller hela
-dagen, och det kommer och går utan att solfläckstalet behöver vara
-högt. Ett enkelt hopp landar ofta någonstans mellan 800 och
-2\,000\,km. Molnet är litet, så öppningen kan gälla ett land och vara
-stängd mot grannen.
-
-Vid sporadiskt E (betecknas vanligen som Es) så kan man ibland från
-portabel kortvågsstation köra nordafrika på full signalstyrka
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \def\Re{17.6}
+  \def\Halv{7.05}
+  \begin{scope}
+    \clip (-\Halv,15.35) rectangle (\Halv,21.15);
+    \JonFyll{\Re}{rhbfsvag}
+    \fill[rhbes] (0,18.84) ellipse[x radius=0.95,y radius=0.26];
+    \draw[vag] (97.5:{\Re+0.46})
+      .. controls ($(97.5:{\Re+0.46})+(54:0.85)$) and (-0.95,18.86) .. (0,18.86)
+      .. controls (0.90,18.86) and ($(83:{\Re+0.18})+(128:0.85)$) .. (83:\Re);
+    \draw[genom] (97.5:{\Re+0.46})
+      .. controls ($(97.5:{\Re+0.46})+(74:1.15)$) and (-1.15,20.05) .. (-0.15,20.45)
+      .. controls (0.45,20.75) .. (0.85,21.02);
+  \end{scope}
+  \path (97.5:\Re) pic[rotate=7.5] {mast};
+  \path (83:\Re) pic[rotate=-7] {mast};
+  \node[etikett,anchor=south] at (0,19.16) {Es};
+  \node[etikett] at (72.2:18.40) {D};
+  \node[etikett] at (72.2:18.82) {E};
+  \node[etikett,text=black!55] at (72.6:19.85) {F2};
+  \node[etikett,anchor=north] at (97.5:{\Re-0.42}) {sändare};
+  \node[etikett,text=rhbrav] at (88:17.25) {öppen väg};
+  \node[etikett,text=rhbgenom,anchor=south] at (-0.15,20.95) {missar molnet};
+  \node[etikett] at (90:16.35) {ofta 800--2\,000 km};
+\end{tikzpicture}
+\caption{Sporadiskt E. Ett tätt moln i E-skiktets höjd böjer vågen. Molnet
+är litet, så en riktning kan vara öppen medan vågen bredvid missar och
+går vidare. Ett hopp landar ofta mellan 800 och 2\,000\,km. Höjderna är
+överdrivna.}
+\label{fig:es}
+\end{figure}
 
 \subsection{Troposfärutbredning}
 \index{tropo}
@@ -329,31 +667,22 @@ portabel kortvågsstation köra nordafrika på full signalstyrka
 \index{2 m!tropo}
 \index{70 cm!tropo}
 
-Under vissa väderförhållanden kan man få ett fenomen som kallas för
-inversion.  Normalt avtar temperaturen i atmosfären med ungefär
-0,65\textdegree\ per 100 meter. Under inversion så har ett skikt
-bildats lite längre upp med varmare luften än den som är närmre
-marken. Fukten spelar också in, särskilt över hav. Vågen böjs då mer
-än vanligt. Kommer den in med rätt vinkel kan den följa skiktet långt,
-eller fångas mellan skikt och mark, och räckvidden blir mycket längre
-än den fria sikten.
+Under vissa väderförhållanden får man en inversion. Normalt avtar temperaturen i
+atmosfären med ungefär 0,65\textdegree\ per 100 meter, men vid inversion har ett
+skikt längre upp blivit varmare än luften närmare marken, och fukten spelar
+också in, särskilt över hav. Vågen böjs då mer än vanligt, och kommer den in med
+rätt vinkel kan den följa skiktet långt, eller fångas mellan skikt och mark, så
+att räckvidden blir mycket längre än den fria sikten.
 
-Detta kallas i dagligt tal för ''tropo'' och är i vissa sammanhang som
-för radiolänk i tropiska länder ett stort problem men för
-radioamatörer är det kära tillfällen att nå bra mycket längre än
-normalt på band som 6\,m, 2\,m, och även 70\,cm.
-
-När den fångas upp mellan två skikt och leds iväg kan den komma ner
-väldigt långt bort under en stund och detta kallas då för ''duktning''
-och kan ibland vara väldigt störande för rundradio och tevesändningar
-när det sker på de banden. Därför måste man planera sådana frekvenser
-noga för att undvika att störas även av grannländerna på andra sidan
-östersjön! Vid duktning kan man lätt nå tiofallt den sträcka man når
-vanligen, till och med mer.
-
-Tropo uppträder främst på sommarhalvåret vid våra breddgrader, ofta i
-högtryck och över Östersjön när varm luft ligger över kallare
-vatten. Hösten kan också ge fina gångar.
+Detta kallas i dagligt tal för tropo. För radiolänk i tropiska länder är det ett
+stort problem, men för radioamatörer är det tillfällen att nå mycket längre än
+normalt på 6\,m, 2\,m och även 70\,cm. När vågen fångas mellan två skikt och
+leds iväg kallas det duktning, och den kan då komma ner mycket långt bort under
+en stund. Samma sak stör rundradio och teve, så de näten måste planeras för att
+inte störas av sändare på andra sidan Östersjön. Vid duktning kan man nå tiofalt
+den sträcka man når vanligen, och ibland mer. Tropo uppträder främst på
+sommarhalvåret vid våra breddgrader, ofta i högtryck och över Östersjön när varm
+luft ligger över kallare vatten, och hösten kan också ge fina gångar.
 
 \subsection{Meteorscatter}
 \index{meteorscatter}
@@ -367,95 +696,42 @@ vatten. Hösten kan också ge fina gångar.
 \index{CW!meteorscatter}
 \index{digitala moder}
 
-Varje dygn brinner mängder av små meteorer i höjd med E-skiktet, kring
-100\,km. Spåret är joniserat ett ögonblick, och en radiosignal kan
-studsa på det. På 6\,m och 2\,m hörs det som korta puffar, ''pings'',
-eller som en brusig öppning på någon sekund upp till en dryg minut när
-spåret är tätt.
+Varje dygn brinner mängder av små meteorer i höjd med E-skiktet, kring 100\,km.
+Spåret är joniserat ett ögonblick, och en radiosignal kan studsa på det. På 6\,m
+och 2\,m hörs det som korta puffar, på engelska \textit{pings}, eller som en
+brusig öppning på någon sekund upp till en dryg minut när spåret är tätt.
+Avståndet blir ofta 500--2\,000\,km. Gryningen är bäst, för då möter jorden fler
+spår, och under en meteorskur blir det tätare. CW och snabba digitala moder
+hinner med de korta puffarna, medan SSB kräver ett längre spår. Riktantennen
+läggs mot området där spåren ligger, inte nödvändigtvis rakt på motstationen.
 
-Avståndet blir ofta 500--2\,000\,km. Gryningen är bäst, för då möter
-jorden fler spår. Under en meteorskur blir det tätare. CW och snabba
-digitala moder hinner med de korta puffarna. SSB kräver ett längre
-spår. Riktantennen läggs mot området där spåren ligger, inte
-nödvändigtvis rakt på motstationen.
+De flesta skurarna är gamla kometsvansar som passerat jordens bana och lämnat
+grus, is och stoft efter sig. När jorden passerar det området ökar antalet
+stjärnfall markant, och då kan man köra radio på det.
 
-De flesta av dessa är gamla kometsvansar som passerat jordens bana vid
-något tidigare tillfälle och lämnat grus, is och stoft efter sig. När
-jorden passerar detta område ökar antalet stjärnfall markant och då
-kan vi köra radio på det.
-
-NVIS är engelska och betyder \textit{Near Vertical Incidence Skywave},
-alltså att man sänder nästan vertikalt uppåt. Utbredningen kommer som
-regel ner i en cirkel runt sändaren som beroende på frekvens,
-jonosfäriska förhållanden med mera brukar kunna bli mellan 300--600
-km.
-
-
-\begin{table}[h]
+\begin{table}[H]
 \centering
+\small
 \begin{tabular}{lccrl}
-\bf Skur                  & \bf Peak    & \bf ZHR  & \bf Hastighet & \bf Kommentar                             \\
-\hline
-\textbf{Geminiderna}      & 13--14 dec  & 120--150 & $\sim$35 km/s & Högsta och mest pålitliga. Bra för 10 m.  \\
-\textbf{Perseiderna}      & 12--13 aug  & 90--110  & $\sim$60 km/s & Mycket aktiv, bra hastighet, bra för MS.  \\
-\textbf{Quadrantiderna}   & 3--4 jan    & 80--120  & $\sim$43 km/s & Hög intensitet, men kort peak.            \\
-\textbf{Leoniderna}       & 17--18 nov  & $\sim$15 & $\sim$71 km/s & Mycket snabba meteorer, tätare jonisering \\
-\textbf{Eta Aquariiderna} & $\sim$6 maj & 50--60   & $\sim$66 km/s & Bra hastighet (Halley).                   \\
-\textbf{Orioniderna}      & 21--22 okt  & $\sim$20 & $\sim$67 km/s & Snabba, från Halley.                      \\
-\hline
+\bf Skur & \bf Peak & \bf ZHR & \bf Hastighet & \bf Kommentar \\ \hline
+\textbf{Geminiderna} & 13--14 dec & 120--150 & $\sim$35 km/s & Högsta och mest pålitliga. Bra för 10\,m. \\
+\textbf{Perseiderna} & 12--13 aug & 90--110 & $\sim$60 km/s & Mycket aktiv, bra hastighet, bra för MS. \\
+\textbf{Quadrantiderna} & 3--4 jan & 80--120 & $\sim$43 km/s & Hög intensitet, men kort peak. \\
+\textbf{Leoniderna} & 17--18 nov & $\sim$15 & $\sim$71 km/s & Mycket snabba meteorer, tätare jonisering. \\
+\textbf{Eta Aquariiderna} & $\sim$6 maj & 50--60 & $\sim$66 km/s & Bra hastighet (Halley). \\
+\textbf{Orioniderna} & 21--22 okt & $\sim$20 & $\sim$67 km/s & Snabba, från Halley. \\
 \end{tabular}
+\normalsize
+\caption{Bästa meteorskurarna för meteorscatter.}
 \label{tab:Meteorskurar}
-\caption{Bästa meteorskurarna för meteor-scatter på kortvåg/HF}
 \end{table}
 
-ZHR betyder {\it Zenital Hourly Rate} och är ett mått på hur många
-spår en observatör kan förväntas se under en timmes tid vid en annars
-mörk himmel. Ett högre värde är alltså bättre för oss för det ger mer
-jonisering!
-
-\subsection{Skymningsutbredning (greyline)}
-\label{sec:greyline}
-\index{skymningsutbredning}
-\index{vågutbredning!skymning}
-\index{greyline}
-\index{vågutbredning!greyline}
-%%%%%%%%%% GRANSKA DETTA
-\index{terminator}
-\index{greyline!160 m}
-\index{greyline!80 m}
-\index{greyline!40 m}
-\index{greyline!terminator}
-\index{greyline!gryning}
-\index{greyline!skymning}
-\index{D-skikt!greyline}
-\index{F-skikt!greyline}
-\index{termin}
-\index{webbapp!termin}
-
-Runt soluppgång och solnedgång finns ett läge som de låga banden
-gillar när D-skiktet, kring 80\,km, ligger redan eller fortfarande i
-mörker och inte därför dämpar medan F-skiktet, kring 300\,km,
-fortfarande är belyst och aktivt och kan bära signalen. Zonen ligger
-på nattsidan av den visuella gränsen mellan dag och natt,
-terminatorn. På morgonen kommer man in i den före den soluppgång man
-ser. På kvällen ligger man kvar i den en stund efter solnedgången.
-
-Därför kan 160, 80 och 40\,m gå långt just då, längs zonen snarare än
-tvärs över dagen. Det QSO man är ute efter sitter i andra änden av
-samma terminator. Gryning här hör ihop med skymning där borta. Det är
-en lång väg längs gränslinjen. En tänd lampa i greyline-appen, som
-beskrivs i bilagan om webbappar, betyder att tillfället är inne. Den
-säger inte att bandet är öppet. Absorption, brus och antenn avgör
-resten. Höjderna 80 och 300\,km är typiska värden, inte dagens
-uppmätta höjd på F2.
-
-Det finns program som kan beräkna solens upp och nedgång på dessa
-höjder, ett jag själv skrivit finns som en webapp som heter ''termin''
-som du kan använda, ser mer om detta i appendix \ref{termin}.
-
-\url{https://termin.avitec.se}
+ZHR betyder \textit{zenital hourly rate} och är ett mått på hur många spår en
+observatör kan förväntas se under en timme vid en annars mörk himmel. Ett högre
+värde ger mer jonisering och är alltså bättre för radio.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \section{Rymdväder}
 \label{sec:rymdvader}
@@ -465,21 +741,18 @@ som du kan använda, ser mer om detta i appendix \ref{termin}.
 \index{Rymdväderappen}
 \index{rymdväder!app}
 
-Rymdvädret påverkar radiokommunikationen både i rymden och på
-jorden. När solen är som mest aktiv kan det orsaka störningar på
-radiosystem vilket märks på satellitkommunikation och framför allt på
-kortvågens utbredning via rymdvåg. Markvåg och fri sikt på VHF går som
-regel ändå tills det blir riktigt stora störningar men då är det
-störningar så att det blir nyheter i radio och teve.
+Rymdvädret påverkar radiokommunikationen både i rymden och på jorden. När solen
+är som mest aktiv störs satellitförbindelser och framför allt kortvågens
+rymdvåg, medan markvåg och fri sikt på VHF som regel går ändå, tills störningen
+blir så stor att den märks i radio och teve.
 
-Vissa sorters störningar kan dock vara gynnsamma för den som använder
-rymdvåg. Vid kraftigare jonisering av F-skiktet kan det börja bära
-frekvenser ända upp mot VHF, men oftare de högre kortvågsbanden,
-20--10\,m. Samtidigt dämpar ett tätt D-skikt 80 och 160\,m på
-dagen. Siffrorna som hör till det här finns samlade i Rymdväderappen,
-i bilagan om webbappar, appendix \ref{rymdväderapp}.
-
-\url{https://hf.avitec.se}
+Vissa störningar är gynnsamma för den som använder rymdvåg. Vid
+kraftigare jonisering kan F-skiktet bära ända upp mot VHF, men oftare
+är det 20--10\,m som öppnar, samtidigt som ett tätt D-skikt dämpar 80
+och 160\,m på dagen. 60\,m dämpas mindre och är ofta fortfarande
+användbart för NVIS. Talen som hör till det här finns i
+Rymdväderappen, bilagan om webbappar, avsnitt~\ref{rymdväderapp},
+\url{https://hf.avitec.se}.
 
 \subsection{Solens inverkan}
 \index{rymdväder!solen}
@@ -494,15 +767,20 @@ i bilagan om webbappar, appendix \ref{rymdväderapp}.
 \index{dagsband}
 \index{nattband}
 
-Det som joniserar jonosfären är främst solens ultravioletta ljus och
-röntgen, inte det vita ljuset vi ser. Mer strålning ger tätare F-skikt
-och högre MUF, men också ett tätare D-skikt på dagen. Därför är de
-höga banden dagsband och de låga banden nattband, när solen i övrigt
-är lugn.
+Det som joniserar jonosfären är främst solens ultravioletta ljus och röntgen,
+inte det synliga ljuset, mer strålning ger ett tätare tätare F-skikt och högre
+MUF, men samtidigt även också ett tätare D-skikt som dämpar de lägre bandens
+utbredning på dagen. Därför är de höga banden dagsband och de låga banden
+nattband, när solen i övrigt är lugn. 60\,m är dock ett undantag bland de låga,
+eftersom det ofta bär NVIS just på dagen.
 
-Solen roterar på omkring 27 dygn. Ett aktivt område kan alltså komma
-tillbaka efter knappt en månad och ge samma störning en gång till. Det
-är en bra sak att komma ihåg när banden plötsligt varit konstiga en
+Det är också därför det är ett så vanligt använt band exempelvis inom NATO och
+andra militära kommunikationer eftersom det är ett band som ofta fungerar
+utmärkt både dag och nattetid även om egenskaperna är lite olika.
+
+Solen roterar ett varv (från jorden sett) på omkring 27 dygn. Ett aktivt område
+kan alltså komma tillbaka efter knappt en månad och ge samma störning en gång
+till. Det är en bra sak att komma ihåg när banden plötsligt varit konstiga en
 vecka.
 
 \subsection{Solens cykler}
@@ -516,18 +794,16 @@ vecka.
 \index{solminimum}
 \index{6 m!F2}
 
-Cykeln vi brukar mena är solfläckscykeln, omkring 11 år från ett
-minimum till nästa. Vid maximum är 15, 12 och 10\,m öppna på dagen mot
-DX, och någon gång orkar F2 ända upp på 6\,m. Vid minimum är 20\,m
-ofta det högsta band som bär pålitligt, och 15\,m och uppåt kan vara
-stängda i veckor.  80, 60 och 40\,m fungerar i båda lägena, fast med
-mer dämpning på dagen när solen är aktiv.
+Cykeln vi brukar mena är solfläckscykeln, omkring 11 år från ett minimum till
+nästa. Vid maximum är 15, 12 och 10\,m öppna på dagen mot DX, och någon gång
+orkar F2 ända upp på 6\,m. Vid minimum är 20\,m ofta det högsta band som bär
+pålitligt, och 15\,m och uppåt kan vara stängda i veckor.  80, 60 och 40\,m
+fungerar i båda lägena, fast med mer dämpning på dagen när solen är aktiv.
 
-Solcykel 25 hade sitt maximum runt 2024--2025. Åren efter ett maximum
-klingar de höga banden av sakta. De slocknar inte över en natt. Just
-nu såhär strax innan 2027 tar sin början har vi haft ganska bra
-konditioner till och från men det märks att vi dalar sakta ner mot ett
-minimum.
+Solcykel 25 hade sitt maximum runt 2024--2025. Åren efter ett maximum klingar de
+höga banden av sakta. De slocknar inte över en natt. Just nu såhär strax innan
+2027 tar sin början har vi haft ganska bra konditioner till och från men det
+märks att vi dalar sakta ner mot ett minimum.
 
 \subsection{Olika fenomen}
 \index{solfenomen}
@@ -678,42 +954,38 @@ uppåt som det brukar börja märkas på allvar.
 \index{kritisk frekvens!NVIS}
 
 Man behöver inte kunna alla diagram. Några tal räcker för att välja
-band. Det finns många rymdvädersidor där ute, även så jag har en som
-man kan använda för att bedöma hur det ser ut med
-radioförbindelserna. Besök gärna \url{https://hf.avitec.se}
-(appendix~\ref{rymdväderapp}) så ser du hur det ser ut just nu. Den
-hämtar data och visualiserar det från
-Insitutet för Rymdfysik (IRF) som har magnetometrar i Kiruna och
-Teckomatorp, den hämtar också data från Tromsø och ifrån tyskland
-liksom NOAA i USA och även australien för en så komplett bild som
-möjligt. Fokuset i prediktionerna ligger dock för skandinavien runt
-60\textdegree N.
+band, och de finns samlade i Rymdväderappen
+(avsnitt~\ref{rymdväderapp}). Den hämtar data från Institutet för
+rymdfysik, som har magnetometrar i Kiruna och Teckomatorp, och även
+från Tromsø, Tyskland, NOAA i USA och Australien. Fokus i
+prediktionerna ligger på Skandinavien runt 60\textdegree N.
 
-SFI är solens radiobrus på 10,7\,cm. Det är ett grovt mått på hur väl
-F2 kan joniseras. Kring 70 är solen tyst och de höga banden sällan
-öppna. Kring 150 och däröver kan 15 och 10\,m gå på
-dagen. Solfläckstalet säger samma sak på ett annat vis. SFI är oftast
-det tal man har mest nytta av.  Båda följer solcykeln mer än vädret
-just den här timmen.
+\begin{table}[H]
+\centering
+\footnotesize
+\begin{tabularx}{\textwidth}{lYY}
+\bf Tal & \bf 160--40\,m & \bf Från 20\,m och uppåt \\ \hline
+SFI & indirekt, via tätare D när solen är aktiv & radiobrus på 10,7\,cm. Kring 70 är 15 och 10\,m sällan öppna, kring 150 kan de gå på dagen \\
+Solfläckstal & samma läge som SFI, annat mått & följer solcykeln, inte vädret den här timmen \\
+K & oro de senaste tre timmarna, 0--9. Kiruna är det lokala värdet. Från omkring 4 blir vägarna mot norr osäkra, från 5 talar man om storm & norrsken på 6 och 2\,m när K är högt \\
+Kp & planetärt medel, kan ligga ett steg från Kirunas K & samma varning som K \\
+A & samma oro utslagen över dygnet. Högt A kan ligga kvar på 80\,m efter att K sjunkit & mindre direkt än på de låga banden \\
+foF2 & taket för NVIS, se tabell~\ref{tab:nvis-fof2} & inte taket för DX \\
+MUF & taket för ett hopp på sträckan man faktiskt kör & DX på 20--10\,m ska ligga under MUF. Över MUF går vågen ut i rymden \\
+LUF & golvet genom D-skikt och brus. Under LUF äts bandet upp & sällan det som begränsar 20\,m \\
+Solvind & kring 400\,km/s är lugnt. Över ungefär 600\,km/s, särskilt om vinden är tät, brukar K stiga inom ett dygn & samma varning. Vinden kommer först, K är det som redan hänt \\
+\end{tabularx}
+\normalsize
+\caption{De tal som räcker för att välja band mellan 160\,m och 2\,m.}
+\label{tab:rymdvader-tal}
+\end{table}
 
-K-index är geomagnetisk oro de senaste tre timmarna, på en skala 0--9.
-Kiruna är vårt lokala värde. Kp är ett planetärt medel och kan ligga
-ett steg ifrån. A-index är samma sak utslagen över dygnet. Lågt K och
-lågt A är lugnt. Från K omkring 4 blir vägarna mot norr osäkra, och
-från 5 talar man om storm. Högt A kan hänga kvar på 80\,m även efter
-att K har sjunkit.
-
-MUF är taket för rymdvåg på en given sträcka. LUF är golvet, den
-lägsta frekvens som tar sig genom D-skiktets dämpning och
-bruset. Användbart F2-DX ligger mellan dem. Ett band över MUF går ut i
-rymden. Ett band under LUF äts upp på vägen. För NVIS är det den
-kritiska frekvensen som är taket, inte MUF för 3\,000\,km.
-
-Solvinden är de laddade partiklar, mest protoner, som blåser från
-solen.  Kring 400\,km/s är en lugn vind. Över ungefär 600\,km/s,
-särskilt om den samtidigt är tät, får man räkna med att K-index stiger
-det närmaste dygnet. Vinden är en varning. K-index är det som redan
-har hänt.
+SFI och solfläckstalet säger hur väl F2 kan joniseras och flyttar alltså
+de höga banden med solcykeln, medan K och A säger hur orolig
+magnetosfären är just nu och drabbar främst vägarna mot norr och de
+låga banden. Solvinden är varningen innan K hinner stiga. För NVIS är
+det foF2 som bestämmer taket, inte MUF för 3\,000\,km, och LUF är
+golvet under vilket D-skiktet och bruset tar signalen.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -747,25 +1019,40 @@ tråden är den tyst. En dipol för 40\,m som hänger öst--väst hörs
 alltså bäst i riktningarna nord och syd. Men den strålar också rakt
 uppåt och rakt nedåt.
 
-Höjden bestämmer vart energin tar vägen. Hänger den lågt, en bit under
-en kvarts våglängd, går det mesta rakt upp. Det är NVIS-läget, och det
-är rätt när man vill nå runt om i landet på 80 och 40\,m även så våra
-grannländer Norge, Finland och även baltikum.
+Höjden bestämmer vart energin tar vägen. Hänger dipolen lågt, en bit
+under en kvarts våglängd, går det mesta rakt upp, och det är
+NVIS-läget, rätt när man vill nå runt om i landet och de närmaste
+grannländerna. Kring en halv våglängd över marken lägger sig loben
+flackare och räcker till DX. Blir den klart högre kan loben dela sig,
+så att en del går flackt och en del brant.
 
-Kring en halv våglängd över marken lägger sig loben flackare och
-räcker till DX. Blir den klart högre kan loben dela sig i flera lober,
-en del flacka och en del branta. På 80\,m är en halv våglängd omkring
-40\,m upp, så de flesta av oss kör det bandet lågt och får NVIS vare
-sig vi tänkt på det eller inte. På 20\,m är en halv våglängd omkring
-10\,m. En dipol på 10--15\,m höjd, den vanliga tråden många har, är
-alltså NVIS på 80\,m och en hygglig DX-antenn på 20\,m. Samma tråd,
-två olika jobb.
+\begin{table}[H]
+\centering
+\begin{tabular}{lrrl}
+	\bf Band & \bf Kvartsvåg & \bf Halvvåg & \bf En lågt hängande tråd          \\ \hline
+	160\,m   &         40\,m &       80\,m & nästan alltid NVIS                 \\
+	80\,m    &         20\,m &       40\,m & NVIS hos de flesta                 \\
+	60\,m    &         15\,m &       30\,m & NVIS, och det är ofta det man vill \\
+	40\,m    &         10\,m &       20\,m & NVIS lågt, DX om den kommer upp    \\
+	20\,m    &          5\,m &       10\,m & hygglig DX redan på 10--15\,m
+\end{tabular}
+\caption{Ungefärlig höjd över mark för NVIS och för ett flackare hopp.
+Under kvartsvågen dominerar den branta loben.}
+\label{tab:dipolhojd}
+\end{table}
+
+På 80\,m är en halv våglängd omkring 40\,m upp, så de flesta kör det
+bandet lågt och får NVIS vare sig de tänkt på det eller inte. På 60\,m
+är en kvarts våglängd omkring 15\,m, så samma tråd är en NVIS-antenn
+där också. På 20\,m är en halv våglängd omkring 10\,m, och en dipol på
+10--15\,m höjd är alltså NVIS på 80 och 60\,m och en hygglig DX-antenn
+på 20\,m. Samma tråd, två olika jobb.
 
 Längden står i teknikkapitlet, under antennlängd. En tråddipol blir i
 praktiken kortare än den fria halvvågen, cirka $142/f$ till $143/f$
 meter när frekvensen är i MHz. Man klipper den lite för lång och
 kortar den efter att man mätt stående våg. Ändarna ska inte gå att
-nudda för männidkor eller djur eftersom där blir spänningen hög när
+nudda för människor eller djur eftersom där blir spänningen hög när
 man sänder. Håll också tråden väl borta från elledningar, undvik
 absolut att låta den gå över en väg eller gata och tänk efter lite hur
 du placerar den.
@@ -983,7 +1270,7 @@ vertikala men är de ungefär lika långa får man bästa effekten.
 
 \subsection{Longwire och ändmatad}
 \index{longwire}
-\index{EFRW} 
+\index{EFRW}
 \index{antenn!longwire}
 \index{endmatad}
 \index{antenn!endmatad}

@@ -11,7 +11,9 @@
 
 itemPageDelimiter = ","
 compressPages     = true
-fCompress         = true
+-- false: suffixet f betyder annars både ''följande sida'' och folium,
+-- och xindex gör då om en komprimerad sida 48f till \nohyperpage{f}.
+fCompress         = false
 minCompress       = 3
 rangeSymbol       = "--"
 numericPage       = true
