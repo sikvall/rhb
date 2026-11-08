@@ -1,5 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \chapter{Antenner}
 \label{sec:antenner}
 \index{antenner}
@@ -14,15 +12,13 @@ Det som inte är tillåtet då är en hemmabyggd eller modifierad sändare,
 se avsnitt~\ref{sec:insteg-restriktioner}.
 
 \vfill
-
 \minitoc
-
 \clearpage
 
 \section{Antenntyper}
 
-Här beskriver vi några av de vanliga atenntyperna. Fokus är på
-enkelhet och sådana man kan bygga själv även om också med komplexa
+Här beskriver vi några av de vanliga antenntyperna. Fokus är på
+enkelhet och sådana man kan bygga själv även om också mer komplexa
 antenner som Yagi-Uda omnämns.
 
 \subsection{Dipolen}
@@ -405,13 +401,13 @@ stället för att gå ut i tråden.
 En strömbalun av Guanella-typ håller emot det. Den är byggd av två
 transmissionsledningar, kopplade så att de ger 4:1, och de släpper i
 praktiken bara igenom ström som går åt motsatt håll i de två
-ledarna. Common modeström, ström åt samma håll i både skärmen och
+ledarna. Common mode-ström, ström åt samma håll i både skärmen och
 mittenledaren, möter där ferritens drossel som ett växelströmsmotstånd
 och undertryckningen är klart bättre än i en spänningsbalun. Därför är
 det helst en Guanella man sätter i matningspunkten. OCF är så pass
 sned att en ensam 4:1 inte alltid räcker. En extra strömbalun 1:1 på
 koaxen strax under den hjälper också för att minska common
-modeproblematiken.
+mode-problematiken.
 
 Höjden följer den vanliga dipolen. Lågt blir det NVIS, högre blir
 loben flackare. Åttamönstret är lite snett eftersom benen är olika
@@ -775,10 +771,10 @@ en dipol inte får plats.
 En enklare sådan kan konstrueras av ett fiskespö. Den matade tråden
 ska vara ungefär 1/4 av våglängden (beräkna som ena benet på en
 halvvåg). På marken lägger man sedan ut en motvikt med ungefär samma
-läng i den riktning man vill ha bästa verkan av antennen, eller så har
-man flera motvikter, exempelvis 3 stycken arrangerade som ett Y och
-får den då ganska rundstrålande. Motvikterna kan vara kortare än det
-vertikala men är de ungefär lika långa får man bästa effekten.
+längd i den riktning man vill ha bästa verkan av antennen, eller så
+har man flera motvikter, exempelvis 3 stycken arrangerade som ett Y
+och får den då ganska rundstrålande. Motvikterna kan vara kortare än
+det vertikala men är de ungefär lika långa får man bästa effekten.
 
 \begin{figure}[H]
 \centering
@@ -920,14 +916,14 @@ inte tvärs den som den vanliga dipolen när man kör den på frekvenser
 som ligger över den lägsta frekvensen den är konstruerad för (där den
 är ungefär en halv våglängd eller kortare) och riktningen följer hur
 tråden ligger. En longwire mot sydväst gynnar sydväst, med flera lober
-snarare än en enda. Antalet lober blir mer och mer markerat ju högre i
-frekvens man använder antennen på och ju längren den är i förhållande
+snarare än en enda. Antalet lober blir mer och mer markerat ju högre
+frekvens man använder antennen på och ju längre den är i förhållande
 till våglängden desto större blir riktverkan i trådens riktning.
 
 Vanligare i dag är den ändmatade halvvågen. Samma längd som en dipol,
 men matad i änden där fästet sitter. Impedansen där är hög, några
 tusen $\Omega$, så den går inte rakt in i radion utan behöver en unun,
-en transformator ofta 49:1 som tar ner impedansen den mot
+en transformator ofta 49:1 som tar ner impedansen mot
 50\,$\Omega$. Det behövs också en motvikt. Ibland räcker koaxens skärm
 om en strömbalun sitter en bit ner på kabeln, annars en kort tråd vid
 matningspunkten.
@@ -938,34 +934,34 @@ Den är för kort för 80 och 160\,m. 30, 17 och 12\,m ligger inte i den
 kedjan. Där får man ta en annan tråd, eller en tuner. En tråd som inte
 ens är en halvvåg på bandet kräver tuner och en motvikt. Annars blir
 radion själv en del av antennen, och det märks som radiofrekvens i
-rummet. För portabelt är den endmatade halvvågen ofta det enklaste.
+rummet. För portabelt är den ändmatade halvvågen ofta det enklaste.
 Tråden väger lite, fästet sitter i ena änden och radion står där man
 matar.
 
 Fördelen med den ändmatade halvvågen är att den fungerar på alla
-resonanta band och rätt utförd behövs heller inten antennanpassare
-annat än en unun. Nackdelen är att en unun med omsättningstalet 49:1
-också har en del förluster eftersom den är svår att linda med lite
-grövre tråd så den blir bra. Omsättningen är ju alltså 7 gånger så
-många varv till den ändmatade tråden som till den drivande delen från
-radion.
+resonanta band och rätt utförd behövs inte heller någon
+antennanpassare annat än en unun. Nackdelen är att en unun med
+omsättningstalet 49:1 också har en del förluster eftersom den är svår
+att linda med lite grövre tråd så den blir bra. Omsättningen är ju
+alltså 7 gånger så många varv till den ändmatade tråden som till den
+drivande delen från radion.
 
 Här finns dock en variant som är väldigt trevlig och det är en så
 kallad {\it end fed random wire} eller EFRW som inte alls är så random
 som det låter. Jag ska försöka förklara -- om vi väljer en trådlängd
 som är icke-resonant på de band vi vill använda den på och samtidigt i
 närheten av säg 40\,\% av längden av en halv våglängd så sjunker
-matningsimpedanden ordentligt i änden. Nu räcker det ofta med 1:9 i
+matningsimpedansen ordentligt i änden. Nu räcker det ofta med 9:1 i
 stället och då blir unun enklare att linda (3 ggr så många varv på
-antennsidan som på radiosidan) och vi kan fortfarande ofta få till det
-nog så bra utan tuner.
+antennsidan som på radiosidan) och vi klarar oss ofta med radions
+inbyggda tuner (eller en enkel extern tuner) på många band.
 
-Men nu blir impedansen i änden i stället några hundra~$\Omega$ i stället
-för flera tusen som tidigare, förlusterna sjunker. Det finns en myt om
-att antenner som inte är i resonans inte är effektiva men det är
-trams, det handlar i princip bara om antennens längd i förhållande
-till den våglängs man vill köra. Matematiskt är den bästa dipolen med
-högst antennvinst den som är 1.25 våglängder lång.
+Nu blir impedansen i änden några hundra~$\Omega$ i stället för flera
+tusen som tidigare. Det finns en myt om att antenner som inte är i
+resonans inte är effektiva men det är trams, det handlar i princip
+bara om antennens längd i förhållande till den våglängd man vill
+köra. Matematiskt är den bästa dipolen med högst antennvinst den som
+är 1,25 våglängder lång.
 
 Detta är en utmärkt portabelantenn eftersom den består av en unun, en
 motvikt och en rulle tråd man kan kasta ut där man vill köra.
@@ -1294,7 +1290,7 @@ avsnitt~\ref{sec:instegsband}.
 Ute räknas vikt, ett fäste och hur fort tråden är i luften. Tre
 antenner klarar det bättre än de andra.
 
-Den endmatade halvvågen är den man oftast tar med. En rulle tråd, en
+Den ändmatade halvvågen är den man oftast tar med. En rulle tråd, en
 transformator 49:1 och ett rep i ett träd eller ett spö. Matningen
 sitter där radion står. En halvvåg på 40\,m täcker också 20, 15 och
 10\,m.
@@ -1352,7 +1348,7 @@ respektive dålig anpassning, står i teknikkapitlet under
 missanpassning.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 
@@ -1388,13 +1384,13 @@ tråden en unun.
 \small
 \begin{tabular}{lcll}
   \textbf{Anpassare} & \textbf{Omsättning} & \textbf{Tar} & \textbf{Hör hemma vid} \\ \hline
-        Guanella & 1:1  & 50\,$\Omega$ mot 50\,$\Omega$       & Off-center matad dipol                            \\
-	Ruthroff & 1:1  & 50\,$\Omega$ mot 50\,$\Omega$       & Klassisk dipol                                    \\
-	Ruthroff & 4:1  & 200\,$\Omega$ mot 50\,$\Omega$      & Doublet                                           \\
-	Ruthroff & 6:1  & 300\,$\Omega$ mot 50\,$\Omega$      & Vikt dipol eller 300\,$\Omega$-ledning. Låg OCFD. \\
+        Guanella & 1:1  & 50\,$\Omega$ mot 50\,$\Omega$       & Klassisk dipol, inverterad V, doublet (vid tuner) \\
+	Ruthroff & 1:1  & 50\,$\Omega$ mot 50\,$\Omega$       & Symmetrisk dipol (spänningsbalun)                 \\
+	Ruthroff & 4:1  & 200\,$\Omega$ mot 50\,$\Omega$      & 200\,$\Omega$-matning (helst med 1:1-drossel)     \\
+	Ruthroff & 6:1  & 300\,$\Omega$ mot 50\,$\Omega$      & Vikt dipol eller 300\,$\Omega$-ledning            \\
 	Guanella & 4:1  & 200\,$\Omega$ mot 50\,$\Omega$      & OCFD, linda på två kärnor, inte en                \\
-	UNUN     & 9:1  & 450\,$\Omega$ mot 50\,$\Omega$      & Ändmatad icke resonant tråd, EFRW                 \\
-	UNUN     & 49:1 & ca 2\,500 $\Omega$ mot 50\,$\Omega$ & Ändmatad resonant tråd,  EFHW                     \\
+	UNUN     & 9:1  & 450\,$\Omega$ mot 50\,$\Omega$      & Ändmatad icke-resonant tråd, EFRW                 \\
+	UNUN     & 49:1 & ca 2\,500 $\Omega$ mot 50\,$\Omega$ & Ändmatad resonant tråd, EFHW                      \\
 \end{tabular}
 \caption{Översikt över olika typer och deras användningsområden}
 \label{tab:balunval}
@@ -1778,16 +1774,14 @@ Två lika lindningar på samma kärna räcker för 4:1. Mittledaren och det
 ena antennbenet möts i toppen, skärmen ligger på mittenuttaget och det
 andra benet i botten. Spänningen mellan benen blir den dubbla mot den
 koaxen lägger på, och impedansen blir den fyrdubbla, så omkring
-200\,$\Omega$ kommer ner mot 50\,$\Omega$.
+200\,$\Omega$ kommer ner mot 50\,$\Omega$. Denna balun lindas ofta
+bifilärt (med två trådar), se skissen över hur den konstrueras.
 
-Denna balun lindas ofta trifilärt (med tre trådar), se skissen över
-hur den konstrueras.
-
-Det är den spänningsbalun som förr satt i nästan varje off-center-matad
-dipol. Antennen är sned, med olika långa ben, och en balun som bara
-håller spänningarna släpper igenom mantelström. Loben drar snett. Ska en
-Ruthroff 4:1 ändå används hör en strömbalun 1:1 hemma på koaxen strax
-under den.
+Det är den spänningsbalun som förr satt i nästan varje
+off-center-matad dipol. Antennen är sned, med olika långa ben, och en
+balun som bara håller spänningarna släpper igenom mantelström. Loben
+drar snett. Ska en Ruthroff 4:1 ändå användas hör en strömbalun 1:1
+hemma på koaxen strax under den.
 
   \begin{figure}[H]
     \centering
